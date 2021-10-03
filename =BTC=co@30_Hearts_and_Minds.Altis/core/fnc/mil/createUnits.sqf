@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_mil_createUnits
+Function: btc_mil_fnc_createUnits
 
 Description:
     Fill me when you edit me !
@@ -17,7 +17,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_mil_createUnits;
+        _result = [] call btc_mil_fnc_createUnits;
     (end)
 
 Author:
@@ -27,21 +27,28 @@ Author:
 
 params [
     ["_group", grpNull, [grpNull]],
-    ["_pos", [0, 0, 0], [[]]],
+    ["_pos", [0, 0, 0], [[], createHashMap]],
     ["_number", 0, [0]],
     ["_pos_iswater", false, [false]],
     ["_type_units", btc_type_units, [[]]],
     ["_type_divers", btc_type_divers, [[]]]
 ];
 
-for "_i" from 1 to _number do {
+// Create Scaling Multiplier 
+private _CurrentPlayers = count allPlayers;
+//private _currentPlayers = west countSide allUnits;
+private _PlayerScale = 0.5 + (_CurrentPlayers / 85.3);
+
+private _numberscaled = _number * _playerScale;
+
+for "_i" from 1 to (round _numberscaled) do {
     private _unit_type = if (_pos_iswater) then {
         selectRandom _type_divers;
     } else {
         selectRandom _type_units;
     };
 
-    [_group, _unit_type, _pos] call btc_fnc_delay_createUnit;
+    [_group, _unit_type, _pos] call btc_delay_fnc_createUnit;
 };
 
 _group

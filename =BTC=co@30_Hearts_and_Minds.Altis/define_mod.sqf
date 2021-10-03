@@ -29,11 +29,8 @@ btc_custom_loc = [
         ];
 */
 private _weapons = [];
-private _magazines = [];
-private _items = [];
-private _backpacks = [];
 
-btc_custom_arsenal = [_weapons, _magazines, _items, _backpacks];
+btc_custom_arsenal = [_weapons, _magazines, _items, _backpacks, _equipment, _helmets];
 
 /*
     Here you can specify which equipment is loaded on player connection.

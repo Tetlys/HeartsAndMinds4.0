@@ -2,13 +2,16 @@ private _MainCategory = localize "str_3den_display3den_menubar_helpdoc_text";
 player createDiarySubject [_MainCategory, _MainCategory];
 
 //Headless and Data base
-player createDiaryRecord [_MainCategory, [localize "STR_BTC_HAM_DOC_HEADLESS_TITLE", localize "STR_BTC_HAM_DOC_HEADLESS_TEXT"]];
+//player createDiaryRecord [_MainCategory, [localize "STR_BTC_HAM_DOC_HEADLESS_TITLE", localize "STR_BTC_HAM_DOC_HEADLESS_TEXT"]];
+
+//Door locked
+player createDiaryRecord [_MainCategory, [localize "STR_BTC_HAM_DOC_DOOR_TITLE", localize "STR_BTC_HAM_DOC_DOOR_TEXT"]];
 
 //Chemical warfare
 player createDiaryRecord [_MainCategory, [localize "STR_BTC_HAM_DOC_CHEMICALWARFARE_TITLE", localize "STR_BTC_HAM_DOC_CHEMICALWARFARE_TEXT"]];
 
 //Spectrum devices
-player createDiaryRecord [_MainCategory, [localize "STR_BTC_HAM_DOC_SPECTRUMDEVICES_TITLE", localize "STR_BTC_HAM_DOC_SPECTRUMDEVICES_TEXT"]];
+//player createDiaryRecord [_MainCategory, [localize "STR_BTC_HAM_DOC_SPECTRUMDEVICES_TITLE", localize "STR_BTC_HAM_DOC_SPECTRUMDEVICES_TEXT"]];
 
 //Vehicles
 player createDiaryRecord [_MainCategory, [localize "str_a3_cfghints_command_vehicles1", localize "STR_BTC_HAM_DOC_VEHICLES_TEXT"]];

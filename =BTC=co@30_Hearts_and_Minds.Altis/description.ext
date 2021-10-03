@@ -1,6 +1,6 @@
 
-loadScreen = "core\img\btc.paa";
-author = "Giallustio";
+loadScreen = "res\KarmaLoading.paa";
+author = "KCDEVOPS";
 onLoadName = $STR_BTC_HAM_DESCR_NAME;
 onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
 enabledebugconsole = 1;
@@ -28,7 +28,6 @@ class RscTitles {
 #include "core\fnc\task\taskTypes.hpp"
 
 class CfgFunctions {
-    #include "core\fnc\eh\functions.hpp"
     // add your own functions below
 };
 
@@ -53,8 +52,19 @@ respawn = "BASE";
 respawnDelay = 2;
 respawnDialog = 0;
 respawnOnStart = 0;
+respawnButton = 0;
 respawnTemplates[] = {"MenuPosition"};
 
 // Disable BI wreck system (H&M handle it internally)
 wreckManagerMode = 0;
 corpseManagerMode = 0;
+
+//CHANNEL id, text, voice
+disableChannels[] = {
+    { 0, false, true },
+    { 1, false, true },
+    { 2, true, true },
+    { 3, true, true },
+    { 4, true, true },
+    { 5, true, true }
+};

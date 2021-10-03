@@ -32,6 +32,7 @@ if ({
         _x isKindOf "Animal" ||
         _x isKindOf "Module_F" ||
         _x isKindOf "WeaponHolder" ||
+        _x isKindOf "Land_JumpTarget_F" ||
         _x isKindOf "DeconShower_01_sound_F"
     )} count (nearestObjects [_create_obj, ["All"], _distance]) > 1) exitWith {
     (localize "STR_BTC_HAM_LOG_BASICS_CLEARAREA") call CBA_fnc_notify;

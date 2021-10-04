@@ -68,3 +68,17 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
         [btc_player_side, _tickets] call BIS_fnc_respawnTickets;
     };
 };
+
+if isServer then
+{
+	[] spawn
+	{
+		while {true} do
+		{
+			{
+				_x removeCuratorEditableObjects [[btc_create_object_point, btc_create_object, btc_gear_object],true]
+			} count allCurators;
+      sleep 0.5;
+		};
+	};
+};

@@ -1,3 +1,10 @@
+
+WHITELISTED = [
+    // MANAGER
+    "76561198047333011", //Tetlys
+];
+
+
 btc_map_mapIllumination = ace_map_mapIllumination;
 if !(isNil "btc_custom_loc") then {
     {
@@ -23,6 +30,10 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
     };
     [] call btc_int_fnc_add_actions;
     [] call btc_int_fnc_shortcuts;
+
+    if (player getVariable ["Reserved", false]) then {
+        if !(getplayerUID player in WHITELISTED) then {"end1" call BIS_fnc_endMission;};
+    };
 
     if (player getVariable ["interpreter", false]) then {
         player createDiarySubject ["btc_diarylog", localize "STR_BTC_HAM_CON_INFO_ASKHIDEOUT_DIARYLOG", '\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa'];

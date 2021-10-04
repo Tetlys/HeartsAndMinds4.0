@@ -85,6 +85,15 @@ if (_uniform isNotEqualTo "") then {
     };
 };
 
+if (
+      [
+        "M40_Gas_mask_nbc_v1_d"
+      ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1
+        ) then {
+          _protection = _protection + 1;
+        };
+      };
+
 if (_protection >= 1) exitWith {_this};
 
 if (_firstDamage || (random 1 > _protection)) then {

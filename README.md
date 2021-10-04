@@ -1,3 +1,26 @@
+### DEVELOPMENT NOTES:
+
+Process for successful github use!
+
+1. CREATE A BRANCH!
+2. Begin work on your branch, one step at a time.
+3. After each step is completed, remember to "Commit" your changes to your branch locally. Do this with a note on 
+   each commit exsplaining what you've done.
+4. "Push" to your branch.
+5. After your branch is complted, and you feel the feature is ready to be added, create a "Pull Request".
+6. Once a "pull" is submited another member of the team will organise a test of that branch, focusing on testing
+   the specific features which were modified/added.
+7. After a sucessfull test the Pull can be accepted and added into main.
+
+For Player Release!
+
+A player release is any test or gameplay involving members outside of the development team. These players should only ever interact with the
+ "Release" branch of gitgub, this branch is specifically setup for the players to enjoy, heavily tested for bugs etc. Players should never be hotseating the server for fixes. If a bug is found, it should be noted and repaired in the main branch for a seperate test. Repeated hotfixes on a live player test will not be tolerated.
+
+Also note: We will no longer be removing stale branches once they are merged. Instead they will just be left alone in a "merged" state for tracability.
+
+
+
 <p align="center">
     <img src="https://data.bistudio.com/assets/img/badges/medal/MWFMP.png" width="85">
     <img src="https://user-images.githubusercontent.com/14364400/120066018-bd52ed80-c074-11eb-87d6-61cdeada32f8.png" width="210">

@@ -189,10 +189,10 @@ if (isServer) then {
     //Cache
     btc_cache_type = [
         _allClassSorted select {
-            _x isKindOf "ReammoBox_F" &&
-            {getText(_cfgVehicles >> _x >> "model") isEqualTo "\A3\weapons_F\AmmoBoxes\AmmoBox_F"}
+            _x isKindOf "CUP_hromada_beden_dekorativniX"
+            // {getText(_cfgVehicles >> _x >> "model") isEqualTo "\A3\weapons_F\AmmoBoxes\AmmoBox_F"}
         },
-        ["Land_PlasticCase_01_small_black_CBRN_F", "Land_PlasticCase_01_small_olive_CBRN_F", "Land_PlasticCase_01_small_CBRN_F"]
+        ["HazmatBag_01_F", "Land_PlasticCase_01_small_CBRN_F"]
     ];
     private _weapons_usefull = "true" configClasses (configFile >> "CfgWeapons") select {
         getNumber (_x >> 'type') isEqualTo 1 &&
@@ -291,8 +291,8 @@ if (isServer) then {
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
 
     //BTC Vehicles in missions.sqm
-    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18];
-    btc_helo = [btc_helo_1];
+    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24, btc_veh_25, btc_veh_26, btc_veh_27, btc_veh_28, btc_veh_29, btc_veh_30, btc_veh_31, btc_veh_32, btc_veh_33, btc_veh_34, btc_veh_35, btc_veh_36, btc_veh_37, btc_veh_38, btc_veh_39, btc_veh_40];
+    btc_helo = [btc_helo_1, btc_helo_2, btc_helo_3];
 
     // The two arrays below are prefixes of buildings and their multiplier.
     // They will multiply the values of btc_rep_malus_building_destroyed and btc_rep_malus_building_damaged,

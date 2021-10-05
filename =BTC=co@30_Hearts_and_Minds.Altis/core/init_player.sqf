@@ -1,7 +1,7 @@
 
 WHITELISTED = [
     // MANAGER
-    "76561198047333011", //Tetlys
+    "76561198047333011" //Tetlys
 ];
 
 

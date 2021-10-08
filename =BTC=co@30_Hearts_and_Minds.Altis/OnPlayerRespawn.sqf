@@ -1,13 +1,18 @@
 [player] remoteExec ["requestResupplyFlags", 2];
 
+// Loop through all arsenals, and init role restricted arsenal.
+// This fixes a bug where when a player joins, 
+// they don't have their description or some shit like that.
 {
-private _box = _x;
-if (!isNull _box) then
-{
-//KARMA_ARSENAL_CRATES deleteAt (KARMA_ARSENAL_CRATES find _x);
-[_box, player] call roleArsenal;
-};
+    private _box = _x;
+    if (!isNull _box) then 
+    {
+        //KARMA_ARSENAL_CRATES deleteAt (KARMA_ARSENAL_CRATES find _x);
+        [_box, player] call roleArsenal;
+    };
 } forEach KARMA_ARSENAL_CRATES;
+
+
 
 Player addEventHandler ["GetInMan", {
     params ["_unit", "_role", "_vehicle", "_turret"];

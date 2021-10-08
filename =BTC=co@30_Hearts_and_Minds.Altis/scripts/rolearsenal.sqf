@@ -1,6 +1,6 @@
 //Function Parms
 //[0] = Arsenal Object
-//[1] = Player 
+//[1] = Player
 // Usage:
 // [_box, _player] call roleArsenal;
 roleArsenal = {
@@ -20,209 +20,139 @@ roleArsenal = {
 
 	// Admin
 
-	if ((_UnitRole == "Odin 6@Odin 6 (Admin)")
-	or (_UnitRole == "Odin 7@Odin 7")
-	or (_UnitRole == "Odin 7@Odin 8")
-	or (_UnitRole == "Odin 7@Odin 9")) then
+	if ((_UnitRole == "Admin 6 @ Admin")
+	or (_UnitRole == "Admin 7 @ Admin")
+	or (_UnitRole == "Admin 8 @ Admin")) then
 	{_Role = "ADMIN"};
 
-	// Command 
+	// Command
 
-	if ((_UnitRole == "Assassin 6 Company Commander@Assassin HQ")) then
+	if (_UnitRole == "Company Commander @ Company HQ") then
 	{_Role = "CO"};
 
-	if (_UnitRole == "Assassin 7 Company Executive Officer@Assassin HQ") then
-	{_Role = "XO"};
 
-	if ((_UnitRole == "Assassin 1-6 Platoon Leader@Assassin 1 HQ (Leadership)")
-	or (_UnitRole == "Assassin 2-6 Platoon Leader@Assassin 2 HQ (Leadership)")) then
+	if (_UnitRole == "Platoon Commander @ Platoon HQ") then
 	{_Role = "PLTCO"};
 
 	if ((_UnitRole == "Assassin 1-7 Platoon Sergeant@Assassin 1 HQ")
 	or (_UnitRole == "Assassin 2-7 Platoon Sergeant@Assassin 2 HQ")) then
 	{_Role = "PLTXO"};
 
-	if ((_UnitRole == "Assassin 1-8 Platoon JFO@Assassin 1 HQ")
-	or (_UnitRole == "Assassin 2-8 Platoon JFO@Assassin 2 HQ")) then
+	if ((_UnitRole == "JTAC  @ Company HQ")
+	or (_UnitRole == "Joing Air Command FAC @ Company HQ")) then
 	{_Role = "PLTJFO"};
 
 	// Squad Leaders
 
-	if ((_UnitRole == "Assassin 1-1 Squad Leader@Assassin 1-1 (Infantry)")
-	or (_UnitRole == "Assassin 1-2 Squad Leader@Assassin 1-2 (Infantry)")
-	or (_UnitRole == "Assassin 1-3 Squad Leader@Assassin 1-3 (Infantry)")
-	or (_UnitRole == "Assassin 1-4 Squad Leader@Assassin 1-4 (Weapons)")
-	or (_UnitRole == "Assassin 2-1 Squad Leader@Assassin 2-1 (Infantry)")
-	or (_UnitRole == "Assassin 2-2 Squad Leader@Assassin 2-2 (Infantry)")
-	or (_UnitRole == "Assassin 2-3 Squad Leader@Assassin 2-3 (Infantry)")
-	or (_UnitRole == "Assassin 2-4 Squad Leader@Assassin 2-4 (Infantry)")) then
+	if ((_UnitRole == "Alpha Squad Leader@Alpha (Infantry)")
+	or (_UnitRole == "Bravo Squad Leader@Bravo (Infantry)")
+	or (_UnitRole == "Charlie Squad Leader@Charlie (Infantry)")) then
 	{_Role = "SQDCO"};
 
-	if ((_UnitRole == "Assassin 1-1 Asst. Squad Leader")
-	or (_UnitRole == "Assassin 1-1-B Fireteam Leader")
-	or (_UnitRole == "Assassin 1-2 Asst. Squad Leader")
-	or (_UnitRole == "Assassin 1-2-B Fireteam Leader")
-	or (_UnitRole == "Assassin 1-3 Asst. Squad Leader")
-	or (_UnitRole == "Assassin 1-3-B Fireteam Leader")
-	or (_UnitRole == "Assassin 1-4-A Team Leader")
-	or (_UnitRole == "Assassin 1-4-B Team Leader")
-	or (_UnitRole == "Assassin 2-1 Asst. Squad Leader")
-	or (_UnitRole == "Assassin 2-1-B Fireteam Leader")
-	or (_UnitRole == "Assassin 2-2 Asst. Squad Leader")
-	or (_UnitRole == "Assassin 2-2-B Fireteam Leader")
-	or (_UnitRole == "Assassin 2-3 Asst. Squad Leader")
-	or (_UnitRole == "Assassin 2-3-B Fireteam Leader")
-	or (_UnitRole == "Assassin 2-4-A Team Leader")
-	or (_UnitRole == "Assassin 1-4-B Team Leader")) then
+	if ((_UnitRole == "Alpha A Fireteam Leader")
+	or (_UnitRole == "Alpha B Fireteam Leader")
+	or (_UnitRole == "Bravo A Fireteam Leader")
+	or (_UnitRole == "Bravo B Fireteam Leader")
+  	or (_UnitRole == "Charlie A Fireteam Leader")
+  	or (_UnitRole == "Charlie B Fireteam Leader")) then
 	{_Role = "SQDXO"};
 
-	if ((_UnitRole == "Assassin 1-1 Corpsman")
-	or (_UnitRole == "Assassin 1-2 Corpsman")
-	or (_UnitRole == "Assassin 1-3 Corpsman")
-	or (_UnitRole == "Assassin 1-4 Corpsman")
-	or (_UnitRole == "Assassin 2-1 Corpsman")
-	or (_UnitRole == "Assassin 2-2 Corpsman")
-	or (_UnitRole == "Assassin 2-3 Corpsman")
-	or (_UnitRole == "Assassin 2-4 Corpsman")
-	or (_UnitRole == "Ogre Corpsman")) then
+	if ((_UnitRole == "Alpha Medic")
+	or (_UnitRole == "Bravo Medic")
+	or (_UnitRole == "Charlie Medic")) then
 	{_Role = "MEDIC"};
 
 	// Normal Squads
 
-	if ((_UnitRole == "Assassin 1-1-A Rifleman")
-	or (_UnitRole == "Assassin 1-1-B Rifleman")
-	or (_UnitRole == "Assassin 1-2-A Rifleman")
-	or (_UnitRole == "Assassin 1-2-B Rifleman")
-	or (_UnitRole == "Assassin 1-3-A Rifleman")
-	or (_UnitRole == "Assassin 1-3-B Rifleman")
-	or (_UnitRole == "Assassin 2-3-A Rifleman")
-	or (_UnitRole == "Assassin 2-3-B Rifleman")
-	or (_UnitRole == "Assassin 2-1-A Rifleman")
-	or (_UnitRole == "Assassin 2-1-B Rifleman")
-	or (_UnitRole == "Assassin 2-2-A Rifleman")
-	or (_UnitRole == "Assassin 2-2-B Rifleman")) then
+	if ((_UnitRole == "Alpha A Rifleman")
+	or (_UnitRole == "Alpha B Rifleman")
+	or (_UnitRole == "Bravo A Rifleman")
+	or (_UnitRole == "Bravo B Rifleman")
+	or (_UnitRole == "Charlie A Rifleman")
+	or (_UnitRole == "Charlie B Rifleman")) then
 	{_Role = "SQDRIFLE"};
 
-	if ((_UnitRole == "Assassin 1-1-B Automatic Rifleman")
-	or (_UnitRole == "Assassin 1-1-A Automatic Rifleman")
-	or (_UnitRole == "Assassin 1-2-A Automatic Rifleman")
-	or (_UnitRole == "Assassin 1-2-B Automatic Rifleman")
-	or (_UnitRole == "Assassin 1-3-A Automatic Rifleman")
-	or (_UnitRole == "Assassin 1-3-B Automatic Rifleman")
-	or (_UnitRole == "Assassin 2-3-A Automatic Rifleman")
-	or (_UnitRole == "Assassin 2-3-B Automatic Rifleman")
-	or (_UnitRole == "Assassin 2-1-A Automatic Rifleman")
-	or (_UnitRole == "Assassin 2-1-B Automatic Rifleman")
-	or (_UnitRole == "Assassin 2-2-A Automatic Rifleman")
-	or (_UnitRole == "Assassin 2-2-B Automatic Rifleman")) then
+	if ((_UnitRole == "Alpha A Automatic Rifleman")
+	or (_UnitRole == "Alpha B Automatic Rifleman")
+	or (_UnitRole == "Bravo A Automatic Rifleman")
+	or (_UnitRole == "Bravo B Automatic Rifleman")
+	or (_UnitRole == "Charlie A Automatic Rifleman")
+	or (_UnitRole == "Charlie B Automatic Rifleman")) then
 	{_Role = "SQDAUTORIFLE"};
 
-	if ((_UnitRole == "Assassin 1-1-A Asst. Automatic Rifleman")
-	or (_UnitRole == "Assassin 1-1-B Asst. Automatic Rifleman")
-	or (_UnitRole == "Assassin 1-2-A Asst. Automatic Rifleman")
-	or (_UnitRole == "Assassin 1-2-B Asst. Automatic Rifleman")
-	or (_UnitRole == "Assassin 1-3-A Asst. Automatic Rifleman")
-	or (_UnitRole == "Assassin 1-3-B Asst. Automatic Rifleman")
-	or (_UnitRole == "Assassin 2-3-A Asst. Automatic Rifleman")
-	or (_UnitRole == "Assassin 2-3-B Asst. Automatic Rifleman")
-	or (_UnitRole == "Assassin 2-1-A Asst. Automatic Rifleman")
-	or (_UnitRole == "Assassin 2-1-B Asst. Automatic Rifleman")
-	or (_UnitRole == "Assassin 2-2-A Asst. Automatic Rifleman")
-	or (_UnitRole == "Assassin 2-2-B Asst. Automatic Rifleman")) then
-	{_Role = "SQDASTRIFLE"};
-
-	// 1-4 
-
-	if ((_UnitRole == "Assassin 1-4-A Machine Gunner")
-	or (_UnitRole == "Assassin 1-4-B Machine Gunner")
-	or (_UnitRole == "Assassin 2-4-A Machine Gunner")
-	or (_UnitRole == "Assassin 2-4-A Machine Gunner")) then
-	{_Role = "SQDMCHNGNR"};
-
-	if ((_UnitRole == "Assassin 1-4-A Assistant Gunner")
-	or (_UnitRole == "Assassin 1-4-B Assistant Gunner")
-	or (_UnitRole == "Assassin 2-4-A Assistant Gunner")
-	or (_UnitRole == "Assassin 2-4-A Assistant Gunner")) then
+	if ((_UnitRole == "Alpha B AT")
+	or (_UnitRole == "Bravo B AT")
+	or (_UnitRole == "Charlie B AT")) then
 	{_Role = "SQDAT"};
 
-	if ((_UnitRole == "Assassin 1-4-A AT Specialist")
-	or (_UnitRole == "Assassin 1-4-B AT Specialist")
-	or (_UnitRole == "Assassin 2-4-A AT Specialist")
-	or (_UnitRole == "Assassin 2-4-B AT Specialist")) then
-	{_Role = "SQDAST"};
+	if ((_UnitRole == "Alpha A Grenadier")
+	or (_UnitRole == "Bravo A Grenadier")
+	or (_UnitRole == "Charlie A Grenadier")) then
+	{_Role = "SQDGREN"};
 
-	// Banshee 
+	// Banshee
 
-	if ((_UnitRole == "Banshee Team Leader@Banshee (MEDEVAC)")
-	or (_UnitRole == "Banshee Trauma Specialist")
-	or (_UnitRole == "Banshee Team Member")) then
+	if ((_UnitRole == "Medevac Team Leader @ MEDEVAC")
+	or (_UnitRole == "Medevac Trauma Specialist")
+	or (_UnitRole == "Medevac Trauma Specialist")) then
 	{_Role = "BANSHEE"};
 
-	// Air Command 
+	// Air Command
 
 	if ((_UnitRole == "JAC 1 Pilot@Joint Air Command 1")
-	or (_UnitRole == "JAC 1 Crew @Joint Air Command 1")
 	or (_UnitRole == "JAC 2 Pilot@Joint Air Command 1")
-	or (_UnitRole == "JAC 2 Crew @Joint Air Command 2")
-	or (_UnitRole == "JAC 3 Pilot@Joint Air Command 3")
-	or (_UnitRole == "JAC 3 Crew @Joint Air Command 3")
-	or (_UnitRole == "JAC 4 Pilot@Joint Air Command 4")
-	or (_UnitRole == "JAC 4 Crew @Joint Air Command 4")
-	or (_UnitRole == "JAC 5 Pilot@Joint Air Command 5")
-	or (_UnitRole == "JAC 5 Crew @Joint Air Command 5")) then
+	or (_UnitRole == "JAC 3 Pilot@Joint Air Command 3")) then
 	{_Role = "JAC"};
 
-	// Butcher 
+	// Butcher
 
-	if ((_UnitRole == "Butcher 1 Driver")
-	or (_UnitRole == "Butcher 1 Gunner")
-	or (_UnitRole == "Butcher 1 Vehicle Commander@Butcher 1 (Armor)")
-	or (_UnitRole == "Butcher 2 Vehicle Commander@Butcher 2 (Armor)")
-	or (_UnitRole == "Butcher 1 Gunner")
-	or (_UnitRole == "Butcher 1 Driver")) then
+	if ((_UnitRole == "Armor 1 Driver")
+	or (_UnitRole == "Armor 1 Gunner")
+	or (_UnitRole == "Armor 1 Vehicle Commander@Armor 1 (Armor)")
+	or (_UnitRole == "Armor 2 Vehicle Commander@Armor 2 (Armor)")
+	or (_UnitRole == "Armor 2 Gunner")
+	or (_UnitRole == "Armor 2 Driver")) then
 	{_Role = "BUTCHER"};
 
-	// Ogre 
+	// Ogre
 
-	if ((_UnitRole == "Ogre Team Leader@Ogre 2 (Ground Logistics)")
-	or (_UnitRole == "Ogre Team Leader@Ogre 1 (Ground Logistics)")
-	or (_UnitRole == "Ogre Engineer")) then
+	if ((_UnitRole == "Logistics Team Leader @ Logistics 1")
+	or (_UnitRole == "Logistics Team Leader @ Logistics 2")
+	or (_UnitRole == "Logistics Engineer")) then
 	{_Role = "OGRE"};
 
-	// Savage 
+	// Savage
 
-	if ((_UnitRole == "Savage Team Leader@Savage (Indirect Fire)")
-	or (_UnitRole == "Savage Operator")) then
+	if ((_UnitRole == "Battery Team Leader@Battery (Indirect Fire)")
+	or (_UnitRole == "Battery Operator")) then
 	{_Role = "SAVAGE"};
 
 
 	//Empty array of gear to add to the arsenal per player.
 	Private _GearToAdd = [];
-	
+
 	//Define the gear for each Role
 	Private _DefaultGear = [
 		// Headgear
-			"rhsusf_ach_helmet_ocp",
-			"rhsusf_ach_helmet_ocp_alt",
-			"rhsusf_ach_helmet_ESS_ocp",
-			"rhsusf_ach_helmet_ESS_ocp_alt",
-			"rhsusf_ach_helmet_headset_ocp",
-			"rhsusf_ach_helmet_headset_ocp_alt",
-			"rhsusf_ach_helmet_headset_ess_ocp",
-			"rhsusf_ach_helmet_headset_ess_ocp_alt",
-			"rhsusf_ach_helmet_ocp_norotos",
-			"rhs_googles_black",
-			"rhs_ess_black",
+            "UK3CB_UN_B_H_6b27m_Cov",
+            "UK3CB_UN_B_H_6b27m",
+            "UK3CB_UN_B_H_6b27m_ESS",
+            "UK3CB_UN_B_H_6b27m_ESS_Cov",
+            "rhssaf_helmet_m97_nostrap_blue",
+            "rhssaf_helmet_m97_nostrap_blue_tan_ess",
+            "rhssaf_helmet_m97_nostrap_blue_tan_ess_bare",
+            "rhsgref_helmet_pasgt_un",
+            "rhsgref_ssh68_un",
+
 		// UNIFORMS
-			"rhs_uniform_acu_ocp",
-			"rhs_uniform_cu_ocp",
-			"rhs_uniform_cu_ocp_101st",
-			"rhs_uniform_cu_ocp_10th",
-			"rhs_uniform_cu_ocp_1stcav",
-			"rhs_uniform_cu_ocp_82nd",
+            "UK3CB_UN_B_U_CombatUniform_TTSKO",
 		// VESTS
-			"rhsusf_spcs_ocp",
-			"rhsusf_iotv_ocp",
+            "UK3CB_UN_B_V_6b23_vydra_3m",
+            "UK3CB_UN_B_V_6b23_ml_02",
+            "UK3CB_UN_B_V_6b23_ML_6sh92_radio",
+            "UK3CB_UN_B_V_6b23_ml_6sh92_vog",
+            "UK3CB_UN_B_V_6b23_ml_01",
+
 		// BACKPACKS
 			"rhsusf_assault_eagleaiii_ocp",
 			"B_Parachute",
@@ -355,15 +285,21 @@ roleArsenal = {
 			"ACE_Vector",
 			"ACE_NVG_Wide"
 	];
-	
+
 	Private _CO = [
-		// Headgear
-		"rhsusf_patrolcap_ocp",
+		// Headgear and uniforms
+		"UK3CB_UN_B_U_Officer_TTSKO",
+        "rhsgref_un_beret",
+        "UK3CB_UN_B_H_Beret",
+        "UK3CB_UN_B_H_Beret_Off",
+        "rhssaf_beret_blue_un",
+
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"tfw_ilbe_whip_ocp",
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_blade_ocp",
+		"B_UAV_01_backpack_F",
 		// Misc
 		"ACE_SpottingScope",
 		"tfw_rf3080Item",
@@ -373,62 +309,17 @@ roleArsenal = {
 		"Laserdesignator"
 		];
 
-		Private _XO = [
-		// BACKPACKS
-		"TFAR_rt1523g",
-		"tfw_ilbe_whip_ocp",
-		"tfw_ilbe_blade_ocp",
-		"TFAR_rt1523g_big",
-		// Misc
-		"ACE_SpottingScope",
-		"tfw_rf3080Item",
-		"B_UavTerminal",
-		"ACE_HuntIR_monitor",
-		"ACE_MX2A",
-		"Laserdesignator"
-		];
-	
 	Private _PLTCO = [
-		// VESTS
-		"rhsusf_iotv_ocp_Squadleader",
-		"rhsusf_spcs_ocp_squadleader",
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_whip_ocp",
 		"tfw_ilbe_blade_ocp",
+		"B_UAV_01_backpack_F",
 		// Misc
 		"ACE_SpottingScope",
 		"tfw_rf3080Item",
-		//MISC 
-		"ACE_VMH3",
-		"B_UavTerminal",
-		"ACE_HuntIR_monitor",
-		"ACE_MX2A",
-		"Laserdesignator"
-		];
-
-		Private _PLTXO = [
-		// VESTS
-		"rhsusf_iotv_ocp_Squadleader",
-		"rhsusf_spcs_ocp_squadleader",
-		// BACKPACKS
-		"TFAR_rt1523g",
-		"TFAR_rt1523g_big",
-		"tfw_ilbe_whip_ocp",
-		"tfw_ilbe_blade_ocp",
-		// Misc
-		"ACE_SpottingScope",
-		"tfw_rf3080Item",
-		//M203
-		"rhs_weap_M320",
-		"rhs_weap_m4a1_carryhandle_m203",
-		"rhs_weap_m4a1_m203",
-		"rhs_weap_m4a1_m203s_d",
-		//Grenades
-		"B_IR_Grenade",
-		"rhs_mag_mk84",
-		//MISC 
+		//MISC
 		"ACE_VMH3",
 		"B_UavTerminal",
 		"ACE_HuntIR_monitor",
@@ -452,16 +343,13 @@ roleArsenal = {
 		];
 
 		Private _SQDCO = [
-		// VESTS
-		"rhsusf_spcs_ocp_squadleader",
-		"rhsusf_iotv_ocp_Squadleader",
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"tfw_rf3080Item",
 		"tfw_ilbe_whip_ocp",
 		"tfw_ilbe_blade_ocp",
 		"TFAR_rt1523g_big",
-		//MISC 
+		//MISC
 		"ACE_VMH3",
 		"ACE_HuntIR_monitor",
 		"ACE_MX2A",
@@ -470,9 +358,6 @@ roleArsenal = {
 
 		Private _SQDXO = [
 		// VESTS
-		"rhsusf_iotv_ocp_Teamleader",
-		"rhsusf_spcs_ocp_teamleader_alt",
-		"rhsusf_spcs_ocp_teamleader",
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"tfw_ilbe_whip_ocp",
@@ -490,19 +375,18 @@ roleArsenal = {
 		//Grenades
 		"B_IR_Grenade",
 		"rhs_mag_mk84",
-		//MISC 
+		//MISC
 		"ACE_VMH3",
 		"ACE_HuntIR_monitor"
 		];
-	
+
 		Private _MEDIC = [
 		// VESTS
-		"rhsusf_spcs_ocp_medic",
-		"rhsusf_iotv_ocp_Medic",
-		"B_Carryall_mcamo",
+        "UK3CB_UN_B_V_6b23_medic",
 		// Misc
 		"ACE_surgicalKit",
 		"ACE_personalAidKit",
+		"adv_aceCPR_AED",
 		"ACE_adenosine",
 		"ACE_bloodIV_500",
 		"ACE_bloodIV_250",
@@ -517,29 +401,13 @@ roleArsenal = {
 		];
 
 		Private _SQDAUTORIFLE = [
-		// VESTS
-		"rhsusf_spcs_ocp_saw",
-		"rhsusf_iotv_ocp_SAW",
 		// WEAPONS & AMMO
 		"rhs_weap_m249_pip",
 		"rhs_weap_m249_pip_L_para",
 		"rhs_weap_m249_light_L",
-		"rhs_weap_m249_pip_ris"
-		];
-
-		Private _SQDASTRIFLE = [
-		// VESTS
-		"rhsusf_spcs_ocp_saw",
-		"rhsusf_iotv_ocp_SAW"
-		];
-
-		Private _SQDMCHNGNR = [
-		// VESTS
-		"rhsusf_spcs_ocp_machinegunner",
-		"rhsusf_iotv_ocp_SAW",
-		// WEAPONS & AMMO
+		"rhs_weap_m249_pip_ris",
 		"rhs_weap_m240B",
-		"rhs_weap_m240G"
+        "rhs_weap_m240G"
 		];
 
 		Private _SQDAT = [
@@ -549,24 +417,27 @@ roleArsenal = {
 		"rhs_weap_M136_hedp"
 		];
 
-		Private _SQDAST = [
-		"ACE_bloodIV_500",
-		"ACE_bloodIV_250",
-		"ACE_bloodIV"
+		Private _SQDGREN = [
+		//M203
+		"rhs_weap_M320",
+		"rhs_weap_m4a1_carryhandle_m203",
+		"rhs_weap_m4a1_m203",
+		"rhs_weap_m4a1_m203s_d"
+
 		];
 
 		Private _BANSHEE = [
 		// MISK
 		"ACE_TacticalLadder_Pack",
 		// VESTS
-		"rhsusf_spcs_ocp_medic",
-		"rhsusf_iotv_ocp_Medic",
+		"UK3CB_UN_B_V_6b23_medic",
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_whip_ocp",
 		"tfw_ilbe_blade_ocp",
 		// Misc
 		"ACE_surgicalKit",
+		"adv_aceCPR_AED",
 		"ACE_personalAidKit",
 		"ACE_adenosine",
 		"ACE_bloodIV_500",
@@ -591,8 +462,7 @@ roleArsenal = {
 		"H_PilotHelmetFighter_B",
 		"H_CrewHelmetHeli_B",
 		// UNIFORMS
-		"U_B_HeliPilotCoveralls",
-		"U_B_PilotCoveralls",
+		"UK3CB_UN_B_U_H_Pilot_TTSKO",
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
@@ -610,7 +480,10 @@ roleArsenal = {
 		"rhsusf_cvc_alt_helmet",
 		"rhsusf_cvc_ess",
 		// VESTS
-		"rhsusf_spcs_ocp_crewman",
+		"UK3CB_UN_B_V_6b23_ml_crewofficer",
+        "UK3CB_UN_B_V_6b23_ml_crew",
+        "UK3CB_UN_B_U_CrewUniform_TTSKO",
+
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
@@ -626,8 +499,9 @@ roleArsenal = {
 		"rhsusf_cvc_alt_helmet",
 		"rhsusf_cvc_ess",
 		// VESTS
-		"rhsusf_iotv_ocp_Repair",
-		"rhsusf_spcs_ocp_crewman",
+		"UK3CB_UN_B_V_6b23_ml_crew",
+    	"UK3CB_UN_B_U_CrewUniform_TTSKO",
+
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
@@ -662,14 +536,8 @@ roleArsenal = {
 	  case "CO": {
 	    _GearToAdd = _DefaultGear + _CO;
 	  };
-	  case "XO": {
-	    _GearToAdd = _DefaultGear + _XO;
-	  };
 	  case "PLTCO": {
 	    _GearToAdd = _DefaultGear + _PLTCO;
-	  };
-	  case "PLTXO": {
-	    _GearToAdd = _DefaultGear + _PLTXO;
 	  };
 	  case "PLTJFO": {
 	    _GearToAdd = _DefaultGear + _PLTJFO;
@@ -689,14 +557,8 @@ roleArsenal = {
 	  case "SQDAUTORIFLE": {
 	    _GearToAdd = _DefaultGear + _SQDAUTORIFLE;
 	  };
-	  case "SQDASTRIFLE": {
-	    _GearToAdd = _DefaultGear + _SQDASTRIFLE;
-	  };
-	  case "SQDMCHNGNR": {
-	    _GearToAdd = _DefaultGear + _SQDMCHNGNR;
-	  };
-	  case "SQDAST": {
-	    _GearToAdd = _DefaultGear + _SQDAST;
+	  case "SQDGREN": {
+	    _GearToAdd = _DefaultGear + _SQDGREN;
 	  };
 	  case "BANSHEE": {
 	    _GearToAdd = _DefaultGear + _BANSHEE;

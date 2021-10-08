@@ -1,10 +1,3 @@
-
-WHITELISTED = [
-    // MANAGER
-    "76561198047333011" //Tetlys
-];
-
-
 btc_map_mapIllumination = ace_map_mapIllumination;
 if !(isNil "btc_custom_loc") then {
     {
@@ -15,12 +8,27 @@ if !(isNil "btc_custom_loc") then {
 };
 btc_intro_done = [] spawn btc_respawn_fnc_intro;
 
+WHITELISTED = [
+    // MANAGER
+    "76561198047333011", // Tetlys
+    "76561198037625563", // Frank
+    "76561198076288121", // Anddy
+    "76561197992739622", // Paladin
+    "76561198277806612", // Cami
+    "76561198033215112", // TCAS
+    "76561198143711716" // Nebula
+];
+
+if (player getVariable ["Reserved", false]) then {
+        if !(getplayerUID player in WHITELISTED) then {"end1" call BIS_fnc_endMission;};
+    };
+
 [{!isNull player}, {
     [] call compileScript ["core\doc.sqf"];
 
     btc_respawn_marker setMarkerPosLocal player;
     player addRating 9999;
-    ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+    //["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
     [player] call btc_eh_fnc_player;
 
@@ -30,10 +38,6 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
     };
     [] call btc_int_fnc_add_actions;
     [] call btc_int_fnc_shortcuts;
-
-    if (player getVariable ["Reserved", false]) then {
-        if !(getplayerUID player in WHITELISTED) then {"end1" call BIS_fnc_endMission;};
-    };
 
     if (player getVariable ["interpreter", false]) then {
         player createDiarySubject ["btc_diarylog", localize "STR_BTC_HAM_CON_INFO_ASKHIDEOUT_DIARYLOG", '\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa'];

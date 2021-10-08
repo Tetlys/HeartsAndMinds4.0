@@ -57,9 +57,7 @@ ResupplyRoleDescriptionToSquadFlags = [
         ["FlagName", "JFO"],
         ["SquadNames",
             [
-                "Assassin 1-8",
-                "Assassin 2-8",
-                "Phantom JTAC"
+                "FAC"
             ]
         ]
     ],
@@ -67,7 +65,7 @@ ResupplyRoleDescriptionToSquadFlags = [
         ["FlagName", "FAC"],
         ["SquadNames",
             [
-                "Assassin 8"
+                "JTAC"
             ]
         ]
     ],
@@ -75,9 +73,9 @@ ResupplyRoleDescriptionToSquadFlags = [
         ["FlagName", "RCN"],
         ["SquadNames",
             [
-                "Phantom 1",
-                "Odin 6",
-                "Odin 7"
+                "Admin 6",
+                "Admin 7",
+                "Admin 8"
             ]
         ]
     ],
@@ -85,14 +83,9 @@ ResupplyRoleDescriptionToSquadFlags = [
         ["FlagName", "GI"],
         ["SquadNames",
             [
-                "Assassin 1-1",
-                "Assassin 1-2",
-                "Assassin 1-3",
-                "Assassin 2-1",
-                "Assassin 2-2",
-                "Assassin 2-3",
-                "Assassin 3-1",
-                "Assassin 3-2"
+                "Alpha",
+                "Bravo",
+                "Charlie"
             ]
         ]
     ],
@@ -100,9 +93,7 @@ ResupplyRoleDescriptionToSquadFlags = [
         ["FlagName", "WPSQ"],
         ["SquadNames",
             [
-                "Assassin 1-4",
-                "Assassin 2-4",
-                "Assassin 3-3"
+                ""
             ]
         ]
     ],
@@ -110,9 +101,7 @@ ResupplyRoleDescriptionToSquadFlags = [
         ["FlagName", "PLHQ"],
         ["SquadNames",
             [
-                "Assassin 1 HQ",
-                "Assassin 2 HQ",
-                "Assassin 3 HQ"
+                "Platoon Commander"
             ]
         ]
     ],
@@ -120,7 +109,7 @@ ResupplyRoleDescriptionToSquadFlags = [
         ["FlagName", "CHQ"],
         ["SquadNames",
             [
-                "Assassin HQ"
+                "Company Commander"
             ]
         ]
     ],
@@ -128,8 +117,8 @@ ResupplyRoleDescriptionToSquadFlags = [
         ["FlagName", "LOGI"],
         ["SquadNames",
             [
-                "Ogre 1",
-                "Ogre 2"
+                "Logistics 1",
+                "Logistics 2"
             ]
         ]
     ],
@@ -137,7 +126,9 @@ ResupplyRoleDescriptionToSquadFlags = [
         ["FlagName", "AIR"],
         ["SquadNames",
             [
-                "JAC"
+                "JAC 1",
+                "JAC 2",
+                "JAC 3"
             ]
         ]
     ],
@@ -145,7 +136,7 @@ ResupplyRoleDescriptionToSquadFlags = [
         ["FlagName", "PJ"],
         ["SquadNames",
             [
-                "Banshee"
+                "Medevac"
             ]
         ]
     ],
@@ -153,7 +144,7 @@ ResupplyRoleDescriptionToSquadFlags = [
         ["FlagName", "IDF"],
         ["SquadNames",
             [
-                "Savage"
+                "Battery"
             ]
         ]
     ]

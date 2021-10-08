@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_task_fnc_setState
+Function: btc_fnc_task_setState
 
 Description:
     Set state to task and subtasks (children).
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        ["btc_dft", "CANCELED"] call btc_task_fnc_setState;
+        ["btc_dft", "CANCELED"] call btc_fnc_task_setState;
     (end)
 
 Author:
@@ -30,7 +30,7 @@ params [
 private _subTasks = _task call BIS_fnc_taskChildren;
 if (_subTasks isEqualTo []) then {
     private _taskParent = _task call BIS_fnc_taskParent;
-    if (_taskParent isNotEqualTo "") then {
+    if !(_taskParent isEqualTo "") then {
         _task = _taskParent;
         _subTasks = _task call BIS_fnc_taskChildren;
     };

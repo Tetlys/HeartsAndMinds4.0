@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_db_fnc_loadCargo
+Function: btc_fnc_db_loadCargo
 
 Description:
     Load ACE cargo and inventory of a vehicle/container.
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_db_fnc_loadCargo;
+        _result = [] call btc_fnc_db_loadCargo;
     (end)
 
 Author:
@@ -27,34 +27,30 @@ Author:
 
     //handle cargo
     {
-        _x params ["_type", "_magClass", "_inventory",
-            ["_isContaminated", false, [false]],
-            ["_dogtagDataTaken", [], [[]]],
-            ["_uid", "", [""]]
-        ];
+        _x params ["_type", "_magClass", "_cargo_obj", ["_isContaminated", false, [false]]];
 
         private _l = createVehicle [_type, getPosATL _obj, [], 0, "CAN_COLLIDE"];
-        [_l] call btc_log_fnc_init;
+        [_l] call btc_fnc_log_init;
         private _isloaded = [_l, _obj, false] call ace_cargo_fnc_loadItem;
         if (btc_debug_log) then {
-            [format ["Object loaded: %1 in veh/container %2 IsLoaded: %3", _l, _obj, _isloaded], __FILE__, [false]] call btc_debug_fnc_message;
+            [format ["Object loaded: %1 in veh/container %2 IsLoaded: %3", _l, _obj, _isloaded], __FILE__, [false]] call btc_fnc_debug_message;
         };
 
         if (_magClass != "") then {
             _l setVariable ["ace_rearm_magazineClass", _magClass, true]
         };
 
-        [_l, _inventory] call btc_log_fnc_inventorySet;
+        [_l, _cargo_obj] call btc_fnc_log_setCargo;
 
         if (_isContaminated) then {
             btc_chem_contaminated pushBack _l;
             publicVariable "btc_chem_contaminated";
         };
-
-        [_l, _dogtagDataTaken] call btc_body_fnc_dogtagSet;
-        _l setVariable ["btc_UID", _uid];
+        if (unitIsUAV _l) then {
+            createVehicleCrew _l;
+        };
     } forEach _cargo;
 
     //set inventory content for weapons, magazines and items
-    [_obj, _inventory] call btc_log_fnc_inventorySet;
+    [_obj, _inventory] call btc_fnc_log_setCargo;
 }, _this] call CBA_fnc_execNextFrame;

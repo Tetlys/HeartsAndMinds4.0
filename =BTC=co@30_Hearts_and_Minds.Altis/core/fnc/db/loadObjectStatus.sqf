@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_db_fnc_loadObjectStatus
+Function: btc_fnc_db_loadObjectStatus
 
 Description:
     Load object status like ACE cargo, inventory and position.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_db_fnc_loadObjectStatus;
+        _result = [] call btc_fnc_db_loadObjectStatus;
     (end)
 
 Author:
@@ -25,22 +25,19 @@ params [
 ];
 _object_data params [
     "_type",
-    "_pos",
+    "_posWorld",
     "_dir",
     "_magClass",
     "_cargo",
     "_inventory",
     "_vectorPos",
-    ["_isContaminated", false, [false]],
-    ["_dogtagDataTaken", [], [[]]],
-    ["_uid", "", [""]],
-    ["_flagTexture", "", [""]]
+    ["_isContaminated", false, [false]]
 ];
 
-private _obj = createVehicle [_type, ASLToATL _pos, [], 0, "CAN_COLLIDE"];
+private _obj = _type createVehicle _posWorld;
 
 _obj setDir _dir;
-_obj setPosASL _pos;
+_obj setPosWorld _posWorld;
 _obj setVectorDirAndUp _vectorPos;
 
 if (_isContaminated) then {
@@ -48,16 +45,10 @@ if (_isContaminated) then {
         publicVariable "btc_chem_contaminated";
     };
 };
-if (_magClass isNotEqualTo "") then {_obj setVariable ["ace_rearm_magazineClass", _magClass, true]};
-if (unitIsUAV _obj) then {
+if !(_magClass isEqualTo "") then {_obj setVariable ["ace_rearm_magazineClass", _magClass, true]};
+if (getNumber(configFile >> "CfgVehicles" >> _type >> "isUav") isEqualTo 1) then {
     createVehicleCrew _obj;
 };
-if (_flagTexture isNotEqualTo "") then {
-    _obj forceFlagTexture _flagTexture;
-};
 
-[_obj, _dogtagDataTaken] call btc_body_fnc_dogtagSet;
-_obj setVariable ["btc_UID", _uid];
-
-[_obj] call btc_log_fnc_init;
-[_obj, _cargo, _inventory] call btc_db_fnc_loadCargo;
+[_obj] call btc_fnc_log_init;
+[_obj, _cargo, _inventory] call btc_fnc_db_loadCargo;

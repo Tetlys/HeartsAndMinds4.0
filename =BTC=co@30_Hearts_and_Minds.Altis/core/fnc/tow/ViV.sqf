@@ -1,9 +1,9 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_tow_fnc_ViV
+Function: btc_fnc_tow_ViV
 
 Description:
-    Move selected vehicle in the tower cargo with an hiden vehicle.
+    Move selected vehicle in the tower cargo with a hidden vehicle.
 
 Parameters:
     _vehicleSelected - Vehicle to store in the tower cargo. [Object]
@@ -13,7 +13,7 @@ Returns:
 
 Examples:
     (begin example)
-        [btc_tow_vehicleSelected, cursorObject] call btc_tow_fnc_ViV;
+        [btc_tow_vehicleSelected, cursorObject] call btc_fnc_tow_ViV;
     (end)
 
 Author:

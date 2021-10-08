@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_tag_fnc_create
+Function: btc_fnc_tag_create
 
 Description:
     Create tag stored in city namespace under "data_tags".
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_tag_fnc_create;
+        _result = [] call btc_fnc_tag_create;
     (end)
 
 Author:

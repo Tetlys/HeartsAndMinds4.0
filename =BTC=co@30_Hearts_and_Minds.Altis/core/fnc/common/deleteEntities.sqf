@@ -40,7 +40,7 @@ Author:
         _entities pushBack _entity;
     };
 
-    if (_entities isNotEqualTo []) exitWith {
+    if !(_entities isEqualTo []) exitWith {
         _this call btc_fnc_deleteEntities;
     };
 }, _this, 1] call CBA_fnc_waitAndExecute;

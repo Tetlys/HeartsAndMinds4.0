@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_lift_fnc_destroyRopes
+Function: btc_fnc_lift_destroyRopes
 
 Description:
     Fill me when you edit me !
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_lift_fnc_destroyRopes;
+        _result = [] call btc_fnc_lift_destroyRopes;
     (end)
 
 Author:
@@ -31,7 +31,7 @@ btc_lifted = false;
 player removeAction btc_lift_action;
 player removeAction btc_lift_action_hud;
 
-if (ropes _heli isNotEqualTo []) then {
+if !(ropes _heli isEqualTo []) then {
     {
         ropeDestroy _x;
     } forEach ropes _heli;

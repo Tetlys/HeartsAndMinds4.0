@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_info_fnc_troops
+Function: btc_fnc_info_troops
 
 Description:
     Show troops information.
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_info_fnc_troops;
+        [] call btc_fnc_info_troops;
     (end)
 
 Author:

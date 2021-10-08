@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fob_fnc_redeployCheck
+Function: btc_fnc_fob_redeployCheck
 
 Description:
     Check if player can redeploy.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_fob_fnc_redeployCheck;
+        [] call btc_fnc_fob_redeployCheck;
     (end)
 
 Author:

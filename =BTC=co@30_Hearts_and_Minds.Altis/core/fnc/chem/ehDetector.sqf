@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_chem_fnc_ehDetector
+Function: btc_fnc_chem_ehDetector
 
 Description:
     Trigger the screen update of the chemical detector when it is opened.
@@ -11,7 +11,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_chem_fnc_ehDetector;
+        [] call btc_fnc_chem_ehDetector;
     (end)
 
 Author:
@@ -33,7 +33,9 @@ Author:
             private _ui = uiNamespace getVariable "RscWeaponChemicalDetector";
             private _obj = _ui displayCtrl 101;
 
-            [{visibleWatch}, btc_chem_fnc_updateDetector, [_obj]] call CBA_fnc_waitUntilAndExecute;
+            [{visibleWatch}, {
+                _this call btc_fnc_chem_updateDetector;
+            }, [_obj]] call CBA_fnc_waitUntilAndExecute;
         };
     }];
 }] call CBA_fnc_waitUntilAndExecute;

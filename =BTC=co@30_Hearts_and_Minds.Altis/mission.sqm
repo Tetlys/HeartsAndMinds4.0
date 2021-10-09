@@ -44499,7 +44499,7 @@ class Mission
 				name="Gate_02";
 			};
 			id=13482;
-			type="Land_zavora_2_a1_90_offset";
+			type="Land_BarGate_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44539,7 +44539,7 @@ class Mission
 				name="Gate_01";
 			};
 			id=13483;
-			type="Land_Zavora_2_a1";
+			type="Land_BarGate_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44579,7 +44579,7 @@ class Mission
 				name="Gate_06";
 			};
 			id=13485;
-			type="Land_Zavora_2_a1";
+			type="Land_BarGate_F";
 			atlOffset=0.0019989014;
 			class CustomAttributes
 			{
@@ -44836,7 +44836,7 @@ class Mission
 				name="Gate_04";
 			};
 			id=13527;
-			type="Land_Zavora_2_a1";
+			type="Land_BarGate_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44876,7 +44876,7 @@ class Mission
 				name="Gate_05";
 			};
 			id=13528;
-			type="Land_Zavora_2_a1";
+			type="Land_BarGate_F";
 			class CustomAttributes
 			{
 				class Attribute0

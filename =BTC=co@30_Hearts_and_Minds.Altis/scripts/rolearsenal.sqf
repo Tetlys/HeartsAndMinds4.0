@@ -205,7 +205,6 @@ roleArsenal = {
 			"rhs_weap_g36kv_ag36",
 			"UK3CB_G3SG1_RIS",
 			"UK3CB_G3KA4",
-			"UK3CB_G3KA4_GL",
 			"UK3CB_MG3_Railed",
 			"rhs_weap_rpk74m_npz",
 			//ammo
@@ -440,6 +439,7 @@ roleArsenal = {
 		"rhs_weap_M320",
 		"rhs_weap_m4a1_carryhandle_m203",
 		"rhs_weap_m4a1_m203",
+		"UK3CB_G3KA4_GL",
 		"rhs_weap_m4a1_m203s_d"
 
 		];

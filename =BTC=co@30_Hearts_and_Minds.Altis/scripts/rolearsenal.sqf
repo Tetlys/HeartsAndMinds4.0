@@ -401,7 +401,6 @@ roleArsenal = {
 		"rhs_weap_m4a1_m203s_d",
 		"rhs_ec200_sand_mag",
 		"ACE_DefusalKit",
-		"MineDetector",
 		"ACE_Clacker",
 		"ACE_M26_Clacker",
 		//Grenades
@@ -576,7 +575,6 @@ roleArsenal = {
 		"SLAMDirectionalMine_Wire_Mag",
 		"rhs_ec400_mag",
 		"rhs_ec200_sand_mag",
-		"MineDetector",
 		"ACE_DefusalKit"
 		];
 

@@ -65,7 +65,7 @@ for "_id" from 0 to (count _locations - 1) do {
 
         
         //if you want a safe area
-        if ((getMarkerPos "SAFEAREA") inArea [_position, 700, 700, 0, false]) exitWith {};
+        if ((getMarkerPos "SAFEAREA") inArea [_position, 1000, 1000, 0, false]) exitWith {};
         
 
         private _city = [_position, _type, _name, _cachingRadius, false, _id] call btc_city_fnc_create;

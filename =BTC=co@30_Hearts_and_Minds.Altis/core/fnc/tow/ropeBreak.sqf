@@ -25,7 +25,7 @@ _thisArgsCBA params ["_vehicleSelected", "_ropes"];
 _tower removeEventHandler ["RopeBreak", _thisId];
 
 _ropes apply {deleteVehicle _x};
-deTach _vehicleSelected;
+detach _vehicleSelected;
 
 [_vehicleSelected, [0, 0, 0.01]] remoteExecCall ["setVelocity", _vehicleSelected];
 [_tower, getMass _tower - (getMass _vehicleSelected)/1.5] remoteExecCall ["setMass", _tower];

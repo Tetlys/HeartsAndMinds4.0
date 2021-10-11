@@ -143,7 +143,6 @@ roleArsenal = {
             "rhssaf_helmet_m97_nostrap_blue_tan_ess_bare",
             "rhsgref_helmet_pasgt_un",
             "rhsgref_ssh68_un",
-
 		// UNIFORMS
             "UK3CB_UN_B_U_CombatUniform_TTSKO",
 		// VESTS
@@ -152,7 +151,6 @@ roleArsenal = {
             "UK3CB_UN_B_V_6b23_ML_6sh92_radio",
             "UK3CB_UN_B_V_6b23_ml_6sh92_vog",
             "UK3CB_UN_B_V_6b23_ml_01",
-
 		// BACKPACKS
 			"rhsusf_assault_eagleaiii_ocp",
 			"B_Parachute",
@@ -283,6 +281,7 @@ roleArsenal = {
 			"TFAR_microdagr",
 			"Binocular",
 			"ACE_Vector",
+			"ACE_VMH3",
 			"ACE_NVG_Wide"
 	];
 

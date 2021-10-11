@@ -202,11 +202,8 @@ roleArsenal = {
 			"rhs_weap_aks74n_gp25_npz",
 			"UK3CB_FNFAL_FULL",
 			"rhs_weap_g36kv",
-			"rhs_weap_g36kv_ag36",
 			"UK3CB_G3SG1_RIS",
 			"UK3CB_G3KA4",
-			"UK3CB_MG3_Railed",
-			"rhs_weap_rpk74m_npz",
 			//ammo
 			"1Rnd_HE_Grenade_shell",
 			"rhs_mag_m4009",
@@ -257,6 +254,23 @@ roleArsenal = {
 			"rhsusf_acc_g33_xps3",
 			"rhsusf_acc_g33_xps3_tan",
 			"rhsusf_acc_ardec_m240",
+			"rhs_weap_ak103_npz",
+			"rhs_weap_ak103_gp25_npz" ,
+			"rhs_weap_ak103_zenitco01_b33",
+			"rhs_weap_ak104_npz",
+			"rhs_weap_ak104_zenitco01_b33",
+			"rhs_weap_ak105_npz",
+			"rhs_weap_ak105_zenitco01_b33",
+			"rhs_weap_ak74n_npz",
+			"rhs_weap_ak74n_gp25_npz",
+			"rhs_weap_aks74n_npz",
+			"rhs_weap_aks74n_gp25_npz",
+			"UK3CB_G3_20rnd_762x51_GT",
+			"UK3CB_G3_20rnd_762x51",
+			"UK3CB_G3_20rnd_762x51_G",
+			"UK3CB_G3_50rnd_762x51_GT",
+			"UK3CB_G3_50rnd_762x51",
+			"UK3CB_G3_50rnd_762x51_G",
 			"optic_hamr",
 			"optic_mrco",
 		// Misc
@@ -387,6 +401,7 @@ roleArsenal = {
 		"rhs_weap_m4a1_m203s_d",
 		"rhs_ec200_sand_mag",
 		"ACE_DefusalKit",
+		"MineDetector",
 		"ACE_Clacker",
 		"ACE_M26_Clacker",
 		//Grenades
@@ -424,7 +439,16 @@ roleArsenal = {
 		"rhs_weap_m249_light_L",
 		"rhs_weap_m249_pip_ris",
 		"rhs_weap_m240B",
-        "rhs_weap_m240G"
+		"UK3CB_MG3_100rnd_762x51_GT",
+		"UK3CB_MG3_100rnd_762x51",
+		"UK3CB_MG3_100rnd_762x51_G",
+		"UK3CB_MG3_250rnd_762x51_GT",
+		"UK3CB_MG3_250rnd_762x51_G",
+		"rhs_100Rnd_762x54mmR_7N13",
+		"UK3CB_MG3_Railed",
+		"rhs_weap_rpk74m_npz",
+		"rhs_100Rnd_762x54mmR_green",
+    "rhs_weap_m240G"
 		];
 
 		Private _SQDAT = [
@@ -440,6 +464,20 @@ roleArsenal = {
 		"rhs_weap_m4a1_carryhandle_m203",
 		"rhs_weap_m4a1_m203",
 		"UK3CB_G3KA4_GL",
+		"1Rnd_HE_Grenade_shell",
+		"rhs_mag_m4009",
+		"rhs_mag_m713_Red",
+		"rhs_mag_m714_White",
+		"ACE_HuntIR_M203",
+		"ACE_40mm_Flare_ir",
+		"ACE_40mm_Flare_white",
+		"rhs_weap_g36kv_ag36",
+		"rhs_mag_m4009",
+		"rhs_mag_m713_Red",
+		"rhs_mag_m714_White",
+		"ACE_HuntIR_M203",
+		"ACE_40mm_Flare_ir",
+		"ACE_40mm_Flare_white",
 		"rhs_weap_m4a1_m203s_d"
 
 		];
@@ -538,6 +576,7 @@ roleArsenal = {
 		"SLAMDirectionalMine_Wire_Mag",
 		"rhs_ec400_mag",
 		"rhs_ec200_sand_mag",
+		"MineDetector",
 		"ACE_DefusalKit"
 		];
 

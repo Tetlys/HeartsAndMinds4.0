@@ -227,9 +227,10 @@ ResupplyCrateAllocations = createHashMapFromArray [
     [
         "RCN",
         createHashMapFromArray [
-            ["CrateAllocations", 1],
-            ["SpecialtyAllocations", 0],
-            ["WhitelistedFlags", ["RCNL", "MED"]]
+            ["CrateAllocations", 5],
+            ["SpecialtyAllocations", 5],
+            ["WhitelistedFlags", []],
+            ["Resupplier", true]
         ]
     ],
     [
@@ -436,7 +437,14 @@ ResupplyCrates = createHashMapFromArray [
 					["MRAWS_HEAT_F", 4],
                     ["launch_MRAWS_green_F", 2],
                     ["rhs_fim92_mag", 4],
-                    ["rhs_weap_fim92", 1]
+                    ["rhs_weap_fim92", 1],
+                    ["rhs_weap_igla",1],
+		            ["Titan_AA",2],
+		            ["rhs_mag_9k38_rocket",2],
+		            ["launch_RPG7_F",1],
+		            ["rhs_rpg7_PG7V_mag",2],
+		            ["rhs_rpg7_type69_airburst_mag",2],
+		            ["RPG7_F",1],
                 ]
             ]
         ]

@@ -228,7 +228,7 @@ ResupplyCrateAllocations = createHashMapFromArray [
         "RCN",
         createHashMapFromArray [
             ["CrateAllocations", 5],
-            ["SpecialtyAllocations", 5],
+            ["SpecialtyAllocations", 0],
             ["WhitelistedFlags", []],
             ["Resupplier", true]
         ]
@@ -393,7 +393,11 @@ ResupplyCrates = createHashMapFromArray [
                     ["rhsusf_mag_6Rnd_M433_HEDP", 6],
                     ["rhsusf_mag_6Rnd_M441_HE", 6],
                     ["rhsusf_mag_6Rnd_M583A1_white", 6],
-                    ["rhsusf_mag_6Rnd_M714_white", 6]
+                    ["rhsusf_mag_6Rnd_M714_white", 6],
+                    ["launch_RPG7_F",1],
+		            ["rhs_rpg7_PG7V_mag",2],
+		            ["rhs_rpg7_type69_airburst_mag",2],
+		            ["RPG7_F",1]
                 ]
             ]
         ]
@@ -444,7 +448,7 @@ ResupplyCrates = createHashMapFromArray [
 		            ["launch_RPG7_F",1],
 		            ["rhs_rpg7_PG7V_mag",2],
 		            ["rhs_rpg7_type69_airburst_mag",2],
-		            ["RPG7_F",1],
+		            ["RPG7_F",1]
                 ]
             ]
         ]

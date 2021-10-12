@@ -304,7 +304,6 @@ roleArsenal = {
 			"UK3CB_G3_50rnd_762x51_GT",
 			"UK3CB_G3_50rnd_762x51",
 			"UK3CB_G3_50rnd_762x51_G",
-			"MineDetector",
 			"optic_hamr",
 			"optic_mrco",
 		// Misc
@@ -435,7 +434,6 @@ roleArsenal = {
 		"rhs_weap_m4a1_m203s_d",
 		"rhs_ec200_sand_mag",
 		"ACE_DefusalKit",
-		"MineDetector",
 		"ACE_Clacker",
 		"ACE_M26_Clacker",
 		//Grenades
@@ -497,16 +495,6 @@ roleArsenal = {
 		// WEAPONS & AMMO
 		"rhs_weap_M136",
 		"B_Carryall_mcamo",
-		"launch_MRAWS_green_F",
-		"MRAWS_HEAT_F",
-		"MRAWS_HEAT55_F",
-		"rhs_weap_igla",
-		"Titan_AA",
-		"rhs_mag_9k38_rocket",
-		"launch_RPG7_F",
-		"rhs_rpg7_PG7V_mag",
-		"rhs_rpg7_type69_airburst_mag",
-		"RPG7_F",
 		"rhs_weap_M136_hedp"
 		];
 

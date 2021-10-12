@@ -64,7 +64,7 @@ private _rope1 = ropeCreate [_tower, _model_rear_tower, _helper, [-0.4, 0, 0]];
 private _rope2 = ropeCreate [_tower, _model_rear_tower, _helper, [0.4, 0, 0]];
 
 [_tower, "RopeBreak", {
-    [_this, _thisArgs] call btc_fnc_tow_ropeBreak;
+    [_this, _thisArgs] call btc_tow_fnc_ropeBreak;
     deleteVehicle (_thisArgs select 2)
 },
     [_vehicleSelected, [_rope1, _rope2], _helper]

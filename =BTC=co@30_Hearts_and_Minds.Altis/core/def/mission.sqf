@@ -395,7 +395,7 @@ btc_fob_mat = "Land_Misc_Cargo1B";
 btc_fob_structure = "Land_Cargo_HQ_V1_F";
 btc_fob_flag = "Flag_NATO_F";
 btc_fob_id = 0;
-btc_fob_minDistance = 1500;
+btc_fob_minDistance = 1000;
 
 //IED
 btc_type_ieds_ace = ["IEDLandBig_F", "IEDLandSmall_F"];
@@ -652,7 +652,7 @@ switch (_p_en) do {
 };
 
 //Chem
-btc_chem_range = 3;
+btc_chem_range = 4;
 
 //Spect
 btc_spect_range = 1000;
@@ -666,8 +666,8 @@ btc_rep_bonus_hideout = 200;
 btc_rep_bonus_mil_killed = 0.25;
 btc_rep_bonus_IEDCleanUp = 10;
 btc_rep_bonus_removeTag = 3;
-btc_rep_bonus_removeTagLetter = 0.5;
-btc_rep_bonus_foodGive = 0.5;
+btc_rep_bonus_removeTagLetter = 1;
+btc_rep_bonus_foodGive = 1;
 
 btc_rep_malus_civ_hd = - 2;
 btc_rep_malus_animal_hd = - 1;

@@ -152,8 +152,11 @@ roleArsenal = {
             "UK3CB_UN_B_V_6b23_ml_6sh92_vog",
             "UK3CB_UN_B_V_6b23_ml_01",
 		// BACKPACKS
-			"rhsusf_assault_eagleaiii_ocp",
 			"B_Parachute",
+			"UK3CB_CW_US_B_LATE_B_RIF",
+			"UK3CB_CW_US_B_LATE_B_RIF_02",
+			"UK3CB_CW_US_B_LATE_B_RIF_03",
+
 		// WEAPONS & AMMO
 			// Smokes Chems etc.
 			"ACE_IR_Strobe_Item",
@@ -364,6 +367,7 @@ roleArsenal = {
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_blade_ocp",
 		"B_UAV_01_backpack_F",
+		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		// Misc
 		"ACE_SpottingScope",
 		"tfw_rf3080Item",
@@ -380,6 +384,7 @@ roleArsenal = {
 		"tfw_ilbe_whip_ocp",
 		"tfw_ilbe_blade_ocp",
 		"B_UAV_01_backpack_F",
+		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		// Misc
 		"ACE_SpottingScope",
 		"tfw_rf3080Item",
@@ -397,6 +402,7 @@ roleArsenal = {
 		"tfw_ilbe_whip_ocp",
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_blade_ocp",
+		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		// Misc
 		"ACE_SpottingScope",
 		"tfw_rf3080Item",
@@ -413,6 +419,7 @@ roleArsenal = {
 		"tfw_ilbe_whip_ocp",
 		"tfw_ilbe_blade_ocp",
 		"TFAR_rt1523g_big",
+		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		//MISC
 		"ACE_VMH3",
 		"ACE_HuntIR_monitor",
@@ -427,6 +434,7 @@ roleArsenal = {
 		"tfw_ilbe_whip_ocp",
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_blade_ocp",
+		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		//M203
 		"rhs_weap_M320",
 		"rhs_weap_m4a1_carryhandle_m203",
@@ -542,6 +550,8 @@ roleArsenal = {
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_whip_ocp",
 		"tfw_ilbe_blade_ocp",
+		// BACKPACKS
+		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		// Misc
 		"ACE_surgicalKit",
 		"adv_aceCPR_AED",
@@ -576,6 +586,7 @@ roleArsenal = {
 		"tfw_ilbe_whip_ocp",
 		"tfw_ilbe_blade_ocp",
 		"ToolKit",
+		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		// WEAPONS & AMMO
 		"B_UavTerminal",
 		"ACE_rope18"
@@ -595,6 +606,7 @@ roleArsenal = {
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_whip_ocp",
+		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		"tfw_ilbe_blade_ocp",
 		"ToolKit",
 		"ACE_VMH3"
@@ -614,6 +626,7 @@ roleArsenal = {
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_whip_ocp",
 		"tfw_ilbe_blade_ocp",
+		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		"ToolKit",
 		"ACE_VMH3",
 		"ACE_Clacker",
@@ -634,6 +647,7 @@ roleArsenal = {
 			"TFAR_rt1523g",
 			"TFAR_rt1523g_big",
 			"tfw_ilbe_whip_ocp",
+			"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 			"tfw_ilbe_blade_ocp",
 			"ACE_artilleryTable"
 		];

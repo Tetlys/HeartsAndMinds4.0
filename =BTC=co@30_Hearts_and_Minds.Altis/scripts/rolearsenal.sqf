@@ -421,6 +421,7 @@ roleArsenal = {
 		"tfw_ilbe_whip_ocp",
 		"tfw_ilbe_blade_ocp",
 		"TFAR_rt1523g_big",
+		"ACE_TacticalLadder_Pack",
 		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		//MISC
 		"ACE_VMH3",

@@ -367,6 +367,7 @@ roleArsenal = {
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_blade_ocp",
 		"B_UAV_01_backpack_F",
+		"ACE_UAVBattery",
 		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		// Misc
 		"ACE_SpottingScope",
@@ -384,6 +385,7 @@ roleArsenal = {
 		"tfw_ilbe_whip_ocp",
 		"tfw_ilbe_blade_ocp",
 		"B_UAV_01_backpack_F",
+		"ACE_UAVBattery",
 		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		// Misc
 		"ACE_SpottingScope",
@@ -496,14 +498,38 @@ roleArsenal = {
 		"UK3CB_MG3_Railed",
 		"rhs_weap_rpk74m_npz",
 		"rhs_100Rnd_762x54mmR_green",
-    "rhs_weap_m240G"
+    	"rhs_weap_m240G"
 		];
 
 		Private _SQDAT = [
 		// WEAPONS & AMMO
 		"rhs_weap_M136",
 		"B_Carryall_mcamo",
-		"rhs_weap_M136_hedp"
+		"rhs_weap_M136_hedp",
+		"rhs_weap_M136_hp",
+		"rhs_fgm148_magazine_AT",
+		"rhs_weap_fgm148",
+		"MRAWS_HEAT55_F",
+		"MRAWS_HEAT_F",
+		"launch_MRAWS_green_F",
+		"rhs_fim92_mag",
+		"rhs_mag_smaw_HEDP",
+		"rhs_mag_smaw_HEAA",
+		"rhs_weap_smaw",
+		"rhs_weap_optic_smaw",
+		"rhs_weap_fim92",
+		"rhs_weap_igla",
+		"Titan_AA",
+		"rhs_mag_9k38_rocket",
+		"launch_RPG7_F",
+		"rhs_weap_m32", 1],
+		"rhsusf_mag_6Rnd_M433_HEDP",
+		"rhsusf_mag_6Rnd_M441_HE",
+		"rhsusf_mag_6Rnd_M583A1_white",
+		"rhsusf_mag_6Rnd_M714_white",
+		"rhs_rpg7_PG7V_mag",
+		"rhs_rpg7_type69_airburst_mag",
+		"RPG7_F"
 		];
 
 		Private _SQDGREN = [
@@ -649,6 +675,8 @@ roleArsenal = {
 			"tfw_ilbe_whip_ocp",
 			"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 			"tfw_ilbe_blade_ocp",
+			"ACE_1Rnd_82mm_Mo_Illum",
+			"ACE_1Rnd_82mm_Mo_HE",
 			"ACE_artilleryTable"
 		];
 

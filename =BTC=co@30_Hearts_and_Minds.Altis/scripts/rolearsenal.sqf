@@ -360,7 +360,6 @@ roleArsenal = {
         "UK3CB_UN_B_H_Beret",
         "UK3CB_UN_B_H_Beret_Off",
         "rhssaf_beret_blue_un",
-
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"tfw_ilbe_whip_ocp",
@@ -523,7 +522,7 @@ roleArsenal = {
 		"Titan_AA",
 		"rhs_mag_9k38_rocket",
 		"launch_RPG7_F",
-		"rhs_weap_m32", 1],
+		"rhs_weap_m32",
 		"rhsusf_mag_6Rnd_M433_HEDP",
 		"rhsusf_mag_6Rnd_M441_HE",
 		"rhsusf_mag_6Rnd_M583A1_white",
@@ -628,7 +627,6 @@ roleArsenal = {
 		"UK3CB_UN_B_V_6b23_ml_crewofficer",
         "UK3CB_UN_B_V_6b23_ml_crew",
         "UK3CB_UN_B_U_CrewUniform_TTSKO",
-
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
@@ -646,8 +644,7 @@ roleArsenal = {
 		"rhsusf_cvc_ess",
 		// VESTS
 		"UK3CB_UN_B_V_6b23_ml_crew",
-    "UK3CB_UN_B_U_CrewUniform_TTSKO",
-
+    	"UK3CB_UN_B_U_CrewUniform_TTSKO",
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
@@ -671,14 +668,14 @@ roleArsenal = {
 		];
 
 		Private _SAVAGE = [
-			"TFAR_rt1523g",
-			"TFAR_rt1523g_big",
-			"tfw_ilbe_whip_ocp",
-			"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
-			"tfw_ilbe_blade_ocp",
-			"ACE_1Rnd_82mm_Mo_Illum",
-			"ACE_1Rnd_82mm_Mo_HE",
-			"ACE_artilleryTable"
+		"TFAR_rt1523g",
+		"TFAR_rt1523g_big",
+		"tfw_ilbe_whip_ocp",
+		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
+		"tfw_ilbe_blade_ocp",
+		"ACE_1Rnd_82mm_Mo_Illum",
+		"ACE_1Rnd_82mm_Mo_HE",
+		"ACE_artilleryTable"
 		];
 
 

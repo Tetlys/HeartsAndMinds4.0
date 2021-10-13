@@ -48,3 +48,5 @@ if (
 ) then {
     [_obj, round ((sizeOf _type)/1.3)] call ace_cargo_fnc_setSpace;
 };
+
+if (_type == "B_Slingload_01_Cargo_F") then {[_obj, 50] call ace_cargo_fnc_setSpace;};

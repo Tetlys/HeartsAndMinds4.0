@@ -27,19 +27,18 @@ roleArsenal = {
 
 	// Command
 
-	if (_UnitRole == "Company Commander @ Company HQ") then
+	if (_UnitRole == "Company Commander @ CROSSROADS") then
 	{_Role = "CO"};
 
 
-	if (_UnitRole == "Platoon Commander @ Platoon HQ") then
+	if (_UnitRole == "Platoon Commander @ HITMAN") then
 	{_Role = "PLTCO"};
 
 	if ((_UnitRole == "Assassin 1-7 Platoon Sergeant@Assassin 1 HQ")
 	or (_UnitRole == "Assassin 2-7 Platoon Sergeant@Assassin 2 HQ")) then
 	{_Role = "PLTXO"};
 
-	if ((_UnitRole == "JTAC  @ Company HQ")
-	or (_UnitRole == "Joing Air Command FAC @ Company HQ")) then
+	if (_UnitRole == "JTAC  @ SUNRAY") then
 	{_Role = "PLTJFO"};
 
 	// Squad Leaders
@@ -99,9 +98,9 @@ roleArsenal = {
 
 	// Air Command
 
-	if ((_UnitRole == "JAC 1 Pilot@Joint Air Command 1")
-	or (_UnitRole == "JAC 2 Pilot@Joint Air Command 1")
-	or (_UnitRole == "JAC 3 Pilot@Joint Air Command 3")) then
+	if ((_UnitRole == "STALKER 1 Pilot@Joint Air Command 1")
+	or (_UnitRole == "STALKER 2 Pilot@Joint Air Command 2")
+	or (_UnitRole == "STALKER 3 Pilot @Joint Air Command 3")) then
 	{_Role = "JAC"};
 
 	// Butcher
@@ -116,8 +115,8 @@ roleArsenal = {
 
 	// Ogre
 
-	if ((_UnitRole == "Logistics Team Leader @ Logistics 1")
-	or (_UnitRole == "Logistics Team Leader @ Logistics 2")
+	if ((_UnitRole == "Logistics Team Leader @ OGRE 1")
+	or (_UnitRole == "Logistics Team Leader @ OGRE 2")
 	or (_UnitRole == "Logistics Engineer")) then
 	{_Role = "OGRE"};
 
@@ -638,6 +637,13 @@ roleArsenal = {
 		];
 
 		Private _OGRE = [
+		//DIVESTUFF
+		"arifle_SDAR_F",
+		"20Rnd_556x45_UW_mag",
+		"B_Assault_Diver",
+		"U_B_Wetsuit",
+		"V_RebreatherB",
+		"G_B_Diving",
 		// Headgear
 		"rhsusf_cvc_helmet",
 		"rhsusf_cvc_alt_helmet",

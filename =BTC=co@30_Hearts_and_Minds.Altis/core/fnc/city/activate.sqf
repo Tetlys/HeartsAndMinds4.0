@@ -158,7 +158,7 @@ if (_data_units isNotEqualTo []) then {
             case "Airport" : {6};
             default {2};
         });
-        [+_houses, round (_p_civ_group_ratio * _numberOfCivi * 5), _city] call btc_civ_fnc_populate;
+        [+_houses, round (_p_civ_group_ratio * _numberOfCivi), _city] call btc_civ_fnc_populate;
     };
 };
 if (btc_p_animals_group_ratio > 0) then {

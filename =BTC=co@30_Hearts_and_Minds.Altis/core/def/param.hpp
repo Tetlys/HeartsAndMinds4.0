@@ -141,31 +141,31 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ENEMY_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 30;
+        default = 50;
     };
     class btc_p_mil_static_group_ratio { // Enemy static density:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ENEMY_STATIC_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 40;
+        default = 50;
     };
     class btc_p_civ_group_ratio { // Civilian density:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_CIVILIAN_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 100;
+        default = 70;
     };
     class btc_p_animals_group_ratio { // Animal density:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ANIMALS_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 10;
+        default = 0;
     };
     class btc_p_wp_houseDensity { // Density of military in house:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_MIL_INHOUSE_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 40;
+        default = 50;
     };
     class btc_p_veh_armed_ho { // Add armed vehicles in Hideout:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPAWN_ARMEDHIDEOUT"]);
@@ -183,13 +183,13 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_PATROL_MAX"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"1","2","3","4","5","6","7","8","9","10"};
-        default = 5;
+        default = 8;
     };
     class btc_p_civ_max_veh { // Maximum number of civilian patrol:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_CIV_MAX_VEH"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
         texts[]={"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"};
-        default = 5;
+        default = 8;
     };
     class btc_p_IED_title { // << IED options >>
         title = $STR_BTC_HAM_PARAM_IED_TITLE;
@@ -207,7 +207,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_IED_SPOT"]);
         values[]={0, 1, 2};
         texts[]={$STR_BTC_HAM_PARAM_IED_SPOT_VERYEASY,$STR_BTC_HAM_PARAM_IED_SPOT_EASY,$STR_3DEN_ATTRIBUTES_SPEEDMODE_NORMAL}; //texts[]={"Very easy","Easy","Normal"};
-        default = 0;
+        default = 1;
     };
     class btc_p_ied_placement { // IEDs type of placement:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_IED_PLACEMENT"]);
@@ -243,7 +243,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_CACHE_RATIO"]);
         values[]={50,100};
         texts[]={"50 m","100 m"};
-        default = 100;
+        default = 50;
     };
     class btc_p_info_chance { // Intel from dead bodies chance:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_CACHE_DEADINFO"]);
@@ -255,7 +255,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_CACHE_HOUSEINFO"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","1%","2%","3%","4%","5%","6%","7%","8%","9%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 5;
+        default = 8;
     };
     class btc_p_skill_title { // << A3 Skill options >>
         title = $STR_BTC_HAM_PARAM_SKILL_TITLE;
@@ -273,13 +273,13 @@ class Params {
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_3DEN_SCENARIO_TEXTSINGULAR"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-        default = 0;
+        default = 6;
     };
     class btc_p_set_skill_aimingAccuracy { // Set skill, aimingAccuracy
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_BTC_HAM_PARAM_SKILL_AIMACC"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-        default = 6;
+        default = 7;
     };
     class btc_p_set_skill_aimingShake { // Set skill, aimingShake
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_BTC_HAM_PARAM_SKILL_AIMSKILL"]);
@@ -291,19 +291,19 @@ class Params {
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_BTC_HAM_PARAM_SKILL_AIMSPEED"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-        default = 4;
+        default = 6;
     };
     class btc_p_set_skill_endurance { // Set skill, endurance
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_A3_VR_STAMINA"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-        default = 5;
+        default = 7;
     };
     class btc_p_set_skill_spotDistance { // Set skill, spotDistance
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_BTC_HAM_PARAM_SKILL_SPOTDIST"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-        default = 8;
+        default = 7;
     };
     class btc_p_set_skill_spotTime { // Set skill, spotTime
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_BTC_HAM_PARAM_SKILL_SPOTTIME"]);
@@ -327,7 +327,7 @@ class Params {
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_A3_CFGHINTS0"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-        default = 7;
+        default = 9;
     };
     class btc_p_gameplay_title { // << Gameplay options >>
         title = $STR_BTC_HAM_PARAM_GAMEPLAY_TITLE;

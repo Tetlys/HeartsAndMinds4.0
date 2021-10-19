@@ -503,32 +503,13 @@ roleArsenal = {
 		Private _SQDAT = [
 		// WEAPONS & AMMO
 		"rhs_weap_M136",
-		"B_Carryall_mcamo",
 		"rhs_weap_M136_hedp",
 		"rhs_weap_M136_hp",
-		"rhs_fgm148_magazine_AT",
-		"rhs_weap_fgm148",
-		"MRAWS_HEAT55_F",
-		"MRAWS_HEAT_F",
-		"launch_MRAWS_green_F",
-		"rhs_fim92_mag",
-		"rhs_mag_smaw_HEDP",
-		"rhs_mag_smaw_HEAA",
-		"rhs_weap_smaw",
-		"rhs_weap_optic_smaw",
 		"rhs_weap_fim92",
-		"rhs_weap_igla",
-		"Titan_AA",
-		"rhs_mag_9k38_rocket",
-		"launch_RPG7_F",
-		"rhs_weap_m32",
-		"rhsusf_mag_6Rnd_M433_HEDP",
-		"rhsusf_mag_6Rnd_M441_HE",
-		"rhsusf_mag_6Rnd_M583A1_white",
-		"rhsusf_mag_6Rnd_M714_white",
-		"rhs_rpg7_PG7V_mag",
-		"rhs_rpg7_type69_airburst_mag",
-		"RPG7_F"
+		"rhs_fim92_mag",
+		"rhs_weap_fgm148",
+		"rhs_fgm148_magazine_AT",
+		"B_Carryall_mcamo"
 		];
 
 		Private _SQDGREN = [
@@ -563,7 +544,6 @@ roleArsenal = {
 		"ACE_40mm_Flare_ir",
 		"ACE_40mm_Flare_white",
 		"rhs_weap_m4a1_m203s_d"
-
 		];
 
 		Private _BANSHEE = [
@@ -709,6 +689,9 @@ roleArsenal = {
 	  };
 	  case "SQDAUTORIFLE": {
 	    _GearToAdd = _DefaultGear + _SQDAUTORIFLE;
+	  };
+	  case "SQDAT": {
+		_GearToAdd = _DefaultGear + _SQDAT;
 	  };
 	  case "SQDGREN": {
 	    _GearToAdd = _DefaultGear + _SQDGREN;

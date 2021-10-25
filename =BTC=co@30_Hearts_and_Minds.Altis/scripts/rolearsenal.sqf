@@ -669,6 +669,9 @@ roleArsenal = {
 	  case "CO": {
 	    _GearToAdd = _DefaultGear + _CO;
 	  };
+	  case "ADMIN": {
+		_GearToAdd = _DefaultGear + _CO;
+	  };
 	  case "PLTCO": {
 	    _GearToAdd = _DefaultGear + _PLTCO;
 	  };

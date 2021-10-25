@@ -2299,7 +2299,7 @@
                 <French>N'est pas une mission secondaire, je ne peux pas abandonner</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_REBOOT">
-                <Original>Server reboot in 5min, leave it NOW!</Original>
+                <Original>Server reboot in 10 min, leave it NOW!</Original>
                 <Chinesesimp>服务器将在5分钟后重启, 请立即离开服务器!</Chinesesimp>
                 <French>Redémarrage du serveur dans 5min, décconectez-vous maintenant !</French>
             </Key>

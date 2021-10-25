@@ -500,6 +500,7 @@ if (isServer) then {
                 "RHS_M2StaticMG_MiniTripod_D",
                 "RHS_M252_D",
                 "RHS_TOW_TriPod_D",
+                "RHS_M2StaticMG_D",
                 "RHS_MK19_TriPod_D"
 
             ],

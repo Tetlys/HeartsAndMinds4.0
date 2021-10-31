@@ -519,7 +519,8 @@ roleArsenal = {
 
 		Private _BUTCHER = [
 		// Headgear
-
+		"rhsusf_cvc_ess",
+		"rhsusf_cvc_alt_helmet",
 		// VESTS
 
 		// BACKPACKS
@@ -541,7 +542,13 @@ roleArsenal = {
 		"V_RebreatherB",
 		"G_B_Diving",
 		// Headgear
-
+		"rhs_weap_M136",
+		"rhs_weap_M136_hedp",
+		"rhs_weap_M136_hp",
+		"rhs_weap_fim92",
+		"rhs_fim92_mag",
+		"rhs_weap_fgm148",
+		"rhs_fgm148_magazine_AT",
 		// VESTS
 
 		// BACKPACKS
@@ -550,7 +557,6 @@ roleArsenal = {
 		"tfw_ilbe_whip_wd2",
 		"tfw_ilbe_DD_wd",
 		"tfw_ilbe_blade_wd",
-
 		"ToolKit",
 		"ACE_VMH3",
 		"ACE_Clacker",

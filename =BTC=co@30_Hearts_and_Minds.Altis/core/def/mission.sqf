@@ -2,7 +2,7 @@
 btc_version = [
     1,
     21.1,
-    7
+    8
 ];
 diag_log format (["=BTC= HEARTS AND MINDS VERSION %1.%2.%3"] + btc_version);
 
@@ -290,10 +290,6 @@ if (isServer) then {
     btc_type_antenna = _allClassSorted select {_x isKindOf "OmniDirectionalAntenna_01_base_F"};
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
 
-    //BTC Vehicles in missions.sqm
-    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24, btc_veh_25, btc_veh_26, btc_veh_27, btc_veh_28, btc_veh_29, btc_veh_30, btc_veh_31, btc_veh_32, btc_veh_33, btc_veh_34, btc_veh_35, btc_veh_36, btc_veh_37, btc_veh_38, btc_veh_39, btc_veh_40];
-    btc_helo = [btc_helo_1, btc_helo_2, btc_helo_3];
-
     // The two arrays below are prefixes of buildings and their multiplier.
     // They will multiply the values of btc_rep_malus_building_destroyed and btc_rep_malus_building_damaged,
     // if a building is not present here it will be multiplied by 1.0.
@@ -347,6 +343,8 @@ if (isServer) then {
     private _ieds = ["Land_GarbageContainer_closed_F", "Land_GarbageContainer_open_F", "Land_Portable_generator_F", "Land_WoodenBox_F", "Land_BarrelTrash_grey_F", "Land_Sacks_heap_F", "Land_Wreck_Skodovka_F", "Land_WheelieBin_01_F", "Land_GarbageBin_03_F"] + btc_type_pallet + btc_type_barrel + (_allClassSorted select {
         _x isKindOf "GasTank_base_F" ||
         {_x isKindOf "Garbage_base_F"} ||
+        {_x isKindOf "Stall_base_F"} ||
+        {_x isKindOf "Market_base_F"} ||
         (_x isKindOf "Constructions_base_F" &&
         {
             "bricks" in toLower _x
@@ -357,7 +355,7 @@ if (isServer) then {
             "offroad" in toLower _x
         })
     });
-    btc_type_ieds = _ieds - ["Land_Garbage_line_F","Land_Garbage_square3_F","Land_Garbage_square5_F"];
+    btc_type_ieds = _ieds - ["Land_Garbage_line_F","Land_Garbage_square3_F","Land_Garbage_square5_F", "Land_MarketShelter_F", "Land_ClothShelter_01_F", "Land_ClothShelter_02_F"];
     btc_model_ieds = btc_type_ieds apply {(toLower getText(_cfgVehicles >> _x >> "model")) select [1]};
     btc_type_blacklist = btc_type_tags + btc_type_flowers + ["UserTexture1m_F"]; publicVariable "btc_type_blacklist";
 
@@ -432,107 +430,91 @@ btc_type_hazmat = ["HazmatBag_01_F", "Land_MetalBarrel_F"] + (_allClassSorted se
 //Containers
 btc_containers_mat = ["B_Slingload_01_Ammo_F", "B_Slingload_01_Cargo_F", "B_Slingload_01_Fuel_F", "B_Slingload_01_Repair_F"];
 
-if (isServer) then {
-    //Player
-    missionNamespace setVariable ["btc_player_side", west, true];
-    missionNamespace setVariable ["btc_respawn_marker", "respawn_west", true];
+//Player
+btc_player_side = west;
+btc_respawn_marker = "respawn_west";
 
-    //Log
-    private _rearming_static =
+//Log
+btc_construction_array =
+[
     [
-        //"Static"
-    ] + (_allClassSorted select {(
-        _x isKindOf "RHS_Stinger_AA_pod_D" ||
-        {_x isKindOf "RHS_M2StaticMG_MiniTripod_D"} ||
-        {_x isKindOf "RHS_M252_D"} ||
-        {_x isKindOf "RHS_TOW_TriPod_D"} ||
-        {_x isKindOf "RHS_MK19_TriPod_D"}) && {
-            getNumber (_cfgVehicles >> _x >> "side") isEqualTo ([east, west, independent, civilian] find btc_player_side)
-        }
-    });
-    ([_rearming_static] call btc_fnc_find_veh_with_turret) params ["_rearming_static", "_magazines_static"];
-
-    ([btc_vehicles + btc_helo] call btc_log_fnc_getRearmMagazines) params ["_rearming_vehicles", "_rearming_magazines"];
-
-    btc_construction_array =
+        "Fortifications",
+        "Static",
+        "Ammobox",
+        "Containers",
+        "Supplies",
+        "FOB",
+        "Decontamination",
+        "Vehicle Logistic"
+    ],
     [
         [
-            "Fortifications",
-            "Static",
-            "Storage",
-            "Containers",
-            "Supplies",
-            "FOB",
-            "Decontamination",
-            "Vehicle Logistic"
-        ] + (_rearming_vehicles apply {getText (_cfgVehicles >> _x >> "displayName")}),
+            //"Fortifications"
+            "Land_BagBunker_Small_F",
+            "Land_BagFence_Corner_F",
+            "Land_BagFence_End_F",
+            "Land_BagFence_Long_F",
+            "Land_BagFence_Round_F",
+            "Land_BagFence_Short_F",
+            "Land_HBarrier_1_F",
+            "Land_HBarrier_3_F",
+            "Land_HBarrier_5_F",
+            "Land_HBarrierBig_F",
+            "Land_Razorwire_F",
+            "Land_CncBarrier_F",
+            "Land_CncBarrierMedium_F",
+            "Land_CncBarrierMedium4_F",
+            "Land_CncWall1_F",
+            "Land_CncWall4_F",
+            "Land_Mil_ConcreteWall_F",
+            "Land_Mil_WallBig_4m_F",
+            "Land_Mil_WallBig_Corner_F",
+            "Land_PortableLight_double_F",
+            "Land_Pod_Heli_Transport_04_medevac_black_F",
+            "Land_Net_Fence_Gate_F",
+            "Land_LampHarbour_F",
+            "Land_Camping_Light_F",
+            "Land_DragonsTeeth_01_4x2_new_redwhite_F",
+            "Land_ConcreteHedgehog_01_F",
+            "Land_Medevac_house_V1_F"
+        ],
         [
-            [
-                //"Fortifications"
-                "Land_HBarrier_3_F",
-                "Land_HBarrier_5_F",
-                "Land_HBarrier_1_F",
-                "Land_ConcreteHedgehog_01_F",
-                "Land_DragonsTeeth_01_4x2_new_redwhite_F",
-                "Land_LampHarbour_F",
-                "Land_Camping_Light_F",
-                "Land_PortableLight_double_F",
-                "Land_PortableLight_single_F",
-                "Land_BagFence_Corner_F",
-                "Land_BagFence_Long_F",
-                "Land_BagFence_Round_F",
-                "Land_BagFence_Short_F",
-                "Land_BagFence_End_F",
-                "Land_CncBarrier_F",
-                "Land_CncBarrierMedium_F",
-                "Land_CncBarrierMedium4_F",
-                "Land_CncWall1_F",
-                "Land_CncWall4_F",
-                "Land_Mil_ConcreteWall_F",
-                "Land_Mil_WallBig_4m_F",
-                "Land_Mil_WallBig_Corner_F",
-                "Land_Medevac_house_V1_F",
-                "Land_Net_Fence_Gate_F"
-            ],
-            [
-                //"Statics"
-                "RHS_Stinger_AA_pod_D",
-                "RHS_M2StaticMG_MiniTripod_D",
-                "RHS_M252_D",
-                "RHS_TOW_TriPod_D",
-                "RHS_M2StaticMG_D",
-                "RHS_MK19_TriPod_D"
+            //"Static"
+            "RHS_Stinger_AA_pod_D",
+            "RHS_M2StaticMG_MiniTripod_D",
+            "RHS_M252_D",
+            "RHS_TOW_TriPod_D",
+            "RHS_M2StaticMG_D",
+            "RHS_MK19_TriPod_D"
+        ],
+        [
+            //"Ammobox"
+            "Land_WoodenBox_F"
 
-            ],
-            [
-                //"storage"
-                "Land_WoodenBox_F"
-            ],
-            [
-                //"Containers"
+        ],
+        [
+            //"Containers"
 
-            ] + btc_containers_mat,
-            [
-                //"Supplies"
-                btc_supplies_cargo
-            ],
-            [
-                //"FOB"
-                btc_fob_mat
-            ],
-            [
-                //"Decontamination"
-                "DeconShower_01_F"
-            ],
-            [
-                //"Vehicle logistic"
-                "ACE_Wheel",
-                "ACE_Track"
-            ]
-        ] + _rearming_magazines
-    ];
-    publicVariable "btc_construction_array";
-};
+        ] + btc_containers_mat,
+        [
+            //"Supplies"
+            btc_supplies_cargo
+        ],
+        [
+            //"FOB"
+            btc_fob_mat
+        ],
+        [
+            //"Decontamination"
+            "DeconShower_01_F"
+        ],
+        [
+            //"Vehicle logistic"
+            "ACE_Wheel",
+            "ACE_Track"
+        ] + (_allClassSorted select {_x isKindOf "FlexibleTank_base_F"})
+    ]
+];
 
 Karma_Containers = [
     btc_fob_mat,
@@ -543,11 +525,14 @@ Karma_Containers = [
     "B_Slingload_01_Fuel_F"
 ];
 
-btc_supplies_mat params ["_food", "_water"];
-private _c_array = btc_construction_array select 1;
-btc_log_def_loadable = (_c_array select 0) + (_c_array select 1) + (_c_array select 2) + (_c_array select 3) + (_c_array select 4) + (_c_array select 5) + (_c_array select 6) + (_c_array select 7) + (_allClassVehicles select {_x isKindOf "ace_rearm_defaultCarriedObject"}) + _food + _water + btc_type_hazmat;
-btc_log_def_can_load = (_c_array select 3);
-btc_log_def_placeable = ((_c_array select 0) + (_c_array select 3) + (_c_array select 4) + (_c_array select 5) + (_c_array select 6) + _food + _water + btc_type_hazmat) select {
+(btc_construction_array select 1) params [
+    "_cFortifications", "_cStatics", "_cAmmobox",
+    "_cContainers", "_cSupplies", "_cFOB",
+    "_cDecontamination", "_cVehicle_logistic"
+];
+btc_log_def_loadable = flatten (btc_construction_array select 1) + flatten btc_supplies_mat + btc_type_hazmat;
+btc_log_def_can_load = _cContainers;
+btc_log_def_placeable = (_cFortifications + _cContainers + _cSupplies + _cFOB + _cDecontamination + _cVehicle_logistic + flatten btc_supplies_mat + btc_type_hazmat) select {
     getNumber(_cfgVehicles >> _x >> "ace_dragging_canCarry") isEqualTo 0
 };
 btc_tow_vehicleSelected = objNull;
@@ -574,7 +559,7 @@ btc_log_fnc_get_nottowable = {
 btc_lift_fnc_getLiftable = {
     params ["_chopper"];
 
-    private _array   = [];
+    private _array = [];
     switch (typeOf _chopper) do {
         case "B_SDV_01_F" : {
             _array = ["Motorcycle", "ReammoBox", "ReammoBox_F", "StaticWeapon", "Car", "Truck", "Wheeled_APC_F", "Tracked_APC", "APC_Tracked_01_base_F", "APC_Tracked_02_base_F", "Air", "Ship", "Tank"] + ((btc_construction_array select 1) select 3) + ((btc_construction_array select 1) select 4) + ((btc_construction_array select 1) select 5);

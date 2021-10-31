@@ -290,10 +290,6 @@ if (isServer) then {
     btc_type_antenna = _allClassSorted select {_x isKindOf "OmniDirectionalAntenna_01_base_F"};
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
 
-    //BTC Vehicles in missions.sqm
-    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18];
-    btc_helo = [btc_helo_1];
-
     // The two arrays below are prefixes of buildings and their multiplier.
     // They will multiply the values of btc_rep_malus_building_destroyed and btc_rep_malus_building_damaged,
     // if a building is not present here it will be multiplied by 1.0.
@@ -347,6 +343,8 @@ if (isServer) then {
     private _ieds = ["Land_GarbageContainer_closed_F", "Land_GarbageContainer_open_F", "Land_Portable_generator_F", "Land_WoodenBox_F", "Land_BarrelTrash_grey_F", "Land_Sacks_heap_F", "Land_Wreck_Skodovka_F", "Land_WheelieBin_01_F", "Land_GarbageBin_03_F"] + btc_type_pallet + btc_type_barrel + (_allClassSorted select {
         _x isKindOf "GasTank_base_F" ||
         {_x isKindOf "Garbage_base_F"} ||
+        {_x isKindOf "Stall_base_F"} ||
+        {_x isKindOf "Market_base_F"} ||
         (_x isKindOf "Constructions_base_F" &&
         {
             "bricks" in toLower _x
@@ -357,7 +355,7 @@ if (isServer) then {
             "offroad" in toLower _x
         })
     });
-    btc_type_ieds = _ieds - ["Land_Garbage_line_F","Land_Garbage_square3_F","Land_Garbage_square5_F"];
+    btc_type_ieds = _ieds - ["Land_Garbage_line_F","Land_Garbage_square3_F","Land_Garbage_square5_F", "Land_MarketShelter_F", "Land_ClothShelter_01_F", "Land_ClothShelter_02_F"];
     btc_model_ieds = btc_type_ieds apply {(toLower getText(_cfgVehicles >> _x >> "model")) select [1]};
     btc_type_blacklist = btc_type_tags + btc_type_flowers + ["UserTexture1m_F"]; publicVariable "btc_type_blacklist";
 
@@ -437,20 +435,6 @@ btc_player_side = west;
 btc_respawn_marker = "respawn_west";
 
 //Log
-private _rearming_static =
-[
-    //"Static"
-] + (_allClassSorted select {(
-    _x isKindOf "GMG_TriPod" ||
-    {_x isKindOf "StaticMortar"} ||
-    {_x isKindOf "HMG_01_base_F"} ||
-    {_x isKindOf "AA_01_base_F"} ||
-    {_x isKindOf "AT_01_base_F"}) && {
-        getNumber (_cfgVehicles >> _x >> "side") isEqualTo ([east, west, independent, civilian] find btc_player_side)
-    }
-});
-([_rearming_static] call btc_fnc_find_veh_with_turret) params ["_rearming_static"];
-
 btc_construction_array =
 [
     [
@@ -488,7 +472,17 @@ btc_construction_array =
             "Land_PortableLight_double_F",
             "Land_Pod_Heli_Transport_04_medevac_black_F"
         ],
-        _rearming_static,
+        [
+            //"Static"
+        ] + (_allClassSorted select {(
+            _x isKindOf "GMG_TriPod" ||
+            {_x isKindOf "StaticMortar"} ||
+            {_x isKindOf "HMG_01_base_F"} ||
+            {_x isKindOf "AA_01_base_F"} ||
+            {_x isKindOf "AT_01_base_F"}) && {
+                getNumber (_cfgVehicles >> _x >> "side") isEqualTo ([east, west, independent, civilian] find btc_player_side)
+            }
+        }),
         [
             //"Ammobox"
             "Land_WoodenBox_F"

@@ -46,6 +46,7 @@ if (isServer) then {
     btc_city_fnc_cleanUp = compileScript ["core\fnc\city\cleanUp.sqf"];
     btc_city_fnc_trigger_free_condition = compileScript ["core\fnc\city\trigger_free_condition.sqf"];
     btc_city_fnc_getHouses = compileScript ["core\fnc\city\getHouses.sqf"];
+    btc_city_fnc_send = compileScript ["core\fnc\city\send.sqf"];
 
     //CIV
     btc_civ_fnc_add_weapons = compileScript ["core\fnc\civ\add_weapons.sqf"];
@@ -69,6 +70,7 @@ if (isServer) then {
     btc_db_fnc_saveObjectStatus = compileScript ["core\fnc\db\saveObjectStatus.sqf"];
     btc_db_fnc_loadCargo = compileScript ["core\fnc\db\loadcargo.sqf"];
     btc_db_fnc_autoRestart = compileScript ["core\fnc\db\autoRestart.sqf"];
+    btc_db_fnc_add_veh = compileScript ["core\fnc\db\add_veh.sqf"];
     btc_db_fnc_setTurretMagazines = compileScript ["core\fnc\db\setTurretMagazines.sqf"];
 
     //DELAY
@@ -76,6 +78,7 @@ if (isServer) then {
     btc_delay_fnc_createVehicle = compileScript ["core\fnc\delay\createVehicle.sqf"];
     btc_delay_fnc_createAgent = compileScript ["core\fnc\delay\createAgent.sqf"];
     btc_delay_fnc_exec = compileScript ["core\fnc\delay\exec.sqf"];
+    btc_delay_fnc_waitAndExecute = compileScript ["core\fnc\delay\waitAndExecute.sqf"];
 
     //DOOR
     btc_door_fnc_lock = compileScript ["core\fnc\door\lock.sqf"];
@@ -211,6 +214,8 @@ if (isServer) then {
     btc_veh_fnc_respawn = compileScript ["core\fnc\veh\respawn.sqf"];
     btc_veh_fnc_propertiesGet = compileScript ["core\fnc\veh\propertiesGet.sqf"];
     btc_veh_fnc_propertiesSet = compileScript ["core\fnc\veh\propertiesSet.sqf"];
+    btc_veh_fnc_addVehFromSQM = compileScript ["core\fnc\veh\addVehFromSQM.sqf"];
+    btc_veh_fnc_addRespawnableFromSQM = compileScript ["core\fnc\veh\addRespawnableFromSQM.sqf"];
 };
 
 /////////////////////CLIENT AND SERVER\\\\\\\\\\\\\\\\\\\\\
@@ -219,7 +224,6 @@ if (isServer) then {
 btc_cache_fnc_hd = compileScript ["core\fnc\cache\hd.sqf"];
 
 //COMMON
-btc_fnc_find_veh_with_turret = compileScript ["core\fnc\common\find_veh_with_turret.sqf"];
 btc_fnc_get_class = compileScript ["core\fnc\common\get_class.sqf"];
 btc_fnc_randomize_pos = compileScript ["core\fnc\common\randomize_pos.sqf"];
 btc_fnc_getHouses = compileScript ["core\fnc\common\getHouses.sqf"];
@@ -231,9 +235,6 @@ btc_chem_fnc_deconShowerAnimLarge = {(_this select 0) setVariable ["BIN_Shower_S
 
 //DEBUG
 btc_debug_fnc_message = compileScript ["core\fnc\debug\message.sqf"];
-
-//DB
-btc_db_fnc_add_veh = compileScript ["core\fnc\db\add_veh.sqf"];
 
 //EH
 btc_eh_fnc_trackItem = compileScript ["core\fnc\eh\trackItem.sqf"];

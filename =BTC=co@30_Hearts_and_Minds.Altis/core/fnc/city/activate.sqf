@@ -181,7 +181,7 @@ if (btc_p_animals_group_ratio > 0) then {
         });
         for "_i" from 1 to _numberOfAnimalsGroup do {
             private _pos = [_city, _spawningRadius/3] call CBA_fnc_randPos;
-            for "_i" from 1 to (round (random 3)) do {
+            for "_i" from 1 to (round random 3) do {
                 [selectRandom btc_animals_type, [_pos, 6] call CBA_fnc_randPos, nil, _city] call btc_delay_fnc_createAgent;
             };
         };
@@ -201,27 +201,27 @@ if (_city getVariable ["spawn_more", false]) then {
         ] call btc_mil_fnc_create_group;
     };
     if (btc_p_veh_armed_spawn_more) then {
-        private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
-        for "_i" from 1 to (1 + round random 2) do {
-            [[_closest, [_city, _spawningRadius/3] call CBA_fnc_randPos, 1, selectRandom btc_type_motorized_armed], btc_mil_fnc_send] call btc_delay_fnc_exec;
-        };
+        [[_city, _spawningRadius/3, 1, btc_type_motorized_armed, 1 + round random 2], btc_city_fnc_send] call btc_delay_fnc_exec;
     };
 };
 
 if (
     (btc_cache_pos isNotEqualTo []) &&
-    {!(btc_cache_obj getVariable ["btc_cache_unitsSpawned", false])}
-) then {
-    if (_city inArea [btc_cache_pos, _cachingRadius, _cachingRadius, 0, false]) then {
+    {_city inArea [btc_cache_pos, _cachingRadius, _cachingRadius, 0, false]}
+) then {  
+    if (btc_cache_obj getVariable ["btc_cache_unitsSpawned", false]) then {
+        [[btc_cache_pos, 5], {
+            if (count (btc_cache_pos nearEntities ["Man", 50]) > 3) exitWith {};
+            [btc_cache_pos, 8, 3, "HOUSE"] call btc_mil_fnc_create_group;
+            [btc_cache_pos, 50, 4, "SENTRY"] call btc_mil_fnc_create_group;
+        }] call btc_delay_fnc_exec;
+    } else {
         btc_cache_obj setVariable ["btc_cache_unitsSpawned", true];
 
         [btc_cache_pos, 8, 3, "HOUSE"] call btc_mil_fnc_create_group;
-        [btc_cache_pos, 60, 4, "SENTRY"] call btc_mil_fnc_create_group;
+        [btc_cache_pos, 50, 4, "SENTRY"] call btc_mil_fnc_create_group;
         if (btc_p_veh_armed_spawn_more) then {
-            private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
-            for "_i" from 1 to (1 + round random 3) do {
-                [[_closest, [_city, _spawningRadius/3] call CBA_fnc_randPos, 1, selectRandom btc_type_motorized_armed], btc_mil_fnc_send] call btc_delay_fnc_exec;
-            };
+            [[_city, _spawningRadius/3, 1, btc_type_motorized_armed, 1 + round random 3], btc_city_fnc_send] call btc_delay_fnc_exec;
         };
     };
 };
@@ -246,10 +246,7 @@ if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
         };
     };
     if (btc_p_veh_armed_ho) then {
-        private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
-        for "_i" from 1 to (2 + round random 3) do {
-            [[_closest, [_pos, _spawningRadius/3] call CBA_fnc_randPos, 1, selectRandom btc_type_motorized_armed], btc_mil_fnc_send] call btc_delay_fnc_exec;
-        };
+        [[_city, _spawningRadius/3, 1, btc_type_motorized_armed, 2 + round random 3], btc_city_fnc_send] call btc_delay_fnc_exec;
     };
 };
 
@@ -324,7 +321,7 @@ if (_civKilled isNotEqualTo []) then {
     };
 
     _city setVariable ["activating", false];
-}, [_has_en, _city, _cachingRadius, _id], btc_delay_time + _delay] call CBA_fnc_waitAndExecute;
+}, [_has_en, _city, _cachingRadius, _id], _delay] call btc_delay_fnc_waitAndExecute;
 
 //Patrol
 btc_patrol_active = btc_patrol_active - [grpNull];
@@ -357,6 +354,6 @@ if (_numberOfCivVeh < _p_civ_max_veh) then {
     };
 };
 
-if (btc_debug) then {
-    [format ["%1 - %2ms", _id, (serverTime - (_city getVariable ["serverTime", serverTime])) * 1000] , __FILE__, [btc_debug, false, true]] call btc_debug_fnc_message;
+if (btc_debug || btc_debug_log) then {
+    [format ["%1 - %2ms", _id, (serverTime - (_city getVariable ["serverTime", serverTime])) * 1000] , __FILE__, [btc_debug, btc_debug_log, true]] call btc_debug_fnc_message;
 };

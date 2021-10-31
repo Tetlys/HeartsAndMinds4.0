@@ -166,6 +166,7 @@ roleArsenal = {
 		// BACKPACKS
 			"B_Parachute",
 			"B_Carryall_khk",
+			"B_Kitbag_cbr",
 		// WEAPONS & AMMO
 			// Smokes Chems etc.
 			"ACE_IR_Strobe_Item",

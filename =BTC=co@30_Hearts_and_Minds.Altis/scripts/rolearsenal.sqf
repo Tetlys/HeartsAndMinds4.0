@@ -508,6 +508,8 @@ roleArsenal = {
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
+		"tfw_ilbe_whip_wd2",
+		"tfw_ilbe_DD_wd",
 		"tfw_ilbe_whip_ocp",
 		"tfw_ilbe_blade_ocp",
 		"ToolKit",
@@ -521,6 +523,8 @@ roleArsenal = {
 		// Headgear
 		"rhsusf_cvc_ess",
 		"rhsusf_cvc_alt_helmet",
+		"rhsusf_cvc_green_helmet",
+		"rhsusf_cvc_green_ess",
 		// VESTS
 
 		// BACKPACKS

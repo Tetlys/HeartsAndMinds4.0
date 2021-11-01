@@ -288,6 +288,8 @@ roleArsenal = {
 			// H&M Stuff
 		    "ACE_Banana",
 			"ACE_SpraypaintRed",
+			"ACE_SpraypaintGreen",
+			"ACE_SpraypaintBlue",
 			"ACE_wirecutter",
 			"M40_Gas_mask_nbc_v1_d",
 			// Medical

@@ -254,11 +254,18 @@ roleArsenal = {
 			"rhs_acc_perst1ik",
 			"optic_hamr",
 			"optic_mrco",
+			"rhsusf_acc_harris_bipod",
+			"rhsusf_acc_acog3_usmc",
+			"rhsusf_acc_anpeq15",
+			"rhsusf_acc_anpeq15_light",
+			"rhsusf_acc_grip2",
+			"rhsusf_acc_grip2_tan",
 			//ammo
 			"1Rnd_HE_Grenade_shell",
 			"rhs_mag_m4009",
 			"ACE_HuntIR_M203",
 			"rhs_mag_m714_White",
+			"SmokeShell",
 			"rhs_mag_m713_Red",
 			"ACE_40mm_Flare_white",
 			"ACE_40mm_Flare_ir",
@@ -449,6 +456,8 @@ roleArsenal = {
 		"rhs_weap_m249_pip_ris",
 		"rhs_weap_m240B",
 		"rhsusf_spc_iar",
+		"rhs_weap_m27iar",
+		"rhs_weap_m27iar_grip",
 		"rhsusf_spc_mg"
 		];
 

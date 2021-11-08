@@ -276,6 +276,8 @@ roleArsenal = {
 			// H&M Stuff
 		    "ACE_Banana",
 			"ACE_SpraypaintRed",
+			"ACE_SpraypaintGreen",
+			"ACE_SpraypaintBlue",
 			"ACE_wirecutter",
 			"M40_Gas_mask_nbc_v1_d",
 			// Medical
@@ -362,8 +364,10 @@ roleArsenal = {
 		"tfw_ilbe_whip_ocp",
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_blade_ocp",
+
 		"tfw_ilbe_blade_arid",
 		"tfw_ilbe_blade_black",
+
 		"B_UAV_01_backpack_F",
 		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		// Misc
@@ -399,10 +403,12 @@ roleArsenal = {
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
-		"tfw_ilbe_blade_arid",
+    "tfw_ilbe_blade_arid",
 		"tfw_ilbe_blade_black",
 		"B_UAV_01_backpack_F",
 		"B_UavTerminal",
+
+
 
 		//M203
 		"rhs_weap_M320",
@@ -525,6 +531,8 @@ roleArsenal = {
 		"RHS_jetpilot_usaf",
 		"H_PilotHelmetFighter_B",
 		"H_CrewHelmetHeli_B",
+		"B_UAV_01_backpack_F",
+		"B_UavTerminal",
 		// UNIFORMS
 		"U_B_PilotCoveralls",
 		// BACKPACKS
@@ -537,7 +545,6 @@ roleArsenal = {
 		"ToolKit",
 
 		// WEAPONS & AMMO
-		"B_UavTerminal",
 		"ACE_rope18"
 		];
 
@@ -566,6 +573,8 @@ roleArsenal = {
 		"U_B_Wetsuit",
 		"V_RebreatherB",
 		"G_B_Diving",
+		"B_UAV_01_backpack_F",
+		"B_UavTerminal",
 		// Headgear
 		"rhs_weap_M136",
 		"rhs_weap_M136_hedp",

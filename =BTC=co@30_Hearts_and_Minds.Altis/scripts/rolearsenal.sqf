@@ -378,6 +378,7 @@ roleArsenal = {
 		"tfw_ilbe_whip_ocp",
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_blade_ocp",
+		"B_UAV_01_backpack_F",
 		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		// Misc
 		"ACE_SpottingScope",
@@ -393,6 +394,8 @@ roleArsenal = {
 		"TFAR_rt1523g",
 		"tfw_rf3080Item",
 		"tfw_ilbe_whip_wd2",
+		"B_UAV_01_backpack_F",
+		"B_UavTerminal",
 		"tfw_ilbe_DD_wd",
 		"tfw_ilbe_blade_wd",
 		"TFAR_rt1523g_big",
@@ -410,6 +413,8 @@ roleArsenal = {
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
+		"B_UAV_01_backpack_F",
+		"B_UavTerminal",
 		"tfw_ilbe_whip_wd2",
 		"tfw_ilbe_DD_wd",
 		"tfw_ilbe_blade_wd",
@@ -546,6 +551,8 @@ roleArsenal = {
 		"RHS_jetpilot_usaf",
 		"H_PilotHelmetFighter_B",
 		"H_CrewHelmetHeli_B",
+		"B_UAV_01_backpack_F",
+		"B_UavTerminal",
 		// UNIFORMS
 		"rhs_uniform_FROG01_wd",
 		// BACKPACKS
@@ -558,7 +565,6 @@ roleArsenal = {
 		"ToolKit",
 		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		// WEAPONS & AMMO
-		"B_UavTerminal",
 		"ACE_rope18"
 		];
 
@@ -568,8 +574,6 @@ roleArsenal = {
 		"rhsusf_cvc_alt_helmet",
 		"rhsusf_cvc_green_helmet",
 		"rhsusf_cvc_green_ess",
-		// VESTS
-
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
@@ -588,6 +592,8 @@ roleArsenal = {
 		"U_B_Wetsuit",
 		"V_RebreatherB",
 		"G_B_Diving",
+		"B_UAV_01_backpack_F",
+		"B_UavTerminal",
 		// Headgear
 		"rhs_weap_M136",
 		"rhs_weap_M136_hedp",
@@ -596,8 +602,6 @@ roleArsenal = {
 		"rhs_fim92_mag",
 		"rhs_weap_fgm148",
 		"rhs_fgm148_magazine_AT",
-		// VESTS
-
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",

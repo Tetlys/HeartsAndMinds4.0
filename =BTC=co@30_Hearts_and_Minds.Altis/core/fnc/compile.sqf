@@ -239,6 +239,9 @@ btc_debug_fnc_message = compileScript ["core\fnc\debug\message.sqf"];
 //EH
 btc_eh_fnc_trackItem = compileScript ["core\fnc\eh\trackItem.sqf"];
 
+//FLAG
+btc_flag_fnc_int = compileScript ["core\fnc\flag\int.sqf"];
+
 //CIV
 btc_civ_fnc_class = compileScript ["core\fnc\civ\class.sqf"];
 btc_civ_fnc_addWP = compileScript ["core\fnc\civ\addWP.sqf"];
@@ -268,6 +271,9 @@ btc_rep_fnc_foodRemoved = compileScript ["core\fnc\rep\foodRemoved.sqf"];
 
 //ARSENAL
 btc_arsenal_fnc_ammoUsage = compileScript ["core\fnc\arsenal\ammoUsage.sqf"];
+
+//TOW
+btc_tow_fnc_int = compileScript ["core\fnc\tow\int.sqf"];
 
 //VEH
 btc_veh_fnc_init = compileScript ["core\fnc\veh\init.sqf"];

@@ -133,38 +133,25 @@ roleArsenal = {
 	//Define the gear for each Role
 	Private _DefaultGear = [
 		// Headgear
-		"rhsusf_mich_helmet_marpatwd",
-		"rhsusf_mich_helmet_marpatwd_alt",
-		"rhsusf_mich_helmet_marpatwd_alt_headset",
-		"rhsusf_mich_helmet_marpatwd_headset",
-		"rhsusf_mich_helmet_marpatwd_norotos",
-		"rhsusf_mich_helmet_marpatwd_norotos_arc",
-		"rhsusf_mich_helmet_marpatwd_norotos_arc_headset",
-		"rhsusf_mich_helmet_marpatwd_norotos_headset",
-		"rhs_booniehat2_marpatwd",
-		"rhsusf_lwh_helmet_marpatwd",
-		"rhsusf_lwh_helmet_marpatwd_blk_ess",
 		"rhsusf_opscore_ut_pelt",
 		"rhsusf_opscore_ut_pelt_cam",
 		"rhsusf_opscore_ut_pelt_nsw",
 		"rhsusf_opscore_ut_pelt_nsw_cam",
 		"rhsusf_opscore_bk_pelt",
 		"rhsusf_mich_bare_norotos_arc_alt",
-		"rhsusf_lwh_helmet_marpatwd_headset_blk2",
-		"rhsusf_lwh_helmet_marpatwd_headset_blk",
-		"rhsusf_lwh_helmet_marpatwd_headset",
-		"rhsusf_lwh_helmet_marpatwd_ess" ,
+		"rhsusf_ach_helmet_ucp",
+		"rhsusf_ach_helmet_ESS_ucp",
+		"rhsusf_ach_helmet_headset_ucp",
+
 		// UNIFORMS
-		"rhs_uniform_FROG01_wd",
+		"rhs_uniform_acu_ucp",
 		// VESTS
-		"rhsusf_spc",
-		"rhsusf_spc_crewman",
-		"rhsusf_spc_light",
-		"rhsusf_spc_patchless",
-		"rhsusf_spc_patchless_radio",
-		"rhsusf_spc_rifleman",
-		"rhsusf_spc_squadleader",
-		"rhsusf_spc_teamleader",
+		"rhsusf_spcs_ucp_grenadier",
+		"rhsusf_spcs_ucp_machinegunner",
+		"rhsusf_spcs_ucp_medic",
+		"rhsusf_spcs_ucp_rifleman",
+		"rhsusf_spcs_ucp_squadleader",
+		"rhsusf_spcs_ucp_teamleader",
 		"rhsusf_oakley_goggles_blk",
 		"rhsusf_oakley_goggles_clr",
 		"rhsusf_oakley_goggles_ylw",
@@ -172,6 +159,7 @@ roleArsenal = {
 			"B_Parachute",
 			"B_Carryall_khk",
 			"B_Kitbag_cbr",
+			"rhsusf_assault_eagleaiii_ucp",
 		// WEAPONS & AMMO
 			// Smokes Chems etc.
 			"ACE_IR_Strobe_Item",
@@ -338,9 +326,8 @@ roleArsenal = {
 		"tfw_ilbe_whip_ocp",
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_blade_ocp",
-		"tfw_ilbe_whip_wd2",
-		"tfw_ilbe_DD_wd",
-		"tfw_ilbe_blade_wd",
+		"tfw_ilbe_blade_arid",
+		"tfw_ilbe_blade_black",
 		"B_UAV_01_backpack_F",
 		"ACE_UAVBattery",
 		// Misc
@@ -356,9 +343,8 @@ roleArsenal = {
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
-		"tfw_ilbe_whip_wd2",
-		"tfw_ilbe_DD_wd",
-		"tfw_ilbe_blade_wd",
+		"tfw_ilbe_blade_arid",
+		"tfw_ilbe_blade_black",
 		"B_UAV_01_backpack_F",
 		"ACE_UAVBattery",
 		// Misc
@@ -378,6 +364,10 @@ roleArsenal = {
 		"tfw_ilbe_whip_ocp",
 		"TFAR_rt1523g_big",
 		"tfw_ilbe_blade_ocp",
+
+		"tfw_ilbe_blade_arid",
+		"tfw_ilbe_blade_black",
+
 		"B_UAV_01_backpack_F",
 		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		// Misc
@@ -392,12 +382,12 @@ roleArsenal = {
 		Private _SQDCO = [
 		// BACKPACKS
 		"TFAR_rt1523g",
+		"tfw_ilbe_blade_arid",
+		"tfw_ilbe_blade_black",
 		"tfw_rf3080Item",
-		"tfw_ilbe_whip_wd2",
 		"B_UAV_01_backpack_F",
 		"B_UavTerminal",
-		"tfw_ilbe_DD_wd",
-		"tfw_ilbe_blade_wd",
+
 		"TFAR_rt1523g_big",
 		"ACE_TacticalLadder_Pack",
 		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
@@ -413,11 +403,13 @@ roleArsenal = {
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
+    "tfw_ilbe_blade_arid",
+		"tfw_ilbe_blade_black",
 		"B_UAV_01_backpack_F",
 		"B_UavTerminal",
-		"tfw_ilbe_whip_wd2",
-		"tfw_ilbe_DD_wd",
-		"tfw_ilbe_blade_wd",
+
+
+
 		//M203
 		"rhs_weap_M320",
 		"rhs_weap_m4a1_carryhandle_m203",
@@ -437,7 +429,7 @@ roleArsenal = {
 
 		Private _MEDIC = [
 		// VESTS
-        "UK3CB_UN_B_V_6b23_medic",
+
 		// Misc
 		"ACE_surgicalKit",
 		"ACE_personalAidKit",
@@ -496,17 +488,6 @@ roleArsenal = {
 		"rhs_weap_g36kv_ag36",
 		"rhs_mag_m4009",
 		"rhs_mag_m713_Red",
-		"rhs_weap_ak103_gp25_npz",
-		"rhs_weap_ak74n_gp25_npz",
-		"rhs_weap_aks74n_gp25_npz",
-		"rhs_VOG25",
-		"rhs_VG40OP_green",
-		"rhs_VG40OP_red",
-		"rhs_VG40OP_white",
-		"rhs_VOG25",
-		"rhs_VG40OP_green",
-		"rhs_VG40OP_red",
-		"rhs_VG40OP_white",
 		"rhs_mag_m714_White",
 		"ACE_HuntIR_M203",
 		"ACE_40mm_Flare_ir",
@@ -520,11 +501,10 @@ roleArsenal = {
 		// VESTS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
-		"rhsusf_spc_corpsman",
+		"tfw_ilbe_blade_arid",
+		"tfw_ilbe_blade_black",
 		// BACKPACKS
-		"tfw_ilbe_whip_wd2",
-		"tfw_ilbe_DD_wd",
-		"tfw_ilbe_blade_wd",
+
 		// Misc
 		"ACE_surgicalKit",
 		"adv_aceCPR_AED",
@@ -554,16 +534,16 @@ roleArsenal = {
 		"B_UAV_01_backpack_F",
 		"B_UavTerminal",
 		// UNIFORMS
-		"rhs_uniform_FROG01_wd",
+		"U_B_PilotCoveralls",
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
-		"tfw_ilbe_whip_wd2",
-		"tfw_ilbe_DD_wd",
+		"tfw_ilbe_blade_arid",
+		"tfw_ilbe_blade_black",
 		"tfw_ilbe_whip_ocp",
 		"tfw_ilbe_blade_ocp",
 		"ToolKit",
-		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
+
 		// WEAPONS & AMMO
 		"ACE_rope18"
 		];
@@ -574,12 +554,13 @@ roleArsenal = {
 		"rhsusf_cvc_alt_helmet",
 		"rhsusf_cvc_green_helmet",
 		"rhsusf_cvc_green_ess",
+		"rhsusf_spcs_ucp_crewman",
+		"rhsusf_ach_helmet_headset_ess_ucp",
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
-		"tfw_ilbe_whip_wd2",
-		"tfw_ilbe_DD_wd",
-		"tfw_ilbe_blade_wd",
+		"tfw_ilbe_blade_arid",
+		"tfw_ilbe_blade_black",
 		"ToolKit",
 		"ACE_VMH3"
 		];
@@ -602,12 +583,14 @@ roleArsenal = {
 		"rhs_fim92_mag",
 		"rhs_weap_fgm148",
 		"rhs_fgm148_magazine_AT",
+		"rhsusf_spcs_ucp_crewman",
+		"rhsusf_cvc_ess",
+		"rhsusf_ach_helmet_headset_ess_ucp",
 		// BACKPACKS
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
-		"tfw_ilbe_whip_wd2",
-		"tfw_ilbe_DD_wd",
-		"tfw_ilbe_blade_wd",
+		"tfw_ilbe_blade_arid",
+		"tfw_ilbe_blade_black",
 		"ToolKit",
 		"ACE_VMH3",
 		"ACE_Clacker",
@@ -627,9 +610,8 @@ roleArsenal = {
 		Private _SAVAGE = [
 		"TFAR_rt1523g",
 		"TFAR_rt1523g_big",
-		"tfw_ilbe_whip_wd2",
-		"tfw_ilbe_DD_wd",
-		"tfw_ilbe_blade_wd",
+		"tfw_ilbe_blade_arid",
+		"tfw_ilbe_blade_black",
 		"ACE_1Rnd_82mm_Mo_Illum",
 		"ACE_1Rnd_82mm_Mo_HE",
 		"ACE_artilleryTable"

@@ -100,6 +100,15 @@ private _action = [
 [_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
 
 _action = [
+    "log_tow",
+    localize "STR_ACE_Towing_displayName",
+    "",
+    {btc_tow_vehicleTowing = _target; (localize "STR_BTC_HAM_TOW_HOOK") call CBA_fnc_notify;},
+    {isNull (_target getVariable ["btc_towing", objNull]);}
+] call ace_interact_menu_fnc_createAction;
+[_x, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
+
+_action = [
     "log_hook",
     localize "STR_ACE_Towing_attach",
     "\z\ace\addons\attach\UI\attach_ca.paa",

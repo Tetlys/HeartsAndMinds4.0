@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=87;
+		nextID=116;
 	};
 	class Camera
 	{
-		pos[]={6510.9121,80.05751,7117.4253};
-		dir[]={-0.77027333,-0.43382299,0.46762758};
-		up[]={-0.3709622,0.9009155,0.22520472};
-		aside[]={0.51899892,2.4302863e-006,0.85489827};
+		pos[]={6464.5781,48.824856,7109.2241};
+		dir[]={-0.55036545,-0.81913495,-0.16222119};
+		up[]={-0.78574753,0.57353282,-0.23160382};
+		aside[]={-0.28275996,5.3798431e-007,0.95930129};
 	};
 };
 binarizationWanted=0;
@@ -84,16 +84,13 @@ addons[]=
 	"rhsusf_c_HEMTT_A4",
 	"RHS_US_A2Port_Armor",
 	"A3_Soft_F_Offroad_01",
-	"ace_medical_treatment",
-	"ace_chemlights",
-	"ace_mk6mortar",
 	"A3_Props_F_AoW_Items_Decorative"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=51;
+		items=48;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -404,27 +401,6 @@ class AddonsMetaData
 			url="https://www.arma3.com";
 		};
 		class Item47
-		{
-			className="ace_medical_treatment";
-			name="ACE3 - Medical Treatment";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item48
-		{
-			className="ace_chemlights";
-			name="ace_chemlights";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item49
-		{
-			className="ace_mk6mortar";
-			name="ACE3 - Mk6 Mortar";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item50
 		{
 			className="A3_Props_F_AoW";
 			name="Arma 3 Art of War - Decorative and Mission ";
@@ -2876,7 +2852,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=7;
+		items=3;
 		class Item0
 		{
 			dataType="Layer";
@@ -3435,7 +3411,7 @@ class Mission
 													colorName="ColorGreen";
 													a=0.5;
 													b=0.5;
-													angle=50.644497;
+													angle=50.644493;
 													id=24;
 												};
 												class Item5
@@ -6345,7 +6321,7 @@ class Mission
 						};
 					};
 					id=0;
-					atlOffset=-0.050354004;
+					atlOffset=-0.071315765;
 				};
 				class Item1
 				{
@@ -29180,7 +29156,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6440.5913,31.821503,7090.4033};
-				angles[]={-0,4.1893158,0};
+				angles[]={0,4.1893158,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29592,68 +29568,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6456.2271,30.209999,7103.2734};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=584;
-			type="ACE_medicalSupplyCrate";
-		};
-		class Item3
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6455.7905,30.209999,7104.0645};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=585;
-			type="ACE_medicalSupplyCrate_advanced";
-		};
-		class Item4
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6455.0039,30.396704,7104.8477};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=588;
-			type="ACE_Box_Chemlights";
-		};
-		class Item5
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6455.1577,30.494053,7105.6704};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=591;
-			type="ACE_Box_82mm_Mo_Combo";
-		};
-		class Item6
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={6492.3882,31.442482,7104.7412};
-				angles[]={-0,1.724165,0};
+				angles[]={0,1.724165,0};
 			};
 			side="Empty";
 			flags=4;

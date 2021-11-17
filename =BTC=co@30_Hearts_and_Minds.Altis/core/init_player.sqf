@@ -68,3 +68,4 @@ if (player getVariable ["Reserved", false]) then {
         }] call CBA_fnc_waitUntilAndExecute;
     };
 }] call CBA_fnc_waitUntilAndExecute;
+

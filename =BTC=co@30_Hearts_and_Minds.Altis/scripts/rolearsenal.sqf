@@ -136,8 +136,11 @@ roleArsenal = {
 		"rhsusf_opscore_fg",
 		"rhsusf_opscore_fg_pelt",
 		"rhsusf_opscore_fg_pelt_cam",
+		"rhssaf_booniehat_woodland",
+		"H_Cap_khaki_specops_UK",
 		// UNIFORMS
 		"rhs_uniform_g3_rgr",
+		"rhs_uniform_g3_m81",
 		// VESTS
 		"rhsusf_spc_corpsman",
 		"rhsusf_spc_crewman",
@@ -183,6 +186,9 @@ roleArsenal = {
 			"rhs_weap_m4",
 			"rhs_weap_mk18_bk",
 			"rhs_weap_mk18_d",
+			"rhs_weap_mk17_CQC",
+			"rhs_weap_mk17_LB",
+			"rhs_weap_mk17_STD",
 			"rhs_weap_m4a1_carryhandle",
 			"rhs_weap_m4a1_blockII",
 			"rhs_weap_m4a1_blockII_bk",
@@ -246,6 +252,9 @@ roleArsenal = {
 			"rhsusf_acc_anpeq15_light",
 			"rhsusf_acc_grip2",
 			"rhsusf_acc_grip2_tan",
+			"rhsusf_acc_aac_762sd_silencer",
+			"rhsusf_acc_aac_762sdn6_silencer",
+			"ace_muzzle_mzls_b",
 			//ammo
 			"1Rnd_HE_Grenade_shell",
 			"rhs_mag_m4009",
@@ -270,6 +279,9 @@ roleArsenal = {
 			"rhsusf_200rnd_556x45_M855_mixed_box",
 			"rhsusf_100Rnd_556x45_M855_soft_pouch_ucp",
 			"rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_ucp",
+			"rhs_mag_20Rnd_SCAR_762x51_m118_special",
+			"rhs_mag_20Rnd_SCAR_762x51_m61_ap",
+			"rhs_mag_20Rnd_SCAR_762x51_m62_tracer",
 		// Misc
 			// H&M Stuff
 		    "ACE_Banana",
@@ -288,8 +300,14 @@ roleArsenal = {
 			"ACE_splint",
 			"ACE_tourniquet",
 			"ACE_bodyBag",
+			"ACE_personalAidKit",
+			"ACE_adenosine",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_250",
+			"ACE_bloodIV",
 			// General
 			"ACE_CableTie",
+			"B_UavTerminal",
 			"ACE_EarPlugs",
 			"ACE_EntrenchingTool",
 			"ACE_Flashlight_MX991",

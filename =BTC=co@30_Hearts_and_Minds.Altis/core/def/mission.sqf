@@ -180,7 +180,7 @@ if (isServer) then {
     btc_rep_delayed = [0, []];
 
     //Chem
-    btc_chem_decontaminate = [btc_bigShower];
+    btc_chem_decontaminate = [];
     btc_chem_contaminated = []; publicVariable "btc_chem_contaminated"; //Preserve reference
 
     //Spect
@@ -673,6 +673,7 @@ btc_rep_malus_building_damaged = - 5;
 btc_rep_malus_building_destroyed = - 10;
 btc_rep_malus_foodRemove = - btc_rep_bonus_foodGive;
 btc_rep_malus_breakDoor = - 0.25;
+btc_rep_malus_wheelChange = - 3;
 
 //Skill
 btc_AI_skill = _p_skill;
@@ -695,5 +696,5 @@ btc_flag_textures = [
 ];
 
 //Respawn
-btc_body_bagTicketPlayer = 2;
-btc_body_enemyTicket = 4;
+btc_body_bagTicketPlayer = 1;
+btc_body_enemyTicket = 2;

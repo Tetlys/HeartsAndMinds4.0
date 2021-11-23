@@ -180,7 +180,7 @@ if (isServer) then {
     btc_rep_delayed = [0, []];
 
     //Chem
-    btc_chem_decontaminate = [btc_bigShower];
+    btc_chem_decontaminate = [];
     btc_chem_contaminated = []; publicVariable "btc_chem_contaminated"; //Preserve reference
 
     //Spect
@@ -663,6 +663,7 @@ btc_rep_malus_building_damaged = - 2.5;
 btc_rep_malus_building_destroyed = - 5;
 btc_rep_malus_foodRemove = - btc_rep_bonus_foodGive;
 btc_rep_malus_breakDoor = - 2;
+btc_rep_malus_wheelChange = - 7;
 
 //Skill
 btc_AI_skill = _p_skill;

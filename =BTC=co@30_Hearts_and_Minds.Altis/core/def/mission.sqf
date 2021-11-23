@@ -484,12 +484,12 @@ btc_construction_array =
         ],
         [
             //"Static"
-            "RHS_Stinger_AA_pod_D",
-            "RHS_M2StaticMG_MiniTripod_D",
-            "RHS_M252_D",
-            "RHS_TOW_TriPod_D",
-            "RHS_M2StaticMG_D",
-            "RHS_MK19_TriPod_D"
+            "RHS_Stinger_AA_pod_WD",
+            "RHS_M2StaticMG_MiniTripod_WD",
+            "RHS_M252_WD",
+            "RHS_TOW_TriPod_WD",
+            "RHS_M2StaticMG_WD",
+            "RHS_MK19_TriPod_WD"
         ],
         [
             //"Inv Storage"
@@ -497,7 +497,10 @@ btc_construction_array =
             "ACE_medicalSupplyCrate",
             "ACE_medicalSupplyCrate_advanced",
             "ACE_Box_Chemlights",
-            "ACE_Box_82mm_Mo_Combo"
+            "ACE_Box_82mm_Mo_Combo",
+            "Land_MetalCase_01_large_F",
+            "Land_WoodenCrate_01_F",
+            "Land_PlasticCase_01_large_black_F"
         ],
         [
             //"Containers"

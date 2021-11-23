@@ -31,3 +31,9 @@ GR_MAX_KIN_DIST = 3000;
 GR_MISSION_CHANCE = 20;
 
 };
+
+/*           ACE            */
+
+    ACE_maxWeightCarry = 800;
+    ACE_maxWeightDrag = 10000;
+    

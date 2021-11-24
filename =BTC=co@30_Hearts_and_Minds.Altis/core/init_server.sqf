@@ -72,6 +72,8 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
     };
 };
 
+// Remove Important Objects
+
 if isServer then
 {
 	[] spawn
@@ -85,7 +87,5 @@ if isServer then
 		};
 	};
 };
-
-
 
 

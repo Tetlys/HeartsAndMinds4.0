@@ -389,7 +389,7 @@ btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
 btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F"];
 
 //FOB
-btc_fob_mat = "Land_Misc_Cargo1B";
+btc_fob_mat = "Land_Cargo20_vr_F";  
 btc_fob_structure = "Land_Cargo_HQ_V1_F";
 btc_fob_flag = "Flag_NATO_F";
 btc_fob_id = 0;
@@ -418,14 +418,13 @@ btc_info_intels = ["Land_Camera_01_F", "Land_HandyCam_F"];
 //Supplies
 btc_supplies_cargo = "B_Slingload_01_Medevac_F";
 btc_supplies_mat = [
-    _allClassSorted select {_x isKindOf "Land_FoodSack_01_cargo_base_F"},
-    _allClassSorted select {_x isKindOf "Land_WaterBottle_01_stack_F"}
+    _allClassSorted select {_x isKindOf "Land_PlasticCase_01_small_idap_F"},
+    _allClassSorted select {_x isKindOf "Land_BarrelWater_F"}
 ];
 
 //Hazmat
 btc_type_hazmat = ["HazmatBag_01_F", "Land_MetalBarrel_F"] + (_allClassSorted select {
     _x isKindOf "Land_GarbageBarrel_02_base_F" ||
-    {_x isKindOf "Land_FoodContainer_01_F"} ||
     {_x isKindOf "Land_CanisterFuel_F"} ||
     {_x isKindOf "CBRNContainer_01_base_F"} ||
     {_x isKindOf "PlasticCase_01_base_F"}

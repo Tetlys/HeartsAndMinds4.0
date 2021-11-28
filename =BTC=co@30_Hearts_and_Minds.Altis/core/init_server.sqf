@@ -89,3 +89,21 @@ if isServer then
 };
 
 
+if isServer then
+{
+    [] spawn {
+
+	    if (sunOrMoon > 0.99) then   
+	    {
+	    	setTimeMultiplier 10;
+            0 setFog 0;
+	    }
+	    else
+	    {
+	    	setTimeMultiplier 3;
+            0 setFog 0;
+        };
+    };
+
+	sleep 600;
+};

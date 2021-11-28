@@ -189,6 +189,7 @@ roleArsenal = {
 			"rhs_weap_mk17_CQC",
 			"rhs_weap_mk17_LB",
 			"rhs_weap_mk17_STD",
+			"rhs_weap_mk18",
 			"rhs_weap_m4a1_carryhandle",
 			"rhs_weap_m4a1_blockII",
 			"rhs_weap_m4a1_blockII_bk",

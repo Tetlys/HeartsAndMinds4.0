@@ -482,7 +482,17 @@ roleArsenal = {
 		"rhs_fim92_mag",
 		"rhs_weap_fgm148",
 		"rhs_fgm148_magazine_AT",
-		"B_Carryall_mcamo"
+		"B_Carryall_mcamo",
+		// Launchers
+		"launch_MRAWS_green_rail_F",
+		"launch_MRAWS_green_F",
+		"rhs_weap_smaw",
+		"rhs_weap_optic_smaw",
+		"MRAWS_HEAT_F",
+		"MRAWS_HEAT55_F",
+		"MRAWS_HE_F",
+		"rhs_mag_smaw_HEDP",
+		"rhs_mag_smaw_SR"
 		];
 
 		Private _SQDGREN = [
@@ -616,7 +626,17 @@ roleArsenal = {
 		"SLAMDirectionalMine_Wire_Mag",
 		"rhs_ec400_mag",
 		"rhs_ec200_sand_mag",
-		"ACE_DefusalKit"
+		"ACE_DefusalKit",
+		// Launchers
+		"launch_MRAWS_green_rail_F",
+		"launch_MRAWS_green_F",
+		"rhs_weap_smaw",
+		"rhs_weap_optic_smaw",
+		"MRAWS_HEAT_F",
+		"MRAWS_HEAT55_F",
+		"MRAWS_HE_F",
+		"rhs_mag_smaw_HEDP",
+		"rhs_mag_smaw_SR"
 		];
 
 		Private _SAVAGE = [

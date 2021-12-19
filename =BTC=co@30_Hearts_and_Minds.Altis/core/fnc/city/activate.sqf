@@ -102,16 +102,16 @@ if (_data_units isNotEqualTo []) then {
 } else {
     // Maximum number of enemy group
     private _numberOfGroup = (switch _type do {
-        case "Hill" : {3};
-        case "VegetationFir" : {3};
-        case "BorderCrossing" : {5};
-        case "NameLocal" : {5};
+        case "Hill" : {4};
+        case "VegetationFir" : {4};
+        case "BorderCrossing" : {7};
+        case "NameLocal" : {7};
         case "StrongpointArea" : {8};
-        case "NameVillage" : {6};
-        case "NameCity" : {12};
-        case "NameCityCapital" : {24};
-        case "Airport" : {24};
-        case "NameMarine" : {3};
+        case "NameVillage" : {8};
+        case "NameCity" : {16};
+        case "NameCityCapital" : {32};
+        case "Airport" : {32};
+        case "NameMarine" : {4};
         default {0};
     });
 
@@ -133,14 +133,14 @@ if (_data_units isNotEqualTo []) then {
 
         if (_has_en) then {
             private _numberOfStatic = (switch _type do {
-                case "VegetationFir" : {2};
-                case "BorderCrossing" : {4};
-                case "NameLocal" : {2};
+                case "VegetationFir" : {3};
+                case "BorderCrossing" : {6};
+                case "NameLocal" : {3};
                 case "StrongpointArea" : {6};
-                case "NameVillage" : {4};
-                case "NameCity" : {8};
-                case "NameCityCapital" : {10};
-                case "Airport" : {4};
+                case "NameVillage" : {6};
+                case "NameCity" : {12};
+                case "NameCityCapital" : {15};
+                case "Airport" : {6};
                 default {0};
             });
             [+_houses, round (_p_mil_static_group_ratio * _numberOfStatic), _city] call btc_mil_fnc_create_staticOnRoof;
@@ -208,7 +208,7 @@ if (_city getVariable ["spawn_more", false]) then {
 if (
     (btc_cache_pos isNotEqualTo []) &&
     {_city inArea [btc_cache_pos, _cachingRadius, _cachingRadius, 0, false]}
-) then {  
+) then {
     if (btc_cache_obj getVariable ["btc_cache_unitsSpawned", false]) then {
         [[btc_cache_pos, 5], {
             if (count (btc_cache_pos nearEntities ["Man", 50]) > 3) exitWith {};
@@ -301,7 +301,7 @@ if (
 
 if (btc_p_info_houseDensity > 0) then {
     [_city, btc_info_fnc_createIntels] call btc_delay_fnc_exec;
-};   
+};
 
 private _civKilled = _city getVariable ["btc_rep_civKilled", []];
 if (_civKilled isNotEqualTo []) then {
@@ -327,17 +327,13 @@ if (_civKilled isNotEqualTo []) then {
 btc_patrol_active = btc_patrol_active - [grpNull];
 private _numberOfPatrol = count btc_patrol_active;
 if (_numberOfPatrol < _p_patrol_max) then {
-    private _offset = 0;
-    private _max = 2;
-    if (_has_en) then {
-        _max = 3;
-        _offset = 3/2;
-    };
-    private _r = (_offset + random _max) min (_p_patrol_max - _numberOfPatrol);
-    for "_i" from 1 to round _r do {
+    private _min = [0, 1] select _has_en;
+    private _addMilPatrol = (_min + random 1) min (_p_patrol_max - _numberOfPatrol);
+    for "_i" from 1 to round _addMilPatrol do {
         private _group = createGroup btc_enemy_side;
         btc_patrol_active pushBack _group;
         _group setVariable ["no_cache", true];
+        _group setVariable ["acex_headless_blacklist", true];
         [[_group, 1 + round random 1, _city, _cachingRadius + btc_patrol_area], btc_mil_fnc_create_patrol] call btc_delay_fnc_exec;
     };
 };
@@ -345,11 +341,12 @@ if (_numberOfPatrol < _p_patrol_max) then {
 btc_civ_veh_active = btc_civ_veh_active - [grpNull];
 private _numberOfCivVeh = count btc_civ_veh_active;
 if (_numberOfCivVeh < _p_civ_max_veh) then {
-    private _r = (3/2 + random 3) min (_p_civ_max_veh - _numberOfCivVeh);
-    for "_i" from 1 to round _r do {
+    private _addCivVeh = (random 2) min (_p_civ_max_veh - _numberOfCivVeh);
+    for "_i" from 1 to round _addCivVeh do {
         private _group = createGroup civilian;
         btc_civ_veh_active pushBack _group;
         _group setVariable ["no_cache", true];
+        _group setVariable ["acex_headless_blacklist", true];
         [[_group, _city, _cachingRadius + btc_patrol_area], btc_civ_fnc_create_patrol] call btc_delay_fnc_exec;
     };
 };

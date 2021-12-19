@@ -161,7 +161,7 @@ class Params {
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
         default = 0;
     };
-    class btc_p_wp_houseDensity { // Density of military in house:
+    class btc_p_wp_houseDensity { // Density of military in house: (Can't be above 100%)
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_MIL_INHOUSE_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
@@ -430,12 +430,6 @@ class Params {
         values[]={0,1,2};
         texts[]={$STR_DISABLED,$STR_BTC_HAM_PARAM_OTHER_FLAGVEH,$STR_BTC_HAM_PARAM_OTHER_FLAGVEHPLAYER};
         default = 2;
-    };
-    class btc_p_auto_headless { // Autodetect Headless client:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_AUTOHEADLESS"]);
-        values[]={0,1};
-        texts[]={$STR_DISABLED,$STR_ENABLED};
-        default = 1;
     };
     class btc_p_debug { // Debug:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_DEBUG"]);

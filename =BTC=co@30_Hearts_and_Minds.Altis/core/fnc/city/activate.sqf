@@ -66,8 +66,8 @@ if (!(_city getVariable ["initialized", false])) then {
         case "NameVillage" : {3.5};
         case "NameCity" : {5};
         case "NameCityCapital" : {6};
-        case "Airport" : {0};
-        case "NameMarine" : {0};
+        case "Airport" : {1};
+        case "NameMarine" : {1};
         default {0};
     });
 
@@ -106,7 +106,7 @@ if (_data_units isNotEqualTo []) then {
         case "VegetationFir" : {3};
         case "BorderCrossing" : {5};
         case "NameLocal" : {5};
-        case "StrongpointArea" : {6};
+        case "StrongpointArea" : {8};
         case "NameVillage" : {6};
         case "NameCity" : {12};
         case "NameCityCapital" : {24};
@@ -136,7 +136,7 @@ if (_data_units isNotEqualTo []) then {
                 case "VegetationFir" : {2};
                 case "BorderCrossing" : {4};
                 case "NameLocal" : {2};
-                case "StrongpointArea" : {4};
+                case "StrongpointArea" : {6};
                 case "NameVillage" : {4};
                 case "NameCity" : {8};
                 case "NameCityCapital" : {10};

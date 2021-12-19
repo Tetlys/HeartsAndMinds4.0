@@ -132,6 +132,38 @@ roleArsenal = {
 
 	//Define the gear for each Role
 	Private _DefaultGear = [
+		//RANDOM
+		"rhs_weap_M320",
+		"ACE_HuntIR_monitor",
+		"rhsusf_weap_MP7A2",
+		"rhsusf_mag_40Rnd_46x30_AP",
+		"rhsusf_mag_40Rnd_46x30_FMJ",
+		"rhsusf_mag_40Rnd_46x30_JHP",
+		"ACE_DefusalKit",
+		//DIVESTUFF
+		"arifle_SDAR_F",
+		"20Rnd_556x45_UW_mag",
+		"B_Assault_Diver",
+		"U_B_Wetsuit",
+		"V_RebreatherB",
+		"G_B_Diving",
+		//goggles
+		"rhsusf_oakley_goggles_blk",
+		"rhsusf_shemagh_grn",
+		"rhsusf_shemagh2_grn",
+		"rhsusf_shemagh_gogg_grn",
+		"rhsusf_shemagh2_gogg_grn",
+		"rhs_googles_black",
+		"G_Aviator",
+		//HATS 
+		"rhs_Booniehat_m81",
+		"rhs_booniehat2_marpatd",
+		"rhs_booniehat2_marpatwd",
+		"rhs_Booniehat_ocp",
+		//AT4
+		"rhs_weap_M136",
+		"rhs_weap_M136_hedp",
+		"rhs_weap_M136_hp",
 		// Headgear
 		"rhsusf_opscore_fg",
 		"rhsusf_opscore_fg_pelt",
@@ -181,6 +213,7 @@ roleArsenal = {
 			"ACE_HandFlare_Red",
 			"ACE_HandFlare_White",
 			"ACE_HandFlare_Yellow",
+			"ACE_MX2A",
 			//weapons
 			"rhs_weap_m16a4",
 			"rhs_weap_m4",
@@ -256,6 +289,7 @@ roleArsenal = {
 			"rhsusf_acc_aac_762sd_silencer",
 			"rhsusf_acc_aac_762sdn6_silencer",
 			"ace_muzzle_mzls_b",
+			"rhsusf_acc_saw_bipod",
 			//ammo
 			"1Rnd_HE_Grenade_shell",
 			"rhs_mag_m4009",
@@ -505,10 +539,6 @@ roleArsenal = {
 		"rhs_mag_m4009",
 		"rhs_mag_m713_Red",
 		"rhs_mag_m714_White",
-		"ACE_HuntIR_M203",
-		"ACE_40mm_Flare_ir",
-		"ACE_40mm_Flare_white",
-		"rhs_weap_g36kv_ag36",
 		"rhs_mag_m4009",
 		"rhs_mag_m713_Red",
 		"rhs_mag_m714_White",
@@ -517,7 +547,6 @@ roleArsenal = {
 		"ACE_40mm_Flare_white",
 		"rhs_weap_m4a1_m203s_d"
 		];
-
 		Private _BANSHEE = [
 		// MISK
 		"ACE_TacticalLadder_Pack",

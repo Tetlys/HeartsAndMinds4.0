@@ -189,6 +189,7 @@ roleArsenal = {
 		"B_Parachute",
 		"B_Carryall_khk",
 		"B_Kitbag_cbr",
+		"UK3CB_CW_US_B_LATE_B_KITBAG_Radio",
 		"B_Carryall_oli",
 		"rhsusf_assault_eagleaiii_ocp",
 		"tfw_ilbe_blade_mc",
@@ -317,6 +318,8 @@ roleArsenal = {
 			"rhs_mag_20Rnd_SCAR_762x51_m118_special",
 			"rhs_mag_20Rnd_SCAR_762x51_m61_ap",
 			"rhs_mag_20Rnd_SCAR_762x51_m62_tracer",
+			"rhsusf_5Rnd_00Buck",
+			"rhsusf_5Rnd_Slug",
 		// Misc
 			// H&M Stuff
 		    "ACE_Banana",
@@ -324,6 +327,7 @@ roleArsenal = {
 			"ACE_SpraypaintGreen",
 			"ACE_SpraypaintBlue",
 			"ACE_wirecutter",
+			"tfw_rf3080Item",
 			"M40_Gas_mask_nbc_v1_d",
 			// Medical
 			"ACE_fieldDressing",
@@ -534,7 +538,6 @@ roleArsenal = {
 		"rhs_weap_M320",
 		"rhs_weap_m4a1_carryhandle_m203",
 		"rhs_weap_m4a1_m203",
-		"UK3CB_G3KA4_GL",
 		"1Rnd_HE_Grenade_shell",
 		"rhs_mag_m4009",
 		"rhs_mag_m713_Red",

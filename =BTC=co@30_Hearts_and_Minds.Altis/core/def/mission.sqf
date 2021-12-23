@@ -510,7 +510,8 @@ btc_construction_array =
         ],
         [
             //"FOB"
-            btc_fob_mat
+            btc_fob_mat,
+            "C_supplyCrate_F"
         ],
         [
             //"Decontamination"

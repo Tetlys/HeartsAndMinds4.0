@@ -23,10 +23,6 @@ Player addEventHandler ["GetInMan", {
 }];
 
 
-
-
-
-
 /*
 To create a custom permission, choose or create a UID list from the permissions UID variables above,
 then use the bellow code to add a new section to the "GetInMan" Event handler:

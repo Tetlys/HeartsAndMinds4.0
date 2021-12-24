@@ -8,8 +8,8 @@ if !(isNil "btc_custom_loc") then {
 };
 btc_intro_done = [] spawn btc_respawn_fnc_intro;
 
+
 WHITELISTED = [
-    // MANAGER
     "76561198047333011", // Tetlys
     "76561198037625563", // Frank
     "76561198076288121", // Anddy
@@ -17,15 +17,14 @@ WHITELISTED = [
     "76561198277806612", // Cami
     "76561198033215112", // TCAS
     "76561198402038100", // N0Ace
+    "76561198256704117", // NoAceSecondAccount
     "76561198040185781", // Johnny
     "76561197985304352", // Remer
     "76561198335402858", // Toast
     "76561198143711716" // Nebula
 ];
 
-if (player getVariable ["Reserved", false]) then {
-        if !(getplayerUID player in WHITELISTED) then {"end1" call BIS_fnc_endMission;};
-    };
+
 
 [{!isNull player}, {
     [] call compileScript ["core\doc.sqf"];
@@ -45,6 +44,10 @@ if (player getVariable ["Reserved", false]) then {
 
     if (player getVariable ["interpreter", false]) then {
         player createDiarySubject ["btc_diarylog", localize "STR_BTC_HAM_CON_INFO_ASKHIDEOUT_DIARYLOG", '\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa'];
+    };
+
+    if (player getVariable ["Reserved", false]) then {
+        if !(getplayerUID player in WHITELISTED) then {"end1" call BIS_fnc_endMission;};
     };
 
     switch (btc_p_autoloadout) do {

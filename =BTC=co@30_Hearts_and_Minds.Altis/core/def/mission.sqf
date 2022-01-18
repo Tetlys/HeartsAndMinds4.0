@@ -373,7 +373,22 @@ _p_civ_veh = _allfaction select _p_civ_veh; //Select faction selected from missi
 private _allclasse = [[_p_civ]] call btc_civ_fnc_class; //Create classes from factions, you can combine factions from the SAME side : [[_p_civ, "btc_ac","LOP_TAK_CIV"]] call btc_civ_fnc_class.
 
 //Save class name to global variable
-btc_civ_type_units = _allclasse select 0;
+btc_civ_type_units = [
+  "C_Djella_01_lxWS",
+  "C_Djella_02_lxWS",
+  "C_Djella_03_lxWS",
+  "C_Djella_04_lxWS",
+  "C_Djella_05_lxWS",
+  "C_Tak_02_A_lxWS",
+  "C_Tak_02_B_lxWS",
+  "C_Tak_02_C_lxWS",
+  "C_Tak_03_A_lxWS",
+  "C_Tak_03_B_lxWS",
+  "C_Tak_03_C_lxWS",
+  "C_Tak_01_A_lxWS",
+  "C_Tak_01_B_lxWS",
+  "C_Tak_01_C_lxWS"
+];
 _allclasse = [[_p_civ_veh]] call btc_civ_fnc_class;
 btc_civ_type_veh = _allclasse select 2;
 btc_civ_type_boats = _allclasse select 1;
@@ -388,9 +403,9 @@ btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
 btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F"];
 
 //FOB
-btc_fob_mat = "Land_Cargo20_vr_F";
+btc_fob_mat = "Land_Cargo_HQ_V3_F";
 btc_fob_structure = "Land_Cargo_HQ_V1_F";
-btc_fob_flag = "Flag_NATO_F";
+btc_fob_flag = "rhs_Flag_Russia_F";
 btc_fob_id = 0;
 btc_fob_minDistance = 1000;
 
@@ -482,23 +497,18 @@ btc_construction_array =
         ],
         [
             //"Static"
-            "RHS_Stinger_AA_pod_WD",
-            "RHS_M2StaticMG_MiniTripod_WD",
-            "RHS_M252_WD",
-            "RHS_TOW_TriPod_WD",
-            "RHS_M2StaticMG_WD",
-            "RHS_MK19_TriPod_WD"
+            "rhs_2b14_82mm_msv",
+            "rhs_Kornet_9M133_2_msv",
+            "RHS_AGS30_TriPod_MSV",
+            "rhs_KORD_high_MSV",
+            "RHS_ZU23_MSV"
         ],
         [
             //"Inv Storage"
-            "Land_WoodenBox_F",
             "ACE_medicalSupplyCrate",
             "ACE_medicalSupplyCrate_advanced",
             "ACE_Box_Chemlights",
-            "ACE_Box_82mm_Mo_Combo",
-            "Land_MetalCase_01_large_F",
-            "Land_WoodenCrate_01_F",
-            "Land_PlasticCase_01_large_black_F"
+            "ACE_Box_82mm_Mo_Combo"
         ],
         [
             //"Containers"
@@ -694,11 +704,13 @@ btc_flag_textures = [
     "\A3\Data_F\Flags\flag_green_CO.paa",
     "\A3\Data_F\Flags\flag_blue_CO.paa",
     '#(argb,8,8,3)color(0.9,0.9,0,1)',
-    "\A3\Data_F\Flags\flag_NATO_CO.paa"
+    "\A3\Data_F\Flags\flag_uk_CO.paa",
+    "\A3\Data_F\Flags\flag_us_CO.paa",
+    "\A3\Data_F\Flags\flag_CSAT_CO.paa"
 ];
 
 //Respawn
 btc_body_bagTicketPlayer = 1;
 btc_body_enemyTicket = 2;
 
-btc_startDate = [2035, 6, 24, 12, 15];
+btc_startDate = [1981, 4, 08, 12, 15];

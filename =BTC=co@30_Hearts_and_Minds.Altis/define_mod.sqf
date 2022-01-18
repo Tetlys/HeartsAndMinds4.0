@@ -5,6 +5,20 @@ btc_custom_loc = [
     EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,true]
 */
 
+[[18947.5,18955.5,0],"Airport","Airfield North",500,true],
+[[18440.5,3808.17,0],"Airport","Airfield South",500,true],
+[[19668.3,7101.56,0],"NameCityCapital","Bal Arkin",400,true],
+[[7023.76,12993.5,0],"Hill","Big Hill",700,true],
+[[17401.9,7436.73,0],"NameCity","Hu Zarhim",400,true],
+[[18466.9,6971.25,0],"NameVillage","Hu Zarhim Lower",200,true],
+[[18804.5,10232.2,0],"NameVillage","Mirdash East",200,true],
+[[19671.9,10052.1,0],"NameCity","Mirdash Outlands",300,true],
+[[13636.8,1761.03,0],"NameCityCapital","Pizza Shores",400,true],
+[[18809.9,5012.71,0],"StrongpointArea","Texico Fuel",350,true],
+[[14323.6,2605.95,0],"NameVillage","TimTam Streams",200,true],
+[[17835,2299.99,0],"StrongpointArea","UmBongo Military",250,true],
+[[18613,1830.29,0],"NameVillage","UmBongo Town",200,true]
+
 ];
 
 /*

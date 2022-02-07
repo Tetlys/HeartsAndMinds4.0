@@ -76,7 +76,7 @@ roleArsenal = {
 	or (_UnitRole == "Armor 2 Vehicle Commander@Armor 2 (Armor)")
 	or (_UnitRole == "Armor 2 Driver")
 	or (_UnitRole == "Armor 2 Gunner")) then
-	{_Role = "ARMOUR"};
+	{_Role = "ARMOR"};
 
 	// STALKER
 	if ((_UnitRole == "STALKER 1 Pilot@Joint Air Command 1")
@@ -209,7 +209,8 @@ roleArsenal = {
 			"ItemAndroid",
 			"ItemcTab",
 			"ItemWatch",
-			"B_UavTerminal"
+			"B_UavTerminal",
+			"TFAR_anprc152"
 	];
 
 	Private _ADMIN = [
@@ -219,7 +220,8 @@ roleArsenal = {
 	//Uniforms
 	"rhs_uniform_afghanka_moldovan_ttsko_blue",
 	//Bagpacks
-	"UK3CB_AAF_B_B_FIELDPACK_DIGI_BLK_Radio",
+	"TFAR_rt1523g_big_bwmod",
+	"TFAR_mr3000_bwmod",
 	//Weapons
 		//Ammo
 		//Attachments
@@ -244,8 +246,8 @@ roleArsenal = {
 	"rhs_6b23_crewofficer",
 	//Uniforms
 	//Bagpacks
-	"UK3CB_B_B_Assault_camo_Radio",
-	"UK3CB_B_B_Tactical_Backpack_Radio",
+	"TFAR_rt1523g_big_bwmod",
+	"TFAR_mr3000_bwmod",
 	//Weapons
 		//Ammo
 		//Attachments
@@ -259,8 +261,8 @@ roleArsenal = {
 	"rhs_6b23_6sh92_radio",
 	//Uniforms
 	//Bagpacks
-	"UK3CB_B_B_Assault_camo_Radio",
-	"UK3CB_B_B_Tactical_Backpack_Radio",
+	"TFAR_rt1523g_big_bwmod",
+	"TFAR_mr3000_bwmod",
 	//Weapons
 		//Ammo
 		//Attachments
@@ -292,7 +294,6 @@ roleArsenal = {
 	//Uniforms
 	//Bagpacks
 	//Weapons
-	"UK3CB_SVD_OLD",
 	"rhs_weap_svdp_wd",
 	"rhs_weap_vss",
 		//Ammo
@@ -327,12 +328,16 @@ roleArsenal = {
 		//Ammo
 		//Attachments
 	  //Explosives
-	"rhssaf_tm200_mag",
-	"rhssaf_tm500_mag",
+  "SatchelCharge_Remote_Mag",
+	"rhs_ec200_mag",
+	"rhs_ec400_mag",
 	"rhs_mine_tm62m_mag",
 	"rhssaf_mine_tma4_mag",
 	//Items
-	"ToolKit"
+	"ToolKit",
+	"ACE_DefusalKit",
+	"ACE_M26_Clacker",
+	"ACE_Clacker"
 	];
 
 	Private _AUTORIFLEMAN = [
@@ -412,7 +417,7 @@ roleArsenal = {
 	//Items
 	];
 
-	Private _ARMOUR = [
+	Private _ARMOR = [
 	//Headgear
 	"rhs_6b48",
 	"rhs_tsh4",
@@ -424,8 +429,8 @@ roleArsenal = {
 	"rhs_6b23_digi_crew",
 	//Uniforms
 	//Bagpacks
-	"UK3CB_B_B_Assault_camo_Radio",
-	"UK3CB_B_B_Tactical_Backpack_Radio",
+	"TFAR_rt1523g_big_bwmod",
+	"TFAR_mr3000_bwmod",
 	//Weapons
 		//Ammo
 		//Attachments
@@ -446,8 +451,8 @@ roleArsenal = {
 	"rhs_6b23_digi_crew",
 	//Uniforms
 	//Bagpacks
-	"UK3CB_B_B_Assault_camo_Radio",
-	"UK3CB_B_B_Tactical_Backpack_Radio",
+	"TFAR_rt1523g_big_bwmod",
+	"TFAR_mr3000_bwmod",
 	//Weapons
 		//Ammo
 		//Attachments
@@ -489,8 +494,8 @@ roleArsenal = {
 	  case "RIFLEMAN": {
 	    _GearToAdd = _DefaultGear + _RIFLEMAN;
 	  };
-	  case "ARMOUR": {
-	    _GearToAdd = _DefaultGear + _ARMOUR;
+	  case "ARMOR": {
+	    _GearToAdd = _DefaultGear + _ARMOR;
 	  };
 	  case "STALKER": {
 	    _GearToAdd = _DefaultGear + _STALKER;

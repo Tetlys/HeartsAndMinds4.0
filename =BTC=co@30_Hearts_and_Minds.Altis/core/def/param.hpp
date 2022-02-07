@@ -81,7 +81,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_TIMEBEFORESHOWMARKER"]);
         values[]={-1,0,5,10,30,60};
         texts[]={$STR_DISABLED,"0 min","5 min","10 min","30 min","60 min"};
-        default = 5;
+        default = 0;
     };
     class btc_p_respawn_arsenal { // ACE Arsenal available on respawn after been killed:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_ENABLEARSENAL"]);
@@ -147,7 +147,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ENEMY_STATIC_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 100;
+        default = 60;
     };
     class btc_p_civ_group_ratio { // Civilian density:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_CIVILIAN_DENSITY"]);
@@ -237,7 +237,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_CACHE_DISTANCE"]);
         values[]={500,1000,1500,2000,2500,3000,3500,4000,5000};
         texts[]={"500 m","1000 m","1500 m","2000 m","2500 m","3000 m","3500 m","4000 m","5000 m"};
-        default = 500;
+        default = 1000;
     };
     class btc_p_cache_info_ratio { //Cache info ratio:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_CACHE_RATIO"]);
@@ -357,7 +357,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_SIDEM"]);
         values[] = {0,1,2,3,4};
         texts[] = {$STR_DISABLED,1,2,3,4};
-        default = 3;
+        default = 2;
     };
     class btc_p_arsenal_title { // << Arsenal options >>
         title = $STR_BTC_HAM_PARAM_ARSENAL_TITLE;
@@ -399,7 +399,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_REPSTART"]);
         values[]={0, 200, 500, 750};
         texts[]={$STR_ACE_ViewDistance_object_verylow,$STR_A3_TIME_TRIALS_MISCTT_ROF_25,$STR_3DEN_ATTRIBUTES_SPEEDMODE_NORMAL,$STR_A3_TIME_TRIALS_MISCTT_ROF_21}; //texts[]={"Very Low","Low","Normal","High"};
-        default = 0;
+        default = 200;
     };
     class btc_p_rep_notify { // Show reputation change above of:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_SHOWREP"]);

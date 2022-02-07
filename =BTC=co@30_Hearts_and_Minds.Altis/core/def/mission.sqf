@@ -403,8 +403,8 @@ btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
 btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F"];
 
 //FOB
-btc_fob_mat = "Land_Cargo_HQ_V3_F";
-btc_fob_structure = "Land_Cargo_HQ_V1_F";
+btc_fob_mat = "Land_Pod_Heli_Transport_04_fuel_F";
+btc_fob_structure = "Land_Cargo_HQ_V3_F";
 btc_fob_flag = "rhs_Flag_Russia_F";
 btc_fob_id = 0;
 btc_fob_minDistance = 1000;
@@ -448,8 +448,8 @@ btc_type_hazmat = ["HazmatBag_01_F", "Land_MetalBarrel_F"] + (_allClassSorted se
 btc_containers_mat = ["B_Slingload_01_Ammo_F", "B_Slingload_01_Cargo_F", "B_Slingload_01_Fuel_F", "B_Slingload_01_Repair_F"];
 
 //Player
-btc_player_side = west;
-btc_respawn_marker = "respawn_west";
+btc_player_side = east;
+btc_respawn_marker = "respawn_east";
 
 //Log
 btc_construction_array =

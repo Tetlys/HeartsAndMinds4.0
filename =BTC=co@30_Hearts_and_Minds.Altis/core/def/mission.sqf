@@ -373,6 +373,8 @@ _p_civ_veh = _allfaction select _p_civ_veh; //Select faction selected from missi
 private _allclasse = [[_p_civ]] call btc_civ_fnc_class; //Create classes from factions, you can combine factions from the SAME side : [[_p_civ, "btc_ac","LOP_TAK_CIV"]] call btc_civ_fnc_class.
 
 //Save class name to global variable
+/*
+To manually set civ type
 btc_civ_type_units = [
   "C_Djella_01_lxWS",
   "C_Djella_02_lxWS",
@@ -389,6 +391,8 @@ btc_civ_type_units = [
   "C_Tak_01_B_lxWS",
   "C_Tak_01_C_lxWS"
 ];
+*/
+btc_civ_type_units = _allclasse select 0;
 _allclasse = [[_p_civ_veh]] call btc_civ_fnc_class;
 btc_civ_type_veh = _allclasse select 2;
 btc_civ_type_boats = _allclasse select 1;

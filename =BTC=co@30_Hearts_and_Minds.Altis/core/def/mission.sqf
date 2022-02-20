@@ -88,7 +88,7 @@ private _p_rep = "btc_p_rep" call BIS_fnc_getParamValue;
 btc_p_rep_notify = "btc_p_rep_notify" call BIS_fnc_getParamValue;
 private _p_city_radiusOffset = ("btc_p_city_radiusOffset" call BIS_fnc_getParamValue) * 100;
 btc_p_trigger = if (("btc_p_trigger" call BIS_fnc_getParamValue) isEqualTo 1) then {
-    "this && (false in (thisList apply {_x isKindOf 'Plane'})) && (false in (thisList apply {(_x isKindOf 'Helicopter') && (speed _x > 190)}))"
+    "this && (false in (thisList apply {_x isKindOf 'Plane'})) && (false in (thisList apply {(_x isKindOf 'Helicopter') && (speed _x > 130)}))"
 } else {
     "this"
 };
@@ -448,8 +448,8 @@ btc_type_hazmat = ["HazmatBag_01_F", "Land_MetalBarrel_F"] + (_allClassSorted se
 btc_containers_mat = ["B_Slingload_01_Ammo_F", "B_Slingload_01_Cargo_F", "B_Slingload_01_Fuel_F", "B_Slingload_01_Repair_F"];
 
 //Player
-btc_player_side = east;
-btc_respawn_marker = "respawn_east";
+btc_player_side = west;
+btc_respawn_marker = "respawn_west";
 
 //Log
 btc_construction_array =
@@ -497,11 +497,14 @@ btc_construction_array =
         ],
         [
             //"Static"
-            "rhs_2b14_82mm_msv",
-            "rhs_Kornet_9M133_2_msv",
-            "RHS_AGS30_TriPod_MSV",
-            "rhs_KORD_high_MSV",
-            "RHS_ZU23_MSV"
+            "RHS_Stinger_AA_pod_WD",
+            "RHS_M2StaticMG_WD",
+            "RHS_M2StaticMG_MiniTripod_WD",
+            "RHS_TOW_TriPod_WD",
+            "RHS_MK19_TriPod_WD",
+            "RHS_M252_WD",
+            "B_Static_Designator_01_F",
+            "B_GMG_01_A_F"
         ],
         [
             //"Inv Storage"
@@ -564,12 +567,12 @@ btc_log_fnc_get_nottowable = {
 
     switch (true) do {
         //The tower is a tank so it can't tow: plane and helicopter
-        case (_tower isKindOf "Tank") : {["Plane", "Helicopter"];};
+        case (_tower isKindOf "Tank") : {[""];};
         case (_tower isKindOf "Truck_F") : {[""];};
         case (_tower isKindOf "Truck") : {[""];};
         case (_tower isKindOf "Ship") : {[];};
         //The tower is a car so it can't tow: truck, tank, plane and helicopter
-        case (_tower isKindOf "Car") : {["Truck", "Truck_F", "Tank", "Plane", "Helicopter"];};
+        case (_tower isKindOf "Car") : {["Truck", "Truck_F", "Plane"];};
         default {["Car", "Truck", "Truck_F", "Tank", "Plane", "Helicopter", "Ship"];};
     };
 };
@@ -657,7 +660,7 @@ switch (_p_en) do {
 };
 
 //Chem
-btc_chem_range = 4;
+btc_chem_range = 6;
 
 //Spect
 btc_spect_range = 1000;
@@ -706,7 +709,9 @@ btc_flag_textures = [
     '#(argb,8,8,3)color(0.9,0.9,0,1)',
     "\A3\Data_F\Flags\flag_uk_CO.paa",
     "\A3\Data_F\Flags\flag_us_CO.paa",
-    "\A3\Data_F\Flags\flag_CSAT_CO.paa"
+    "\A3\Data_F\Flags\flag_NATO_CO.paa",
+    "\A3\Data_F_Orange\Flags\flag_IDAP_CO.paa",
+    "\A3\Data_F\Flags\Flag_pow_CO.paa"
 ];
 
 //Respawn

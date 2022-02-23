@@ -1008,7 +1008,7 @@
         </Container>
         <Container name="Checkpoint">
             <Key ID="STR_BTC_HAM_SIDE_CHECKPOINT_TITLE">
-                <Original>Destroy checkpoints in %1</Original>
+                <Original>Destroy the checkpoints</Original>
                 <Spanish>Destruir los puestos de control en %1</Spanish>
                 <German>Kontrollpunkte zerstören in %1</German>
                 <Portuguese>Destruir ponto de verificação em %1</Portuguese>
@@ -1016,7 +1016,7 @@
                 <French>Détruisez les points de contrôle dans %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHECKPOINT_DESC">
-                <Original>Checkpoints have been located in %1. Local population is asking for your help to destroy ammo box in all checkpoints!</Original>
+                <Original>Checkpoints have been located. Local population is asking for your help to destroy ammo box in all checkpoints!</Original>
                 <Spanish>Los puntos de control se han localizado en %1. La población local está pidiendo su ayuda para destruir la caja de municiones en todos los puntos de control!</Spanish>
                 <German>Kontrollpunkt wurden in der Nähe von %1 gesichtet. Die lokale Bevölkerung bittet Sie darum, alle Munitionskisten und den jeweiligen Kontrollpunkt zu beseitigen!</German>
                 <Portuguese>Os pontos de verificação foram localizados em %1. A população local está pedindo sua ajuda para destruidir todas as caixas de munições em todos os pontos de verificação!</Portuguese>
@@ -1046,7 +1046,7 @@
                 <French>Appel d'urgence médicale en mer</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREATBOAT_DESC">
-                <Original>A civilian is calling for a medic in %1, treat and wait for patient stabilization.</Original>
+                <Original>A civilian is calling for a medic, treat and wait for patient stabilization.</Original>
                 <Spanish>Un civil está llamando a un médico en %1, tratar y esperar la estabilización del paciente.</Spanish>
                 <German>Ein Zivilist aus %1 hat einen Notruf abgesetzt. Behandeln Sie ihn umd warten Sie darauf, dass sich sein Zustand stabilisiert.</German>
                 <Portuguese>Um civil fez uma chamada médica em %1. Trate-o e aguarde a estabilização dele.</Portuguese>
@@ -1064,7 +1064,7 @@
                 <French>Un civil a besoins de votre aide</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_TITLE">
-                <Original>Medical emergency call in %1</Original>
+                <Original>Medical emergency call</Original>
                 <Spanish>Llamada de emergencia médica en %1</Spanish>
                 <German>Medizinischer Notruf aus %1</German>
                 <Portuguese>Chamada de emergência médica em %1</Portuguese>
@@ -1072,7 +1072,7 @@
                 <French>Appel d'urgence médicale dans %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_DESC">
-                <Original>A civilian is calling for a medic in %1, treat and wait for patient stabilization </Original>
+                <Original>A civilian is calling for a medic, treat and wait for patient stabilization </Original>
                 <Spanish>Un civil está llamando a un médico en %1, tratar y esperar la estabilización del paciente</Spanish>
                 <German>Ein Zivilist aus %1 hat einen Notruf abgesetzt. Behandeln Sie ihn umd warten Sie darauf, dass sich sein Zustand stabilisiert </German>
                 <Portuguese>Um civil fez uma chamada médica em %1. Trate-o e aguarde a estabilização dele.</Portuguese>
@@ -1098,7 +1098,7 @@
                 <French>Fin du convoi</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONVOY_TITLE">
-                <Original>Destroy Oplitas convoy attacking %1</Original>
+                <Original>Destroy Oplitas convoy</Original>
                 <Spanish>Destruir el convoy de Oplitas atacando %1</Spanish>
                 <German>Bewaffneter Konvoi unterwegs nach %1</German>
                 <Portuguese>Destrua o comboio armado inimigo %1</Portuguese>
@@ -1106,7 +1106,7 @@
                 <French>Détruire le convoi d'Oplitas attaquant %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONVOY_DESC">
-                <Original>An armed Oplitas convoy is going to attack %1. Local population is asking for your help to destroy it before it gets there!</Original>
+                <Original>An armed Oplitas convoy is going to attack. Local population is asking for your help to destroy it before it gets there!</Original>
                 <Spanish>Un convoy armado de Oplitas va a atacar %1. La población local está pidiendo su ayuda para destruirlo antes de que llegue allí!</Spanish>
                 <German>Ein bewaffneter Konvoi der Oplitas will %1 angreifen. Schützen Sie die Bevölkerung in dem Sie den Konvoi zerstören bevor er dort ankommt</German>
                 <Portuguese>Um comboio armado inimigo vai atacar %1. Proteja a população local dentruindo o comboio antes que ele chegue</Portuguese>
@@ -1132,7 +1132,7 @@
                 <French>Commencer le piratage</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_TITLE">
-                <Original>Hack missile near %1</Original>
+                <Original>Hack missile</Original>
                 <Spanish>Hackear misil cerca de %1</Spanish>
                 <German>Rakete hacken in der Nähe von %1</German>
                 <Portuguese>Hackeie o míssil em %1</Portuguese>
@@ -1140,7 +1140,7 @@
                 <French>Piratez le missile a proximité de %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_DESC">
-                <Original>Hack a prototype missile with a terminal available in %1. Defend your position until the process is done!</Original>
+                <Original>Hack a prototype missile with a terminal. Defend your position until the process is done!</Original>
                 <Spanish>Hackear un misil prototipo con un terminal disponible en %1. Defiende tu posición hasta que el proceso haya terminado!</Spanish>
                 <German>Hacke eine Prototyp-Rakete mit einem in %1 verfügbaren Terminal. Verteidige deine Position, bis der Prozess abgeschlossen ist!</German>
                 <Portuguese>Hackei o terminal de protótipo de míssil em %1. Defenda sua posição até que o processo seja concluído!</Portuguese>
@@ -1168,7 +1168,7 @@
         </Container>
         <Container name="Hostage">
             <Key ID="STR_BTC_HAM_SIDE_HOSTAGE_TITLE">
-                <Original>Liberate hostage near %1</Original>
+                <Original>Liberate hostage</Original>
                 <Spanish>Liberar rehén cerca de %1</Spanish>
                 <German>Geisel befreien: %1</German>
                 <Portuguese>Liberte o refém próximo a %1</Portuguese>
@@ -1176,7 +1176,7 @@
                 <French>Libérer un otage près de %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HOSTAGE_DESC">
-                <Original>Liberate a civilian hostage in %1. The Local population is asking for your help!</Original>
+                <Original>Liberate a civilian hostage. The Local population is asking for your help!</Original>
                 <Spanish>Liberar a un rehén civil en %1. La población local está pidiendo su ayuda!</Spanish>
                 <German>Befreien Sie eine Geisel in %1 aus den Händen der Terroristen. Die lokale Bevölkerung bittet um Ihre Hilfe!</German>
                 <Portuguese>Liberte o civil refém em %1 das mãos dos terroristas. A população local está pedindo sua ajuda!</Portuguese>
@@ -1186,7 +1186,7 @@
         </Container>
         <Container name="Mines">
             <Key ID="STR_BTC_HAM_SIDE_MINES_TITLE">
-                <Original>Minefield near %1</Original>
+                <Original>Minefield</Original>
                 <Spanish>Campo minado cerca de %1</Spanish>
                 <German>Minenfeld in der Nähe von %1</German>
                 <Portuguese>Campo minado perto de %1</Portuguese>
@@ -1194,7 +1194,7 @@
                 <French>Champ de mines à proximité de %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_MINES_DESC">
-                <Original>There is a minefield near %1, clear it!</Original>
+                <Original>There is a minefield, clear it!</Original>
                 <Spanish>Hay un campo minado cerca de %1, ¡despejenlo!</Spanish>
                 <German>Es gibt ein Minenfeld in der Nähe von %1, räumen Sie es!</German>
                 <Portuguese>Campo minado próximo a %1. Limpe-os!</Portuguese>
@@ -1204,7 +1204,7 @@
         </Container>
         <Container name="Rescue">
             <Key ID="STR_BTC_HAM_SIDE_RESC_TITLE">
-                <Original>Rescue downed pilot near %1</Original>
+                <Original>Rescue downed pilot</Original>
                 <Spanish>Rescate de piloto caído cerca de %1</Spanish>
                 <German>Abgestürzter Piloten in der Nähe %1</German>
                 <Portuguese>Resgate de piloto abatido perto de %1</Portuguese>
@@ -1212,7 +1212,7 @@
                 <French>Sauvetage d'un pilote abattu près de %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RESC_DESC">
-                <Original>MAYDAY-MAYDAY, a pilot crashed his helicopter near %1. Command is asking for your help to rescue and bring him back to base!</Original>
+                <Original>MAYDAY-MAYDAY, a pilot crashed his helicopter. Command is asking for your help to rescue and bring him back to base!</Original>
                 <Spanish>MAYDAY-MAYDAY, un piloto estrelló su helicóptero cerca de %1. ¡El Comando está pidiendo su ayuda para rescatarlo y traerlo de vuelta a la base!</Spanish>
                 <German>MAYDAY-MAYDAY, ein Pilot stürzte mit seinem Helikopter in der Nähe von %1 ab. Sie haben den Befehl ihn zu retten und sicher zur Basis zurückzubringen!</German>
                 <Portuguese>MAYDAY-MAYDAY, um piloto caiu com seu helicóptero próximo a %1. O comando solicitou sua ajuda para resgatá-lo e trazê-lo de volta a base!</Portuguese>
@@ -1270,7 +1270,7 @@
         </Container>
         <Container name="Supply">
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_TITLE">
-                <Original>Supply %1</Original>
+                <Original>Supply</Original>
                 <Spanish>Suministrar %1</Spanish>
                 <German>Versorgung nach %1 bringen</German>
                 <Portuguese>Envie Suprimentos para %1</Portuguese>
@@ -1278,7 +1278,7 @@
                 <French>Ravitailler %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_DESC">
-                <Original>The citizens of %1 are on the brink starving and thirsty to death, bring them food and potable water present in the supply container at the logistic point!</Original>
+                <Original>The citizens are on the brink starving and thirsty to death, bring them food and potable water present in the supply container at the logistic point!</Original>
                 <Spanish>Los ciudadanos de %1 están al borde de la muerte de hambre, ¡tráiganles algunos suministros presentes en el punto logístico!</Spanish>
                 <German>Die Bewohner der Stadt %1 sind am verdusten und verhungern. Versorgen Sie die Bürger mit den nötigen Nahrungsmitteln. Den benötigten Nachschubcontainer finden sie am Versorgungspunkt.</German>
                 <Portuguese>O população de %1 estão passando fome! Forneça suprimentos! Os suprimentos podem ser solicitados no ponto logístico.</Portuguese>
@@ -1312,7 +1312,7 @@
         </Container>
         <Container name="Tower">
             <Key ID="STR_BTC_HAM_SIDE_TOWER_TITLE">
-                <Original>Destroy tower in %1</Original>
+                <Original>Destroy tower</Original>
                 <Spanish>Destruir torre de radio en %1</Spanish>
                 <German>Funkturm zerstören: %1</German>
                 <Portuguese>Destrua a torre de rádio em %1</Portuguese>
@@ -1320,7 +1320,7 @@
                 <French>Détruire la tour dans %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_TOWER_DESC">
-                <Original>A Oplitas communications tower has been located in %1. Local population is asking for your help to destroy it! (Use one M183 explosive satchel)</Original>
+                <Original>A Oplitas communications tower has been located. Local population is asking for your help to destroy it! (Use one M183 explosive satchel)</Original>
                 <Spanish>En %1 se ha ubicado una torre de comunicaciones de Oplitas. La población local está pidiendo tu ayuda para destruirlo! (Use un explosivo satchel M183)</Spanish>
                 <German>Ein Funkturm der Oplitas befindet sich in %1. Die lokale Bevölkerung bittet darum diesen zu zerstören! (Nutzen Sie die M183 Sprengladungen)</German>
                 <Portuguese>A torre de comunicação inimiga foi localizada em %1. A população local está pedindo sua ajuda para destruí-las. (Use a mochila de explosivos M183)</Portuguese>
@@ -1338,7 +1338,7 @@
                 <French>Générateur</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_UNDERWATER_TITLE">
-                <Original>Destroy underwater generator in %1</Original>
+                <Original>Destroy underwater generator</Original>
                 <Spanish>Destruir el generador subacuático en %1</Spanish>
                 <German>Zerstöre den Unterwassergenerator in %1</German>
                 <Portuguese>Destrua o gerador subaquático em %1</Portuguese>
@@ -1346,7 +1346,7 @@
                 <French>Détruire le générateur sous-marin dans %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_UNDERWATER_DESC">
-                <Original>An underwater generator has been located in %1. Local population is asking for your help to destroy it!</Original>
+                <Original>An underwater generator has been located. Local population is asking for your help to destroy it!</Original>
                 <Spanish>Se ha localizado un generador submarino en %1. La población local está pidiendo tu ayuda para destruirlo!</Spanish>
                 <German>Ein Unterwassergenerator wurde in der Nähe von %1 aufgeklärt. Die zivile Bevölkerung bittet um die Zerstörung des Aggregats!</German>
                 <Portuguese>O gerador subaquático foi localizado em %1. A população local está pedindo sua ajuda para destruí-lo!</Portuguese>
@@ -1356,7 +1356,7 @@
         </Container>
         <Container name="Vehicle">
             <Key ID="STR_BTC_HAM_SIDE_VEHICLE_TITLE">
-                <Original>Vehicle needs assistance near %1</Original>
+                <Original>Vehicle needs assistance</Original>
                 <Spanish>Vehículo necesita asistencia cerca de %1</Spanish>
                 <German>Fahrzeug braucht Unterstützung in der Nähe von %1</German>
                 <Portuguese>Veículos necessitando de assistência em %1</Portuguese>
@@ -1364,7 +1364,7 @@
                 <French>Un véhicule a besoin d'assistance à proximité de %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_VEHICLE_DESC">
-                <Original>A vehicle damaged by an IED needs assistance near %1! Repair it!</Original>
+                <Original>A vehicle damaged by an IED needs assistance! Repair it!</Original>
                 <Spanish>Un vehículo dañado por IED necesita asistencia cerca de %1! ¡Repárelo!</Spanish>
                 <German>Ein Fahrzeug wurde durch eine IED beschädigt und braucht nun Unterstützung in der Nähe von %1! Repariere Sie es!</German>
                 <Portuguese>Um veículo foi danificado por um IED precisa de reparo em %1! Conserte-o!</Portuguese>
@@ -1374,7 +1374,7 @@
         </Container>
         <Container name="Conquer">
             <Key ID="STR_BTC_HAM_SIDE_CONQUER_TITLE">
-                <Original>Free %1</Original>
+                <Original>Librate</Original>
                 <Spanish>Liberar %1</Spanish>
                 <German>Befreie %1</German>
                 <Portuguese>Liberte %1</Portuguese>
@@ -1382,7 +1382,7 @@
                 <French>Liberer %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONQUER_DESC">
-                <Original>%1 has been conquered by the Oplitas! The Local population is being terrorized, they are asking for help!</Original>
+                <Original>A town was conquered by the Oplitas! The Local population is being terrorized, they are asking for help!</Original>
                 <Spanish>%1 ha sido conquistado por los Oplitas! La población local está siendo aterrorizada, están pidiendo ayuda!</Spanish>
                 <German>%1 wurde von der Oplitas erobert! Die lokale Bevölkerung wird terrorisiert, greifen Sie ein!</German>
                 <Portuguese>Os inimigos estão conquistando a cidade %1. A população local está sendo aterrorizada. Ajude-os!</Portuguese>
@@ -1398,7 +1398,7 @@
                 <French>Assassiner %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_DESC">
-                <Original>Assassinate %1 in %2, then bring his dog tag to the base for identification. He is responsible for terrorizing the local population!</Original>
+                <Original>Assassinate %1, then bring his dog tag to the base for identification. He is responsible for terrorizing the local population!</Original>
                 <German>Eliminieren Sie %1 in %2 und sichern Sie seine Hundemarke zur Identifizierung. Er ist der Hauptverantwortliche für den Terror in der Region!</German>
                 <Chinesesimp>在 %2 地区刺杀 %1, 然后将他的狗牌带回基地以进行身份鉴定。他是当地恐怖主义活动的主要责任人之一!</Chinesesimp>
                 <French>Assassiner %1 dans la ville de %2, puis apportez sa plaque d'identité à la base pour identification. Il est terrorise la population locale!</French>
@@ -1410,7 +1410,7 @@
                 <French>Tuez %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_IN_DESC">
-                <Original>Kill %1 in %2.</Original>
+                <Original>Kill %1.</Original>
                 <German>Töten Sie %1 in %2.</German>
                 <Chinesesimp>在 %2 地区杀死 %1。</Chinesesimp>
                 <French>Tuez %1 dans la ville de %2.</French>
@@ -1442,13 +1442,13 @@
         </Container>
         <Container name="Chemical Leak">
             <Key ID="STR_BTC_HAM_SIDE_CHEM_TITLE">
-                <Original>Chemical leak in %1</Original>
+                <Original>Chemical leak</Original>
                 <German>Chemieunfall in %1</German>
                 <Chinesesimp>处理 %1 地区的化学品泄露</Chinesesimp>
                 <French>Fuite chimique dans la ville de %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHEM_DESC">
-                <Original>Some containers with a dangerous chemical agent have been broken in %1. The civilian population reported that only some small objects are contaminated. Eliminate the contamination by moving those objects under a big shower.</Original>
+                <Original>Some containers with a dangerous chemical agent have been broken. The civilian population reported that only some small objects are contaminated. Eliminate the contamination by moving those objects under a big shower.</Original>
                 <German>In %1 wurden einige Behälter mit gefährlichen chemischen Stoffen beschädigt. Laut Aussagen der Zivilbevölkerung scheinen aber nur kleinere Objekte mit dieser Substanz in Berührungen gekommen zu sein. Finden und beseitigen Sie die kontaminierten Objekte, in dem Sie diese unter eine große Dusche stellen.</German>
                 <Chinesesimp>在 %1 地区, 一些装有危险化学试剂的集装箱发生破损。平民报告称只有一些小物体受到污染。将这些物体移动到大型淋浴器下以消除污染。</Chinesesimp>
                 <French>Certains conteneurs contenant un agent chimique dangereux ont été cassés dans la ville de %1. La population civile a signalé que seuls quelques petits objets étaient contaminés. Éliminez la contamination en déplaçant ces objets sous une grande douche.</French>
@@ -1492,12 +1492,12 @@
         </Container>
         <Container name="EMP">
             <Key ID="STR_BTC_HAM_SIDE_EMP_TITLE">
-                <Original>EMP in %1</Original>
+                <Original>EMP</Original>
                 <Chinesesimp>摧毁 %1 地区的 EMP 装置</Chinesesimp>
                 <French>EMP dans la ville de %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_EMP_DESC">
-                <Original>Civilian population reported that vehicles have electronic fail around %1. They are requesting your help to investigate the origin. %2</Original>
+                <Original>Civilian population reported that vehicles have electronic fail. They are requesting your help to investigate the origin. %2</Original>
                 <Chinesesimp>平民报告称, %1 地区附近存在载具上的电子设备失效的情况。平民请求对来源进行调查。%2</Chinesesimp>
                 <French>La population civile a signalé que les véhicules ont une panne électronique autour de %1. Ils demandent votre aide pour enquêter sur l'origine. %2</French>
             </Key>
@@ -1514,12 +1514,12 @@
         </Container>
         <Container name="Remove rubbish">
             <Key ID="STR_BTC_HAM_SIDE_RUBBISH_TITLE">
-                <Original>Remove rubbish in %1</Original>
+                <Original>Remove rubbish</Original>
                 <Chinesesimp>清除 %1 地区的垃圾</Chinesesimp>
                 <French>Retirer les déchets à %1</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RUBBISH_DESC">
-                <Original>Civilian population reported many rubbish on road making driving difficult around %1. They are requesting your help to remove them with a Nemmera.</Original>
+                <Original>Civilian population reported many rubbish on road making driving difficult. They are requesting your help to remove them with a Nemmera.</Original>
                 <Chinesesimp>平民报告称 %1 附近的道路上有许多垃圾, 导致行车困难。平民请求您派遣豹式装甲车(Nemmera)来清除这些垃圾。</Chinesesimp>
                 <French>La population civile a signalé de nombreux déchets sur la route rendant la conduite difficile autour de %1. Ils demandent votre aide pour les supprimer avec un Nemmera.</French>
             </Key>
@@ -1536,15 +1536,15 @@
         </Container>
         <Container name="Pandemic">
             <Key ID="STR_BTC_HAM_SIDE_PANDEMIC_TITLE">
-                <Original>Contaminate civilians in %1</Original>
+                <Original>Contaminated civilians</Original>
                 <Chinesesimp>%1 地区的平民受到感染</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_PANDEMIC_DESC">
-                <Original>Civilians get contaminated by a chemical agent around %1. They are requesting your help to decontaminate those civilans with a little shower. To locate civilians go to the subtask, follow red blood drop and use your chemical detector.</Original>
+                <Original>Civilians get contaminated by a chemical agent. They are requesting your help to decontaminate those civilans with a little shower. To locate civilians go to the subtask, follow red blood drop and use your chemical detector.</Original>
                 <Chinesesimp>%1 附近的平民感染了一种化学试剂。平民请求您使用小型淋浴器来净化受感染的村民。要确定平民的位置, 请查看次级任务, 跟随红色的血滴并使用化学探测器。</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_PANDEMIC_DECON_TITLE">
-                <Original>Decontaminate this civilian</Original>
+                <Original>Decontaminate the civilian</Original>
                 <Chinesesimp>净化这名平民</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_PANDEMIC_DECON_DESC">
@@ -1575,7 +1575,7 @@
         </Container>
         <Container name="Action(ACE): Log. Point">
             <Key ID="STR_BTC_HAM_ACTION_LOC_MAIN">
-                <Original>Logistic</Original>
+                <Original>Logistics</Original>
                 <Spanish>Logistica</Spanish>
                 <German>Logistik</German>
                 <Portuguese>Logística</Portuguese>
@@ -1583,7 +1583,7 @@
                 <French>Logistique</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_LOGPOINT_REQOBJ">
-                <Original>Require object</Original>
+                <Original>Open Menu</Original>
                 <Spanish>Solicitar Objeto</Spanish>
                 <German>Nachschub anfordern</German>
                 <Portuguese>Solicitar reabastecimento</Portuguese>
@@ -1599,7 +1599,7 @@
                 <French>Réparer l'épave</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_LOGPOINT_REQVEH">
-                <Original>Require vehicle</Original>
+                <Original>Vehicle Spawner [ADMIN]</Original>
                 <Spanish>Solicitar vehiculo</Spanish>
                 <German>Fahrzeug anfordern</German>
                 <Portuguese>Solicitar veículo</Portuguese>
@@ -1615,13 +1615,13 @@
                 <Original>Resupply rearm source</Original>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_LOGPOINT_BODYBAG">
-                <Original>Get tickets from body bag or prisoner</Original>
+                <Original>Collect Tickets</Original>
                 <Chinesesimp>回收尸体袋或囚犯以获得重生票数</Chinesesimp>
             </Key>
         </Container>
         <Container name="Action(ACE): FOB">
             <Key ID="STR_BTC_HAM_ACTION_FOB_MOUNT">
-                <Original>Mount FOB</Original>
+                <Original>Build FOB</Original>
                 <Spanish>Armar FOB</Spanish>
                 <German>FOB aufbauen</German>
                 <Portuguese>Montar a FOB</Portuguese>
@@ -1679,7 +1679,7 @@
                 <French>Taxi</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_ORDERS_ASKINFO">
-                <Original>Ask info</Original>
+                <Original>Ask for intel</Original>
                 <Spanish>Pedir información</Spanish>
                 <German>Nach Informationen fragen</German>
                 <Portuguese>Pedir informações</Portuguese>
@@ -1687,7 +1687,7 @@
                 <French>Demander des informations</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_ORDERS_ASKREP">
-                <Original>Ask Reputation</Original>
+                <Original>Ask about Reputation</Original>
                 <Spanish>Pregunte su reputación</Spanish>
                 <German>Nach dem Ansehen fragen</German>
                 <Portuguese>Peça a reputação</Portuguese>
@@ -1719,22 +1719,22 @@
         </Container>
         <Container name="Action(ACE): Re-deploy">
             <Key ID="STR_BTC_HAM_ACTION_BIRESPAWN">
-                <Original>BI respawn</Original>
+                <Original>Suicide (-rep)</Original>
                 <Chinesesimp>BI重生</Chinesesimp>
                 <French>BI respawn</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_REDEPLOYBASE">
-                <Original>Re-deploy base</Original>
+                <Original>Teleport HQ</Original>
                 <Chinesesimp>重新部署至基地</Chinesesimp>
                 <French>Se redéployer sur base</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_REDEPLOYRALLY">
-                <Original>Re-deploy rallypoints</Original>
+                <Original>DISABLED</Original>
                 <Chinesesimp>重新部署至集合点</Chinesesimp>
                 <French>Se redéployer au point de ralliement</French>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_REDEPLOYFOB">
-                <Original>Re-deploy FOB/vehicles</Original>
+                <Original>Teleport FOB</Original>
                 <Chinesesimp>重新部署至FOB/载具</Chinesesimp>
                 <French>Se redéployer sur FOB/vehicles</French>
             </Key>
@@ -1770,7 +1770,7 @@
                 <Chinesesimp>悬挂旗帜</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_VEHINIT_CUTFLAG">
-                <Original>Cut flag</Original>
+                <Original>Remove flag</Original>
                 <Chinesesimp>剪断旗帜</Chinesesimp>
             </Key>
         </Container>
@@ -1794,7 +1794,7 @@
         </Container>
         <Container name="Action(ACE): Door">
             <Key ID="STR_BTC_HAM_ACTION_DOOR_BREAK">
-                <Original>Break door lock</Original>
+                <Original>Break lock</Original>
                 <French>Casser la serrure</French>
                 <Chinesesimp>撬锁</Chinesesimp>
             </Key>
@@ -1803,7 +1803,7 @@
     <Package name="Conversations">
         <Container name="Conversations: Info">
             <Key ID="STR_BTC_HAM_CON_INFO_ASKREP_NOINTER">
-                <Original>I can't understand what is saying</Original>
+                <Original>[A language you do not understand]</Original>
                 <Spanish>No puedo entender lo que está diciendo</Spanish>
                 <German>Ich verstehe nicht was Sie sagen</German>
                 <Portuguese>Não consigo entender o que está dizendo</Portuguese>
@@ -1891,7 +1891,7 @@
                 <French>J'ai une plaie ouverte !</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASK_ALLREADYANS">
-                <Original>I already answered to your question!</Original>
+                <Original>I already answered your questions!</Original>
                 <Spanish>¡Ya respondí a tu pregunta!</Spanish>
                 <German>Ich habe Ihnen bereits alles gesagt!</German>
                 <Portuguese>Eu já respondi a sua pergunta!</Portuguese>
@@ -1907,7 +1907,7 @@
                 <French>Je n'ai aucune information pour toi</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASK_CACHEMAP">
-                <Original>I'll show you some hint on the map</Original>
+                <Original>I'll show you a hint on the map</Original>
                 <Spanish>Te mostraré alguna pista en el map</Spanish>
                 <German>Ich habe etwas auf der Karte markiert</German>
                 <Portuguese>Eu vou te mostrar uma dica no mapa</Portuguese>
@@ -1915,7 +1915,7 @@
                 <French>Je vais vous montrer un indice sur la carte</French>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKHIDEOUT_TRUE">
-                <Original>I saw a lot of militia activity towards %1, %2 meter from here. Probably there is an hideout!</Original>
+                <Original>I saw a lot of militia activity towards %1, %2 meter from here. Probably a hideout!</Original>
                 <Spanish>Vi mucha actividad de la milicia en direccion a %1, %2 metros de aqui. ¡Probablemente haya un escondite!</Spanish>
                 <German>Ich habe mehrer bewaffnete Personen in Richtung %1, ca. %2m entfernt, gesehen. Möglicherweise ist dort ein Versteck!</German>
                 <Portuguese>Eu vi várias pessoas armadas indo para %1, a cerca de %2 metros distância. Talvez haja um esconderijo!</Portuguese>
@@ -2112,7 +2112,7 @@
                 <French>Ne fermez pas la boîte de dialogue avec échap</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_CREATE_H_NAME">
-                <Original>Name your FOB!</Original>
+                <Original>Name your FOB! (Dont include "FOB" at the start)</Original>
                 <Spanish>Nombre su FOB!</Spanish>
                 <German>FOB benennen!</German>
                 <Portuguese>Não feche a caixa de diálogo com esc</Portuguese>
@@ -2214,7 +2214,7 @@
                 <French>Ce corps n'a pas d'informations</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_5">
-                <Original>Intel about an hideout found!</Original>
+                <Original>Intel about a hideout found!</Original>
                 <Spanish>¡Información sobre un escondite encontrado!</Spanish>
                 <German>Informationen über ein Versteck gefunden!</German>
                 <Portuguese>Informação sobre esconderijo encontrada!</Portuguese>
@@ -2222,7 +2222,7 @@
                 <French>Intel à propos d'une planque trouvée !</French>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_6">
-                <Original>In the last hideout we found important intel about all the cities occupied by the Oplitas! Size the last positions held by the enemies and defeat them once and for all</Original>
+                <Original>In the last hideout we found important intel about all the cities occupied by the Oplitas! Capture the last positions held by the enemies and defeat them once and for all</Original>
                 <Spanish>En el último escondite encontramos información importante sobre todas las ciudades ocupadas por los Oplitas! Evalúa las últimas posiciones de los enemigos y derrótalos de una vez por todas.</Spanish>
                 <German>In the last hideout we found important intel about all the cities occupied by the Oplitas! Size the last positions held by the enemies and defeat them once and for all</German>
                 <Portuguese>No último esconderijo encontramos informações importantes sobre as cidades ocupadas pelos inimigos! Conquites as últimas posições dos inimigos e derrote-os de uma vez por todas</Portuguese>
@@ -2381,7 +2381,7 @@
         </Container>
         <Container name="Other: Endmission">
             <Key ID="STR_BTC_HAM_O_COMMON_ENDMISSION">
-                <Original>All the hideouts are destroyed, finally the Oplitas has been defeated! Mission accomplished</Original>
+                <Original>We did it! Good lord we actually finished a map!</Original>
                 <Spanish>Todos los escondites fueron destruidos, finalmente el Oplitas han sido derrotados! Misión cumplida</Spanish>
                 <German>Alle Verstecke sind zerstört, nun sind die Oplitas besiegt! Mission erfüllt</German>
                 <Portuguese>Todos os esconderijos foram destruídos, finalmente os inimigos foram derrotados! Missão cumprida</Portuguese>
@@ -2442,11 +2442,11 @@
         </Container>
         <Container name="Other: Bodybag">
             <Key ID="STR_BTC_HAM_O_BODYBAG_NO">
-                <Original>No body bag around or alive enemy</Original>
+                <Original>No body bag or POW located -> Please move closer to the pad.</Original>
                 <Chinesesimp>附近没有尸体袋或存活的敌军</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_O_BODYBAG_COPY">
-                <Original>You can't copy body bag</Original>
+                <Original>You can't copy dead people silly!</Original>
                 <Chinesesimp>你不能复制尸体袋</Chinesesimp>
             </Key>
         </Container>
@@ -2472,7 +2472,7 @@
                 <French>Impossible de remorquer !&lt;br/&gt;(Ce véhicule ne peut pas remorquer %1)</French>
             </Key>
             <Key ID="STR_BTC_HAM_TOW_HOOK">
-                <Original>Towing vehicle selected, interact with the vehicle to tow!</Original>
+                <Original>Towing vehicle selected, interact with another vehicle to tow!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_TOW_TFAR">
                 <Original>Too far!</Original>
@@ -2493,7 +2493,7 @@
         </Container>
         <Container name="Logistic: Lift deploy ropes ">
             <Key ID="STR_BTC_HAM_LOG_LDR_ACTIONHUD">
-                <Original>Hud On\Off</Original>
+                <Original>Lift Hud On\Off</Original>
                 <Spanish>Hud Encendido\Apagado</Spanish>
                 <German>Hud An\Aus</German>
                 <Portuguese>Hud Ligado\Desligado</Portuguese>
@@ -2501,7 +2501,7 @@
                 <French>Hud On\Off</French>
             </Key>
             <Key ID="STR_BTC_HAM_LOG_HOOK">
-                <Original>Hook</Original>
+                <Original>HOOK</Original>
                 <Spanish>Enganchar</Spanish>
                 <German>Einhacken</German>
                 <Portuguese>Enganchar</Portuguese>
@@ -2561,7 +2561,7 @@
                 <French>Aucune épave trouvée</French>
             </Key>
             <Key ID="STR_BTC_HAM_LOG_RWRECK_NOTWRECK">
-                <Original>It is not a wreck!</Original>
+                <Original>Object is not a wreck!</Original>
                 <Spanish>¡No es chatarra!</Spanish>
                 <German>Das ist kein Wrack!</German>
                 <Portuguese>Isso não é um carcaça!</Portuguese>
@@ -2584,7 +2584,7 @@
                 <French>Aucun objet à supprimer trouvé</French>
             </Key>
             <Key ID="STR_BTC_HAM_LOG_LPDELETE">
-                <Original>Can't delete object not created by Logistic Point</Original>
+                <Original>Can't delete an object not created by Logistic Point</Original>
                 <German>Objekt konnte nicht gelöscht werden, da es nicht am Logisik-Punkt erstellt worden ist</German>
                 <Chinesesimp>只能删除由后勤点创建的物件</Chinesesimp>
                 <French>Impossible de supprimer un objet non créé par le Point Logistique</French>

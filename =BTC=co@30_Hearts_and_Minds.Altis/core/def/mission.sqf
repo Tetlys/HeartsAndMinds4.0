@@ -147,7 +147,7 @@ if (isServer) then {
     //Hideout
     btc_hideouts = []; publicVariable "btc_hideouts";
     btc_hideouts_id = 0;
-    btc_hideouts_radius = 800;
+    btc_hideouts_radius = 500;
     btc_hideout_n = _hideout_n;
     if (btc_hideout_n isEqualTo 99) then {
         btc_hideout_n = round random 10;
@@ -170,11 +170,11 @@ if (isServer) then {
 
     //Patrol
     btc_patrol_active = [];
-    btc_patrol_area = 2500;
+    btc_patrol_area = 1500;
 
     //Rep
     btc_global_reputation = _p_rep;
-    btc_rep_militia_call_time = 600;
+    btc_rep_militia_call_time = 500;
     btc_rep_militia_called = - btc_rep_militia_call_time;
     btc_rep_delayed = [0, []];
 
@@ -409,7 +409,7 @@ btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_R
 //FOB
 btc_fob_mat = "Land_Pod_Heli_Transport_04_fuel_F";
 btc_fob_structure = "Land_Cargo_HQ_V3_F";
-btc_fob_flag = "rhs_Flag_Russia_F";
+btc_fob_flag = "Flag_ION_F";
 btc_fob_id = 0;
 btc_fob_minDistance = 1000;
 
@@ -431,7 +431,7 @@ btc_info_intel_type = [80, 95];//cache - hd - both
 btc_info_cache_def = _cache_info_def;
 btc_info_cache_ratio = _cache_info_ratio;
 btc_info_hideout_radius = 4000;
-btc_info_intels = ["Land_Camera_01_F", "Land_HandyCam_F"];
+btc_info_intels = ["Land_Camera_01_F", "Land_HandyCam_F" , "acex_intelitems_document" , "acex_intelitems_notepad" , "acex_intelitems_photo"];
 
 //Supplies
 btc_supplies_cargo = "B_Slingload_01_Medevac_F";
@@ -497,6 +497,8 @@ btc_construction_array =
             "Land_Camping_Light_F",
             "Land_DragonsTeeth_01_4x2_new_redwhite_F",
             "Land_ConcreteHedgehog_01_F",
+            "Land_Plank_01_8m_F",
+            "Land_Plank_01_4m_F",
             "Land_Medevac_house_V1_F"
         ],
         [
@@ -672,22 +674,22 @@ btc_spect_updateOn = -1;
 
 //Rep
 btc_rep_bonus_cache = 150;
-btc_rep_bonus_civ_hh = 5;
-btc_rep_bonus_disarm = 15;
+btc_rep_bonus_civ_hh = 10;
+btc_rep_bonus_disarm = 30;
 btc_rep_bonus_hideout = 200;
 btc_rep_bonus_mil_killed = 0.5;
-btc_rep_bonus_IEDCleanUp = 10;
+btc_rep_bonus_IEDCleanUp = 15;
 btc_rep_bonus_removeTag = 5;
 btc_rep_bonus_removeTagLetter = 3;
-btc_rep_bonus_foodGive = 3;
+btc_rep_bonus_foodGive = 5;
 
-btc_rep_malus_civ_hd = - 2;
+btc_rep_malus_civ_hd = - 3;
 btc_rep_malus_animal_hd = - 1;
 btc_rep_malus_civ_killed = - 15;
 btc_rep_malus_animal_killed = - 5;
-btc_rep_malus_civ_suppressed = - 3;
-btc_rep_malus_player_respawn = - 0;
-btc_rep_malus_veh_killed = - 25;
+btc_rep_malus_civ_suppressed = - 5;
+btc_rep_malus_player_respawn = - 1;
+btc_rep_malus_veh_killed = - 30;
 btc_rep_malus_building_damaged = - 5;
 btc_rep_malus_building_destroyed = - 10;
 btc_rep_malus_foodRemove = - btc_rep_bonus_foodGive;
@@ -715,11 +717,14 @@ btc_flag_textures = [
     "\A3\Data_F\Flags\flag_us_CO.paa",
     "\A3\Data_F\Flags\flag_NATO_CO.paa",
     "\A3\Data_F_Orange\Flags\flag_IDAP_CO.paa",
+    "\A3\Data_F\Flags\flag_rcrystal_CO.paa",
+    "\A3\Data_F\Flags\flag_ion_CO.paa",
+    "\A3\Data_F\Flags\Flag_uno_CO.paa",
     "\A3\Data_F\Flags\Flag_pow_CO.paa"
 ];
 
 //Respawn
-btc_body_bagTicketPlayer = 1;
-btc_body_enemyTicket = 2;
+btc_body_bagTicketPlayer = 2;
+btc_body_enemyTicket = 3;
 
-btc_startDate = [1981, 4, 08, 12, 15];
+btc_startDate = [2021, 4, 08, 12, 15];

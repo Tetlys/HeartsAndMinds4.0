@@ -58,16 +58,16 @@ private _spawningRadius = _cachingRadius/2;
 
 if (!(_city getVariable ["initialized", false])) then {
     private _numberOfIED = (switch _type do {
-        case "Hill" : {1};
-        case "VegetationFir" : {1};
-        case "BorderCrossing" : {2};
-        case "NameLocal" : {2.5};
-        case "StrongpointArea" : {3};
-        case "NameVillage" : {3.5};
-        case "NameCity" : {5};
-        case "NameCityCapital" : {6};
-        case "Airport" : {1};
-        case "NameMarine" : {1};
+        case "Hill" : {0}; //3
+        case "VegetationFir" : {0}; //2
+        case "BorderCrossing" : {1};//4
+        case "NameLocal" : {2};//5
+        case "StrongpointArea" : {7};//10
+        case "NameVillage" : {3};//6
+        case "NameCity" : {4};//7
+        case "NameCityCapital" : {5};//8
+        case "Airport" : {6};//9
+        case "NameMarine" : {0};//1
         default {0};
     });
 
@@ -102,15 +102,15 @@ if (_data_units isNotEqualTo []) then {
     // Maximum number of enemy group
     private _numberOfGroup = (switch _type do {
         case "Hill" : {4};
-        case "VegetationFir" : {4};
-        case "BorderCrossing" : {7};
-        case "NameLocal" : {7};
-        case "StrongpointArea" : {8};
-        case "NameVillage" : {8};
-        case "NameCity" : {16};
-        case "NameCityCapital" : {32};
-        case "Airport" : {32};
-        case "NameMarine" : {4};
+        case "VegetationFir" : {2};
+        case "BorderCrossing" : {6};
+        case "NameLocal" : {8};
+        case "StrongpointArea" : {18};
+        case "NameVillage" : {10};
+        case "NameCity" : {12};
+        case "NameCityCapital" : {14};
+        case "Airport" : {16};
+        case "NameMarine" : {1};
         default {0};
     });
 
@@ -132,13 +132,13 @@ if (_data_units isNotEqualTo []) then {
 
         if (_has_en) then {
             private _numberOfStatic = (switch _type do {
-                case "VegetationFir" : {3};
-                case "BorderCrossing" : {6};
+                case "VegetationFir" : {1};
+                case "BorderCrossing" : {2};
                 case "NameLocal" : {3};
-                case "StrongpointArea" : {6};
-                case "NameVillage" : {6};
-                case "NameCity" : {12};
-                case "NameCityCapital" : {15};
+                case "StrongpointArea" : {7};
+                case "NameVillage" : {4};
+                case "NameCity" : {5};
+                case "NameCityCapital" : {6};
                 case "Airport" : {6};
                 default {0};
             });
@@ -147,14 +147,14 @@ if (_data_units isNotEqualTo []) then {
 
         // Spawn civilians
         private _numberOfCivi = (switch _type do {
-            case "VegetationFir" : {1};
+            case "VegetationFir" : {0};
             case "BorderCrossing" : {0};
-            case "NameLocal" : {3};
-            case "StrongpointArea" : {0};
-            case "NameVillage" : {6};
-            case "NameCity" : {10};
-            case "NameCityCapital" : {19};
-            case "Airport" : {6};
+            case "NameLocal" : {5};
+            case "StrongpointArea" : {4};
+            case "NameVillage" : {10};
+            case "NameCity" : {15};
+            case "NameCityCapital" : {20};
+            case "Airport" : {5};
             default {2};
         });
         [+_housesEntrerable, round (_p_civ_group_ratio * _numberOfCivi), _city] call btc_civ_fnc_populate;
@@ -170,9 +170,9 @@ if (btc_p_animals_group_ratio > 0) then {
         private _numberOfAnimalsGroup = (switch _type do {
             case "Hill" : {3};
             case "VegetationFir" : {3};
-            case "NameLocal" : {3};
-            case "NameVillage" : {2};
-            case "NameCity" : {1};
+            case "NameLocal" : {2};
+            case "NameVillage" : {0};
+            case "NameCity" : {0};
             case "NameCityCapital" : {0};
             case "Airport" : {0};
             case "NameMarine" : {0};

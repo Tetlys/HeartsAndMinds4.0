@@ -101,15 +101,15 @@ if (_data_units isNotEqualTo []) then {
 } else {
     // Maximum number of enemy group
     private _numberOfGroup = (switch _type do {
-        case "Hill" : {4};
+        case "Hill" : {3};
         case "VegetationFir" : {2};
-        case "BorderCrossing" : {6};
-        case "NameLocal" : {8};
-        case "StrongpointArea" : {18};
-        case "NameVillage" : {10};
-        case "NameCity" : {12};
-        case "NameCityCapital" : {14};
-        case "Airport" : {16};
+        case "BorderCrossing" : {4};
+        case "NameLocal" : {5};
+        case "StrongpointArea" : {15};
+        case "NameVillage" : {6};
+        case "NameCity" : {7};
+        case "NameCityCapital" : {8};
+        case "Airport" : {10};
         case "NameMarine" : {1};
         default {0};
     });
@@ -151,9 +151,9 @@ if (_data_units isNotEqualTo []) then {
             case "BorderCrossing" : {0};
             case "NameLocal" : {5};
             case "StrongpointArea" : {4};
-            case "NameVillage" : {10};
-            case "NameCity" : {15};
-            case "NameCityCapital" : {20};
+            case "NameVillage" : {8};
+            case "NameCity" : {12};
+            case "NameCityCapital" : {15};
             case "Airport" : {5};
             default {2};
         });
@@ -168,9 +168,9 @@ if (btc_p_animals_group_ratio > 0) then {
     } else {
         // Spawn animals
         private _numberOfAnimalsGroup = (switch _type do {
-            case "Hill" : {3};
-            case "VegetationFir" : {3};
-            case "NameLocal" : {2};
+            case "Hill" : {2};
+            case "VegetationFir" : {2};
+            case "NameLocal" : {1};
             case "NameVillage" : {0};
             case "NameCity" : {0};
             case "NameCityCapital" : {0};

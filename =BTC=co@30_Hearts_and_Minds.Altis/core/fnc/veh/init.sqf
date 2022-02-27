@@ -50,6 +50,3 @@ switch true do {
         _type call btc_tow_fnc_int;
     };
 };
-
-
-

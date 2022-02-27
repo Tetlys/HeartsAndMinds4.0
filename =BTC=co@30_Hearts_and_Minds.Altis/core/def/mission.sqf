@@ -430,7 +430,7 @@ btc_info_intel_chance = _info_chance;
 btc_info_intel_type = [80, 95];//cache - hd - both
 btc_info_cache_def = _cache_info_def;
 btc_info_cache_ratio = _cache_info_ratio;
-btc_info_hideout_radius = 4000;
+btc_info_hideout_radius = 2000;
 btc_info_intels = ["Land_Camera_01_F", "Land_HandyCam_F" , "acex_intelitems_document" , "acex_intelitems_notepad" , "acex_intelitems_photo"];
 
 //Supplies
@@ -509,8 +509,7 @@ btc_construction_array =
             "RHS_TOW_TriPod_WD",
             "RHS_MK19_TriPod_WD",
             "RHS_M252_WD",
-            "B_Static_Designator_01_F",
-            "B_GMG_01_A_F"
+            "B_Static_Designator_01_F"
         ],
         [
             //"Inv Storage"
@@ -529,8 +528,8 @@ btc_construction_array =
         ],
         [
             //"FOB"
-            btc_fob_mat,
-            "C_supplyCrate_F"
+            btc_fob_mat
+        //    "C_supplyCrate_F"
         ],
         [
             //"Decontamination"
@@ -727,4 +726,4 @@ btc_flag_textures = [
 btc_body_bagTicketPlayer = 2;
 btc_body_enemyTicket = 3;
 
-btc_startDate = [2021, 4, 08, 12, 15];
+btc_startDate = [2021, 06, 15, 12, 15];

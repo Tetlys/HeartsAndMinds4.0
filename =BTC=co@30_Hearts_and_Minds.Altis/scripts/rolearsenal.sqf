@@ -44,9 +44,8 @@ roleArsenal = {
 			or (_UnitRole == "Charlie Marksman")) then
 			{_Role = "MARKSMAN"};
 		//ENGINEER
-			if ((_UnitRole == "Alpha Engineer")
-			or (_UnitRole == "Bravo Engineer")
-			or (_UnitRole == "Charlie Engineer")) then
+			if ((_UnitRole == "O.G.R.E Commander@O.G.R.E (Logistics)")
+			or (_UnitRole == "O.G.R.E Engineer")) then
 			{_Role = "ENGINEER"};
 		//AUTORIFLEMAN
 			if ((_UnitRole == "Alpha AutoRifleman")
@@ -67,10 +66,7 @@ roleArsenal = {
 	// ARMOUR
 	if ((_UnitRole == "Armor 1 Vehicle Commander@Armor 1 (Armor)")
 	or (_UnitRole == "Armor 1 Driver")
-	or (_UnitRole == "Armor 1 Gunner")
-	or (_UnitRole == "Armor 2 Vehicle Commander@Armor 2 (Armor)")
-	or (_UnitRole == "Armor 2 Driver")
-	or (_UnitRole == "Armor 2 Gunner")) then
+	or (_UnitRole == "Armor 1 Gunner")) then
 	{_Role = "ARMOR"};
 
 	// STALKER
@@ -78,47 +74,42 @@ roleArsenal = {
 	or (_UnitRole == "STALKER 2 Pilot@Joint Air Command 2")) then
 	{_Role = "STALKER"};
 
-
 	//Empty array of gear to add to the arsenal per player.
 	Private _GearToAdd = [];
 
 	//Define the gear for each Role
 	Private _DefaultGear = [
 	//Uniform
-    "U_B_CombatUniform_mcam_tshirt",
-    "rhs_uniform_g3_mc",
+  "U_B_CombatUniform_mcam_tshirt",
+  "rhs_uniform_g3_mc",
 	"rhs_uniform_g3_tan",
 	"rhs_uniform_g3_rgr",
-    "U_lxWS_ION_Casual1",
-		"U_C_ArtTShirt_01_v5_F",
-		"U_C_ArtTShirt_01_v3_F",
-		"U_C_ArtTShirt_01_v4_F",
-		"U_C_ArtTShirt_01_v1_F",
-		"U_I_C_Soldier_Bandit_2_F",
-		"U_I_C_Soldier_Bandit_3_F",
-		"U_BG_Guerilla2_2",
-		"U_BG_Guerilla2_1",
-		"U_BG_Guerilla2_3",
-		"U_C_Journalist",
-		"U_Rangemaster",
+  "U_lxWS_ION_Casual1",
+	"U_C_ArtTShirt_01_v5_F",
+	"U_C_ArtTShirt_01_v3_F",
+	"U_C_ArtTShirt_01_v4_F",
+	"U_C_ArtTShirt_01_v1_F",
+	"U_I_C_Soldier_Bandit_2_F",
+	"U_I_C_Soldier_Bandit_3_F",
+	"U_BG_Guerilla2_2",
+	"U_BG_Guerilla2_1",
+	"U_BG_Guerilla2_3",
+	"U_C_Journalist",
+	"U_Rangemaster",
+	"U_B_CombatUniform_mcam_vest",
 	//Vest
-    "rhsusf_mbav_grenadier",
-    "rhsusf_mbav_light",
-    "rhsusf_mbav_mg",
-    "rhsusf_mbav_medic",
-    "rhsusf_mbav_rifleman",
-    "rhsusf_plateframe_grenadier",
-    "rhsusf_plateframe_light",
-    "rhsusf_plateframe_machinegunner",
-    "rhsusf_plateframe_marksman",
-    "rhsusf_plateframe_medic",
-    "rhsusf_plateframe_rifleman",
-    "rhsusf_plateframe_teamleader",
-		"rhsusf_iotv_ocp_Medic",
-		"rhsusf_iotv_ocp_Rifleman",
-		"rhsusf_iotv_ocp_SAW",
-		"rhsusf_iotv_ocp_Squadleader",
-		"rhsusf_iotv_ocp_Teamleader",
+  "rhsusf_mbav_grenadier",
+  "rhsusf_mbav_light",
+  "rhsusf_mbav_mg",
+  "rhsusf_mbav_medic",
+  "rhsusf_mbav_rifleman",
+  "rhsusf_plateframe_grenadier",
+  "rhsusf_plateframe_light",
+  "rhsusf_plateframe_machinegunner",
+  "rhsusf_plateframe_marksman",
+  "rhsusf_plateframe_medic",
+  "rhsusf_plateframe_rifleman",
+  "rhsusf_plateframe_teamleader",
 	"rhsusf_spc_corpsman",
 	"rhsusf_spc_iar",
 	"rhsusf_spc_light",
@@ -127,99 +118,117 @@ roleArsenal = {
 	"rhsusf_spc_rifleman",
 	"rhsusf_spc_squadleader",
 	"rhsusf_spc_teamleader",
-    "V_TacVestIR_blk",
 	"V_PlateCarrier1_rgr",
 	"V_PlateCarrier2_rgr",
 	"V_PlateCarrierSpec_rgr",
 	"V_PlateCarrierSpec_mtp",
+	"Crye_AVS_1",
+  "Crye_AVS_1_RG",
+  "Crye_AVS_1_Tan",
+  "Crye_AVS_1_1",
+  "Crye_AVS_1_1_RG",
+  "Crye_AVS_1_1_Tan",
+  "Crye_AVS_1_2",
+  "Crye_AVS_1_2_RG",
+  "Crye_AVS_1_2_Tan",
+  "Crye_AVS_1_3",
+  "Crye_AVS_1_3_RG",
+  "Crye_AVS_1_3_Tan",
+  "Crye_AVS_3",
+  "Crye_AVS_3_RG",
+  "Crye_AVS_3_Tan",
+  "Crye_AVS_3_1",
+  "Crye_AVS_3_1_RG",
+  "Crye_AVS_3_1_Tan",
+  "Crye_AVS_3_2",
+  "Crye_AVS_3_2_RG",
+  "Crye_AVS_3_2_Tan",
+  "Crye_AVS_3_3",
+  "Crye_AVS_3_3_RG",
+  "Crye_AVS_3_3_Tan",
 	//Bagpack
 	"kat_stretcherBag",
 	"B_Parachute",
-    "ACE_TacticalLadder_Pack",
-    "B_AssaultPack_cbr",
-    "B_AssaultPack_rgr",
-    "B_AssaultPack_khk",
-    "B_AssaultPack_mcamo",
-    "B_Carryall_cbr",
-    "B_Carryall_green_F",
-    "B_Carryall_khk",
-    "B_Carryall_mcamo",
-    "B_Carryall_oli",
-    "B_Kitbag_cbr",
-    "B_Kitbag_rgr",
-    "B_Kitbag_mcamo",
-    "B_Kitbag_sgg",
-    "B_Kitbag_tan",
-    "B_TacticalPack_mcamo",
-    "B_TacticalPack_oli",
-    "tfw_ilbe_blade_coy",
-    "tfw_ilbe_blade_gr",
-    "tfw_ilbe_blade_mc",
+  "ACE_TacticalLadder_Pack",
+  "B_AssaultPack_cbr",
+  "B_AssaultPack_rgr",
+  "B_AssaultPack_khk",
+  "B_AssaultPack_mcamo",
+  "B_Carryall_cbr",
+  "B_Carryall_green_F",
+  "B_Carryall_khk",
+  "B_Carryall_mcamo",
+  "B_Carryall_oli",
+  "B_Kitbag_cbr",
+  "B_Kitbag_rgr",
+  "B_Kitbag_mcamo",
+  "B_Kitbag_sgg",
+  "B_Kitbag_tan",
+  "B_TacticalPack_mcamo",
+  "B_TacticalPack_oli",
+  "tfw_ilbe_blade_coy",
+  "tfw_ilbe_blade_gr",
+  "tfw_ilbe_blade_mc",
 	//helm
 	"rhs_booniehat2_marpatd",
-    "H_Booniehat_khk",
-    "H_Booniehat_mcamo",
-    "H_Booniehat_oli",
-    "H_Booniehat_tan",
-    "H_Cap_tan",
-    "H_Cap_blk_CMMG",
-    "H_Cap_blk_ION",
-    "H_Cap_khaki_specops_UK",
-    "H_Cap_usblack",
-    "H_Cap_tan_specops_US",
-    "rhsusf_ach_bare_tan",
-    "rhsusf_ach_bare_tan_ess",
-    "rhsusf_ach_bare_tan_headset",
-    "rhsusf_ach_bare_tan_headset_ess",
-    "rhsusf_ach_bare_ess",
-    "rhsusf_ach_bare_headset",
-    "rhsusf_ach_bare_headset_ess",
-    "rhsusf_opscore_fg",
-    "rhsusf_opscore_fg_pelt",
-    "rhsusf_opscore_fg_pelt_cam",
-    "rhsusf_opscore_fg_pelt_nsw",
-    "rhsusf_opscore_mc_cover",
-    "rhsusf_opscore_mc_cover_pelt",
-    "rhsusf_opscore_mc_cover_pelt_nsw",
-    "rhsusf_opscore_mc",
-    "rhsusf_opscore_mc_pelt",
-    "rhsusf_opscore_mc_pelt_nsw",
-	"lxWS_H_bmask_base",
-	"lxWS_H_bmask_camo01",
-	"lxWS_H_bmask_white",
-	"lxWS_H_bmask_camo02",
-	"lxWS_H_bmask_yellow",
+  "H_Booniehat_khk",
+  "H_Booniehat_mcamo",
+  "H_Booniehat_oli",
+  "H_Booniehat_tan",
+  "H_Cap_tan",
+  "H_Cap_blk_CMMG",
+  "H_Cap_blk_ION",
+  "H_Cap_khaki_specops_UK",
+  "H_Cap_usblack",
+  "H_Cap_tan_specops_US",
+	"rhssaf_beret_red",
+  "rhssaf_beret_black",
+  "rhssaf_beret_green",
+  "H_Beret_blk",
+  "rhsusf_ach_bare_tan",
+  "rhsusf_ach_bare_tan_ess",
+  "rhsusf_ach_bare_tan_headset",
+  "rhsusf_ach_bare_tan_headset_ess",
+  "rhsusf_ach_bare_ess",
+  "rhsusf_ach_bare_headset",
+  "rhsusf_ach_bare_headset_ess",
+  "rhsusf_opscore_fg",
+  "rhsusf_opscore_fg_pelt",
+  "rhsusf_opscore_fg_pelt_cam",
+  "rhsusf_opscore_fg_pelt_nsw",
+  "rhsusf_opscore_mc_cover",
+  "rhsusf_opscore_mc_cover_pelt",
+  "rhsusf_opscore_mc_cover_pelt_nsw",
+  "rhsusf_opscore_mc",
+  "rhsusf_opscore_mc_pelt",
+  "rhsusf_opscore_mc_pelt_nsw",
+	"rhsusf_opscore_coy_cover_pelt",
+	"rhsusf_opscore_paint_pelt_nsw_cam",
 	//weapons
 	"rhs_weap_g36c",
 	"rhs_weap_g36kv",
-	"rhs_weap_g36kv_ag36",
-    "rhs_weap_m4a1_blockII_bk",
-	"rhs_weap_m4a1_blockII_M203_bk",
+	"rhs_weap_m4a1_carryhandle",
+	"rhs_weap_m4a1_carryhandle_mstock",
+  "rhs_weap_m4a1_blockII_bk",
 	"rhs_weap_m4a1_blockII_d",
-	"rhs_weap_m4a1_blockII_M203_d",
 	"rhs_weap_m16a4_imod",
-	"rhs_weap_m16a4_imod_M203",
 	"rhs_weap_mk18_d",
-    "rhs_weap_mk18_bk",
-	"rhs_weap_mk18_m320",
+  "rhs_weap_mk18_bk",
 	"rhsusf_weap_MP7A2",
 	"rhsusf_weap_MP7A2_desert",
-    "SMG_03C_TR_black",
+  "SMG_03C_TR_black",
 	"SMG_03C_TR_khaki",
-    "arifle_Mk20_plain_F",
-    "arifle_Mk20_GL_plain_F",
-    "rhs_weap_vhsd2",
-    "rhs_weap_vhsd2_bg",
-    "rhs_weap_ak103_zenitco01_b33",
-    "rhs_weap_ak103_gp25_npz",
-    "rhs_weap_ak104_zenitco01_b33",
-		"rhs_weap_ak105_zenitco01_b33",
+  "arifle_Mk20_plain_F",
+  "rhs_weap_vhsd2",
+  "rhs_weap_ak103_zenitco01_b33",
+  "rhs_weap_ak104_zenitco01_b33",
+	"rhs_weap_ak105_zenitco01_b33",
 	"arifle_TRG21_F",
+	//secondary
 	"rhsusf_weap_glock17g4",
 	"rhsusf_weap_m9",
 	"hgun_Pistol_heavy_01_F",
 	"rhs_weap_m1911a1",
-	"rhs_weap_M320",
 	//launchers
 	"rhs_weap_M136",
 	"rhs_weap_M136_hedp",
@@ -233,12 +242,20 @@ roleArsenal = {
 	"rhsusf_mag_40Rnd_46x30_JHP",
 	"50Rnd_570x28_SMG_03",
 	"rhs_30Rnd_545x39_AK_plum_green",
+	"11Rnd_45ACP_Mag",
+	"rhsusf_mag_17Rnd_9x19_JHP",
+	"rhsusf_mag_7x45acp_MHP",
+	"rhsusf_mag_15Rnd_9x19_JHP",
 	//ammoroles
-    "ACE_20Rnd_762x51_Mag_Tracer",
+	"10Rnd_93x64_DMR_05_Mag",
+  "ACE_20Rnd_762x51_Mag_Tracer",
 	"ACE_20Rnd_762x51_M993_AP_Mag",
 	"rhsusf_20Rnd_762x51_SR25_m62_Mag",
 	"rhsusf_20Rnd_762x51_SR25_m993_Mag",
 	"rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",
+	"200Rnd_65x39_cased_Box_Tracer_Red",
+	"rhsusf_100Rnd_762x51_m62_tracer",
+	"rhsusf_100Rnd_762x51_m61_ap",
 	"rhs_fgm148_magazine_AT",
 	"MRAWS_HE_F",
 	"MRAWS_HEAT55_F",
@@ -255,8 +272,8 @@ roleArsenal = {
 	"rhs_mag_m715_Green",
 	"rhs_mag_m716_yellow",
 	"rhs_GDM40",
-    "rhs_VG40MD",
-    "rhs_VOG25",
+  "rhs_VG40MD",
+  "rhs_VOG25",
 	// attachments
 	"optic_arco_blk_f",
 	"optic_arco_ak_blk_f",
@@ -297,7 +314,12 @@ roleArsenal = {
 	"ace_muzzle_mzls_smg_01",
 	"muzzle_snds_acp",
 	"rhs_acc_dtk3",
+	"rhs_acc_dtk4short",
 	"rhs_acc_tgpa",
+	"rhs_acc_pbs1",
+	"rhs_acc_dtk4screws",
+	"ace_muzzle_mzls_h",
+	"muzzle_snds_h",
 	//Grenades
 	"SmokeShell",
 	"SmokeShellBlue",
@@ -340,17 +362,17 @@ roleArsenal = {
 	"rhsusf_shemagh2_tan",
 	//items
 	"Attachable_Helistretcher",
-    "ACE_rope36",
-    "ACE_rope27",
-    "ACE_rope18",
+  "ACE_rope36",
+  "ACE_rope27",
+  "ACE_rope18",
 	"ACE_Banana",
 	"ACE_fieldDressing",
 	"ACE_elasticBandage",
 	"ACE_packingBandage",
 	"ACE_quikclot",
-	"kat_bloodIV_O",
-  "kat_bloodIV_O_250",
-  "kat_bloodIV_O_500",
+	"ACE_salineIV",
+	"ACE_salineIV_250",
+	"ACE_salineIV_500",
 	"ACE_bodyBag",
 	"ACE_CableTie",
 	"ACE_EarPlugs",
@@ -380,14 +402,18 @@ roleArsenal = {
 	"TFAR_anprc152",
 	"ACE_VMH3",
 	"ACE_WaterBottle",
-	"tfw_rf3080Item"
+	"tfw_rf3080Item",
+	"ACE_artilleryTable"
 	];
 
 	Private _ADMIN = [
+	//secondary
+	"rhs_weap_M320",
 	//uniform
 	"U_I_C_Soldier_Bandit_4_F",
 	//vests
 	//backpacks
+	"B_rhsusf_B_BACKPACK",
 	//items
 	"ToolKit",
 	"ACE_wirecutter",
@@ -402,30 +428,38 @@ roleArsenal = {
 	"ACE_HuntIR_monitor",
 	"B_UavTerminal",
 	"kat_aatKit",
-    "kat_accuvac",
-    "kat_X_AED",
-    "kat_AED",
-    "kat_crossPanel",
-    "kat_chestSeal",
-    "KAT_Empty_bloodIV_250",
-    "KAT_Empty_bloodIV_500",
-    "kat_larynx",
-    "kat_stethoscope",
-    "kat_guedel",
-    "kat_Pulseoximeter"
+  "kat_accuvac",
+  "kat_X_AED",
+  "kat_AED",
+  "kat_crossPanel",
+  "kat_chestSeal",
+  "KAT_Empty_bloodIV_250",
+  "KAT_Empty_bloodIV_500",
+  "kat_larynx",
+  "kat_stethoscope",
+  "kat_guedel",
+  "kat_Pulseoximeter",
+	"kat_bloodIV_O",
+	"kat_bloodIV_O_250",
+	"kat_bloodIV_O_500"
 	];
 
 	Private _CO = [
+	//secondary
+	"rhs_weap_M320",
 	//backpacks
+	"B_rhsusf_B_BACKPACK",
 	//vests
 	"rhsusf_spc_patchless",
 	"rhsusf_spc_patchless_radio",
     //items
 	"ACE_HuntIR_monitor",
 	"B_UavTerminal"
-    ];
+  ];
 
 	Private _SL = [
+	//secondary
+	"rhs_weap_M320",
 	//backpacks
 	//vests
 	"rhsusf_spc_patchless",
@@ -444,17 +478,20 @@ roleArsenal = {
 	"ACE_adenosine",
 	"ACE_surgicalKit",
 	"kat_aatKit",
-    "kat_accuvac",
-    "kat_X_AED",
-    "kat_AED",
-    "kat_crossPanel",
-    "kat_chestSeal",
-    "KAT_Empty_bloodIV_250",
-    "KAT_Empty_bloodIV_500",
-    "kat_larynx",
-    "kat_stethoscope",
-    "kat_guedel",
-    "kat_Pulseoximeter"
+  "kat_accuvac",
+  "kat_X_AED",
+  "kat_AED",
+  "kat_crossPanel",
+  "kat_chestSeal",
+  "kat_larynx",
+  "kat_stethoscope",
+  "kat_guedel",
+  "kat_Pulseoximeter",
+	"KAT_Empty_bloodIV_250",
+	"KAT_Empty_bloodIV_500",
+	"kat_bloodIV_O",
+	"kat_bloodIV_O_250",
+	"kat_bloodIV_O_500"
 	];
 
 	Private _MARKSMAN = [
@@ -471,6 +508,8 @@ roleArsenal = {
 	"optic_dms",
 	"ace_muzzle_mzls_93mmg",
 	"muzzle_snds_93mmg",
+	"optic_nvs",
+  "rhsusf_acc_acog_anpvs27",
 	//Items
 	"ACE_ATragMX",
 	"ACE_Kestrel4500",
@@ -481,7 +520,7 @@ roleArsenal = {
 
 	Private _ENGINEER = [
 	//vests
-    "V_PlateCarrierGL_rgr",
+  "V_PlateCarrierGL_rgr",
 	"V_PlateCarrierGL_mtp",
 	//Explosives
 	"SatchelCharge_Remote_Mag",
@@ -503,6 +542,7 @@ roleArsenal = {
 	"rhs_weap_m249_light_L",
 	"rhs_weap_m249_light_S",
 	"rhs_weap_m240B",
+	"LMG_Mk200_F",
 	"MMG_02_black_F",
 	//vests
 	//Items
@@ -518,6 +558,19 @@ roleArsenal = {
 	];
 
 	Private _RIFLEMAN = [
+	//weapons
+	"rhs_weap_g36kv_ag36",
+	"rhs_weap_m4a1_blockII_M203_bk",
+	"rhs_weap_m4a1_blockII_M203_d",
+  "rhs_weap_m16a4_imod_M203",
+	"rhs_weap_mk18_m320",
+	"arifle_Mk20_GL_plain_F",
+	"rhs_weap_vhsd2_bg",
+	"rhs_weap_ak103_gp25_npz",
+	"rhs_weap_m4a1_carryhandle_m203",
+	//secondary
+	"rhs_weap_M320",
+	//items
 	"ACE_Banana",
 	"ACE_WaterBottle"
 	];
@@ -541,23 +594,8 @@ roleArsenal = {
 	"V_Chestrig_khk",
 	"V_Chestrig_oli",
 	//Items
-	"ACE_adenosine",
-	"adv_aceCPR_AED",
-	"ACE_surgicalKit",
 	"ToolKit",
-	"B_UavTerminal",
-	"kat_aatKit",
-    "kat_accuvac",
-    "kat_X_AED",
-    "kat_AED",
-    "kat_crossPanel",
-    "kat_chestSeal",
-    "KAT_Empty_bloodIV_250",
-    "KAT_Empty_bloodIV_500",
-    "kat_larynx",
-    "kat_stethoscope",
-    "kat_guedel",
-    "kat_Pulseoximeter"
+	"B_UavTerminal"
 	];
 
 	Private _STALKER = [
@@ -588,28 +626,13 @@ roleArsenal = {
 	"rhsusf_hgu56p_tan",
 	"rhsusf_hgu56p_visor_tan",
 	"rhsusf_hgu56p_tan",
-    "rhsusf_hgu56p_mask_tan",
-    "rhsusf_hgu56p_visor_tan",
-    "rhsusf_hgu56p_visor_mask_tan",
-    "rhsusf_ihadss",
+  "rhsusf_hgu56p_mask_tan",
+  "rhsusf_hgu56p_visor_tan",
+  "rhsusf_hgu56p_visor_mask_tan",
+  "rhsusf_ihadss",
 	//Items
-	"ACE_adenosine",
-	"adv_aceCPR_AED",
-	"ACE_surgicalKit",
 	"ToolKit",
-	"B_UavTerminal",
-	"kat_aatKit",
-    "kat_accuvac",
-    "kat_X_AED",
-    "kat_AED",
-    "kat_crossPanel",
-    "kat_chestSeal",
-    "KAT_Empty_bloodIV_250",
-    "KAT_Empty_bloodIV_500",
-    "kat_larynx",
-    "kat_stethoscope",
-    "kat_guedel",
-    "kat_Pulseoximeter"
+	"B_UavTerminal"
 	];
 
 	switch (_Role) do {

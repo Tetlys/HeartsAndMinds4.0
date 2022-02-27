@@ -19,7 +19,7 @@ if (btc_db_load && {profileNamespace getVariable [format ["btc_hm_%1_db", worldN
     } else {
         [] spawn btc_fnc_final_phase;
     };
-    
+
     [] call btc_cache_fnc_init;
 
     btc_startDate set [3, btc_p_time];
@@ -80,8 +80,15 @@ if isServer then
 			{
 				_x removeCuratorEditableObjects [[btc_create_object_point, btc_create_object, btc_gear_object],true]
 			} count allCurators;
-      
       sleep 0.25;
+
 		};
 	};
+};
+if isServer then
+{
+	[] spawn
+	{
+		while {true} do{0 setFog 0;sleep 60;};
+  };
 };

@@ -104,7 +104,7 @@ if (btc_p_set_skill) then {
         [_this select 0, "HandleDamage", btc_patrol_fnc_disabled] call CBA_fnc_addBISEventHandler;
     }, false] call CBA_fnc_addClassEventHandler;
 } forEach btc_civ_type_veh;
-["ace_tagCreated", btc_tag_fnc_eh] call CBA_fnc_addEventHandler; 
+["ace_tagCreated", btc_tag_fnc_eh] call CBA_fnc_addEventHandler;
 
 if (btc_p_respawn_ticketsAtStart >= 0) then {
     ["btc_respawn_player", btc_respawn_fnc_player] call CBA_fnc_addEventHandler;
@@ -125,4 +125,28 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
         params ["_obj"];
         [_obj, 50] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["CUP_MTVR_Base", "Truck_01_base_F"];
+} forEach ["rhsusf_M977A4_usarmy_wd", "RHS_CH_47F"];
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 20] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["rhsgred_hidf_cessna_o3a", "B_T_Boat_Armed_01_minigun_F", "rhsusf_mkvsoc"];
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 100] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["RHS_C130J_Cargo"];
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 5] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["rhsusf_m1025_w_m2", "rhsusf_m1025_w_mk19", "rhsusf_m1045_w"];
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 10] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["RHS_M2A3_BUSKIII_wd", "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom", "B_APC_Wheeled_01_cannon_F", "I_Heli_light_03_dynamicLoadout_F", "RHS_UH60M2", "rhsusf_stryker_m1132_m2_wd"];

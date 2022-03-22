@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=424;
+		nextID=436;
 	};
 	class Camera
 	{
-		pos[]={9306.7314,193.04874,21479.479};
-		dir[]={-0.40040118,-0.66516048,0.63027543};
-		up[]={-0.35667986,0.74669206,0.56145376};
-		aside[]={0.84407753,9.4296411e-008,0.53622526};
+		pos[]={9222.3545,203.68478,21407.746};
+		dir[]={-0.093692698,-0.62316108,0.77647555};
+		up[]={-0.074652813,0.78208148,0.61868876};
+		aside[]={0.99280703,4.8468792e-007,0.11979519};
 	};
 };
 binarizationWanted=0;
@@ -3171,7 +3171,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={9144.7354,18.591839,21640.861};
-								angles[]={-0,4.3109322,0};
+								angles[]={0,4.3109322,0};
 							};
 							side="Empty";
 							flags=4;
@@ -4731,7 +4731,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={11565.776,25.823206,11965.594};
-								angles[]={-0,2.0719178,-0};
+								angles[]={0,2.0719178,0};
 							};
 							side="Empty";
 							flags=4;
@@ -7401,8 +7401,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={9138.4678,14.67217,21634.863};
-										angles[]={0,3.2390485,0};
+										position[]={9138.4678,14.672169,21634.863};
+										angles[]={0,3.2390518,0};
 									};
 									side="West";
 									flags=7;
@@ -7426,6 +7426,7 @@ class Mission
 									};
 									id=4034;
 									type="rhsusf_army_ocp_rifleman";
+									atlOffset=-9.5367432e-007;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -7504,7 +7505,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=4;
+										class Attribute4
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="69";
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=6;
 									};
 								};
 							};
@@ -7512,6 +7551,30 @@ class Mission
 							{
 							};
 							id=4033;
+							atlOffset=-9.5367432e-007;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="groupID";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Crossroads";
+										};
+									};
+								};
+								nAttributes=1;
+							};
 						};
 						class Item1
 						{
@@ -7591,7 +7654,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="110";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item1
@@ -7683,7 +7784,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=3;
+										class Attribute3
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="110";
+												};
+											};
+										};
+										class Attribute4
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=5;
 									};
 								};
 								class Item2
@@ -7775,7 +7914,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=3;
+										class Attribute3
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="110";
+												};
+											};
+										};
+										class Attribute4
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=5;
 									};
 								};
 								class Item3
@@ -7847,7 +8024,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="110";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item4
@@ -7919,7 +8134,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="110";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item5
@@ -7991,7 +8244,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="110";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item6
@@ -8063,7 +8354,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="110";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item7
@@ -8135,7 +8464,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="110";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item8
@@ -8207,7 +8574,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="110";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item9
@@ -8279,7 +8684,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="110";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 							};
@@ -8288,6 +8731,29 @@ class Mission
 							};
 							id=4035;
 							atlOffset=-9.5367432e-007;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="groupID";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Alpha";
+										};
+									};
+								};
+								nAttributes=1;
+							};
 						};
 						class Item2
 						{
@@ -8302,7 +8768,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9119.8799,14.828253,21632.316};
-										angles[]={0,1.4505389,0};
+										angles[]={0,1.4505432,0};
 									};
 									side="West";
 									flags=7;
@@ -8366,7 +8832,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="120";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item1
@@ -8375,7 +8879,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9121.1494,14.801074,21632.229};
-										angles[]={0,1.4505389,0};
+										angles[]={0,1.4505432,0};
 									};
 									side="West";
 									flags=5;
@@ -8459,7 +8963,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=3;
+										class Attribute3
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="120";
+												};
+											};
+										};
+										class Attribute4
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=5;
 									};
 								};
 								class Item2
@@ -8468,7 +9010,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9119.998,15.000087,21629.111};
-										angles[]={0,1.4505389,0};
+										angles[]={0,1.4505432,0};
 									};
 									side="West";
 									flags=5;
@@ -8552,7 +9094,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=3;
+										class Attribute3
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="120";
+												};
+											};
+										};
+										class Attribute4
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=5;
 									};
 								};
 								class Item3
@@ -8561,7 +9141,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9120.0059,14.889371,21631.4};
-										angles[]={0,1.4505389,0};
+										angles[]={0,1.4505432,0};
 									};
 									side="West";
 									flags=5;
@@ -8625,7 +9205,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="120";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item4
@@ -8634,7 +9252,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9119.9883,14.941932,21630.633};
-										angles[]={0,1.4505389,0};
+										angles[]={0,1.4505432,0};
 									};
 									side="West";
 									flags=5;
@@ -8697,7 +9315,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="120";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item5
@@ -8706,7 +9362,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9121.0889,14.853068,21631.488};
-										angles[]={0,1.4505389,0};
+										angles[]={0,1.4505432,0};
 									};
 									side="West";
 									flags=5;
@@ -8770,7 +9426,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="120";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item6
@@ -8779,7 +9473,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9119.9873,14.983886,21629.895};
-										angles[]={0,1.4505389,0};
+										angles[]={0,1.4505432,0};
 									};
 									side="West";
 									flags=5;
@@ -8843,7 +9537,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="120";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item7
@@ -8852,7 +9584,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9120.8652,14.991447,21629.145};
-										angles[]={0,1.4505389,0};
+										angles[]={0,1.4505432,0};
 									};
 									side="West";
 									flags=5;
@@ -8916,7 +9648,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="120";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item8
@@ -8925,7 +9695,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9120.9297,14.957662,21629.99};
-										angles[]={0,1.4505389,0};
+										angles[]={0,1.4505432,0};
 									};
 									side="West";
 									flags=5;
@@ -8989,7 +9759,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="120";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item9
@@ -8998,7 +9806,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9121.1553,14.90775,21630.658};
-										angles[]={0,1.4505389,0};
+										angles[]={0,1.4505432,0};
 									};
 									side="West";
 									flags=5;
@@ -9061,7 +9869,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="120";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 							};
@@ -9069,6 +9915,29 @@ class Mission
 							{
 							};
 							id=4046;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="groupID";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Bravo";
+										};
+									};
+								};
+								nAttributes=1;
+							};
 						};
 						class Item3
 						{
@@ -9148,7 +10017,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="130";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item1
@@ -9241,7 +10148,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=3;
+										class Attribute3
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="130";
+												};
+											};
+										};
+										class Attribute4
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=5;
 									};
 								};
 								class Item2
@@ -9334,7 +10279,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=3;
+										class Attribute3
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="130";
+												};
+											};
+										};
+										class Attribute4
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=5;
 									};
 								};
 								class Item3
@@ -9406,7 +10389,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="130";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item4
@@ -9479,7 +10500,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="130";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item5
@@ -9551,7 +10610,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="130";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item6
@@ -9623,7 +10720,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="130";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item7
@@ -9695,7 +10830,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="130";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item8
@@ -9767,7 +10940,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="130";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 								class Item9
@@ -9839,7 +11050,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=2;
+										class Attribute2
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="130";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=4;
 									};
 								};
 							};
@@ -9848,6 +11097,29 @@ class Mission
 							};
 							id=4057;
 							atlOffset=9.5367432e-007;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="groupID";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Charlie";
+										};
+									};
+								};
+								nAttributes=1;
+							};
 						};
 						class Item4
 						{
@@ -9964,7 +11236,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=4;
+										class Attribute4
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="210";
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=6;
 									};
 								};
 								class Item1
@@ -10074,7 +11384,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=4;
+										class Attribute4
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="210";
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=6;
 									};
 								};
 								class Item2
@@ -10185,7 +11533,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=4;
+										class Attribute4
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="210";
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=6;
 									};
 								};
 							};
@@ -10210,7 +11596,7 @@ class Mission
 													"STRING"
 												};
 											};
-											value="Alpha 3-1";
+											value="O.G.R.Ew";
 										};
 									};
 								};
@@ -10332,7 +11718,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=4;
+										class Attribute4
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="220";
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=6;
 									};
 								};
 								class Item1
@@ -10443,7 +11867,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=4;
+										class Attribute4
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="220";
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=6;
 									};
 								};
 								class Item2
@@ -10554,7 +12016,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=4;
+										class Attribute4
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="220";
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=6;
 									};
 								};
 							};
@@ -10562,6 +12062,29 @@ class Mission
 							{
 							};
 							id=4072;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="groupID";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Armor";
+										};
+									};
+								};
+								nAttributes=1;
+							};
 						};
 						class Item6
 						{
@@ -10576,7 +12099,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9138.79,14.891292,21619.42};
-										angles[]={0,4.2901349,0};
+										angles[]={0,4.2901416,0};
 									};
 									side="West";
 									flags=7;
@@ -10678,7 +12201,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=4;
+										class Attribute4
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="240";
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=6;
 									};
 								};
 							};
@@ -10686,6 +12247,29 @@ class Mission
 							{
 							};
 							id=4076;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="groupID";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Stalker 1";
+										};
+									};
+								};
+								nAttributes=1;
+							};
 						};
 						class Item7
 						{
@@ -10700,7 +12284,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={9138.3115,14.879574,21620.313};
-										angles[]={0,3.637574,0};
+										angles[]={0,3.6375804,0};
 									};
 									side="West";
 									flags=7;
@@ -10802,7 +12386,45 @@ class Mission
 												};
 											};
 										};
-										nAttributes=4;
+										class Attribute4
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="240";
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										nAttributes=6;
 									};
 								};
 							};
@@ -10810,6 +12432,29 @@ class Mission
 							{
 							};
 							id=4078;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="groupID";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Stalker 2";
+										};
+									};
+								};
+								nAttributes=1;
+							};
 						};
 						class Item8
 						{
@@ -10823,8 +12468,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={9137.9063,14.696619,21633.309};
-										angles[]={0,3.0108922,0};
+										position[]={9137.9063,14.696945,21633.309};
+										angles[]={0,3.010885,0};
 									};
 									side="West";
 									flags=7;
@@ -10849,7 +12494,7 @@ class Mission
 									};
 									id=4081;
 									type="rhsusf_army_ocp_rifleman";
-									atlOffset=0.0016736984;
+									atlOffset=0.001999855;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -10887,6 +12532,251 @@ class Mission
 														};
 													};
 													value=2;
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="ace_isEOD";
+											expression="_this setVariable ['ACE_isEOD', _value, true]";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=1;
+												};
+											};
+										};
+										class Attribute4
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.04;
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03ENG";
+												};
+											};
+										};
+										class Attribute6
+										{
+											property="ace_isMedic";
+											expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=2;
+												};
+											};
+										};
+										class Attribute7
+										{
+											property="ENH_unitTraits_medic";
+											expression="_this setUnitTrait ['Medic', _value]";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=1;
+												};
+											};
+										};
+										class Attribute8
+										{
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="69";
+												};
+											};
+										};
+										nAttributes=9;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=4080;
+							atlOffset=0.001999855;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="groupID";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Admin A";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item9
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={9139.3496,14.688779,21633.871};
+										angles[]={0,2.3105192,0};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="COLONEL";
+										init="call{group this setgroupid [""Admin B""];};" \n "this setVariable [""side_mission"",true];" \n "this setVariable [""perms_admin"",true];" \n "this setVariable [""PERMS_FOB"", true];" \n "this setVariable [""interpreter"",true];" \n "this setVariable [ ""Reserved"", true ];" \n "removeAllWeapons this";
+										name="odin_7";
+										description="Admin B @ Admin";
+										isPlayable=1;
+										class Inventory
+										{
+											class uniform
+											{
+												typeName="rhs_uniform_g3_rgr";
+												isBackpack=0;
+											};
+											map="ItemMap";
+											compass="ItemCompass";
+											watch="ItemWatch";
+										};
+									};
+									id=4083;
+									type="rhsusf_army_ocp_rifleman";
+									atlOffset=-9.5367432e-007;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="ace_isEngineer";
+											expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=2;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="TFAR_freq_lr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="30";
 												};
 											};
 										};
@@ -10968,115 +12858,8 @@ class Mission
 										};
 										class Attribute6
 										{
-											property="ENH_unitTraits_medic";
-											expression="_this setUnitTrait ['Medic', _value]";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										nAttributes=7;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=4080;
-							atlOffset=0.0016736984;
-						};
-						class Item9
-						{
-							dataType="Group";
-							side="West";
-							class Entities
-							{
-								items=1;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={9139.3496,14.68878,21633.871};
-										angles[]={0,2.3105278,0};
-									};
-									side="West";
-									flags=7;
-									class Attributes
-									{
-										rank="COLONEL";
-										init="call{group this setgroupid [""Admin B""];};" \n "this setVariable [""side_mission"",true];" \n "this setVariable [""perms_admin"",true];" \n "this setVariable [""PERMS_FOB"", true];" \n "this setVariable [""interpreter"",true];" \n "this setVariable [ ""Reserved"", true ];" \n "removeAllWeapons this";
-										name="odin_7";
-										description="Admin B @ Admin";
-										isPlayable=1;
-										class Inventory
-										{
-											class uniform
-											{
-												typeName="rhs_uniform_g3_rgr";
-												isBackpack=0;
-											};
-											map="ItemMap";
-											compass="ItemCompass";
-											watch="ItemWatch";
-										};
-									};
-									id=4083;
-									type="rhsusf_army_ocp_rifleman";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="ace_isMedic";
-											expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=2;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="ace_isEngineer";
-											expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=2;
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
+											property="TFAR_freq_sr";
+											expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
 											class Value
 											{
 												class data
@@ -11088,49 +12871,11 @@ class Mission
 															"STRING"
 														};
 													};
-													value="Male03ENG";
+													value="69";
 												};
 											};
 										};
-										class Attribute3
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1.04;
-												};
-											};
-										};
-										class Attribute4
-										{
-											property="ace_isEOD";
-											expression="_this setVariable ['ACE_isEOD', _value, true]";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										nAttributes=5;
+										nAttributes=7;
 									};
 								};
 							};
@@ -11138,10 +12883,34 @@ class Mission
 							{
 							};
 							id=4082;
+							atlOffset=-9.5367432e-007;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="groupID";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Admin B";
+										};
+									};
+								};
+								nAttributes=1;
+							};
 						};
 					};
 					id=3601;
-					atlOffset=0.0027770996;
+					atlOffset=0.0028581619;
 				};
 				class Item6
 				{
@@ -18830,7 +20599,7 @@ class Mission
 				};
 			};
 			id=3597;
-			atlOffset=-121.80473;
+			atlOffset=-121.80471;
 		};
 		class Item1
 		{

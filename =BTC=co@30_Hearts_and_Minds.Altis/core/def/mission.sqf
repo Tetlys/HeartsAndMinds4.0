@@ -682,11 +682,11 @@ btc_rep_bonus_removeTag = 5;
 btc_rep_bonus_removeTagLetter = 3;
 btc_rep_bonus_foodGive = 5;
 
-btc_rep_malus_civ_hd = - 3;
+btc_rep_malus_civ_hd = - 5;
 btc_rep_malus_animal_hd = - 1;
 btc_rep_malus_civ_killed = - 15;
 btc_rep_malus_animal_killed = - 5;
-btc_rep_malus_civ_suppressed = - 5;
+btc_rep_malus_civ_suppressed = - 3;
 btc_rep_malus_player_respawn = - 1;
 btc_rep_malus_veh_killed = - 30;
 btc_rep_malus_building_damaged = - 5;

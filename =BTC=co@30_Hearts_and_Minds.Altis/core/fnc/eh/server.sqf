@@ -115,6 +115,19 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
     };
 };
 
+/*
+"rhsusf_m1025_d_m2" // M2 Hmv
+"rhsusf_m1045_d" // Tow Hmv
+"rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy" // Truck
+"rhsusf_M1078A1R_SOV_M2_D_fmtv_socom" //M2 Truck
+"rhsusf_stryker_m1132_m2_d" // Striker
+"RHS_M119_D" // Howitser
+"rhsusf_M977A4_usarmy_d" // Hemmt
+"RHS_MELB_MH6M" // Littlebird
+"RHS_UH60M_d" // Blackhawk
+"RHS_UH60M_MEV_d" // Blackhawk medical
+*/
+
 //Cargo
 [btc_fob_mat, "InitPost", {
     params ["_obj"];
@@ -125,28 +138,22 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
         params ["_obj"];
         [_obj, 50] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["rhsusf_M977A4_usarmy_wd", "RHS_CH_47F"];
+} forEach ["rhsusf_M977A4_usarmy_d"];
 {
     [_x, "InitPost", {
         params ["_obj"];
         [_obj, 20] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["rhsgred_hidf_cessna_o3a", "B_T_Boat_Armed_01_minigun_F", "rhsusf_mkvsoc"];
-{
-    [_x, "InitPost", {
-        params ["_obj"];
-        [_obj, 100] call ace_cargo_fnc_setSpace;
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["RHS_C130J_Cargo"];
-{
-    [_x, "InitPost", {
-        params ["_obj"];
-        [_obj, 5] call ace_cargo_fnc_setSpace;
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["rhsusf_m1025_w_m2", "rhsusf_m1025_w_mk19", "rhsusf_m1045_w"];
+} forEach ["rhsusf_M1078A1R_SOV_M2_D_fmtv_socom", "rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy"];
 {
     [_x, "InitPost", {
         params ["_obj"];
         [_obj, 10] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["RHS_M2A3_BUSKIII_wd", "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom", "B_APC_Wheeled_01_cannon_F", "I_Heli_light_03_dynamicLoadout_F", "RHS_UH60M2", "rhsusf_stryker_m1132_m2_wd"];
+} forEach ["RHS_UH60M_d", "RHS_UH60M_MEV_d", "rhsusf_stryker_m1132_m2_d", "RHS_M119_D"];
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 8] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["RHS_MELB_MH6M", "rhsusf_m1025_d_m2", "rhsusf_m1045_d"];

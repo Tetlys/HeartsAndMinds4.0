@@ -11,7 +11,6 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
 
 WHITELISTED = [
     "76561198047333011", // Tetlys
-    "76561198076288121", // Anddy
     "76561197992739622", // Paladin
     "76561198033215112", // TCAS
     "76561198402038100", // N0Ace
@@ -19,15 +18,17 @@ WHITELISTED = [
     "76561198040185781", // Johnny
     "76561197985304352", // Remer
     "76561198029760083", // Prodegy
-    "76561198119274525", // Ash
     "76561198010606123", // Kyle
-    "76561198082213301" // Jayhova
+    "76561198082213301", // Jayhova
+    "76561198051408370", // Chad
+    "76561198807583841"  // Cryptic
 ];
 
 
 
 [{!isNull player}, {
     [] call compileScript ["core\doc.sqf"];
+    execVM "scripts\empty_vehicles_marker.sqf";
 
     btc_respawn_marker setMarkerPosLocal player;
     player addRating 9999;

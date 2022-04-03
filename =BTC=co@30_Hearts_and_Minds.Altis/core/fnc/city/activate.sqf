@@ -149,12 +149,12 @@ if (_data_units isNotEqualTo []) then {
         private _numberOfCivi = (switch _type do {
             case "VegetationFir" : {0};
             case "BorderCrossing" : {0};
-            case "NameLocal" : {5};
-            case "StrongpointArea" : {4};
-            case "NameVillage" : {8};
-            case "NameCity" : {12};
-            case "NameCityCapital" : {15};
-            case "Airport" : {5};
+            case "NameLocal" : {10};
+            case "StrongpointArea" : {0};
+            case "NameVillage" : {12};
+            case "NameCity" : {15};
+            case "NameCityCapital" : {20};
+            case "Airport" : {20};
             default {2};
         });
         [+_housesEntrerable, round (_p_civ_group_ratio * _numberOfCivi), _city] call btc_civ_fnc_populate;

@@ -373,8 +373,7 @@ _p_civ_veh = _allfaction select _p_civ_veh; //Select faction selected from missi
 private _allclasse = [[_p_civ]] call btc_civ_fnc_class; //Create classes from factions, you can combine factions from the SAME side : [[_p_civ, "btc_ac","LOP_TAK_CIV"]] call btc_civ_fnc_class.
 
 //Save class name to global variable
-/*
-To manually set civ type
+
 btc_civ_type_units = [
   "C_Djella_01_lxWS",
   "C_Djella_02_lxWS",
@@ -391,8 +390,8 @@ btc_civ_type_units = [
   "C_Tak_01_B_lxWS",
   "C_Tak_01_C_lxWS"
 ];
-*/
-btc_civ_type_units = _allclasse select 0;
+
+//btc_civ_type_units = _allclasse select 0;
 _allclasse = [[_p_civ_veh]] call btc_civ_fnc_class;
 btc_civ_type_veh = _allclasse select 2;
 btc_civ_type_boats = _allclasse select 1;
@@ -404,7 +403,7 @@ btc_w_civs = [
 btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
 
 // ANIMALS
-btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F"];
+btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F", "Dromedary_02_lxWS", "Dromedary_03_lxWS", "Dromedary_04_lxWS", "Dromedary_01_lxWS"];
 
 //FOB
 btc_fob_mat = "Land_Pod_Heli_Transport_04_fuel_F";
@@ -503,7 +502,6 @@ btc_construction_array =
         ],
         [
             //"Static"
-            "RHS_Stinger_AA_pod_WD",
             "RHS_M2StaticMG_WD",
             "RHS_M2StaticMG_MiniTripod_WD",
             "RHS_TOW_TriPod_WD",
@@ -641,18 +639,25 @@ btc_type_motorized_armed = _allclasse select 6;
 btc_type_mg = _allclasse select 7;
 btc_type_gl = _allclasse select 8;
 
+btc_type_units = btc_type_units;
+btc_type_divers = btc_type_divers;
+btc_type_crewmen = btc_type_crewmen;
+btc_type_boats = btc_type_boats;
+btc_type_motorized = btc_type_motorized + ["rhsgref_tla_kraz255b1_cargo_open", "rhsgref_tla_offroad"];
+btc_type_motorized_armed = btc_type_motorized_armed + ["rhsgref_tla_offroad_at", "rhsgref_tla_offroad_armed", "rhsgref_tla_btr60"];
+btc_type_mg = btc_type_mg - ["O_Tura_ZU23_lxWS"];
+btc_type_gl = btc_type_gl - ["O_Tura_ZU23_lxWS"];
+
+
+/*
 //Sometimes you need to remove units: - ["Blabla","moreBlabla"];
 //Sometimes you need to add units: + ["Blabla","moreBlabla"];
 switch (_p_en) do {
-    /*case "Myfactionexemple" : {
-        btc_type_units = btc_type_units - ["Blabla","moreBlabla"];
-        btc_type_divers = btc_type_divers + ["Blabla","moreBlabla"];
-        btc_type_crewmen = "Blabla";
-        btc_type_boats = btc_type_boats;
-        btc_type_motorized = btc_type_motorized;
-        btc_type_mg = btc_type_mg;
-        btc_type_gl = btc_type_gl;
-    };*/
+    case "OPF_TURA_lxWS" : {
+        btc_type_motorized = btc_type_motorized + ["rhsgref_tla_kraz255b1_cargo_open", "rhsgref_tla_offroad"];
+        btc_type_motorized_armed = btc_type_motorized_armed + ["rhsgref_tla_offroad_at", "rhsgref_tla_offroad_armed", "rhsgref_tla_btr60"];
+        btc_type_units = btc_type_units - ["O_Tura_ZU23_lxWS"];
+    };
     case "OPF_G_F" : {
         btc_type_motorized = btc_type_motorized + ["I_Truck_02_transport_F", "I_Truck_02_covered_F"];
         btc_type_motorized_armed = btc_type_motorized_armed + ["I_Heli_light_03_F"];
@@ -663,9 +668,11 @@ switch (_p_en) do {
         btc_type_units = btc_type_units - ["I_C_Soldier_Camo_F"];
     };
 };
+*/
+ 
 
 //Chem
-btc_chem_range = 6;
+btc_chem_range = 5;
 
 //Spect
 btc_spect_range = 1000;
@@ -689,8 +696,8 @@ btc_rep_malus_animal_killed = - 5;
 btc_rep_malus_civ_suppressed = - 3;
 btc_rep_malus_player_respawn = - 1;
 btc_rep_malus_veh_killed = - 30;
-btc_rep_malus_building_damaged = - 5;
-btc_rep_malus_building_destroyed = - 10;
+btc_rep_malus_building_damaged = - 2;
+btc_rep_malus_building_destroyed = - 30;
 btc_rep_malus_foodRemove = - btc_rep_bonus_foodGive;
 btc_rep_malus_breakDoor = - 0.25;
 btc_rep_malus_wheelChange = - 3;
@@ -723,7 +730,7 @@ btc_flag_textures = [
 ];
 
 //Respawn
-btc_body_bagTicketPlayer = 2;
-btc_body_enemyTicket = 3;
+btc_body_bagTicketPlayer = 1;
+btc_body_enemyTicket = 5;
 
 btc_startDate = [2021, 06, 15, 12, 15];

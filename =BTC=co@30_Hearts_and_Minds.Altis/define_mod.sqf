@@ -393,7 +393,7 @@ btc_custom_loc = [
 [[20036.7,12993.7,0],"NameVillage","NameVillage_7,",300,true],
 [[17919.6,14949.9,0],"NameVillage","NameVillage_70,",300,true],
 [[19064.4,14273.7,0],"NameVillage","NameVillage_8,",300,true],
-[[15334,13009.8,0]"NameVillage","NameVillage_9",300,true]
+[[15334,13009.8,0],"NameVillage","NameVillage_9",300,true]
 
 ];
 

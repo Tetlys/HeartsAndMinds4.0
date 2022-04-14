@@ -42,8 +42,8 @@ if (isServer) then {
     btc_city_fnc_activate = compileScript ["core\fnc\city\activate.sqf"];
     btc_city_fnc_create = compileScript ["core\fnc\city\create.sqf"];
     btc_city_fnc_de_activate = compileScript ["core\fnc\city\de_activate.sqf"];
-    btc_city_fnc_set_clear = compileScript ["core\fnc\city\set_clear.sqf"];
-    btc_city_fnc_trigger_player_side = compileScript ["core\fnc\city\trigger_player_side.sqf"];
+    btc_city_fnc_setClear = compileScript ["core\fnc\city\setClear.sqf"];
+    btc_city_fnc_setPlayerTrigger = compileScript ["core\fnc\city\setPlayerTrigger.sqf"];
     btc_city_fnc_cleanUp = compileScript ["core\fnc\city\cleanUp.sqf"];
     btc_city_fnc_trigger_free_condition = compileScript ["core\fnc\city\trigger_free_condition.sqf"];
     btc_city_fnc_getHouses = compileScript ["core\fnc\city\getHouses.sqf"];
@@ -71,6 +71,7 @@ if (isServer) then {
     btc_db_fnc_loadCargo = compileScript ["core\fnc\db\loadcargo.sqf"];
     btc_db_fnc_autoRestart = compileScript ["core\fnc\db\autoRestart.sqf"];
     btc_db_fnc_setTurretMagazines = compileScript ["core\fnc\db\setTurretMagazines.sqf"];
+    btc_db_fnc_autoRestartLoop = compileScript ["core\fnc\db\autoRestartLoop.sqf"];
 
     //DELAY
     btc_delay_fnc_createUnit = compileScript ["core\fnc\delay\createUnit.sqf"];
@@ -366,6 +367,7 @@ if (!isDedicated) then {
     btc_lift_fnc_hookFake = compileScript ["core\fnc\lift\hookFake.sqf"];
     btc_lift_fnc_hud = compileScript ["core\fnc\lift\hud.sqf"];
     btc_lift_fnc_hudLoop = compileScript ["core\fnc\lift\hudLoop.sqf"];
+    btc_lift_fnc_shortcuts = compileScript ["core\fnc\lift\shortcuts.sqf"];
 
     //LOG
     btc_log_fnc_get_corner_points = compileScript ["core\fnc\log\get_corner_points.sqf"];

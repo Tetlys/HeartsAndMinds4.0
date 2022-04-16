@@ -1,6 +1,5 @@
 enableSaving [false, false];
 
-[] call compileFinal preprocessFileLineNumbers "core\FireTeams\init.sqf";
 [] call compileScript ["core\def\mission.sqf"];
 [] call compileScript ["define_mod.sqf"];
 
@@ -17,9 +16,3 @@ if (!isDedicated && hasInterface) then {
 if (!isDedicated && !hasInterface) then {
     [] call compileScript ["core\init_headless.sqf"];
 };
-
-/*           ACE            */
-
-    ACE_maxWeightCarry = 5000;
-    ACE_maxWeightDrag = 10000;
-    

@@ -41,48 +41,6 @@ _action = ["Search_intel", localize "STR_A3_Showcase_Marksman_BIS_tskIntel_title
 }, {true}] call ace_interact_menu_fnc_createAction;
 {[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;} forEach btc_info_intels;
 
-//Container Loading Addon.
-
-{
-
-private _action = [
-    "Logistic",
-    localize "STR_BTC_HAM_ACTION_LOC_MAIN",
-    "\A3\ui_f\data\igui\cfg\simpleTasks\letters\L_ca.paa",
-    {},
-    {isNull isVehicleCargo attachedto _target && isNull isVehicleCargo _target}
-] call ace_interact_menu_fnc_createAction;
-[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-
-_action = [
-    "log_tow",
-    localize "STR_ACE_Towing_displayName",
-    "",
-    {btc_tow_vehicleTowing = _target; (localize "STR_BTC_HAM_TOW_HOOK") call CBA_fnc_notify;},
-    {isNull (_target getVariable ["btc_towing", objNull]);}
-] call ace_interact_menu_fnc_createAction;
-[_x, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-
-_action = [
-    "log_hook",
-    localize "STR_ACE_Towing_attach",
-    "\z\ace\addons\attach\UI\attach_ca.paa",
-    {[btc_tow_vehicleTowing, _target] call btc_tow_fnc_ropeCreate;},
-    {!isNull btc_tow_vehicleTowing && {btc_tow_vehicleTowing != _target}}
-] call ace_interact_menu_fnc_createAction;
-[_x, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-
-_action = [
-    "log_unhook",
-    localize "STR_ACE_Towing_detach",
-    "\z\ace\addons\attach\UI\detach_ca.paa",
-    {_target call btc_tow_fnc_unhook;},
-    {!isNull (_target getVariable ["btc_towing", objNull]);}
-] call ace_interact_menu_fnc_createAction;
-[_x, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-
-} forEach Karma_Containers;
-
 //Log point
 {
     _x params ["_object", "_helipad"];
@@ -111,7 +69,7 @@ _action = [
     [_object, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToObject;
     _action = ["Require_veh", localize "STR_BTC_HAM_ACTION_LOGPOINT_REQVEH", "\A3\ui_f\data\map\vehicleicons\iconCar_ca.paa", {
         params ["", "", "_params"];
-        _params spawn btc_arsenal_fnc_garage}, {((call BIS_fnc_admin) == 2 || !isMultiplayer) and btc_p_garage}, {}, [_helipad], [0, 0, 0], 5] call ace_interact_menu_fnc_createAction;
+        _params spawn btc_arsenal_fnc_garage}, {(serverCommandAvailable "#logout" || !isMultiplayer) and btc_p_garage}, {}, [_helipad], [0, 0, 0], 5] call ace_interact_menu_fnc_createAction;
     [_object, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToObject;
     _action = ["Tool", localize "str_3den_display3den_menubar_tools_text", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\T_ca.paa", {}, {true}] call ace_interact_menu_fnc_createAction;
     [_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
@@ -156,9 +114,9 @@ _action = ["Shower_act", getText(configfile >> "CfgVehicles" >> "DeconShower_02_
 } forEach ["DeconShower_01_F", "DeconShower_02_F"];
 
 //FOB
-_action = ["Mount_FOB", localize "STR_BTC_HAM_ACTION_FOB_MOUNT", "\A3\Ui_f\data\Map\Markers\NATO\b_hq.paa", {_target spawn btc_fob_fnc_create}, {player getVariable ["perms_FOB", false]}] call ace_interact_menu_fnc_createAction;
+_action = ["Mount_FOB", localize "STR_BTC_HAM_ACTION_FOB_MOUNT", "\A3\Ui_f\data\Map\Markers\NATO\b_hq.paa", {_target spawn btc_fob_fnc_create}, {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])}] call ace_interact_menu_fnc_createAction;
 [btc_fob_mat, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-_action = ["Dismantle_FOB", localize "STR_BTC_HAM_ACTION_FOB_DISMANTLE", "", {_target remoteExecCall ["btc_fob_fnc_dismantle_s", 2]}, {player getVariable ["perms_FOB", false]}, {}, [], [0, 0, -2], 5] call ace_interact_menu_fnc_createAction;
+_action = ["Dismantle_FOB", localize "STR_BTC_HAM_ACTION_FOB_DISMANTLE", "", {_target remoteExecCall ["btc_fob_fnc_dismantle_s", 2]}, {true}, {}, [], [0, 0, -2], 5] call ace_interact_menu_fnc_createAction;
 [btc_fob_flag, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
 
 //Orders

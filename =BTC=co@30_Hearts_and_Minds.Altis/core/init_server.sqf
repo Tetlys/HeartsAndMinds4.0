@@ -1,6 +1,6 @@
 [] call compileScript ["core\fnc\city\init.sqf"];
 
-//["Initialize"] call BIS_fnc_dynamicGroups;
+["Initialize"] call BIS_fnc_dynamicGroups;
 setTimeMultiplier btc_p_acctime;
 
 ["btc_m", -1, objNull, "", false, false] call btc_task_fnc_create;
@@ -19,7 +19,7 @@ if (btc_db_load && {profileNamespace getVariable [format ["btc_hm_%1_db", worldN
     } else {
         [] spawn btc_fnc_final_phase;
     };
-
+    
     [] call btc_cache_fnc_init;
 
     btc_startDate set [3, btc_p_time];
@@ -63,28 +63,4 @@ if (
         _tickets = -1;
     };
     [btc_player_side, _tickets] call BIS_fnc_respawnTickets;
-};
-
-// Remove Important Objects
-
-if isServer then
-{
-	[] spawn
-	{
-		while {true} do
-		{
-			{
-				_x removeCuratorEditableObjects [[btc_create_object_point, btc_create_object, btc_gear_object],true]
-			} count allCurators;
-      sleep 0.25;
-
-		};
-	};
-};
-if isServer then
-{
-	[] spawn
-	{
-		while {true} do{0 setFog 0;sleep 60;};
-  };
 };

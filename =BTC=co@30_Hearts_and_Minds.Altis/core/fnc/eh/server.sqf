@@ -102,7 +102,7 @@ if (btc_p_set_skill) then {
         [_this select 0, "HandleDamage", btc_patrol_fnc_disabled] call CBA_fnc_addBISEventHandler;
     }, false] call CBA_fnc_addClassEventHandler;
 } forEach btc_civ_type_veh;
-["ace_tagCreated", btc_tag_fnc_eh] call CBA_fnc_addEventHandler;
+["ace_tagCreated", btc_tag_fnc_eh] call CBA_fnc_addEventHandler; 
 
 if (btc_p_respawn_ticketsAtStart >= 0) then {
     ["ace_placedInBodyBag", btc_body_fnc_setBodyBag] call CBA_fnc_addEventHandler;
@@ -111,19 +111,6 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
         addMissionEventHandler ["PlayerConnected", btc_respawn_fnc_playerConnected];
     };
 };
-
-/*
-"rhsusf_m1025_d_m2" // M2 Hmv
-"rhsusf_m1045_d" // Tow Hmv
-"rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy" // Truck
-"rhsusf_M1078A1R_SOV_M2_D_fmtv_socom" //M2 Truck
-"rhsusf_stryker_m1132_m2_d" // Striker
-"RHS_M119_D" // Howitser
-"rhsusf_M977A4_usarmy_d" // Hemmt
-"RHS_MELB_MH6M" // Littlebird
-"RHS_UH60M_d" // Blackhawk
-"RHS_UH60M_MEV_d" // Blackhawk medical
-*/
 
 //Cargo
 [btc_fob_mat, "InitPost", {
@@ -135,22 +122,4 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
         params ["_obj"];
         [_obj, 50] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["rhsusf_M977A4_usarmy_d"];
-{
-    [_x, "InitPost", {
-        params ["_obj"];
-        [_obj, 20] call ace_cargo_fnc_setSpace;
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["rhsusf_M1078A1R_SOV_M2_D_fmtv_socom", "rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy"];
-{
-    [_x, "InitPost", {
-        params ["_obj"];
-        [_obj, 10] call ace_cargo_fnc_setSpace;
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["RHS_UH60M_d", "RHS_UH60M_MEV_d", "rhsusf_stryker_m1132_m2_d", "RHS_M119_D"];
-{
-    [_x, "InitPost", {
-        params ["_obj"];
-        [_obj, 8] call ace_cargo_fnc_setSpace;
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["RHS_MELB_MH6M", "rhsusf_m1025_d_m2", "rhsusf_m1045_d"];
+} forEach ["CUP_MTVR_Base", "Truck_01_base_F"];

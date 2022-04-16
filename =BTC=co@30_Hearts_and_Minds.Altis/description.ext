@@ -1,9 +1,21 @@
 
-loadScreen = "core\img\btc.paa";
-author = "Giallustio";
+//loadScreen = "core\img\btc.paa";
+author = "Eden Development - Tetlys";
 onLoadName = $STR_BTC_HAM_DESCR_NAME;
 onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
 enabledebugconsole = 1;
+respawnButton = 0;
+
+
+//CHANNEL id, text, voice
+disableChannels[] = {
+    { 0, false, true },
+    { 1, true, true },
+    { 2, true, true },
+    { 3, true, true },
+    { 4, true, true },
+    { 5, true, true }
+};
 
 #include "core\fnc\common\dlg.hpp"
 #include "core\fnc\fob\dlg.hpp"

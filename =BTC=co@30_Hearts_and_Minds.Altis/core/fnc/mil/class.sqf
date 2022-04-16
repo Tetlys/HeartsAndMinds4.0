@@ -119,10 +119,10 @@ if (_type_boats isEqualTo []) then {
     _type_boats = ["I_Boat_Armed_01_minigun_F", "I_Boat_Transport_01_F", "I_SDV_01_F", "I_G_Boat_Transport_01_F"];
 };
 if (_type_mg isEqualTo []) then {
-    _type_mg = ["O_HMG_01_F", "O_HMG_01_high_F"];
+    _type_mg = ["I_G_HMG_02_F"];
 };
 if (_type_gl isEqualTo []) then {
-    _type_gl = ["O_GMG_01_F", "O_GMG_01_high_F"];
+    _type_gl = ["I_G_Mortar_01_F"];
 };
 
 //Final filter unwanted units type

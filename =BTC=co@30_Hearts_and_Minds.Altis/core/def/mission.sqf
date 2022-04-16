@@ -145,13 +145,13 @@ if (isServer) then {
     btc_civ_veh_active = [];
 
     //Database
-    btc_db_serverCommandPassword = "btc_password"; //Define the same password in server.cfg like this: serverCommandPassword = "btc_password";
+    btc_db_serverCommandPassword = "goaskryan"; //Define the same password in server.cfg like this: serverCommandPassword = "btc_password";
     btc_db_warningTimeAutoRestart = 5;
 
     //Hideout
     btc_hideouts = []; publicVariable "btc_hideouts";
     btc_hideouts_id = 0;
-    btc_hideouts_radius = 800;
+    btc_hideouts_radius = 500;
     if (btc_hideout_n isEqualTo 99) then {
         btc_hideout_n = round random 10;
     };
@@ -174,10 +174,10 @@ if (isServer) then {
 
     //Patrol
     btc_patrol_active = [];
-    btc_patrol_area = 2500;
+    btc_patrol_area = 1000;
 
     //Rep
-    btc_rep_militia_call_time = 600;
+    btc_rep_militia_call_time = 300;
     btc_rep_militia_called = - btc_rep_militia_call_time;
     btc_rep_delayed = [0, []];
 
@@ -382,6 +382,24 @@ private _allclasse = [[_p_civ]] call btc_civ_fnc_class; //Create classes from fa
 
 //Save class name to global variable
 btc_civ_type_units = _allclasse select 0;
+/*
+btc_civ_type_units = [
+  "C_Djella_01_lxWS",
+  "C_Djella_02_lxWS",
+  "C_Djella_03_lxWS",
+  "C_Djella_04_lxWS",
+  "C_Djella_05_lxWS",
+  "C_Tak_02_A_lxWS",
+  "C_Tak_02_B_lxWS",
+  "C_Tak_02_C_lxWS",
+  "C_Tak_03_A_lxWS",
+  "C_Tak_03_B_lxWS",
+  "C_Tak_03_C_lxWS",
+  "C_Tak_01_A_lxWS",
+  "C_Tak_01_B_lxWS",
+  "C_Tak_01_C_lxWS"
+];
+*/
 _allclasse = [[_p_civ_veh]] call btc_civ_fnc_class;
 btc_civ_type_veh = _allclasse select 2;
 btc_civ_type_boats = _allclasse select 1;
@@ -396,11 +414,14 @@ btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
 btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F"];
 
 //FOB
-btc_fob_mat = "Land_Cargo20_blue_F";
-btc_fob_structure = "Land_Cargo_HQ_V1_F";
-btc_fob_flag = "Flag_NATO_F";
+//btc_fob_mat = "Land_Cargo20_blue_F";
+//btc_fob_structure = "Land_Cargo_HQ_V1_F";
+//btc_fob_flag = "Flag_NATO_F";
+btc_fob_mat = "Land_Pod_Heli_Transport_04_fuel_F";
+btc_fob_structure = "Land_Cargo_HQ_V3_F";
+btc_fob_flag = "Flag_ION_F";
 btc_fob_id = 0;
-btc_fob_minDistance = 1500;
+btc_fob_minDistance = 1000;
 
 //IED
 btc_type_ieds_ace = ["IEDLandBig_F", "IEDLandSmall_F"];
@@ -458,11 +479,11 @@ btc_construction_array =
     [
         "Fortifications",
         "Static",
-        "Ammobox",
+        "Inv Storage",
         "Containers",
-        "Supplies",
+        "Mission Objects",
         "FOB",
-        "Decontamination",
+        "DO NOT USE",
         "Vehicle Logistic"
     ],
     [
@@ -474,53 +495,75 @@ btc_construction_array =
             "Land_BagFence_Long_F",
             "Land_BagFence_Round_F",
             "Land_BagFence_Short_F",
-            "Land_HBarrier_1_F",
-            "Land_HBarrier_3_F",
-            "Land_HBarrier_5_F",
-            "Land_HBarrierBig_F",
-            "Land_Razorwire_F",
-            "Land_CncBarrier_F",
-            "Land_CncBarrierMedium_F",
-            "Land_CncBarrierMedium4_F",
-            "Land_CncWall1_F",
-            "Land_CncWall4_F",
-            "Land_Mil_ConcreteWall_F",
+            //Modern day
+          //"Land_HBarrier_1_F",
+          //"Land_HBarrier_3_F",
+          //"Land_HBarrier_5_F",
+          //"Land_HBarrierBig_F",
+          //"Land_Razorwire_F",
+            //"Land_CncBarrier_F",
+            //"Land_CncBarrierMedium_F",
+            //"Land_CncBarrierMedium4_F",
+            //"Land_CncWall1_F",
+            //"Land_CncWall4_F",
+            //"Land_Mil_ConcreteWall_F",
+            //"Land_Mil_WallBig_4m_F",
+            //"Land_Mil_WallBig_Corner_F",
+            //"Land_PortableLight_double_F",
+            //"Land_Pod_Heli_Transport_04_medevac_black_F",
+            //"Land_Net_Fence_Gate_F",
+            //"Land_LampHarbour_F",
+            //"Land_Camping_Light_F",
+            //"Land_DragonsTeeth_01_4x2_new_redwhite_F",
+            //"Land_ConcreteHedgehog_01_F",
+            //WW2
+            "Land_Plank_01_8m_F",
+            "Land_Plank_01_4m_F",
             "Land_Mil_WallBig_4m_F",
-            "Land_Mil_WallBig_Corner_F",
-            "Land_PortableLight_double_F",
-            "Land_Pod_Heli_Transport_04_medevac_black_F"
+            "Land_I44_Buildings_Barbedwire2",
+            "Land_WW2_Wire_2",
+            "Land_WW2_SWU_Antitank_Barrier",
+            "WW2_BET_Tschechenigel",
+            "WW2_BET_Hoeckerlinie_2"
         ],
         [
             //"Static"
-        ] + (_allClassSorted select {(
-            _x isKindOf "GMG_TriPod" ||
-            {_x isKindOf "StaticMortar"} ||
-            {_x isKindOf "HMG_01_base_F"} ||
-            {_x isKindOf "AA_01_base_F"} ||
-            {_x isKindOf "AT_01_base_F"}) && {
-                getNumber (_cfgVehicles >> _x >> "side") isEqualTo ([east, west, independent, civilian] find btc_player_side)
-            }
-        }),
+            //Modern Day
+            //"RHS_M2StaticMG_WD",
+            //"RHS_M2StaticMG_MiniTripod_WD",
+            //"RHS_TOW_TriPod_WD",
+            //"RHS_MK19_TriPod_WD",
+            //"RHS_M252_WD",
+            //"B_Static_Designator_01_F"
+            //WW2
+            "LIB_MG42_Lafette_Deployed",
+            "LIB_GER_SearchLight",
+            "LIB_GrWr34",
+            "LIB_MG34_Lafette_Deployed"
+        ],
         [
-            //"Ammobox"
-            "Land_WoodenBox_F"
+            //"Inv Storage"
+            //Modern Day
+            //"ACE_medicalSupplyCrate",
+            //"ACE_medicalSupplyCrate_advanced",
+            //"ACE_Box_Chemlights",
+            //"ACE_Box_82mm_Mo_Combo"
+            //WW2
+            "Land_WoodenCrate_01_F"
 
-        ] + (_allClassSorted select {
-            _x isKindOf "ReammoBox_F" &&
-            {!(_x isKindOf "Slingload_01_Base_F")} &&
-            {!(_x isKindOf "Pod_Heli_Transport_04_base_F")}
-        }),
+        ],
         [
             //"Containers"
 
         ] + btc_containers_mat,
         [
-            //"Supplies"
+            //"Mission Objects"
             btc_supplies_cargo
         ],
         [
             //"FOB"
             btc_fob_mat
+        //    "C_supplyCrate_F"
         ],
         [
             //"Decontamination"
@@ -529,11 +572,19 @@ btc_construction_array =
         [
             //"Vehicle logistic"
             "ACE_Wheel",
-            "ACE_Track",
-            "B_Slingload_01_Ammo_F",
-            "B_Slingload_01_Fuel_F"
+            "ACE_Track"
         ] + (_allClassSorted select {_x isKindOf "FlexibleTank_base_F"})
     ]
+];
+
+
+Containers = [
+    btc_fob_mat,
+    btc_supplies_cargo,
+    "B_Slingload_01_Cargo_F",
+    "B_Slingload_01_Repair_F",
+    "B_Slingload_01_Ammo_F",
+    "B_Slingload_01_Fuel_F"
 ];
 
 (btc_construction_array select 1) params [
@@ -569,7 +620,7 @@ btc_log_fnc_get_nottowable = {
         };
         case (_tower isKindOf "Car") : {
             ["Truck", "Truck_F", "Tank", "Plane", "Helicopter"]; //The tower is a car so it can't tow: truck, tank, plane and helicopter
-        }; 
+        };
         default {
             ["Car", "Truck", "Truck_F", "Tank", "Plane", "Helicopter", "Ship"];
         };
@@ -667,12 +718,12 @@ btc_spect_updateOn = -1;
 
 //Rep
 btc_rep_bonus_cache = 100;
-btc_rep_bonus_civ_hh = 3;
-btc_rep_bonus_disarm = 15;
+btc_rep_bonus_civ_hh = 10;
+btc_rep_bonus_disarm = 30;
 btc_rep_bonus_hideout = 200;
-btc_rep_bonus_mil_killed = 0.25;
-btc_rep_bonus_IEDCleanUp = 10;
-btc_rep_bonus_removeTag = 3;
+btc_rep_bonus_mil_killed = 0.5;
+btc_rep_bonus_IEDCleanUp = 15;
+btc_rep_bonus_removeTag = 5;
 btc_rep_bonus_removeTagLetter = 0.5;
 btc_rep_bonus_foodGive = 0.5;
 
@@ -698,7 +749,7 @@ btc_rep_level_high = 750;
 btc_units_owners = [];
 
 //Door
-btc_door_breaking_time = 60;
+btc_door_breaking_time = 1;
 
 //Flag
 btc_flag_textures = [
@@ -706,11 +757,19 @@ btc_flag_textures = [
     "\A3\Data_F\Flags\flag_green_CO.paa",
     "\A3\Data_F\Flags\flag_blue_CO.paa",
     '#(argb,8,8,3)color(0.9,0.9,0,1)',
+    "\A3\Data_F\Flags\flag_uk_CO.paa",
+    "\A3\Data_F\Flags\flag_us_CO.paa",
+    "\A3\Data_F\Flags\flag_NATO_CO.paa",
+    "\A3\Data_F_Orange\Flags\flag_IDAP_CO.paa",
+    "\A3\Data_F\Flags\flag_rcrystal_CO.paa",
+    "\A3\Data_F\Flags\flag_ion_CO.paa",
+    "\A3\Data_F\Flags\Flag_uno_CO.paa",
+    "\A3\Data_F\Flags\Flag_pow_CO.paa",
     "\A3\Data_F\Flags\flag_NATO_CO.paa"
 ];
 
 //Respawn
 btc_body_bagTicketPlayer = 1;
-btc_body_enemyTicket = 1;
+btc_body_enemyTicket = 5;
 
 btc_startDate = [2035, 6, 24, 12, 15];

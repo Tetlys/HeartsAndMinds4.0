@@ -85,7 +85,7 @@
                 <Czech>Přezbrojení/oprava a Objekty</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_INTRO_ONLYRESPAWN">
-                <Original>Only Respawnable</Original>
+                <Original>Respawnable Vehicle</Original>
                 <Spanish>Solo Respawneable</Spanish>
                 <German>Respawnt bei Zertörung</German>
                 <Portuguese>Único Respawnável</Portuguese>
@@ -298,7 +298,7 @@
                 <Czech>Chemická válka</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_CHEMICALWARFARE_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\danger_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Chemical agent:&lt;/marker&gt;&lt;br/&gt; A chemical agent can be found in the battlefield at cache location for example. When an object is contaminated, the chemical agent propagates to people around (in a circle of 3m). Those people will be hurt constantly and get pain until they died or found a decontaminating shower (available at the logistic point) to clean up their body. When they are contaminated, they can propagate it to other people around (in a circle of 2m) or vehicle if they get inside. Keep in mind, dead body stay contaminated but body bag will isolate it. Also, a contaminated object loaded as cargo will contaminate the container or vehicle. &lt;img image='\a3\Data_F_Enoch\Images\CBRNObjects_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Protection:&lt;/marker&gt;&lt;br/&gt; Use CBRN gear (uniform, respirator mask and breather backpack) for full protection from the contamination effect. But, don't forget to take a shower for more than 5s before removing your CBRN gear. Be aware, even with a CBRN equipment you can propagate the agent to people or vehicle, you are just protected from the effect. &lt;img image='\a3\Data_F_Enoch\Images\CBRNSuit_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; Simple mask and simple uniform can reduce from 65% to 80% the probability to take damage.  The pain from breathing while contaminated can be avoid with a simple mask. &lt;img image='\A3\Data_F_Orange\Images\Respirator_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\box_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Decontaminate:&lt;/marker&gt;&lt;br/&gt; You can use a small shower to decontaminate units only. Use the big shower for objects, vehicles and objects loaded as cargo. To activate them, just stay under the shower. &lt;img image='\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\DeconShower_01_F.jpg' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Detection:&lt;/marker&gt;&lt;br/&gt; You can analyze an object, vehicle or man with ED-1E drone to determine if it is contaminated (Note: The drone will never be contaminated.). You can also check if you are in a contaminated area by using a chemical detector (THREAT from 0.1 to 0.9: contaminated objects are around, THREAT at 1: you are in the propagating range (you will be contaminated)). &lt;img image='\a3\Data_F_Enoch\Images\ChemicalDetector_ca.paa' width='355' height='200'/&gt;</Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\danger_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Chemical agent:&lt;/marker&gt;&lt;br/&gt; A chemical agent can be found in the battlefield at a cache location for example. When an object is contaminated, the chemical agent propagates to people around (in a circle of 3m). Those people will be hurt constantly and get pain until they died or found a decontaminating shower (available at the logistic point) to clean up their body. When they are contaminated, they can propagate it to other people around (in a circle of 2m) or vehicle if they get inside. Keep in mind, dead body stay contaminated but body bag will isolate it. Also, a contaminated object loaded as cargo will contaminate the container or vehicle. &lt;img image='\a3\Data_F_Enoch\Images\CBRNObjects_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Protection:&lt;/marker&gt;&lt;br/&gt; Use CBRN gear (uniform, respirator mask and breather backpack) for full protection from the contamination effect. But, don't forget to take a shower for more than 5s before removing your CBRN gear. Be aware, even with a CBRN equipment you can propagate the agent to people or vehicle, you are just protected from the effect. &lt;img image='\a3\Data_F_Enoch\Images\CBRNSuit_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; Simple mask and simple uniform can reduce from 65% to 80% the probability to take damage.  The pain from breathing while contaminated can be avoid with a simple mask. &lt;img image='\A3\Data_F_Orange\Images\Respirator_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\box_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Decontaminate:&lt;/marker&gt;&lt;br/&gt; You can use a small shower to decontaminate units only. Use the big shower for objects, vehicles and objects loaded as cargo. To activate them, just stay under the shower. &lt;img image='\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\DeconShower_01_F.jpg' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Detection:&lt;/marker&gt;&lt;br/&gt; You can analyze an object, vehicle or man with ED-1E drone to determine if it is contaminated (Note: The drone will never be contaminated.). You can also check if you are in a contaminated area by using a chemical detector (THREAT from 0.1 to 0.9: contaminated objects are around, THREAT at 1: you are in the propagating range (you will be contaminated)). &lt;img image='\a3\Data_F_Enoch\Images\ChemicalDetector_ca.paa' width='355' height='200'/&gt;</Original>
                 <German>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\danger_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Chemische Wirk- bzw. Kampfstoffe:&lt;/marker&gt;&lt;br/&gt; Chemische Wirk- bzw. Kampfstoffe werden immer mal wieder im Einsatz, zum Beispiel bei den Waffenkisten, gefunden. Wenn ein Objekt kontaminiert ist, dann verbreitet sich der chemische Wirkstoff auf Personen in der näheren Umgebung (in ein Umkreis von ca. 3m). Personen, welche sich ungeschützt einem solchen Objekt nähern, werden kontaminiert und erleiden Schaden, bis Sie sterben. Man kann sich mir Hilfe einer Dekontaminationsdusche (am Logistikpunkt erhältlich) von diesem Effekt befreien. Die Kontaminierung von Personen kann untereinander weitergegeben werden, wenn man nicht aufpasst (in einem Umkreis von ca. 2m). Das gilt auch für die Innenräume von Fahrzeugen. Denken Sie daran, dass Leichen kontaminiert bleiben, die Leichensäcke diese jedoch isolieren. Kontaminierte Objekte können beim Verladen auch den Container und das Fahrzeug verseuchen. &lt;img image='\a3\Data_F_Enoch\Images\CBRNObjects_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Schutz:&lt;/marker&gt;&lt;br/&gt; Verwenden Sie CBRN-Ausrüstung (auch ABC-Ausrüstung genannt, bestehend aus Uniform, Maske und Atemgerät), um sich vor Kontamination zu schützen. Vor dem ablegen der CBRN-Ausrüstung ist es wichtig, mindestens 5 Sekunden zu duschen, um sämtliche Verseuchungen zu entfernen. Beachten Sie, dass die CBRN-Ausrüstung nur Sie selbst vor den chemischen Kampfstoffen schütz. Sie können weiterhin andere Personen und Fahrzeuge kontaminieren. &lt;img image='\a3\Data_F_Enoch\Images\CBRNSuit_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\box_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Dekontaminierung:&lt;/marker&gt;&lt;br/&gt; Mit der kleinen Dekontaminationsdusche können Sie nur Personen dekontaminieren. Verwenden Sie die große Dusche für Objekte, Fahrzeuge und den Ladenraum von Fahrzeugen (oder Containern). Um die Duschen zu aktivieren, stellen Sie sich einfach darunter. &lt;img image='\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\DeconShower_01_F.jpg' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Erkennung:&lt;/marker&gt;&lt;br/&gt; Sie können ein Objekt, Fahrzeug oder eine Person mit einer ED-1E-Drohne analysieren, um festzustellen, ob es kontaminiert ist (Hinweis: Die Drohne wird niemals von einer Kontamination betroffen sein). Ebenso können Sie einen Chemischen Detektor nutzen um feststellen wie stark der nähere Bereich um Sie herum kontaminiert ist. (THREAT von 0.1 bis 0.9: kontaminierte Gegenstände sind in der Nähe, THREAT von 1: Sie befinden sich in einen verseuchten Bereich (Sie sind somit selbst kontaminiert)). &lt;img image='\a3\Data_F_Enoch\Images\ChemicalDetector_ca.paa' width='355' height='200'/&gt;</German>
                 <Chinesesimp>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\danger_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;化学试剂:&lt;/marker&gt;&lt;br/&gt; 化学试剂会在战场上的武器箱等位置出现。当一个物体受到污染时, 这种化学试剂会传播它到周围的人身上(3米范围内)。感染者将持续受到伤害并感到疼痛, 直至死亡, 或找到一个净化淋浴(位于在后勤点)来清理他们的身体。当这些人受到污染时, 他们会将污染传播给周围的其他人(2米范围内)或车辆(如果他们进入车辆的话)。记住, 尸体将保持受到污染的状态, 但尸体袋可以将其隔离。此外, 作为货物装载受污染物体将会污染集装箱或车辆。&lt;img image='\a3\Data_F_Enoch\Images\CBRNObjects_ca.paa' width='355' height='200'/&gt;&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;防护措施:&lt;/marker&gt;&lt;br/&gt; 使用CBRN(生化核辐)装备(服装、口罩、面具和呼吸器背包)可以保护您完全免受污染影响。但是, 在取下CBRN装备之前, 不要忘记进行至少5秒的净化淋浴。请注意, 即使穿戴了CBRN装备, 您也会向人员或车辆传播化学试剂, 只有你免受污染影响。普通的面具和制服会将受到伤害的可能性减免60%至80%。&lt;img image='\a3\Data_F_Enoch\Images\CBRNSuit_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\box_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;清除污染:&lt;/marker&gt;&lt;br/&gt; 小型淋浴器只能用来净化单兵单位。使用大型淋浴器来清洗物品、车辆和货物。要激活净化过程, 只需待在淋浴下即可。&lt;img image='\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\DeconShower_01_F.jpg' width='355' height='200'/&gt;&lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;检测:&lt;/marker&gt;&lt;br/&gt; 你可以使用 ED-1E 无人机分析物体、车辆或人, 以测定其是否受到污染(注: 该无人机永远不会受到污染)。您也可以使用化学探测器检测您是否处于污染区域内(威胁度介于0.1至0.9之间: 附近存在受污染物体, 威胁度等于1: 您处于传播区域内(您将受到污染))。&lt;img image='\a3\Data_F_Enoch\Images\ChemicalDetector_ca.paa' width='355' height='200'/&gt;</Chinesesimp>
                 <French>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\danger_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Agent chimique:&lt;/marker&gt;&lt;br/&gt; Un agent chimique peut être trouvé sur le champ de bataille à l'emplacement d'une cache d'arme, par exemple. Lorsqu'un objet est contaminé, l'agent chimique se propage aux personnes autour (dans un cercle de 3 m). Ces personnes seront constamment blessées jusqu'à ce qu'elles meurent ou trouvent une douche décontaminante (disponible au point logistique) pour nettoyer leur corps. Lorsqu'ils sont contaminés, ils peuvent le propager à d'autres personnes autour (dans un cercle de 2 m) ou à un véhicule s'ils pénètrent à l'intérieur. Gardez à l'esprit que les cadavres restent contaminés, mais le sac mortuaire l'isolera. De plus, un objet contaminé placé dans la cargaison d'un conteneur ou d'un véhicule le contaminera. &lt;img image='\a3\Data_F_Enoch\Images\CBRNObjects_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Protection:&lt;/marker&gt;&lt;br/&gt; Utilisez un équipement CBRN (uniforme, masque respiratoire et sac à dos) pour une protection complète contre l'effet de contamination. Mais n'oubliez pas de prendre une douche pendant plus de 5 secondes avant de retirer votre équipement CBRN. Sachez que même avec un équipement CBRN, vous pouvez propager l'agent à des personnes ou à un véhicule, vous êtes simplement protégé de l'effet. &lt;img image='\a3\Data_F_Enoch\Images\CBRNSuit_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; Un masque simple et un uniforme simple peuvent réduire de 65% à 80% la probabilité de subir des dommages.&lt;img image='\A3\Data_F_Orange\Images\Respirator_ca.paa' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\box_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Décontaminer:&lt;/marker&gt;&lt;br/&gt; Vous pouvez utiliser une petite douche uniquement pour décontaminer les unités. Utilisez la grande douche pour les objets, les véhicules et les objets chargés comme cargaison. Pour les activer, il suffit de rester sous la douche. &lt;img image='\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\DeconShower_01_F.jpg' width='355' height='200'/&gt; &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;Détection:&lt;/marker&gt;&lt;br/&gt; Vous pouvez analyser un objet, un véhicule ou un homme avec un drone ED-1E pour déterminer s'il est contaminé (Remarque: le drone ne sera jamais contaminé.). Vous pouvez également vérifier si vous vous trouvez dans une zone contaminée en utilisant un détecteur chimique (THREAT de 0,1 à 0,9: les objets contaminés sont aux alentours, THREAT à 1: vous êtes dans la plage de propagation (vous serez contaminé)). &lt;img image='\a3\Data_F_Enoch\Images\ChemicalDetector_ca.paa' width='355' height='200'/&gt;</French>
@@ -1112,7 +1112,7 @@
         </Container>
         <Container name="Mission: Destroy all the hideouts">
             <Key ID="STR_BTC_HAM_MISSION_DESTROY_DESC">
-                <Original>Destroy all the hideouts of the Oplitas</Original>
+                <Original>Destroy all Oplitas hideouts</Original>
                 <Spanish>Destruye todos los escondites de los Oplitas</Spanish>
                 <German>Zerstören Sie sämtliche Verstecke der Oplitas</German>
                 <Portuguese>Destrua todos os esconderijos dos inimigos</Portuguese>
@@ -1121,7 +1121,7 @@
                 <Czech>Zničte všechny úkryty Oplitas</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_DESTROY_TITLE">
-                <Original>Destroy all the hideouts</Original>
+                <Original>Destroy all hideouts</Original>
                 <Spanish>Destruye todos los escondites</Spanish>
                 <German>Alle Verstecke zerstören</German>
                 <Portuguese>Destrua todos os esconderijos</Portuguese>
@@ -1145,7 +1145,7 @@
     <Package name="Side Missions">
         <Container name="Capture officer">
             <Key ID="STR_BTC_HAM_SIDE_CAPOFF_TITLE">
-                <Original>Capture commander in concealed convoy</Original>
+                <Original>Capture commander from concealed convoy</Original>
                 <Spanish>Capturar al comandante en convoy ocult</Spanish>
                 <German>Offizier gefangen nehmen</German>
                 <Portuguese>Capturar Oficial dentro do comboio camuflado</Portuguese>
@@ -1193,7 +1193,7 @@
         </Container>
         <Container name="Checkpoint">
             <Key ID="STR_BTC_HAM_SIDE_CHECKPOINT_TITLE">
-                <Original>Destroy checkpoints in %1</Original>
+                <Original>Destroy checkpoints</Original>
                 <Spanish>Destruir los puestos de control en %1</Spanish>
                 <German>Kontrollpunkte zerstören in %1</German>
                 <Portuguese>Destruir ponto de verificação em %1</Portuguese>
@@ -1202,7 +1202,7 @@
                 <Czech>Zničte kontrolní body v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHECKPOINT_DESC">
-                <Original>Checkpoints have been located in %1. Local population is asking for your help to destroy ammo box in all checkpoints!</Original>
+                <Original>Checkpoints have been located. Local population is asking for your help to destroy ammo box in all checkpoints!</Original>
                 <Spanish>Los puntos de control se han localizado en %1. La población local está pidiendo su ayuda para destruir la caja de municiones en todos los puntos de control!</Spanish>
                 <German>Kontrollpunkt wurden in der Nähe von %1 gesichtet. Die lokale Bevölkerung bittet Sie darum, alle Munitionskisten und den jeweiligen Kontrollpunkt zu beseitigen!</German>
                 <Portuguese>Os pontos de verificação foram localizados em %1. A população local está pedindo sua ajuda para destruidir todas as caixas de munições em todos os pontos de verificação!</Portuguese>
@@ -1211,7 +1211,7 @@
                 <Czech>Kontrolní body byly umístěny v %1. Místní obyvatelstvo žádá o vaši pomoc při zničení bedny s municí ve všech kontrolních bodech!</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHECKPOINT_DESTROY_DESC">
-                <Original>Destroy this checkpoint by destroying this object.</Original>
+                <Original>Find and destroy the ammo container in Checkpoint</Original>
                 <German>Beseitigen Sie den Kontrollpunkt, indem Sie alle Objekte zerstören.</German>
                 <Chinesesimp>通过摧毁这一物件来摧毁该检查点。</Chinesesimp>
                 <French>Détruisez ce point de contrôle en détruisant cet objet.</French>
@@ -1236,7 +1236,7 @@
                 <Czech>Lékařské nouzové volání na moři</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREATBOAT_DESC">
-                <Original>A civilian is calling for a medic in %1, treat and wait for patient stabilization.</Original>
+                <Original>A civilian is calling for a medic. Treat and stabilize the patient.</Original>
                 <Spanish>Un civil está llamando a un médico en %1, tratar y esperar la estabilización del paciente.</Spanish>
                 <German>Ein Zivilist aus %1 hat einen Notruf abgesetzt. Behandeln Sie ihn umd warten Sie darauf, dass sich sein Zustand stabilisiert.</German>
                 <Portuguese>Um civil fez uma chamada médica em %1. Trate-o e aguarde a estabilização dele.</Portuguese>
@@ -1247,7 +1247,7 @@
         </Container>
         <Container name="Civ treatment">
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_MRK">
-                <Original>Civil need help</Original>
+                <Original>Civilian needs help</Original>
                 <Spanish>Civil necesita ayuda</Spanish>
                 <German>Zivilist braucht Hilfe</German>
                 <Portuguese>Um civil precisa de ajuda</Portuguese>
@@ -1256,7 +1256,7 @@
                 <Czech>Civil potřebuje pomoc</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_TITLE">
-                <Original>Medical emergency call in %1</Original>
+                <Original>Medical emergency call incoming</Original>
                 <Spanish>Llamada de emergencia médica en %1</Spanish>
                 <German>Medizinischer Notruf aus %1</German>
                 <Portuguese>Chamada de emergência médica em %1</Portuguese>
@@ -1265,7 +1265,7 @@
                 <Czech>Lékařské tísňové volání v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_DESC">
-                <Original>A civilian is calling for a medic in %1, treat and wait for patient stabilization </Original>
+                <Original>A civilian is calling for a medic. Treat and stabilize the patient.</Original>
                 <Spanish>Un civil está llamando a un médico en %1, tratar y esperar la estabilización del paciente</Spanish>
                 <German>Ein Zivilist aus %1 hat einen Notruf abgesetzt. Behandeln Sie ihn umd warten Sie darauf, dass sich sein Zustand stabilisiert </German>
                 <Portuguese>Um civil fez uma chamada médica em %1. Trate-o e aguarde a estabilização dele.</Portuguese>
@@ -1276,7 +1276,7 @@
         </Container>
         <Container name="Convoy">
             <Key ID="STR_BTC_HAM_SIDE_CONVOY_STARTCHAT">
-                <Original>Convoy has left the starting point!</Original>
+                <Original>Convoy has left the area!</Original>
                 <Spanish>¡El convoy ha dejado el punto de partida!</Spanish>
                 <German>Der Konvoi ist losgefahren!</German>
                 <Portuguese>O comboio deixou o ponto de partida!</Portuguese>
@@ -1294,7 +1294,7 @@
                 <Czech>Konec konvoje</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONVOY_TITLE">
-                <Original>Destroy Oplitas convoy attacking %1</Original>
+                <Original>Destroy Oplitas convoy</Original>
                 <Spanish>Destruir el convoy de Oplitas atacando %1</Spanish>
                 <German>Bewaffneter Konvoi unterwegs nach %1</German>
                 <Portuguese>Destrua o comboio armado inimigo %1</Portuguese>
@@ -1303,7 +1303,7 @@
                 <Czech>Zničte konvoj Oplitas útočící na %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONVOY_DESC">
-                <Original>An armed Oplitas convoy is going to attack %1. Local population is asking for your help to destroy it before it gets there!</Original>
+                <Original>An armed Oplitas convoy is going to attack. Locals are asking for your help to destroy the convoy before it reaches their town!</Original>
                 <Spanish>Un convoy armado de Oplitas va a atacar %1. La población local está pidiendo su ayuda para destruirlo antes de que llegue allí!</Spanish>
                 <German>Ein bewaffneter Konvoi der Oplitas will %1 angreifen. Schützen Sie die Bevölkerung in dem Sie den Konvoi zerstören bevor er dort ankommt</German>
                 <Portuguese>Um comboio armado inimigo vai atacar %1. Proteja a população local dentruindo o comboio antes que ele chegue</Portuguese>
@@ -1314,7 +1314,7 @@
         </Container>
         <Container name="Hack">
             <Key ID="STR_BTC_HAM_SIDE_HACK_STARTHACK">
-                <Original>Defend the terminal until the missile is hacked!</Original>
+                <Original>Defend the terminal until the missile launch control is hacked!</Original>
                 <Spanish>Defiende la terminal hasta que el misil sea hacekado!</Spanish>
                 <German>Verteidigt das Terminal, bis die Rakete gehackt erfolgreich gehackt ist!</German>
                 <Portuguese>Defenda o terminal até que o míssil seja hackeado!</Portuguese>
@@ -1332,7 +1332,7 @@
                 <Czech>Začněte hackovat</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_TITLE">
-                <Original>Hack missile near %1</Original>
+                <Original>Hack missile near</Original>
                 <Spanish>Hackear misil cerca de %1</Spanish>
                 <German>Rakete hacken in der Nähe von %1</German>
                 <Portuguese>Hackeie o míssil em %1</Portuguese>
@@ -1341,7 +1341,7 @@
                 <Czech>Hacknout raketu poblíž %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_DESC">
-                <Original>Hack a prototype missile with a terminal available in %1. Defend your position until the process is done!</Original>
+                <Original>Hack a prototype missile with a terminal. Defend your position until the process is complete!</Original>
                 <Spanish>Hackear un misil prototipo con un terminal disponible en %1. Defiende tu posición hasta que el proceso haya terminado!</Spanish>
                 <German>Hacke eine Prototyp-Rakete mit einem in %1 verfügbaren Terminal. Verteidige deine Position, bis der Prozess abgeschlossen ist!</German>
                 <Portuguese>Hackei o terminal de protótipo de míssil em %1. Defenda sua posição até que o processo seja concluído!</Portuguese>
@@ -1350,14 +1350,14 @@
                 <Czech>Hackněte prototyp střely s terminálem dostupným v %1. Braňte svou pozici, dokud nebude proces dokončen!</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_OPEN_DESC">
-                <Original>Use the terminal to launch the hack.</Original>
+                <Original>Use the terminal to initiate the hack.</Original>
                 <German>Benutzen Sie das Terminal, um den Hack zu starten.</German>
                 <Chinesesimp>使用该终端开始黑客入侵。</Chinesesimp>
                 <French>Utilisez le terminal pour lancer le hack.</French>
                 <Czech>Ke spuštění hacku použijte terminál.</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_OPEN_TITLE">
-                <Original>Start the Hack</Original>
+                <Original>Start hacking</Original>
                 <German>Hack starten</German>
                 <Chinesesimp>进行黑客入侵</Chinesesimp>
                 <French>Lancez le piratage</French>
@@ -1373,7 +1373,7 @@
         </Container>
         <Container name="Hostage">
             <Key ID="STR_BTC_HAM_SIDE_HOSTAGE_TITLE">
-                <Original>Liberate hostage near %1</Original>
+                <Original>Liberate hostage</Original>
                 <Spanish>Liberar rehén cerca de %1</Spanish>
                 <German>Geisel befreien: %1</German>
                 <Portuguese>Liberte o refém próximo a %1</Portuguese>
@@ -1382,7 +1382,7 @@
                 <Czech>Osvoboďte rukojmí poblíž %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HOSTAGE_DESC">
-                <Original>Liberate a civilian hostage in %1. The Local population is asking for your help!</Original>
+                <Original>Liberate a civilian hostage. The Locals are asking for your help!</Original>
                 <Spanish>Liberar a un rehén civil en %1. La población local está pidiendo su ayuda!</Spanish>
                 <German>Befreien Sie eine Geisel in %1 aus den Händen der Terroristen. Die lokale Bevölkerung bittet um Ihre Hilfe!</German>
                 <Portuguese>Liberte o civil refém em %1 das mãos dos terroristas. A população local está pedindo sua ajuda!</Portuguese>
@@ -1393,7 +1393,7 @@
         </Container>
         <Container name="Mines">
             <Key ID="STR_BTC_HAM_SIDE_MINES_TITLE">
-                <Original>Minefield near %1</Original>
+                <Original>Minefield</Original>
                 <Spanish>Campo minado cerca de %1</Spanish>
                 <German>Minenfeld in der Nähe von %1</German>
                 <Portuguese>Campo minado perto de %1</Portuguese>
@@ -1402,7 +1402,7 @@
                 <Czech>Minové pole poblíž %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_MINES_DESC">
-                <Original>There is a minefield near %1, clear it!</Original>
+                <Original>There is a minefield, clear it!</Original>
                 <Spanish>Hay un campo minado cerca de %1, ¡despejenlo!</Spanish>
                 <German>Es gibt ein Minenfeld in der Nähe von %1, räumen Sie es!</German>
                 <Portuguese>Campo minado próximo a %1. Limpe-os!</Portuguese>
@@ -1413,7 +1413,7 @@
         </Container>
         <Container name="Rescue">
             <Key ID="STR_BTC_HAM_SIDE_RESC_TITLE">
-                <Original>Rescue downed pilot near %1</Original>
+                <Original>Rescue downed pilot</Original>
                 <Spanish>Rescate de piloto caído cerca de %1</Spanish>
                 <German>Abgestürzter Piloten in der Nähe %1</German>
                 <Portuguese>Resgate de piloto abatido perto de %1</Portuguese>
@@ -1422,7 +1422,7 @@
                 <Czech>Záchrana sestřeleného pilota poblíž %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RESC_DESC">
-                <Original>MAYDAY-MAYDAY, a pilot crashed his helicopter near %1. Command is asking for your help to rescue and bring him back to base!</Original>
+                <Original>MAYDAY-MAYDAY, we have reports of a downed helicopter. Command is asking for your help to rescue the pilot and bring him back to base!</Original>
                 <Spanish>MAYDAY-MAYDAY, un piloto estrelló su helicóptero cerca de %1. ¡El Comando está pidiendo su ayuda para rescatarlo y traerlo de vuelta a la base!</Spanish>
                 <German>MAYDAY-MAYDAY, ein Pilot stürzte mit seinem Helikopter in der Nähe von %1 ab. Sie haben den Befehl ihn zu retten und sicher zur Basis zurückzubringen!</German>
                 <Portuguese>MAYDAY-MAYDAY, um piloto caiu com seu helicóptero próximo a %1. O comando solicitou sua ajuda para resgatá-lo e trazê-lo de volta a base!</Portuguese>
@@ -1431,7 +1431,7 @@
                 <Czech>MAYDAY-MAYDAY, pilot havaroval se svým vrtulníkem poblíž %1. Velení žádá o vaši pomoc při jeho záchraně a přivedení zpět na základnu!</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RESC_FIND_DESC">
-                <Original>Find the pilot of the helicopter. It should be around the helicopter wreck.</Original>
+                <Original>Search the wreckage for the pilot.</Original>
                 <German>Finden Sie den Piloten. Er sollte sich um Umfeld des Helikopterwracks befinden.</German>
                 <Chinesesimp>找到该直升机的飞行员。他应该在直升机残骸附近。</Chinesesimp>
                 <French>Trouvez le pilote de l'hélicoptère. Il devrait être autour de l'épave de l'hélicoptère.</French>
@@ -1489,7 +1489,7 @@
         </Container>
         <Container name="Supply">
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_TITLE">
-                <Original>Supply %1</Original>
+                <Original>Supply</Original>
                 <Spanish>Suministrar %1</Spanish>
                 <German>Versorgung nach %1 bringen</German>
                 <Portuguese>Envie Suprimentos para %1</Portuguese>
@@ -1498,7 +1498,7 @@
                 <Czech>Supply %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_DESC">
-                <Original>The citizens of %1 are on the brink starving and thirsty to death, bring them food and potable water present in the supply container at the logistic point!</Original>
+                <Original>The citizens of are on the brink starving and thirsty to death, bring them food and potable water present in the supply container at the logistic point!</Original>
                 <Spanish>Los ciudadanos de %1 están al borde de la muerte de hambre, ¡tráiganles algunos suministros presentes en el punto logístico!</Spanish>
                 <German>Die Bewohner der Stadt %1 sind am verdusten und verhungern. Versorgen Sie die Bürger mit den nötigen Nahrungsmitteln. Den benötigten Nachschubcontainer finden sie am Versorgungspunkt.</German>
                 <Portuguese>O população de %1 estão passando fome! Forneça suprimentos! Os suprimentos podem ser solicitados no ponto logístico.</Portuguese>
@@ -1537,7 +1537,7 @@
         </Container>
         <Container name="Tower">
             <Key ID="STR_BTC_HAM_SIDE_TOWER_TITLE">
-                <Original>Destroy tower in %1</Original>
+                <Original>Destroy tower in</Original>
                 <Spanish>Destruir torre de radio en %1</Spanish>
                 <German>Funkturm zerstören: %1</German>
                 <Portuguese>Destrua a torre de rádio em %1</Portuguese>
@@ -1546,7 +1546,7 @@
                 <Czech>Zničte věž v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_TOWER_DESC">
-                <Original>A Oplitas communications tower has been located in %1. Local population is asking for your help to destroy it! (Use one M183 explosive satchel)</Original>
+                <Original>A Oplitas communications tower has been located in. Local population is asking for your help to destroy it! (Use one M183 explosive satchel)</Original>
                 <Spanish>En %1 se ha ubicado una torre de comunicaciones de Oplitas. La población local está pidiendo tu ayuda para destruirlo! (Use un explosivo satchel M183)</Spanish>
                 <German>Ein Funkturm der Oplitas befindet sich in %1. Die lokale Bevölkerung bittet darum diesen zu zerstören! (Nutzen Sie die M183 Sprengladungen)</German>
                 <Portuguese>A torre de comunicação inimiga foi localizada em %1. A população local está pedindo sua ajuda para destruí-las. (Use a mochila de explosivos M183)</Portuguese>
@@ -1566,7 +1566,7 @@
                 <Czech>Generator</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_UNDERWATER_TITLE">
-                <Original>Destroy underwater generator in %1</Original>
+                <Original>Destroy underwater generator in</Original>
                 <Spanish>Destruir el generador subacuático en %1</Spanish>
                 <German>Zerstöre den Unterwassergenerator in %1</German>
                 <Portuguese>Destrua o gerador subaquático em %1</Portuguese>
@@ -1575,7 +1575,7 @@
                 <Czech>Zničte podvodní generátor v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_UNDERWATER_DESC">
-                <Original>An underwater generator has been located in %1. Local population is asking for your help to destroy it!</Original>
+                <Original>An underwater generator has been located in. Local population is asking for your help to destroy it!</Original>
                 <Spanish>Se ha localizado un generador submarino en %1. La población local está pidiendo tu ayuda para destruirlo!</Spanish>
                 <German>Ein Unterwassergenerator wurde in der Nähe von %1 aufgeklärt. Die zivile Bevölkerung bittet um die Zerstörung des Aggregats!</German>
                 <Portuguese>O gerador subaquático foi localizado em %1. A população local está pedindo sua ajuda para destruí-lo!</Portuguese>
@@ -1586,7 +1586,7 @@
         </Container>
         <Container name="Vehicle">
             <Key ID="STR_BTC_HAM_SIDE_VEHICLE_TITLE">
-                <Original>Vehicle needs assistance near %1</Original>
+                <Original>Vehicle needs assistance near</Original>
                 <Spanish>Vehículo necesita asistencia cerca de %1</Spanish>
                 <German>Fahrzeug braucht Unterstützung in der Nähe von %1</German>
                 <Portuguese>Veículos necessitando de assistência em %1</Portuguese>
@@ -1595,7 +1595,7 @@
                 <Czech>Vozidlo potřebuje asistenci poblíž %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_VEHICLE_DESC">
-                <Original>A vehicle damaged by an IED needs assistance near %1! Repair it!</Original>
+                <Original>A vehicle damaged by an IED needs assistance near! Repair it!</Original>
                 <Spanish>Un vehículo dañado por IED necesita asistencia cerca de %1! ¡Repárelo!</Spanish>
                 <German>Ein Fahrzeug wurde durch eine IED beschädigt und braucht nun Unterstützung in der Nähe von %1! Repariere Sie es!</German>
                 <Portuguese>Um veículo foi danificado por um IED precisa de reparo em %1! Conserte-o!</Portuguese>
@@ -1633,21 +1633,21 @@
                 <Czech>Eliminovat %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_DESC">
-                <Original>Assassinate %1 in %2, then bring his dog tag to the base for identification. He is responsible for terrorizing the local population!</Original>
+                <Original>Assassinate %1 in, then bring his dog tag to the base for identification. He is responsible for terrorizing the local population!</Original>
                 <German>Eliminieren Sie %1 in %2 und sichern Sie seine Hundemarke zur Identifizierung. Er ist der Hauptverantwortliche für den Terror in der Region!</German>
                 <Chinesesimp>在 %2 地区刺杀 %1, 然后将他的狗牌带回基地以进行身份鉴定。他是当地恐怖主义活动的主要责任人之一!</Chinesesimp>
                 <French>Assassiner %1 dans la ville de %2, puis apportez sa plaque d'identité à la base pour identification. Il est terrorise la population locale!</French>
                 <Czech>Zavražděte %1 v %2, pak přineste jeho psí známku na základnu k identifikaci. Je zodpovědný za terorizaci místního obyvatelstva!</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_IN_TITLE">
-                <Original>Kill %1</Original>
+                <Original>Kill</Original>
                 <German>Töte %1</German>
                 <Chinesesimp>杀死 %1</Chinesesimp>
                 <French>Tuez %1</French>
                 <Czech>Zabijte %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_IN_DESC">
-                <Original>Kill %1 in %2.</Original>
+                <Original>Kill.</Original>
                 <German>Töten Sie %1 in %2.</German>
                 <Chinesesimp>在 %2 地区杀死 %1。</Chinesesimp>
                 <French>Tuez %1 dans la ville de %2.</French>
@@ -1661,7 +1661,7 @@
                 <Czech>Vezměte si psí známku</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_DOGTAG_DESC">
-                <Original>Take dog tag of %1.</Original>
+                <Original>Take dog tag of.</Original>
                 <German>Nehmen Sie die Hundemarke von %1 an sich.</German>
                 <Chinesesimp>拿取 %1 的狗牌。</Chinesesimp>
                 <French>Prendre la plaque d'identité sur %1.</French>
@@ -1675,7 +1675,7 @@
                 <Czech>Přineste psí známku na základnu</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_BRING_DESC">
-                <Original>Bring %1 dog tag to the logistic point.</Original>
+                <Original>Bring dog tag to the logistic point.</Original>
                 <German>Geben Sie die Hundemarke beim Logistikpunkt in der Basis ab.</German>
                 <Chinesesimp>将 %1 的狗牌带回基地后勤点。</Chinesesimp>
                 <French>Apportez la plaque d'identité de %1 au point logistique.</French>
@@ -1684,14 +1684,14 @@
         </Container>
         <Container name="Chemical Leak">
             <Key ID="STR_BTC_HAM_SIDE_CHEM_TITLE">
-                <Original>Chemical leak in %1</Original>
+                <Original>Chemical leak</Original>
                 <German>Chemieunfall in %1</German>
                 <Chinesesimp>处理 %1 地区的化学品泄露</Chinesesimp>
                 <French>Fuite chimique dans la ville de %1</French>
                 <Czech>Chemický únik v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHEM_DESC">
-                <Original>Some containers with a dangerous chemical agent have been broken in %1. The civilian population reported that only some small objects are contaminated. Eliminate the contamination by moving those objects under a big shower.</Original>
+                <Original>Some containers with a dangerous chemical agent have been broken. The civilian population reported that only some small objects are contaminated. Eliminate the contamination by moving those objects under a big shower.</Original>
                 <German>In %1 wurden einige Behälter mit gefährlichen chemischen Stoffen beschädigt. Laut Aussagen der Zivilbevölkerung scheinen aber nur kleinere Objekte mit dieser Substanz in Berührungen gekommen zu sein. Finden und beseitigen Sie die kontaminierten Objekte, in dem Sie diese unter eine große Dusche stellen.</German>
                 <Chinesesimp>在 %1 地区, 一些装有危险化学试剂的集装箱发生破损。平民报告称只有一些小物体受到污染。将这些物体移动到大型淋浴器下以消除污染。</Chinesesimp>
                 <French>Certains conteneurs contenant un agent chimique dangereux ont été cassés dans la ville de %1. La population civile a signalé que seuls quelques petits objets étaient contaminés. Éliminez la contamination en déplaçant ces objets sous une grande douche.</French>
@@ -1742,14 +1742,14 @@
         </Container>
         <Container name="EMP">
             <Key ID="STR_BTC_HAM_SIDE_EMP_TITLE">
-                <Original>EMP in %1</Original>
+                <Original>EMP in</Original>
                 <German>EMP in %1</German>
                 <Chinesesimp>摧毁 %1 地区的 EMP 装置</Chinesesimp>
                 <French>EMP dans la ville de %1</French>
                 <Czech>EMP v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_EMP_DESC">
-                <Original>Civilian population reported that vehicles have electronic fail around %1. They are requesting your help to investigate the origin. %2</Original>
+                <Original>Civilian population reported that vehicles have electronic fail. They are requesting your help to investigate the origin.</Original>
                 <German>Die Bevölkerung hat um %1 Probleme mit der Elektronik ihrer Fahrzeugen. Sie brauchen unsere Unterstützung um den Grund dafür zu finden. %2</German>
                 <Chinesesimp>平民报告称, %1 地区附近存在载具上的电子设备失效的情况。平民请求对来源进行调查。%2</Chinesesimp>
                 <French>La population civile a signalé que les véhicules ont une panne électronique autour de %1. Ils demandent votre aide pour enquêter sur l'origine. %2</French>
@@ -1772,14 +1772,14 @@
         </Container>
         <Container name="Remove rubbish">
             <Key ID="STR_BTC_HAM_SIDE_RUBBISH_TITLE">
-                <Original>Remove rubbish in %1</Original>
+                <Original>Remove rubbish</Original>
                 <German>Entferne Müll in %1</German>
                 <Chinesesimp>清除 %1 地区的垃圾</Chinesesimp>
                 <French>Retirer les déchets à %1</French>
                 <Czech>Odstraňte odpad v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RUBBISH_DESC">
-                <Original>Civilian population reported many rubbish on road making driving difficult around %1. They are requesting your help to remove them with a Nemmera.</Original>
+                <Original>Civilian population reported many rubbish on road making driving difficult. They are requesting your help to remove them with a Nemmera.</Original>
                 <German>Die Bevölkerung meldet viel Müll auf den Straßen bei %1. Dieser macht das fahren auf den Straßen fast unmöglich. Sie benötigen unsere Unterstützung um den Müll mit dem Nemera zu entfernen</German>
                 <Chinesesimp>平民报告称 %1 附近的道路上有许多垃圾, 导致行车困难。平民请求您派遣豹式装甲车(Nemmera)来清除这些垃圾。</Chinesesimp>
                 <French>La population civile a signalé de nombreux déchets sur la route rendant la conduite difficile autour de %1. Ils demandent votre aide pour les supprimer avec un Nemmera.</French>
@@ -1802,13 +1802,13 @@
         </Container>
         <Container name="Pandemic">
             <Key ID="STR_BTC_HAM_SIDE_PANDEMIC_TITLE">
-                <Original>Contaminate civilians in %1</Original>
+                <Original>Contaminate civilians in</Original>
                 <German>Kontaminierte Zivilisten bei %1</German>
                 <Chinesesimp>%1 地区的平民受到感染</Chinesesimp>
                 <Czech>Kontaminovaný civilisti v %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_PANDEMIC_DESC">
-                <Original>Civilians get contaminated by a chemical agent around %1. They are requesting your help to decontaminate those civilans with a little shower. To locate civilians go to the subtask, follow red blood drop and use your chemical detector.</Original>
+                <Original>Civilians get contaminated by a chemical agent. They are requesting your help to decontaminate those civilans with a little shower. To locate civilians go to the subtask, follow red blood drop and use your chemical detector.</Original>
                 <German>Zivilisten werden durch einen chemischen Kampfstoff bei %1 kontaminiert. Sie benötigen unsere Unterstützung. Dekontaminiere die Zivilisten mit einer kleinen Decon Dusche. Um die Zivilisten zu finden, suche bei der Unteraufgabe nach Bluttropfen und nutze deinen chemischen Detekor.</German>
                 <Chinesesimp>%1 附近的平民感染了一种化学试剂。平民请求您使用小型淋浴器来净化受感染的村民。要确定平民的位置, 请查看次级任务, 跟随红色的血滴并使用化学探测器。</Chinesesimp>
                 <Czech>Civilisté jsou kontaminováni chemickou látkou kolem %1. Žádají vaši pomoc při dekontaminaci těch civilistů malou sprchou. Chcete-li najít civilisty, přejděte na dílčí úkol, postupujte podle kapky červené krve a použijte svůj chemický detektor.</Czech>
@@ -1860,7 +1860,7 @@
                 <Czech>Logistic</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_LOGPOINT_REQOBJ">
-                <Original>Require object</Original>
+                <Original>Build Menu</Original>
                 <Spanish>Solicitar Objeto</Spanish>
                 <German>Nachschub anfordern</German>
                 <Portuguese>Solicitar reabastecimento</Portuguese>
@@ -1878,7 +1878,7 @@
                 <Czech>Opravit</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_LOGPOINT_REQVEH">
-                <Original>Require vehicle</Original>
+                <Original>Admin Garage</Original>
                 <Spanish>Solicitar vehiculo</Spanish>
                 <German>Fahrzeug anfordern</German>
                 <Portuguese>Solicitar veículo</Portuguese>

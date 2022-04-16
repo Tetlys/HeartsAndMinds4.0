@@ -3,19 +3,36 @@ if !(isNil "btc_custom_loc") then {
     {
         _x params ["_pos", "_cityType", "_cityName", "_radius"];
         private _location = createLocation [_cityType, _pos, _radius, _radius];
-        _location setText _cityName;
+        //_location setText _cityName;
     } forEach btc_custom_loc;
 };
 btc_intro_done = [] spawn btc_respawn_fnc_intro;
 [] call btc_int_fnc_shortcuts;
 [] call btc_lift_fnc_shortcuts;
 
+WHITELISTED = [
+    "76561198047333011", // Tetlys
+    "76561197992739622", // Paladin
+    "76561198033215112", // TCAS
+    "76561198402038100", // N0Ace
+    "76561198256704117", // NoAceSecondAccount
+    "76561198040185781", // Johnny
+    "76561197985304352", // Remer
+    "76561198029760083", // Prodegy
+    "76561198010606123", // Kyle
+    "76561198082213301", // Jayhova
+    "76561198051408370", // Chad
+    "76561199078232622", // SOV
+    "76561198807583841"  // Cryptic
+];
+
 [{!isNull player}, {
     [] call compileScript ["core\doc.sqf"];
+    execVM "scripts\empty_vehicles_marker.sqf";
 
     btc_respawn_marker setMarkerPosLocal player;
     player addRating 9999;
-    ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+    //["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
     [player] call btc_eh_fnc_player;
 
@@ -27,6 +44,10 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
 
     if (player getVariable ["interpreter", false]) then {
         player createDiarySubject ["btc_diarylog", localize "STR_BTC_HAM_CON_INFO_ASKHIDEOUT_DIARYLOG", '\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa'];
+    };
+
+    if (player getVariable ["Reserved", false]) then {
+        if !(getplayerUID player in WHITELISTED) then {"end1" call BIS_fnc_endMission;};
     };
 
     switch (btc_p_autoloadout) do {

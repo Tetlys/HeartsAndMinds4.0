@@ -102,7 +102,7 @@ if (btc_p_set_skill) then {
         [_this select 0, "HandleDamage", btc_patrol_fnc_disabled] call CBA_fnc_addBISEventHandler;
     }, false] call CBA_fnc_addClassEventHandler;
 } forEach btc_civ_type_veh;
-["ace_tagCreated", btc_tag_fnc_eh] call CBA_fnc_addEventHandler; 
+["ace_tagCreated", btc_tag_fnc_eh] call CBA_fnc_addEventHandler;
 
 if (btc_p_respawn_ticketsAtStart >= 0) then {
     ["ace_placedInBodyBag", btc_body_fnc_setBodyBag] call CBA_fnc_addEventHandler;
@@ -122,4 +122,22 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
         params ["_obj"];
         [_obj, 50] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["CUP_MTVR_Base", "Truck_01_base_F"];
+} forEach ["LIB_SdKfz_7"];
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 20] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["LIB_OpelBlitz_Ambulance", "LIB_OpelBlitz_Ammo", "LIB_OpelBlitz_Fuel", "LIB_OpelBlitz_Parm", "LIB_SdKfz_7_Ammo"];
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 10] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["LIB_PzKpfwIV_H_tarn51d", "LIB_PzKpfwVI_B_tarn51d", "LIB_PzKpfwVI_E_tarn51d", "LIB_OpelBlitz_Open_Y_Camo", "LIB_SdKfz_7_AA"];
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 8] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["LIB_FW190F8_3", "LIB_Ju87", "LIB_Kfz1_MG42_camo", "LIB_SdKfz251_FFV"];

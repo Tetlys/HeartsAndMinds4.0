@@ -76,7 +76,7 @@ private _group = [];
 
 _trigger = createTrigger ["EmptyDetector", _pos, false];
 _trigger setVariable ["group", _group];
-_trigger setTriggerArea [20, 20, 0, false];
+_trigger setTriggerArea [20, 20, 0, true];
 _trigger setTriggerActivation [str btc_player_side, "PRESENT", true];
 _trigger setTriggerStatements ["this", "private _group = thisTrigger getVariable 'group'; {_x setCombatMode 'RED';} forEach _group;", "private _group = thisTrigger getVariable 'group'; {_x setCombatMode 'WHITE';} forEach _group;"];
 

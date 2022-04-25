@@ -64,7 +64,7 @@ _marker2 setMarkerType "hd_flag";
 _marker2 setMarkerSize [0.6, 0.6];
 
 private _area = createMarker [format ["sm_%1", _pos2], _pos2];
-_area setMarkerShape "ELLIPSE";
+_area setMarkerShape "RECTANGLE";
 _area setMarkerBrush "SolidBorder";
 _area setMarkerSize [_radius/2, _radius/2];
 _area setMarkerAlpha 0.3;

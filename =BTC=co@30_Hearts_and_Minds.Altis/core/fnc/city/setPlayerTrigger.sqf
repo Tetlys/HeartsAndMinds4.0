@@ -26,7 +26,7 @@ params [
     ["_cachingRadius", 0, [0]]
 ];
 
-_trigger setTriggerArea [_cachingRadius + btc_city_radiusOffset, _cachingRadius + btc_city_radiusOffset, 0, false, 800];
+_trigger setTriggerArea [_cachingRadius + btc_city_radiusOffset, _cachingRadius + btc_city_radiusOffset, 0, true, 800];
 _trigger setTriggerActivation ["ANYPLAYER", "PRESENT", true];
 _trigger setTriggerStatements [btc_p_trigger, "thisTrigger call btc_city_fnc_activate", "thisTrigger call btc_city_fnc_de_activate"];
 
@@ -37,7 +37,7 @@ if (btc_debug) then {
     private _type = _trigger getVariable "type";
 
     private _marker = createMarker [format ["loc_%1", _id], _trigger];
-    _marker setMarkerShape "ELLIPSE";
+    _marker setMarkerShape "RECTANGLE";
     _marker setMarkerBrush "SolidBorder";
     _marker setMarkerSize [_cachingRadius + btc_city_radiusOffset, _cachingRadius + btc_city_radiusOffset];
     _marker setMarkerAlpha 0.3;

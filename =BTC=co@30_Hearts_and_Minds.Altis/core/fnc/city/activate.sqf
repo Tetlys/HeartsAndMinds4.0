@@ -309,7 +309,7 @@ if (_civKilled isNotEqualTo []) then {
 
     if (_has_en) then {
         private _trigger = createTrigger ["EmptyDetector", _city, false];
-        _trigger setTriggerArea [_cachingRadius, _cachingRadius, 0, false];
+        _trigger setTriggerArea [_cachingRadius, _cachingRadius, 0, true];
         _trigger setTriggerActivation [str btc_enemy_side, "PRESENT", false];
         _trigger setTriggerStatements [btc_p_city_free_trigger_condition, "[thisTrigger, thisList] call btc_city_fnc_setClear", ""];
         _trigger setTriggerInterval 2;

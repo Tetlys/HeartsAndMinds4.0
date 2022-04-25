@@ -64,7 +64,7 @@ _marker2 setMarkerType "hd_flag";
 _marker2 setMarkerSize [0.6, 0.6];
 
 private _area = createMarker [format ["sm_%1", _pos2], _pos2];
-_area setMarkerShape "ELLIPSE";
+_area setMarkerShape "RECTANGLE";
 _area setMarkerBrush "SolidBorder";
 _area setMarkerSize [_radius/2, _radius/2];
 _area setMarkerAlpha 0.3;
@@ -138,7 +138,7 @@ for "_i" from 1 to _convoyLength do {
     //// Create trigger \\\\
     private _trigger = createTrigger ["EmptyDetector", _captive, false];
     _trigger setVariable ["captive", _captive];
-    _trigger setTriggerArea [15, 15, 0, false];
+    _trigger setTriggerArea [15, 15, 0, true];
     _trigger setTriggerActivation [str btc_player_side, "PRESENT", true];
     _trigger setTriggerStatements ["this", format ["_captive = thisTrigger getVariable 'captive'; deleteVehicle thisTrigger; doStop _captive; [_captive, true] call ace_captives_fnc_setSurrendered; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%4'], 29, _captive] call btc_task_fnc_create; [['%3', '%4'], 21, btc_create_object_point, typeOf btc_create_object_point] call btc_task_fnc_create;", _surrender_taskID, _handcuff_taskID, _back_taskID, _taskID], ""];
     _trigger attachTo [_captive, [0, 0, 0]];

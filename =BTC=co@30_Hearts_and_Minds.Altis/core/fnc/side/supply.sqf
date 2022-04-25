@@ -39,7 +39,7 @@ private _move_taskID = _taskID + "mv";
 [[_move_taskID, _taskID], 18, _pos, btc_supplies_cargo] call btc_task_fnc_create;
 
 private _area = createMarker [format ["sm_%1", _pos], _pos];
-_area setMarkerShape "ELLIPSE";
+_area setMarkerShape "RECTANGLE";
 _area setMarkerBrush "SolidBorder";
 _area setMarkerSize [30, 30];
 _area setMarkerAlpha 0.3;

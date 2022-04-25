@@ -33,7 +33,7 @@ btc_city_remaining = [];
         private _cachingRadius = _y getVariable ["cachingRadius", 500];
 
         private _marker = createMarker [format ["city_%1", position _y], position _y];
-        _marker setMarkerShape "ELLIPSE";
+        _marker setMarkerShape "RECTANGLE";
         _marker setMarkerBrush "SolidBorder";
         _marker setMarkerSize [_cachingRadius, _cachingRadius];
         _marker setMarkerAlpha 0.3;

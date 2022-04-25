@@ -389,43 +389,31 @@ btc_civ_type_veh = _allclasse select 2;
 btc_civ_type_boats = _allclasse select 1;
 
 btc_civ_type_units = [
-"LIB_CIV_Assistant",
-"LIB_CIV_Citizen_1",
-"LIB_CIV_Citizen_2",
-"LIB_CIV_Citizen_3",
-"LIB_CIV_Citizen_4",
-"LIB_CIV_Citizen_5",
-"LIB_CIV_Citizen_6",
-"LIB_CIV_Citizen_7",
-"LIB_CIV_Citizen_8",
-"LIB_CIV_Functionary_4",
-"LIB_CIV_Functionary_1",
-"LIB_CIV_Functionary_3",
-"LIB_CIV_Functionary_2",
-"LIB_CIV_Priest",
-"LIB_CIV_Rocker",
-"LIB_CIV_SchoolTeacher",
-"LIB_CIV_Villager_1",
-"LIB_CIV_Villager_4",
-"LIB_CIV_Villager_2",
-"LIB_CIV_Villager_3",
-"LIB_CIV_Woodlander_1",
-"LIB_CIV_Woodlander_4",
-"LIB_CIV_Woodlander_3",
-"LIB_CIV_Woodlander_2"
+"C_Djella_01_lxWS", 
+"C_Djella_02_lxWS", 
+"C_Djella_03_lxWS", 
+"C_Djella_04_lxWS", 
+"C_Djella_05_lxWS", 
+"C_Tak_02_A_lxWS", 
+"C_Tak_02_B_lxWS", 
+"C_Tak_02_C_lxWS", 
+"C_Tak_03_A_lxWS", 
+"C_Tak_03_B_lxWS", 
+"C_Tak_03_C_lxWS", 
+"C_Tak_01_A_lxWS", 
+"C_Tak_01_B_lxWS", 
+"C_Tak_01_C_lxWS"
 ];
-btc_civ_type_veh = [
-"LIB_GazM1",
-"LIB_GazM1_dirty"
-];
+
 
 btc_w_civs = [
-    ["LIB_TT33", "LIB_M9130", "LIB_PPSh41_m"]
+    ["srifle_DMR_06_hunter_F", "sgun_HunterShotgun_01_F", "srifle_DMR_06_hunter_khs_F", "sgun_HunterShotgun_01_Sawedoff_F", "Hgun_PDW2000_F", "arifle_AKM_F", "arifle_AKS_F"],
+    ["hgun_Pistol_heavy_02_F", "hgun_Rook40_F", "hgun_Pistol_01_F"]
 ];
-btc_g_civs = ["HandGrenade"];
+btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
 
 // ANIMALS
-btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F"];
+btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F", "Dromedary_01_lxWS", "Dromedary_04_lxWS", "Dromedary_03_lxWS", "Dromedary_02_lxWS"];
 
 //FOB
 //btc_fob_mat = "Land_Cargo20_blue_F";
@@ -433,7 +421,7 @@ btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_R
 //btc_fob_flag = "Flag_NATO_F";
 btc_fob_mat = "Land_Pod_Heli_Transport_04_fuel_F";
 btc_fob_structure = "Land_Cargo_HQ_V3_F";
-btc_fob_flag = "Flag_ION_F";
+btc_fob_flag = "Flag_NATO_F";
 btc_fob_id = 0;
 btc_fob_minDistance = 1000;
 
@@ -509,61 +497,46 @@ btc_construction_array =
             "Land_BagFence_Long_F",
             "Land_BagFence_Round_F",
             "Land_BagFence_Short_F",
-            //Modern day
-          //"Land_HBarrier_1_F",
-          //"Land_HBarrier_3_F",
-          //"Land_HBarrier_5_F",
-          //"Land_HBarrierBig_F",
-          //"Land_Razorwire_F",
-            //"Land_CncBarrier_F",
-            //"Land_CncBarrierMedium_F",
-            //"Land_CncBarrierMedium4_F",
-            //"Land_CncWall1_F",
-            //"Land_CncWall4_F",
-            //"Land_Mil_ConcreteWall_F",
-            //"Land_Mil_WallBig_4m_F",
-            //"Land_Mil_WallBig_Corner_F",
-            //"Land_PortableLight_double_F",
-            //"Land_Pod_Heli_Transport_04_medevac_black_F",
-            //"Land_Net_Fence_Gate_F",
-            //"Land_LampHarbour_F",
-            //"Land_Camping_Light_F",
-            //"Land_DragonsTeeth_01_4x2_new_redwhite_F",
-            //"Land_ConcreteHedgehog_01_F",
-            //WW2
-            "Land_Plank_01_8m_F",
-            "Land_Plank_01_4m_F",
+            
+          "Land_HBarrier_1_F",
+          "Land_HBarrier_3_F",
+          "Land_HBarrier_5_F",
+          "Land_HBarrierBig_F",
+          "Land_Razorwire_F",
+            "Land_CncBarrier_F",
+            "Land_CncBarrierMedium_F",
+            "Land_CncBarrierMedium4_F",
+            "Land_CncWall1_F",
+            "Land_CncWall4_F",
+            "Land_Mil_ConcreteWall_F",
             "Land_Mil_WallBig_4m_F",
-            "Land_I44_Buildings_Barbedwire2",
-            "Land_WW2_Wire_2",
-            "Land_WW2_SWU_Antitank_Barrier",
-            "WW2_BET_Tschechenigel",
-            "WW2_BET_Hoeckerlinie_2"
+            "Land_Mil_WallBig_Corner_F",
+            "Land_PortableLight_double_F",
+            "Land_Pod_Heli_Transport_04_medevac_black_F",
+            "Land_Net_Fence_Gate_F",
+            "Land_LampHarbour_F",
+            "Land_Camping_Light_F",
+            "Land_DragonsTeeth_01_4x2_new_redwhite_F",
+            "Land_ConcreteHedgehog_01_F",
+            "Land_Plank_01_8m_F",
+            "Land_Plank_01_4m_F"
         ],
         [
             //"Static"
-            //Modern Day
-            //"RHS_M2StaticMG_WD",
-            //"RHS_M2StaticMG_MiniTripod_WD",
-            //"RHS_TOW_TriPod_WD",
-            //"RHS_MK19_TriPod_WD",
-            //"RHS_M252_WD",
-            //"B_Static_Designator_01_F"
-            //WW2
-            "LIB_MG42_Lafette_Deployed",
-            "LIB_GER_SearchLight",
-            "LIB_GrWr34",
-            "LIB_MG34_Lafette_Deployed"
+            "RHS_M2StaticMG_WD",
+            "RHS_M2StaticMG_MiniTripod_WD",
+            "RHS_TOW_TriPod_WD",
+            "RHS_MK19_TriPod_WD",
+            "RHS_M252_WD",
+            "B_Static_Designator_01_F"
         ],
         [
             //"Inv Storage"
-            //Modern Day
-            //"ACE_medicalSupplyCrate",
-            //"ACE_medicalSupplyCrate_advanced",
-            //"ACE_Box_Chemlights",
-            //"ACE_Box_82mm_Mo_Combo"
-            //WW2
-            "Land_WoodenCrate_01_F"
+            "ACE_medicalSupplyCrate",
+            "ACE_medicalSupplyCrate_advanced",
+            "ACE_Box_Chemlights",
+            "ACE_Box_82mm_Mo_Combo"
+
 
         ],
         [

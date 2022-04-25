@@ -138,22 +138,22 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
         params ["_obj"];
         [_obj, 50] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["LIB_SdKfz_7"];
+} forEach ["rhsusf_M977A4_usarmy_d", "rhsusf_M977A4_BKIT_M2_usarmy_d"];
 {
     [_x, "InitPost", {
         params ["_obj"];
         [_obj, 20] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["LIB_OpelBlitz_Ambulance", "LIB_OpelBlitz_Ammo", "LIB_OpelBlitz_Fuel", "LIB_OpelBlitz_Parm", "LIB_SdKfz_7_Ammo"];
+} forEach ["rhsusf_m113d_usarmy_supply", "rhsusf_m113d_usarmy_medical"];
 {
     [_x, "InitPost", {
         params ["_obj"];
         [_obj, 10] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["LIB_PzKpfwIV_H_tarn51d", "LIB_PzKpfwVI_B_tarn51d", "LIB_PzKpfwVI_E_tarn51d", "LIB_OpelBlitz_Open_Y_Camo", "LIB_SdKfz_7_AA"];
+} forEach ["RHS_UH60M_d", "B_APC_Tracked_01_CRV_F"];
 {
     [_x, "InitPost", {
         params ["_obj"];
         [_obj, 8] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["LIB_FW190F8_3", "LIB_Ju87", "LIB_Kfz1_MG42_camo", "LIB_SdKfz251_FFV"];
+} forEach ["rhsusf_m1165a1_gmv_m2_m240_socom_d", "RHS_MELB_MH6M", "RHS_MELB_AH6M", "rhsusf_m1025_d_m2", "rhsusf_m1045_d"];

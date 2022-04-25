@@ -68,8 +68,10 @@ if (_type_boats isEqualTo []) then {
     _type_boats = ["C_Rubberboat","C_Boat_Civil_01_F","C_Boat_Civil_01_rescue_F","C_Boat_Civil_01_police_F","C_Boat_Transport_02_F","C_Scooter_Transport_01_F"];
 };
 if (_type_veh isEqualTo []) then {
-    _type_veh = ["C_Hatchback_01_F","C_SUV_01_F","C_Offroad_01_F","C_Van_01_transport_F","C_Van_01_box_F","C_Truck_02_transport_F","C_Truck_02_covered_F","C_Offroad_02_unarmed_F"]
+    _type_veh = ["LIB_GazM1", "LIB_GazM1_dirty"] // SWAP THIS OUT FOR CIV TYPES CIVILIAN VEHICLES 
 };
+
+
 
 //Final filter unwanted units type
 _type_units = _type_units select {

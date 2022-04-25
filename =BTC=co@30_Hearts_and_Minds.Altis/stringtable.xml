@@ -2407,7 +2407,7 @@
                 <Czech>OKAMŽITĚ ODEJDĚTE</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_TAG_WWKY">
-                <Original>WE WILL KILL YOU</Original>
+                <Original>THEY WILL KILL YOU</Original>
                 <Czech>ZABÍJEM TĚ</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_TAG_BA">
@@ -2419,11 +2419,11 @@
                 <Czech>JDI DOMŮ</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_TAG_IE">
-                <Original>IED EVERYWHERE</Original>
+                <Original>IEDS EVERYWHERE</Original>
                 <Czech>IED VŠUDE</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_TAG_DWY">
-                <Original>DRONE WATCHING YOU</Original>
+                <Original>WATCHING YOU</Original>
                 <Czech>DRON VÁS SLEDUJE</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_TAG_WHY">
@@ -2431,7 +2431,7 @@
                 <Czech>NENÁVIDÍME TĚ</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_TAG_YGD">
-                <Original>YOU GONNA DIE</Original>
+                <Original>YOURE GONNA DIE</Original>
                 <Czech>ZEMŘEŠ</Czech>
             </Key>
         </Container>

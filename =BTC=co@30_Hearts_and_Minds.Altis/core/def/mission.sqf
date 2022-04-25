@@ -382,33 +382,45 @@ private _allclasse = [[_p_civ]] call btc_civ_fnc_class; //Create classes from fa
 
 //Save class name to global variable
 btc_civ_type_units = _allclasse select 0;
-/*
-btc_civ_type_units = [
-  "C_Djella_01_lxWS",
-  "C_Djella_02_lxWS",
-  "C_Djella_03_lxWS",
-  "C_Djella_04_lxWS",
-  "C_Djella_05_lxWS",
-  "C_Tak_02_A_lxWS",
-  "C_Tak_02_B_lxWS",
-  "C_Tak_02_C_lxWS",
-  "C_Tak_03_A_lxWS",
-  "C_Tak_03_B_lxWS",
-  "C_Tak_03_C_lxWS",
-  "C_Tak_01_A_lxWS",
-  "C_Tak_01_B_lxWS",
-  "C_Tak_01_C_lxWS"
-];
-*/
 _allclasse = [[_p_civ_veh]] call btc_civ_fnc_class;
 btc_civ_type_veh = _allclasse select 2;
 btc_civ_type_boats = _allclasse select 1;
 
-btc_w_civs = [
-    ["srifle_DMR_06_hunter_F", "sgun_HunterShotgun_01_F", "srifle_DMR_06_hunter_khs_F", "sgun_HunterShotgun_01_Sawedoff_F", "Hgun_PDW2000_F", "arifle_AKM_F", "arifle_AKS_F"],
-    ["hgun_Pistol_heavy_02_F", "hgun_Rook40_F", "hgun_Pistol_01_F"]
+btc_civ_type_units = [
+"LIB_CIV_Assistant",
+"LIB_CIV_Citizen_1",
+"LIB_CIV_Citizen_2",
+"LIB_CIV_Citizen_3",
+"LIB_CIV_Citizen_4",
+"LIB_CIV_Citizen_5",
+"LIB_CIV_Citizen_6",
+"LIB_CIV_Citizen_7",
+"LIB_CIV_Citizen_8",
+"LIB_CIV_Functionary_4",
+"LIB_CIV_Functionary_1",
+"LIB_CIV_Functionary_3",
+"LIB_CIV_Functionary_2",
+"LIB_CIV_Priest",
+"LIB_CIV_Rocker",
+"LIB_CIV_SchoolTeacher",
+"LIB_CIV_Villager_1",
+"LIB_CIV_Villager_4",
+"LIB_CIV_Villager_2",
+"LIB_CIV_Villager_3",
+"LIB_CIV_Woodlander_1",
+"LIB_CIV_Woodlander_4",
+"LIB_CIV_Woodlander_3",
+"LIB_CIV_Woodlander_2"
 ];
-btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
+btc_civ_type_veh = [
+"LIB_GazM1",
+"LIB_GazM1_dirty"
+];
+
+btc_w_civs = [
+    ["LIB_TT33", "LIB_M9130", "LIB_PPSh41_m"]
+];
+btc_g_civs = ["HandGrenade"];
 
 // ANIMALS
 btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F"];
@@ -554,6 +566,9 @@ btc_construction_array =
         ],
         [
             //"Containers"
+            "B_Slingload_01_Ammo_F",
+            "B_Slingload_01_Fuel_F",
+            "B_Slingload_01_Repair_F"
 
         ] + btc_containers_mat,
         [

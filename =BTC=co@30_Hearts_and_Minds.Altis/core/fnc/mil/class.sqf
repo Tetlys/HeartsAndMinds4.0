@@ -122,7 +122,7 @@ if (_type_mg isEqualTo []) then {
     _type_mg = ["I_G_HMG_02_F"];
 };
 if (_type_gl isEqualTo []) then {
-    _type_gl = ["I_G_Mortar_01_F"];
+    _type_gl = ["I_G_HMG_02_F"];
 };
 
 //Final filter unwanted units type

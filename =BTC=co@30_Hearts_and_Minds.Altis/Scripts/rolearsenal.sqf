@@ -43,14 +43,11 @@ roleArsenal = {
 			or (_UnitRole == "Bravo Marksman")
 			or (_UnitRole == "Charlie Marksman")) then
 			{_Role = "MARKSMAN"};
-		//ARMOR 1
+		//ARMOR
 			if ((_UnitRole == "Armor Commander@Armor 1")
+			or (_UnitRole == "Armor Commander@Armor 2")
 			or (_UnitRole == "Armor Crew")) then
-			{_Role = "ARMOR 1"};
-		//ARMOR 2
-			if ((_UnitRole == "Armor Commander@Armor 2")
-			or (_UnitRole == "Armor Crew")) then
-			{_Role = "ARMOR 2"};
+			{_Role = "ARMOR"};
 		//ENGINEER
 		if ((_UnitRole == "Alpha Engineer")
 		or (_UnitRole == "Bravo Engineer")
@@ -82,48 +79,62 @@ roleArsenal = {
 
 	//Define the gear for each Role
 	Private _DefaultGear = [
+    //helm
+    "H_LIB_GER_Helmet",
+    "H_LIB_GER_HelmetCamo3",
+    "H_LIB_GER_Helmet_Glasses",
+    "H_LIB_GER_Helmet_net",
+    "H_LIB_GER_Helmet_ns",
+    "H_LIB_GER_Helmet_os",
+    "H_LIB_GER_HelmetUtility",
+    "H_LIB_GER_HelmetUtility_Grass",
+    "H_LIB_GER_HelmetUtility_Oak",
+    "H_LIB_GER_HelmetCamo2",
+    "H_LIB_GER_HelmetCamo",
+    "H_LIB_GER_HelmetCamo4",
+    "H_LIB_GER_Cap",
 	//Uniform
 	"U_LIB_GER_Schutze",
-	"U_LIB_GER_Soldier2",
+    "U_LIB_GER_Soldier3",
+    "U_LIB_GER_Soldier_camo2",
+    "U_LIB_GER_Soldier_camo",
+    "U_LIB_GER_Soldier_camo4",
+    "U_LIB_GER_Soldier_camo3",
+    "U_LIB_GER_Soldier_camo5",
+    "U_LIB_GER_Schutze_HBT",
 	//Vest
-	"V_LIB_GER_VestG43",
-	//radio
-	"TFAR_rf7800str",
-	"B_LIB_US_Radio",
+	"V_LIB_GER_VestKar98",
 	//Bagpack
+	"B_LIB_GER_A_frame_kit",
+	"B_LIB_GER_A_frame_zeltbahn",
 	"B_LIB_GER_A_frame",
 	"B_LIB_GER_SapperBackpack_empty",
-	//helm
-	"H_LIB_GER_Helmet",
-	"H_LIB_GER_Helmet_ns",
-	"H_LIB_GER_HelmetUtility",
-	"H_LIB_GER_Cap",
+    "B_LIB_GER_Backpack",
 	//weapons
 	"LIB_K98",
-	"LIB_G43",
 	//secondary
 	"LIB_M1896",
 	"LIB_P08",
 	"LIB_FLARE_PISTOL",
 	//launchers
 	//ammo
-  "LIB_5Rnd_792x57",
-	"LIB_10Rnd_792x57",
+    "LIB_5Rnd_792x57",
 	//sec ammo
 	"LIB_10Rnd_9x19_M1896",
 	"LIB_8Rnd_9x19_P08",
 	"LIB_1Rnd_flare_green",
 	"LIB_1Rnd_flare_red",
-  "LIB_1Rnd_flare_white",
+    "LIB_1Rnd_flare_white",
 	"LIB_1Rnd_flare_yellow",
 	//ammo specific roles
-	"LIB_1Rnd_G_PZGR_30",
-  "LIB_1Rnd_G_PZGR_40",
-  "LIB_1Rnd_G_SPRGR_30",
 	"LIB_50Rnd_792x57",
 	"LIB_32Rnd_9x19",
 	"LIB_30Rnd_792x33",
-	"LIB_1Rnd_PzFaust_60m",
+	"LIB_10Rnd_792x57",
+	"LIB_1Rnd_G_PZGR_30",
+    "LIB_1Rnd_G_PZGR_40",
+    "LIB_1Rnd_G_SPRGR_30",
+	"LIB_1Rnd_RPzB",
 	//GL ammo
 	//attachments
 	"lib_acc_k98_bayo",
@@ -135,7 +146,18 @@ roleArsenal = {
 	"LIB_Shg24",
 	"LIB_NB39",
 	//facewear
+	"G_LIB_Dienst_Brille",
+	"G_LIB_Dienst_Brille2",
+	"G_LIB_Headwrap",
+	"G_LIB_Headwrap_gloves",
+	"G_LIB_Watch2",
+	"G_LIB_Watch1",
+	"LIB_GER_Gloves4",
+	"LIB_GER_Gloves3",
+	"LIB_GER_Gloves2",
+	"LIB_GER_Gloves1",
 	//items
+	"TFAR_rf7800str",
 	"ACE_bloodIV",
 	"ACE_bloodIV_250",
 	"ACE_bloodIV_500",
@@ -147,7 +169,7 @@ roleArsenal = {
 	"ACE_packingBandage",
 	"ACE_quikclot",
 	"ACE_bodyBag",
-	//"ACE_CableTie",
+	"ACE_CableTie",
 	"ACE_EarPlugs",
 	"ACE_EntrenchingTool",
 	//"ACE_epinephrine",
@@ -159,7 +181,7 @@ roleArsenal = {
 	"ACE_morphine",
 	"ACE_personalAidKit",
 	"ACE_splint",
-	//"ACE_SpraypaintRed",
+	"ACE_SpraypaintRed",
 	"ACE_tourniquet",
 	"ACE_wirecutter",
 	//"ACE_NVG_Wide_Black",
@@ -180,7 +202,7 @@ roleArsenal = {
 	"ACE_artilleryTable"
 	//"ACE_DefusalKit",
 	//"kat_guedel",
-  //"kat_Pulseoximeter",
+    //"kat_Pulseoximeter",
 	//"kat_chestSeal"
 	];
 
@@ -189,55 +211,75 @@ roleArsenal = {
 	//uniform
 	//vests
 	//backpacks
+	"B_LIB_GER_Radio_ACRE2",
 	//items
-	"ACE_surgicalKit"
+	"LIB_Binocular_GER"
 	];
 
 	Private _CO = [
 	//weapons
+	"LIB_G3340",
+	"LIB_G43",
 	"LIB_MP40",
 	"LIB_MP44",
 	//secondary
 	//backpacks
+	"B_LIB_GER_Radio_ACRE2",
 	//vests
 	"V_LIB_GER_VestUnterofficer",
-	"V_LIB_GER_FieldOfficer"
-  //items
-  ];
+	"V_LIB_GER_FieldOfficer",
+    //items
+	"Binocular",
+	"LIB_Binocular_GER"
+    ];
 
 	Private _SL = [
 	//weapons
+	"LIB_G3340",
+	"LIB_G43",
 	"LIB_MP40",
 	"LIB_MP44",
 	//secondary
 	//backpacks
+	"B_LIB_GER_Radio_ACRE2",
 	//vests
 	"V_LIB_GER_VestMP40",
 	"V_LIB_GER_VestSTG",
+	"V_LIB_GER_OfficerVest",
 	"V_LIB_GER_VestUnterofficer",
-	"V_LIB_GER_FieldOfficer"
+	"V_LIB_GER_FieldOfficer",
 	//items
+	"Binocular",
+	"LIB_Binocular_GER"
 	];
 
 	Private _MEDIC = [
+	//helms
+	"H_LIB_GER_Helmet_Medic",
 	//uniforms
 	//vests
 	"U_LIB_GER_Medic",
+	//backpacks
+	"B_LIB_GER_MedicBackpack_Empty",
 	//items
 	"ACE_surgicalKit"
 	];
 
 	Private _MARKSMAN = [
 	//uniform
+	"U_LIB_GER_Scharfschutze",
 	//vests
+	"V_LIB_GER_SniperBelt",
 	//weapons
-	"LIB_K98ZF39"
+	"LIB_K98ZF39",
 	//attachments
 	//Items
+	"LIB_Binocular_GER"
 	];
 
 	Private _ENGINEER = [
 	//vests
+	"V_LIB_GER_PioneerVest",
 	//helm
 	//backpacks
 	//Explosives
@@ -245,41 +287,56 @@ roleArsenal = {
 	"LIB_Ladung_Big_MINE_mag",
 	"LIB_shumine_42_MINE_mag",
 	//Items
-	"ACE_LIB_LadungPM"
+	"ACE_LIB_LadungPM",
+	"LIB_ToolKit",
+	"ToolKit"
 	];
 
 	Private _ARMOR = [
+	//helms
+	"H_LIB_GER_TankPrivateCap",
+    "H_LIB_GER_TankPrivateCap2",
+    "H_LIB_GER_TankOfficerCap",
+    "H_LIB_GER_TankOfficerCap2",
 	//uniforms
 	"U_LIB_GER_Soldier_camo5",
+	"U_LIB_GER_Tank_crew_leutnant",
+    "U_LIB_GER_Tank_crew_private",
+	"U_LIB_GER_Tank_crew_unterofficer",
 	//weapons
 	"LIB_MP40",
 	"LIB_MP44",
 	//vests
-	"V_LIB_GER_VestMP40",
-	"V_LIB_GER_VestSTG",
-	"V_LIB_GER_VestUnterofficer",
-	//helm
-	"H_LIB_GER_Helmet_Glasses"
+	"V_LIB_GER_TankPrivateBelt",
 	//backpacks
+	"B_LIB_GER_Radio_ACRE2",
 	//Explosives
 	//Items
+	"LIB_Binocular_GER",
+	"LIB_ToolKit",
+	"ToolKit"
 	];
 
 	Private _AUTORIFLEMAN = [
 	//weapons
 	"LIB_MG34",
 	"LIB_MG42",
+	"LIB_FG42G",
 	//attachments
 	//vests
 	"U_LIB_GER_MG_schutze",
 	//Items
-	"ACE_WaterBottle"
+	"ACE_WaterBottle",
+	"ACE_SpareBarrel"
 	];
 
 	Private _AT = [
 	//launchers
 	"LIB_PzFaust_60m",
+	"LIB_RPzB",
 	//vests
+	//backpacks
+	"B_LIB_GER_Panzer_Empty",
 	//grenades
 	"LIB_Shg24x7"
 	];
@@ -303,8 +360,11 @@ roleArsenal = {
 	"V_LIB_GER_OfficerVest",
 	//helm
 	//backpacks
-	"B_LIB_GER_LW_Paradrop"
+	"B_LIB_GER_LW_Paradrop",
+	"B_LIB_GER_Radio_ACRE2",
 	//Items
+	"ToolKit",
+	"LIB_Binocular_GER"
 	];
 
 	switch (_Role) do {

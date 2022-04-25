@@ -64,7 +64,16 @@ WHITELISTED = [
     [] call btc_respawn_fnc_screen;
 
     if (btc_debug) then {
-        onMapSingleClick "vehicle player setPos _pos";
+        addMissionEventHandler ["MapSingleClick", {
+            params ["_units", "_pos", "_alt", "_shift"];
+            if (
+                alive player &&
+                !_alt &&
+                !_shift
+            ) then {
+                vehicle player setPos _pos;
+            };
+        }];
         player allowDamage false;
 
         [{!isNull (findDisplay 12)}, {

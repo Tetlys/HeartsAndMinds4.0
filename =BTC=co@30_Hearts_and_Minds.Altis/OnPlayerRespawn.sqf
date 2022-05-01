@@ -10,6 +10,29 @@
     };
 } forEach ARSENAL_CRATES;
 
+if (player distance (getMarkerPos "Respawn_west") >500) then{
+
+_ActionID1 = player addAction  
+    [  
+    "Respawn", // title  
+    {  
+    params ["_target", "_caller", "_actionId", "_arguments"]; // script  
+    player removeAction _actionID;
+	player setPos (getMarkerPos "Respawn_west");
+	},  
+    nil,  // arguments  
+    1.5,  // priority  
+    true,  // showWindow  
+    true,  // hideOnUse  
+    "",   // shortcut  
+    "",   // Conditions
+    -1,   // radius  
+    false //Allow when Uncon 
+    ];
+
+sleep 30;
+player removeAction _actionID1
+}
 
 
 Player addEventHandler ["GetInMan", {

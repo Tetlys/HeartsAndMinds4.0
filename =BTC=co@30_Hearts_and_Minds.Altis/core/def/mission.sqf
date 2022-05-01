@@ -93,7 +93,7 @@ btc_global_reputation = "btc_p_rep" call BIS_fnc_getParamValue;
 btc_p_rep_notify = "btc_p_rep_notify" call BIS_fnc_getParamValue;
 btc_city_radiusOffset = ("btc_p_city_radiusOffset" call BIS_fnc_getParamValue) * 100;
 btc_p_trigger = if (("btc_p_trigger" call BIS_fnc_getParamValue) isEqualTo 1) then {
-    "this && (false in (thisList apply {_x isKindOf 'Plane'})) && (false in (thisList apply {(_x isKindOf 'Helicopter') && (speed _x > 190)}))"
+    "this && (false in (thisList apply {_x isKindOf 'Plane'})) && (false in (thisList apply {(_x isKindOf 'Helicopter') && (speed _x > 150)}))"
 } else {
     "this"
 };
@@ -485,7 +485,7 @@ btc_construction_array =
         "Containers",
         "Mission Objects",
         "FOB",
-        "DO NOT USE",
+        "Decontamination",
         "Vehicle Logistic"
     ],
     [
@@ -536,8 +536,6 @@ btc_construction_array =
             "ACE_medicalSupplyCrate_advanced",
             "ACE_Box_Chemlights",
             "ACE_Box_82mm_Mo_Combo"
-
-
         ],
         [
             //"Containers"
@@ -675,6 +673,9 @@ btc_type_motorized = _allclasse select 5;
 btc_type_motorized_armed = _allclasse select 6;
 btc_type_mg = _allclasse select 7;
 btc_type_gl = _allclasse select 8;
+
+btc_type_mg = btc_type_mg - [""];
+btc_type_gl = btc_type_gl - [""];
 
 //Sometimes you need to remove units: - ["Blabla","moreBlabla"];
 //Sometimes you need to add units: + ["Blabla","moreBlabla"];

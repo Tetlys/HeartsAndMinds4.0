@@ -48,10 +48,14 @@ roleArsenal = {
 			or (_UnitRole == "Armor Commander@Armor 2")
 			or (_UnitRole == "Armor Crew")) then
 			{_Role = "ARMOR"};
+    //O.G.R.E
+			if ((_UnitRole == "O.G.R.E Commander@O.G.R.E")
+			or (_UnitRole == "O.G.R.E Engineer")) then
+			{_Role = "OGRE"};
 		//ENGINEER
-		if ((_UnitRole == "Alpha Engineer")
-		or (_UnitRole == "Bravo Engineer")
-		or (_UnitRole == "Charlie Engineer")) then
+		  if ((_UnitRole == "Alpha Engineer")
+		  or (_UnitRole == "Bravo Engineer")
+		  or (_UnitRole == "Charlie Engineer")) then
 			{_Role = "ENGINEER"};
 		//AUTORIFLEMAN
 			if ((_UnitRole == "Alpha AutoRifleman")
@@ -68,303 +72,878 @@ roleArsenal = {
 			or (_UnitRole == "Bravo Rifleman")
 			or (_UnitRole == "Charlie Rifleman")) then
 			{_Role = "RIFLEMAN"};
-
-  // STALKER
-	if ((_UnitRole == "STALKER 1 Pilot@Joint Air Command 1")
-	or (_UnitRole == "STALKER 2 Pilot@Joint Air Command 2")) then
-	{_Role = "STALKER"};
+    //GRENADIER
+			if ((_UnitRole == "Alpha Grenadier")
+			or (_UnitRole == "Bravo Grenadier")
+			or (_UnitRole == "Charlie Grenadier")) then
+			{_Role = "GRENADIER"};
+    // STALKER
+	    if ((_UnitRole == "STALKER 1 Pilot@Joint Air Command 1")
+	    or (_UnitRole == "STALKER 2 Pilot@Joint Air Command 2")) then
+	    {_Role = "STALKER"};
 
 	//Empty array of gear to add to the arsenal per player.
 	Private _GearToAdd = [];
-
+  /*
+  //Array of gear categories used in definition
+  //Primary
+  //Secondary
+  //Launcher
+  //Helm
+  //Uniform
+  //Vest
+  //Backpack
+  //Facewear
+  //NVG
+  //Binocular
+  //Radio
+  //Sights
+  //Rail
+  //Muzzle
+  //Bipod
+  //Magazines
+  //Additional Magazines
+  //Grenades
+  //Explosives
+	//items
+  */
 	//Define the gear for each Role
 	Private _DefaultGear = [
-    //helm
-    "H_LIB_GER_Helmet",
-    "H_LIB_GER_HelmetCamo3",
-    "H_LIB_GER_Helmet_Glasses",
-    "H_LIB_GER_Helmet_net",
-    "H_LIB_GER_Helmet_ns",
-    "H_LIB_GER_Helmet_os",
-    "H_LIB_GER_HelmetUtility",
-    "H_LIB_GER_HelmetUtility_Grass",
-    "H_LIB_GER_HelmetUtility_Oak",
-    "H_LIB_GER_HelmetCamo2",
-    "H_LIB_GER_HelmetCamo",
-    "H_LIB_GER_HelmetCamo4",
-    "H_LIB_GER_Cap",
-	//Uniform
-	"U_LIB_GER_Schutze",
-    "U_LIB_GER_Soldier3",
-    "U_LIB_GER_Soldier_camo2",
-    "U_LIB_GER_Soldier_camo",
-    "U_LIB_GER_Soldier_camo4",
-    "U_LIB_GER_Soldier_camo3",
-    "U_LIB_GER_Soldier_camo5",
-    "U_LIB_GER_Schutze_HBT",
-	//Vest
-	"V_LIB_GER_VestKar98",
-	//Bagpack
-	"B_LIB_GER_A_frame_kit",
-	"B_LIB_GER_A_frame_zeltbahn",
-	"B_LIB_GER_A_frame",
-	"B_LIB_GER_SapperBackpack_empty",
-    "B_LIB_GER_Backpack",
-	//weapons
-	"LIB_K98",
-	//secondary
-	"LIB_M1896",
-	"LIB_P08",
-	"LIB_FLARE_PISTOL",
-	//launchers
-	//ammo
-    "LIB_5Rnd_792x57",
-	//sec ammo
-	"LIB_10Rnd_9x19_M1896",
-	"LIB_8Rnd_9x19_P08",
-	"LIB_1Rnd_flare_green",
-	"LIB_1Rnd_flare_red",
-    "LIB_1Rnd_flare_white",
-	"LIB_1Rnd_flare_yellow",
-	//ammo specific roles
-	"LIB_50Rnd_792x57",
-	"LIB_32Rnd_9x19",
-	"LIB_30Rnd_792x33",
-	"LIB_10Rnd_792x57",
-	"LIB_1Rnd_G_PZGR_30",
-    "LIB_1Rnd_G_PZGR_40",
-    "LIB_1Rnd_G_SPRGR_30",
-	"LIB_1Rnd_RPzB",
-	//GL ammo
-	//attachments
-	"lib_acc_k98_bayo",
-	//sights
-	//rail
-	//muzzle
-	//bipod
-	//Grenades
-	"LIB_Shg24",
-	"LIB_NB39",
-	//facewear
-	"G_LIB_Dienst_Brille",
-	"G_LIB_Dienst_Brille2",
-	"G_LIB_Headwrap",
-	"G_LIB_Headwrap_gloves",
-	"G_LIB_Watch2",
-	"G_LIB_Watch1",
-	"LIB_GER_Gloves4",
-	"LIB_GER_Gloves3",
-	"LIB_GER_Gloves2",
-	"LIB_GER_Gloves1",
-	//items
-	"TFAR_rf7800str",
-	"ACE_bloodIV",
-	"ACE_bloodIV_250",
-	"ACE_bloodIV_500",
-	"LIB_GER_ItemWatch",
-	"LIB_GER_ItemCompass",
-	"ACE_Banana",
+  //Primary
+  "rhs_weap_m4a1_carryhandle",
+  //Secondary
+  "rhsusf_weap_glock17g4",
+  "rhsusf_weap_m1911a1",
+  "rhsusf_weap_m9",
+  "ACE_VMH3",
+  //Launcher
+  "rhs_weap_M136",
+  "rhs_weap_M136_hedp",
+  "rhs_weap_M136_hp",
+  //Helm
+  //Uniform
+  //Vest
+  "rhsusf_iotv_ocp_Rifleman",
+  "rhsusf_mbav_rifleman",
+  "rhsusf_spcs_ocp_rifleman",
+  //Backpack
+  "tfw_ilbe_whip_ocp",
+  "B_AssaultPack_cbr",
+  "B_AssaultPack_mcamo",
+  "rhsusf_assault_eagleaiii_coy",
+  "rhsusf_assault_eagleaiii_ocp",
+  "B_Parachute",
+  //Facewear
+  "rhs_googles_black",
+  "rhs_googles_clear",
+  "rhs_googles_orange",
+  "rhs_googles_yellow",
+  "rhs_ess_black",
+  "M40_Gas_mask_nbc_v1_d",
+  "G_Shades_Black",
+  "G_Shades_Blue",
+  "G_Shades_Green",
+  "G_Shades_Red",
+  "G_Sport_BlackWhite",
+  "G_Sport_Checkered",
+  "G_Sport_Blackred",
+  "rhsusf_oakley_goggles_blk",
+  "rhsusf_oakley_goggles_clr",
+  "rhsusf_oakley_goggles_ylw",
+  "rhsusf_shemagh_od",
+  "rhsusf_shemagh2_od",
+  "rhsusf_shemagh_gogg_od",
+  "rhsusf_shemagh2_gogg_od",
+  "rhsusf_shemagh_tan",
+  "rhsusf_shemagh2_tan",
+  "rhsusf_shemagh_gogg_tan",
+  "rhsusf_shemagh2_gogg_tan",
+  "rhsusf_shemagh_white",
+  "rhsusf_shemagh2_white",
+  "rhsusf_shemagh_gogg_white",
+  "rhsusf_shemagh2_gogg_white",
+  //NVG
+  "ACE_NVG_Wide_Black",
+	"ACE_NVG_Wide",
+  //Binocular
+  "Laserdesignator",
+	"Laserbatteries",
+	"ACE_Vector",
+  //Radio
+  "TFAR_anprc152",
+  //Sights
+  "optic_arco_blk_f",
+  "optic_arco_ak_blk_f",
+  "optic_holosight_blk_f",
+  "rhsusf_acc_g33_t1",
+  "optic_mrco",
+  "optic_hamr",
+  "rhsusf_acc_acog",
+  "rhsusf_acc_eotech_552",
+  "rhsusf_acc_compm4",
+  "optic_erco_blk_f",
+  "rhsusf_acc_acog_rmr",
+  "rhsusf_acc_eotech_xps3",
+  //Rail
+  "rhsusf_acc_anpeq15side_bk",
+  "rhsusf_acc_anpeq15_bk_top",
+  "rhsusf_acc_anpeq15_bk",
+  "rhsusf_acc_anpeq15_bk_light",
+  "acc_flashlight_pistol",
+  //Muzzle
+  "ace_muzzle_mzls_l",
+  "rhsusf_acc_nt4_black",
+  "rhsusf_acc_sf3p556",
+  "rhsusf_acc_sfmb556",
+  "rhsusf_acc_omega9k",
+  //Bipod
+  "rhsusf_acc_grip2",
+  "bipod_01_f_blk",
+  "rhsusf_acc_grip1",
+  "rhsusf_acc_harris_bipod",
+  "rhsusf_acc_kac_grip",
+  "rhsusf_acc_rvg_blk",
+  "rhsusf_acc_tacsac_blk",
+  "rhsusf_acc_tdstubby_blk",
+  "rhsusf_acc_grip3",
+  //Magazines
+  "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+  "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+  "rhsusf_mag_17Rnd_9x19_FMJ",
+  "rhsusf_mag_17Rnd_9x19_JHP",
+  "rhsusf_mag_7x45acp_MHP",
+  "rhsusf_mag_15Rnd_9x19_FMJ",
+  "rhsusf_mag_15Rnd_9x19_JHP",
+  //Additional Magazines
+  "rhsusf_100Rnd_762x51_m61_ap",
+  "rhsusf_100Rnd_762x51_m62_tracer",
+  "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",
+  "20Rnd_762x51_Mag",
+  "ACE_20Rnd_762x51_M993_AP_Mag",
+  "ACE_20Rnd_762x51_Mag_Tracer",
+  "rhsusf_20Rnd_762x51_SR25_m993_Mag",
+  "rhsusf_20Rnd_762x51_SR25_m62_Mag",
+  "rhsusf_mag_40Rnd_46x30_JHP",
+  "50Rnd_570x28_SMG_03",
+  "30Rnd_45ACP_Mag_SMG_01",
+  "MRAWS_HE_F",
+  "MRAWS_HEAT55_F",
+  "MRAWS_HEAT_F",
+  "NLAW_F",
+  "rhs_fgm148_magazine_AT",
+  "1Rnd_HE_Grenade_shell",
+  "1Rnd_SmokeGreen_Grenade_shell",
+  "1Rnd_SmokeRed_Grenade_shell",
+  "1Rnd_Smoke_Grenade_shell",
+  "1Rnd_SmokeYellow_Grenade_shell",
+  "ACE_40mm_Flare_white",
+  "ACE_40mm_Flare_green",
+  "ACE_40mm_Flare_red",
+  "ACE_40mm_Flare_ir",
+  "kat_Painkiller",
+  //Grenades
+  "ACE_Chemlight_HiGreen",
+  "ACE_Chemlight_HiRed",
+  "ACE_Chemlight_HiWhite",
+  "ACE_Chemlight_HiYellow",
+  "B_IR_Grenade",
+  "ACE_HandFlare_Green",
+  "ACE_HandFlare_Red",
+  "ACE_HandFlare_White",
+  "ACE_HandFlare_Yellow",
+  "SmokeShellGreen",
+  "SmokeShellRed",
+  "SmokeShell",
+  "SmokeShellYellow",
+  "rhs_mag_mk84",
+  "rhs_mag_mk3a2",
+  "rhs_mag_m67",
+  //Explosives
+  //FOOD
+  "ACE_Can_Franta",
+  "ACE_Can_RedGull",
+  "ACE_Can_Spirit",
+  "ACE_Canteen",
+  "ACE_MRE_BeefStew",
+  "ACE_MRE_CreamChickenSoup",
+  "ACE_MRE_ChickenHerbDumplings",
+  "ACE_MRE_LambCurry",
+  "ACE_MRE_CreamTomatoSoup",
+  "ACE_WaterBottle",
+  //items
+	"ACE_salineIV",
+	"ACE_salineIV_250",
+	"ACE_salineIV_500",
+  "ACE_epinephrine",
+  "ACE_morphine",
 	"ACE_fieldDressing",
 	"ACE_elasticBandage",
 	"ACE_packingBandage",
 	"ACE_quikclot",
+  "kat_guedel",
+  "kat_Pulseoximeter",
+	"kat_chestSeal",
 	"ACE_bodyBag",
+  "ACE_Banana",
 	"ACE_CableTie",
 	"ACE_EarPlugs",
 	"ACE_EntrenchingTool",
-	//"ACE_epinephrine",
-	//"ItemcTabHCam",
-	//"ACE_IR_Strobe_Item",
-	//"ACE_Flashlight_XL50",
+	"ItemcTabHCam",
+	"ACE_IR_Strobe_Item",
+	"ACE_Flashlight_XL50",
 	"ACE_MapTools",
-	//"ACE_microDAGR",
-	"ACE_morphine",
+	"ACE_microDAGR",
 	"ACE_personalAidKit",
 	"ACE_splint",
 	"ACE_SpraypaintRed",
 	"ACE_tourniquet",
 	"ACE_wirecutter",
-	//"ACE_NVG_Wide_Black",
-	//"ACE_NVG_Wide",
-	//"Laserdesignator",
-	//"Laserbatteries",
-	//"ACE_Vector",
 	"ItemMap",
-	//"ItemGPS",
-	//"ItemAndroid",
-	//"ItemcTab",
-	//"ItemWatch",
-	//"TFAR_anprc152",
-	//"ACE_VMH3",
-	//"ACE_WaterBottle",
-	//"tfw_rf3080Item",
+	"ItemGPS",
+	"ItemAndroid",
+  "ItemcTabHCam",
+	"ItemWatch",
+	"ACE_VMH3",
 	"ACE_RangeTable_82mm",
-	"ACE_artilleryTable"
-	//"ACE_DefusalKit",
-	//"kat_guedel",
-    //"kat_Pulseoximeter",
-	//"kat_chestSeal"
+	"ACE_artilleryTable",
+	"ACE_DefusalKit"
 	];
 
 	Private _ADMIN = [
-	//secondary
-	//uniform
-	//vests
-	//backpacks
-	"B_LIB_GER_Radio_ACRE2",
-	//items
-	"LIB_Binocular_GER"
+  //Primary
+  //Secondary
+  "rhs_weap_M320",
+  //Launcher
+  //Helm
+  "lxWS_H_bmask_base",
+  "H_Construction_headset_black_F",
+  //Uniform
+  "rhs_uniform_g3_blk",
+  //Vest
+  "V_PlateCarrier1_blk",
+  //Backpack
+  "tfw_ilbe_whip_black",
+  "B_rhsusf_B_BACKPACK",
+  "B_UAV_01_backpack_F",
+  //Facewear
+  "G_Balaclava_blk",
+  //Sights
+  //Rail
+  //Muzzle
+  //Bipod
+  //Grenades
+  //Explosives
+  "DemoCharge_Remote_Mag",
+  "SatchelCharge_Remote_Mag",
+  "ATMine_Range_Mag",
+  //items
+  "kat_bloodIV_O",
+  "kat_bloodIV_O_250",
+  "kat_bloodIV_O_500",
+  "kat_IV_16",
+  "kat_aatKit",
+  "kat_accuvac",
+  "kat_X_AED",
+  "kat_AED",
+  "kat_IO_FAST",
+  "KAT_Empty_bloodIV_250",
+  "KAT_Empty_bloodIV_500",
+  "kat_larynx",
+  "kat_naloxone",
+  "ACE_HuntIR_monitor",
+  "B_UavTerminal",
+  "ACE_M26_Clacker",
+  "ACE_Clacker",
+  "ACE_rope12",
+  "ACE_rope15",
+  "ACE_rope18",
+  "ACE_rope27",
+  "ToolKit",
+  "ItemcTab",
+  "tfw_rf3080Item"
 	];
 
 	Private _CO = [
-	//weapons
-	"LIB_G3340",
-	"LIB_G43",
-	"LIB_MP40",
-	"LIB_MP44",
-	//secondary
-	//backpacks
-	"B_LIB_GER_Radio_ACRE2",
-	//vests
-	"V_LIB_GER_VestUnterofficer",
-	"V_LIB_GER_FieldOfficer",
-    //items
-	"Binocular",
-	"LIB_Binocular_GER"
-    ];
+  //Primary
+  "rhs_weap_m4a1_blockII",
+  "rhs_weap_m16a4_imod",
+  "rhs_weap_mk18_bk",
+  "rhs_weap_mk18_d",
+  //Secondary
+  "rhs_weap_M320",
+  //Launcher
+  //Helm
+  "rhsusf_ach_bare_tan",
+  "rhsusf_ach_bare_tan_ess",
+  "rhsusf_ach_bare_tan_headset",
+  "rhsusf_ach_bare_tan_headset_ess",
+  "rhsusf_ach_helmet_ocp",
+  "rhsusf_ach_helmet_ocp_alt",
+  "rhsusf_ach_helmet_ESS_ocp",
+  "rhsusf_ach_helmet_ESS_ocp_alt",
+  "rhsusf_ach_helmet_headset_ocp",
+  "rhsusf_ach_helmet_headset_ocp_alt",
+  "rhsusf_ach_helmet_headset_ess_ocp",
+  "rhsusf_ach_helmet_headset_ess_ocp_alt",
+  "rhsusf_opscore_mc_cover",
+  "rhsusf_opscore_mc_cover_pelt",
+  "rhsusf_opscore_mc_cover_pelt_nsw",
+  "rhsusf_opscore_mc_cover_pelt_cam",
+  "rhsusf_opscore_mc",
+  "rhsusf_opscore_mc_pelt",
+  "rhsusf_opscore_mc_pelt_nsw",
+  "rhsusf_opscore_paint",
+  "rhsusf_opscore_paint_pelt",
+  "rhsusf_opscore_paint_pelt_nsw",
+  "rhsusf_opscore_paint_pelt_nsw_cam",
+  "H_Booniehat_tan",
+  "H_Booniehat_mcamo",
+  "H_Booniehat_khk",
+  "H_Booniehat_khk_hs",
+  "rhs_booniehat2_marpatd",
+  "rhs_Booniehat_ocp",
+  //Uniform
+  "rhs_uniform_acu_ocp",
+  "rhs_uniform_acu_oefcp",
+  "U_lxWS_B_CombatUniform_desert",
+  "U_lxWS_B_CombatUniform_desert_tshirt",
+  "U_B_CombatUniform_mcam",
+  "U_B_CombatUniform_mcam_tshirt",
+  "rhs_uniform_cu_ocp",
+  "rhs_uniform_g3_mc",
+  "rhs_uniform_g3_tan",
+  //Vest
+  "rhsusf_iotv_ocp_Teamleader",
+  "rhsusf_spcs_ocp_teamleader",
+  //Backpack
+  "B_rhsusf_B_BACKPACK",
+  "B_UAV_01_backpack_F",
+  //Facewear
+  //Sights
+  //Rail
+  //Muzzle
+  //Bipod
+  //items
+  "ACE_HuntIR_monitor",
+  "B_UavTerminal",
+  "ItemcTab",
+  "tfw_rf3080Item"
+  ];
 
 	Private _SL = [
-	//weapons
-	"LIB_G3340",
-	"LIB_G43",
-	"LIB_MP40",
-	"LIB_MP44",
-	//secondary
-	//backpacks
-	"B_LIB_GER_Radio_ACRE2",
-	//vests
-	"V_LIB_GER_VestMP40",
-	"V_LIB_GER_VestSTG",
-	"V_LIB_GER_OfficerVest",
-	"V_LIB_GER_VestUnterofficer",
-	"V_LIB_GER_FieldOfficer",
-	//items
-	"Binocular",
-	"LIB_Binocular_GER"
+  //Primary
+  "rhs_weap_m4a1_blockII",
+  "rhs_weap_m16a4_imod",
+  "rhs_weap_mk18_bk",
+  "rhs_weap_mk18_d",
+  //Secondary
+  "rhs_weap_M320",
+  //Launcher
+  //Helm
+  "rhsusf_ach_bare_tan",
+  "rhsusf_ach_bare_tan_ess",
+  "rhsusf_ach_bare_tan_headset",
+  "rhsusf_ach_bare_tan_headset_ess",
+  "rhsusf_ach_helmet_ocp",
+  "rhsusf_ach_helmet_ocp_alt",
+  "rhsusf_ach_helmet_ESS_ocp",
+  "rhsusf_ach_helmet_ESS_ocp_alt",
+  "rhsusf_ach_helmet_headset_ocp",
+  "rhsusf_ach_helmet_headset_ocp_alt",
+  "rhsusf_ach_helmet_headset_ess_ocp",
+  "rhsusf_ach_helmet_headset_ess_ocp_alt",
+  "rhsusf_opscore_mc_cover",
+  "rhsusf_opscore_mc_cover_pelt",
+  "rhsusf_opscore_mc_cover_pelt_nsw",
+  "rhsusf_opscore_mc_cover_pelt_cam",
+  "rhsusf_opscore_mc",
+  "rhsusf_opscore_mc_pelt",
+  "rhsusf_opscore_mc_pelt_nsw",
+  "rhsusf_opscore_paint",
+  "rhsusf_opscore_paint_pelt",
+  "rhsusf_opscore_paint_pelt_nsw",
+  "rhsusf_opscore_paint_pelt_nsw_cam",
+  "H_Booniehat_tan",
+  "H_Booniehat_mcamo",
+  "H_Booniehat_khk",
+  "H_Booniehat_khk_hs",
+  "rhs_booniehat2_marpatd",
+  "rhs_Booniehat_ocp",
+  //Uniform
+  "rhs_uniform_acu_ocp",
+  "rhs_uniform_acu_oefcp",
+  "U_lxWS_B_CombatUniform_desert",
+  "U_lxWS_B_CombatUniform_desert_tshirt",
+  "U_B_CombatUniform_mcam",
+  "U_B_CombatUniform_mcam_tshirt",
+  "rhs_uniform_cu_ocp",
+  "rhs_uniform_g3_mc",
+  "rhs_uniform_g3_tan",
+  //Vest
+  "rhsusf_iotv_ocp_Squadleader",
+  "rhsusf_spcs_ocp_squadleader",
+  //Backpack
+  "B_rhsusf_B_BACKPACK",
+  "B_UAV_01_backpack_F",
+  //Facewear
+  //Sights
+  //Rail
+  //Muzzle
+  //Bipod
+  //items
+  "ACE_HuntIR_monitor",
+  "B_UavTerminal",
+  "ItemcTab",
+  "tfw_rf3080Item"
 	];
 
 	Private _MEDIC = [
-	//helms
-	"H_LIB_GER_Helmet_Medic",
-	//uniforms
-	//vests
-	"U_LIB_GER_Medic",
-	//backpacks
-	"B_LIB_GER_MedicBackpack_Empty",
-	//items
-	"ACE_surgicalKit"
-	];
+  //Primary
+  "rhs_weap_m4a1_blockII",
+  "rhs_weap_m16a4_imod",
+  "rhs_weap_mk18_bk",
+  "rhs_weap_mk18_d",
+  //Secondary
+  //Launcher
+  //Helm
+  "rhsusf_ach_bare_tan",
+  "rhsusf_ach_bare_tan_ess",
+  "rhsusf_ach_bare_tan_headset",
+  "rhsusf_ach_bare_tan_headset_ess",
+  "rhsusf_ach_helmet_ocp",
+  "rhsusf_ach_helmet_ocp_alt",
+  "rhsusf_ach_helmet_ESS_ocp",
+  "rhsusf_ach_helmet_ESS_ocp_alt",
+  "rhsusf_ach_helmet_headset_ocp",
+  "rhsusf_ach_helmet_headset_ocp_alt",
+  "rhsusf_ach_helmet_headset_ess_ocp",
+  "rhsusf_ach_helmet_headset_ess_ocp_alt",
+  "rhsusf_opscore_mc_cover",
+  "rhsusf_opscore_mc_cover_pelt",
+  "rhsusf_opscore_mc_cover_pelt_nsw",
+  "rhsusf_opscore_mc_cover_pelt_cam",
+  "rhsusf_opscore_mc",
+  "rhsusf_opscore_mc_pelt",
+  "rhsusf_opscore_mc_pelt_nsw",
+  "rhsusf_opscore_paint",
+  "rhsusf_opscore_paint_pelt",
+  "rhsusf_opscore_paint_pelt_nsw",
+  "rhsusf_opscore_paint_pelt_nsw_cam",
+  "H_Booniehat_tan",
+  "H_Booniehat_mcamo",
+  "H_Booniehat_khk",
+  "H_Booniehat_khk_hs",
+  "rhs_booniehat2_marpatd",
+  "rhs_Booniehat_ocp",
+  //Uniform
+  "rhs_uniform_acu_ocp",
+  "rhs_uniform_acu_oefcp",
+  "U_lxWS_B_CombatUniform_desert",
+  "U_lxWS_B_CombatUniform_desert_tshirt",
+  "U_B_CombatUniform_mcam",
+  "U_B_CombatUniform_mcam_tshirt",
+  "rhs_uniform_cu_ocp",
+  "rhs_uniform_g3_mc",
+  "rhs_uniform_g3_tan",
+  //Vest
+  "rhsusf_iotv_ocp_Medic",
+  "rhsusf_mbav_medic",
+  "rhsusf_spcs_ocp_medic",
+  //Backpack
+  "B_Carryall_cbr",
+  "B_Carryall_mcamo",
+  //Facewear
+  //Sights
+  //Rail
+  //Muzzle
+  //Bipod
+  //items
+  "kat_bloodIV_O",
+  "kat_bloodIV_O_250",
+  "kat_bloodIV_O_500",
+  "kat_IV_16",
+  "kat_aatKit",
+  "kat_accuvac",
+  "kat_X_AED",
+  "kat_AED",
+  "kat_IO_FAST",
+  "KAT_Empty_bloodIV_250",
+  "KAT_Empty_bloodIV_500",
+  "kat_larynx",
+  "kat_naloxone",
+  "ACE_surgicalKit",
+  "ACE_adenosine"
+  ];
 
 	Private _MARKSMAN = [
-	//uniform
-	"U_LIB_GER_Scharfschutze",
-	//vests
-	"V_LIB_GER_SniperBelt",
-	//weapons
-	"LIB_K98ZF39",
-	//attachments
-	//Items
-	"LIB_Binocular_GER"
+  //Primary
+  "rhs_weap_m14ebrri",
+  "rhs_weap_sr25_ec",
+  //Secondary
+  //Launcher
+  //Helm
+  "rhsusf_ach_helmet_camo_ocp",
+  //Uniform
+  "U_B_GhillieSuit",
+  //Vest
+  "rhsusf_spcs_ocp_sniper",
+  //Backpack
+  //Facewear
+  //Sights
+  "optic_sos",
+  "optic_nvs",
+  "optic_ams",
+  //Rail
+  //Muzzle
+  "rhsusf_acc_aac_762sd_silencer",
+  "ace_muzzle_mzls_b"
+  //Bipod
+  //items
 	];
 
 	Private _ENGINEER = [
-	//vests
-	"V_LIB_GER_PioneerVest",
-	//helm
-	//backpacks
-	//Explosives
-	"LIB_Ladung_Small_MINE_mag",
-	"LIB_Ladung_Big_MINE_mag",
-	"LIB_shumine_42_MINE_mag",
-	//Items
-	"ACE_LIB_LadungPM",
-	"LIB_ToolKit",
-	"ToolKit"
+  //Primary
+  "rhs_weap_m4a1_blockII",
+  "rhs_weap_m16a4_imod",
+  "rhs_weap_mk18_bk",
+  "rhs_weap_mk18_d",
+  //Secondary
+  //Launcher
+  //Helm
+  "rhsusf_ach_bare_tan",
+  "rhsusf_ach_bare_tan_ess",
+  "rhsusf_ach_bare_tan_headset",
+  "rhsusf_ach_bare_tan_headset_ess",
+  "rhsusf_ach_helmet_ocp",
+  "rhsusf_ach_helmet_ocp_alt",
+  "rhsusf_ach_helmet_ESS_ocp",
+  "rhsusf_ach_helmet_ESS_ocp_alt",
+  "rhsusf_ach_helmet_headset_ocp",
+  "rhsusf_ach_helmet_headset_ocp_alt",
+  "rhsusf_ach_helmet_headset_ess_ocp",
+  "rhsusf_ach_helmet_headset_ess_ocp_alt",
+  "rhsusf_opscore_mc_cover",
+  "rhsusf_opscore_mc_cover_pelt",
+  "rhsusf_opscore_mc_cover_pelt_nsw",
+  "rhsusf_opscore_mc_cover_pelt_cam",
+  "rhsusf_opscore_mc",
+  "rhsusf_opscore_mc_pelt",
+  "rhsusf_opscore_mc_pelt_nsw",
+  "rhsusf_opscore_paint",
+  "rhsusf_opscore_paint_pelt",
+  "rhsusf_opscore_paint_pelt_nsw",
+  "rhsusf_opscore_paint_pelt_nsw_cam",
+  "H_Booniehat_tan",
+  "H_Booniehat_mcamo",
+  "H_Booniehat_khk",
+  "H_Booniehat_khk_hs",
+  "rhs_booniehat2_marpatd",
+  "rhs_Booniehat_ocp",
+  //Uniform
+  "rhs_uniform_acu_ocp",
+  "rhs_uniform_acu_oefcp",
+  "U_lxWS_B_CombatUniform_desert",
+  "U_lxWS_B_CombatUniform_desert_tshirt",
+  "U_B_CombatUniform_mcam",
+  "U_B_CombatUniform_mcam_tshirt",
+  "rhs_uniform_cu_ocp",
+  "rhs_uniform_g3_mc",
+  "rhs_uniform_g3_tan",
+  //Vest
+  "rhsusf_iotv_ocp_Repair",
+  //Backpack
+  "B_Carryall_cbr",
+  "B_Carryall_mcamo",
+  //Facewear
+  //Sights
+  //Rail
+  //Muzzle
+  //Bipod
+  //Explosives
+  "DemoCharge_Remote_Mag",
+  "SatchelCharge_Remote_Mag",
+  "ATMine_Range_Mag",
+  //items
+  "ACE_M26_Clacker",
+  "ACE_Clacker"
 	];
 
-	Private _ARMOR = [
-	//helms
-	"H_LIB_GER_TankPrivateCap",
-    "H_LIB_GER_TankPrivateCap2",
-    "H_LIB_GER_TankOfficerCap",
-    "H_LIB_GER_TankOfficerCap2",
-	//uniforms
-	"U_LIB_GER_Soldier_camo5",
-	"U_LIB_GER_Tank_crew_leutnant",
-    "U_LIB_GER_Tank_crew_private",
-	"U_LIB_GER_Tank_crew_unterofficer",
-	//weapons
-	"LIB_MP40",
-	"LIB_MP44",
-	//vests
-	"V_LIB_GER_TankPrivateBelt",
-	//backpacks
-	"B_LIB_GER_Radio_ACRE2",
-	//Explosives
-	//Items
-	"LIB_Binocular_GER",
-	"LIB_ToolKit",
-	"ToolKit"
+	Private _OGRE = [
+  //Primary
+  "rhsusf_weap_MP7A2",
+  "SMG_03C_black",
+  "SMG_01_F",
+  //Secondary
+  //Launcher
+  //Helm
+  "rhsusf_cvc_helmet",
+  "rhsusf_cvc_alt_helmet",
+  "rhsusf_cvc_ess",
+  "H_EarProtectors_black_F",
+  //Uniform
+  "U_C_WorkerCoveralls",
+  //Vest
+  "rhsusf_spcs_ocp_crewman",
+  //Backpack
+  //Facewear
+  //Sights
+  //Rail
+  //Muzzle
+  //Bipod
+  //items
+  "ACE_1Rnd_82mm_Mo_HE",
+  "ACE_1Rnd_82mm_Mo_HE_Guided",
+  "ACE_1Rnd_82mm_Mo_Illum",
+  "ACE_1Rnd_82mm_Mo_HE_LaserGuided",
+  "ACE_1Rnd_82mm_Mo_Smoke",
+  "ToolKit"
 	];
 
 	Private _AUTORIFLEMAN = [
-	//weapons
-	"LIB_MG34",
-	"LIB_MG42",
-	"LIB_FG42G",
-	//attachments
-	//vests
-	"U_LIB_GER_MG_schutze",
-	//Items
-	"ACE_WaterBottle",
-	"ACE_SpareBarrel"
+  //Primary
+  "rhs_weap_m240B",
+  "rhs_weap_m249_pip_ris",
+  "rhs_weap_m249_light_S",
+  //Secondary
+  //Launcher
+  //Helm
+  "rhsusf_ach_bare_tan",
+  "rhsusf_ach_bare_tan_ess",
+  "rhsusf_ach_bare_tan_headset",
+  "rhsusf_ach_bare_tan_headset_ess",
+  "rhsusf_ach_helmet_ocp",
+  "rhsusf_ach_helmet_ocp_alt",
+  "rhsusf_ach_helmet_ESS_ocp",
+  "rhsusf_ach_helmet_ESS_ocp_alt",
+  "rhsusf_ach_helmet_headset_ocp",
+  "rhsusf_ach_helmet_headset_ocp_alt",
+  "rhsusf_ach_helmet_headset_ess_ocp",
+  "rhsusf_ach_helmet_headset_ess_ocp_alt",
+  "rhsusf_opscore_mc_cover",
+  "rhsusf_opscore_mc_cover_pelt",
+  "rhsusf_opscore_mc_cover_pelt_nsw",
+  "rhsusf_opscore_mc_cover_pelt_cam",
+  "rhsusf_opscore_mc",
+  "rhsusf_opscore_mc_pelt",
+  "rhsusf_opscore_mc_pelt_nsw",
+  "rhsusf_opscore_paint",
+  "rhsusf_opscore_paint_pelt",
+  "rhsusf_opscore_paint_pelt_nsw",
+  "rhsusf_opscore_paint_pelt_nsw_cam",
+  "H_Booniehat_tan",
+  "H_Booniehat_mcamo",
+  "H_Booniehat_khk",
+  "H_Booniehat_khk_hs",
+  "rhs_booniehat2_marpatd",
+  "rhs_Booniehat_ocp",
+  //Uniform
+  //Vest
+  "rhsusf_iotv_ocp_SAW",
+  "rhsusf_mbav_mg",
+  "rhsusf_spcs_ocp_machinegunner",
+  "rhsusf_spcs_ocp_saw",
+  //Backpack
+  "B_Carryall_cbr",
+  "B_Carryall_mcamo",
+  //Facewear
+  //Sights
+  //Rail
+  //Muzzle
+  "rhsusf_acc_ardec_m240",
+  "ace_muzzle_mzls_b",
+  //Bipod
+  "rhsusf_acc_kac_grip_saw_bipod",
+  "rhsusf_acc_saw_bipod",
+  "rhsusf_acc_grip4_bipod",
+  "rhsusf_acc_saw_lw_bipod",
+  //items
+  "ACE_WaterBottle"
 	];
 
 	Private _AT = [
-	//launchers
-	"LIB_PzFaust_60m",
-	"LIB_RPzB",
-	//vests
-	//backpacks
-	"B_LIB_GER_Panzer_Empty",
-	//grenades
-	"LIB_Shg24x7"
+  //Primary
+  "rhs_weap_m4a1_blockII",
+  "rhs_weap_m16a4_imod",
+  "rhs_weap_mk18_bk",
+  "rhs_weap_mk18_d",
+  //Secondary
+  //Launcher
+  "launch_MRAWS_green_F",
+  "launch_NLAW_F",
+  "rhs_weap_fgm148",
+  //Helm
+  "rhsusf_ach_bare_tan",
+  "rhsusf_ach_bare_tan_ess",
+  "rhsusf_ach_bare_tan_headset",
+  "rhsusf_ach_bare_tan_headset_ess",
+  "rhsusf_ach_helmet_ocp",
+  "rhsusf_ach_helmet_ocp_alt",
+  "rhsusf_ach_helmet_ESS_ocp",
+  "rhsusf_ach_helmet_ESS_ocp_alt",
+  "rhsusf_ach_helmet_headset_ocp",
+  "rhsusf_ach_helmet_headset_ocp_alt",
+  "rhsusf_ach_helmet_headset_ess_ocp",
+  "rhsusf_ach_helmet_headset_ess_ocp_alt",
+  "rhsusf_opscore_mc_cover",
+  "rhsusf_opscore_mc_cover_pelt",
+  "rhsusf_opscore_mc_cover_pelt_nsw",
+  "rhsusf_opscore_mc_cover_pelt_cam",
+  "rhsusf_opscore_mc",
+  "rhsusf_opscore_mc_pelt",
+  "rhsusf_opscore_mc_pelt_nsw",
+  "rhsusf_opscore_paint",
+  "rhsusf_opscore_paint_pelt",
+  "rhsusf_opscore_paint_pelt_nsw",
+  "rhsusf_opscore_paint_pelt_nsw_cam",
+  "H_Booniehat_tan",
+  "H_Booniehat_mcamo",
+  "H_Booniehat_khk",
+  "H_Booniehat_khk_hs",
+  "rhs_booniehat2_marpatd",
+  "rhs_Booniehat_ocp",
+  //Uniform
+  //Vest
+  //Backpack
+  "B_Carryall_cbr",
+  "B_Carryall_mcamo"
+  //Facewear
+  //Sights
+  //Rail
+  //Muzzle
+  //Bipod
+  //items
 	];
 
 	Private _RIFLEMAN = [
-	//weapons
-	//secondary
-	//attachments
-	"lib_acc_gw_sb_empty"
-	//items
+  //Primary
+  "rhs_weap_m4a1_blockII",
+  "rhs_weap_m16a4_imod",
+  "rhs_weap_mk18_bk",
+  "rhs_weap_mk18_d",
+  //Secondary
+  //Launcher
+  //Helm
+  "rhsusf_ach_bare_tan",
+  "rhsusf_ach_bare_tan_ess",
+  "rhsusf_ach_bare_tan_headset",
+  "rhsusf_ach_bare_tan_headset_ess",
+  "rhsusf_ach_helmet_ocp",
+  "rhsusf_ach_helmet_ocp_alt",
+  "rhsusf_ach_helmet_ESS_ocp",
+  "rhsusf_ach_helmet_ESS_ocp_alt",
+  "rhsusf_ach_helmet_headset_ocp",
+  "rhsusf_ach_helmet_headset_ocp_alt",
+  "rhsusf_ach_helmet_headset_ess_ocp",
+  "rhsusf_ach_helmet_headset_ess_ocp_alt",
+  "rhsusf_opscore_mc_cover",
+  "rhsusf_opscore_mc_cover_pelt",
+  "rhsusf_opscore_mc_cover_pelt_nsw",
+  "rhsusf_opscore_mc_cover_pelt_cam",
+  "rhsusf_opscore_mc",
+  "rhsusf_opscore_mc_pelt",
+  "rhsusf_opscore_mc_pelt_nsw",
+  "rhsusf_opscore_paint",
+  "rhsusf_opscore_paint_pelt",
+  "rhsusf_opscore_paint_pelt_nsw",
+  "rhsusf_opscore_paint_pelt_nsw_cam",
+  "H_Booniehat_tan",
+  "H_Booniehat_mcamo",
+  "H_Booniehat_khk",
+  "H_Booniehat_khk_hs",
+  "rhs_booniehat2_marpatd",
+  "rhs_Booniehat_ocp",
+  //Uniform
+  //Vest
+  "rhsusf_iotv_ocp_Rifleman",
+  "rhsusf_mbav_rifleman",
+  "rhsusf_spcs_ocp_rifleman"
+  //Backpack
+  //Facewear
+  //Sights
+  //Rail
+  //Muzzle
+  //Bipod
+  //items
 	];
 
+  Private _GRENADIER = [
+  //Primary
+  "rhs_weap_m4a1_blockII_M203",
+  "rhs_weap_m16a4_imod_M203",
+  "rhs_weap_mk18_m320",
+  //Secondary
+  //Launcher
+  //Helm
+  "rhsusf_ach_bare_tan",
+  "rhsusf_ach_bare_tan_ess",
+  "rhsusf_ach_bare_tan_headset",
+  "rhsusf_ach_bare_tan_headset_ess",
+  "rhsusf_ach_helmet_ocp",
+  "rhsusf_ach_helmet_ocp_alt",
+  "rhsusf_ach_helmet_ESS_ocp",
+  "rhsusf_ach_helmet_ESS_ocp_alt",
+  "rhsusf_ach_helmet_headset_ocp",
+  "rhsusf_ach_helmet_headset_ocp_alt",
+  "rhsusf_ach_helmet_headset_ess_ocp",
+  "rhsusf_ach_helmet_headset_ess_ocp_alt",
+  "rhsusf_opscore_mc_cover",
+  "rhsusf_opscore_mc_cover_pelt",
+  "rhsusf_opscore_mc_cover_pelt_nsw",
+  "rhsusf_opscore_mc_cover_pelt_cam",
+  "rhsusf_opscore_mc",
+  "rhsusf_opscore_mc_pelt",
+  "rhsusf_opscore_mc_pelt_nsw",
+  "rhsusf_opscore_paint",
+  "rhsusf_opscore_paint_pelt",
+  "rhsusf_opscore_paint_pelt_nsw",
+  "rhsusf_opscore_paint_pelt_nsw_cam",
+  "H_Booniehat_tan",
+  "H_Booniehat_mcamo",
+  "H_Booniehat_khk",
+  "H_Booniehat_khk_hs",
+  "rhs_booniehat2_marpatd",
+  "rhs_Booniehat_ocp",
+  //Uniform
+  //Vest
+  "rhsusf_iotv_ocp_Grenadier",
+  "rhsusf_mbav_grenadier",
+  "rhsusf_spcs_ocp_grenadier"
+  //Backpack
+  //Facewear
+  //Sights
+  //Rail
+  //Muzzle
+  //Bipod
+  //items
+  ];
+
 	Private _STALKER = [
-	//weapons
-	"LIB_MP40",
-	"LIB_MP44",
-	//uniforms
-	"U_LIB_GER_LW_pilot",
-	//vests
-	"V_LIB_GER_VestUnterofficer",
-	"V_LIB_GER_OfficerVest",
-	//helm
-	//backpacks
-	"B_LIB_GER_LW_Paradrop",
-	"B_LIB_GER_Radio_ACRE2",
-	//Items
-	"ToolKit",
-	"LIB_Binocular_GER"
+  //Primary
+  "rhsusf_weap_MP7A2",
+  "SMG_03C_black",
+  "SMG_01_F",
+  //Secondary
+  //Launcher
+  //Helm
+  "H_CrewHelmetHeli_B",
+  "H_PilotHelmetHeli_B",
+  //Uniform
+  "U_B_HeliPilotCoveralls",
+  "U_B_PilotCoveralls",
+  //Vest
+  "rhsusf_spcs_ocp_crewman",
+  //Backpack
+  //Facewear
+  //Sights
+  //Rail
+  //Muzzle
+  //Bipod
+	//items
+  "ACE_rope12",
+  "ACE_rope15",
+  "ACE_rope18",
+  "ACE_rope27",
+  "ToolKit"
 	];
 
 	switch (_Role) do {
@@ -388,6 +967,9 @@ roleArsenal = {
 	  };
 		case "ARMOR": {
 	    _GearToAdd = _DefaultGear + _ARMOR;
+      };
+		case "OGRE": {
+	    _GearToAdd = _DefaultGear + _OGRE;
 	  };
 	  case "AUTORIFLEMAN": {
 	    _GearToAdd = _DefaultGear + _AUTORIFLEMAN;
@@ -397,6 +979,9 @@ roleArsenal = {
 	  };
 	  case "RIFLEMAN": {
 	    _GearToAdd = _DefaultGear + _RIFLEMAN;
+      };
+	  case "GRENADIER": {
+	    _GearToAdd = _DefaultGear + _GRENADIER;
 	  };
 	  case "STALKER": {
 	    _GearToAdd = _DefaultGear + _STALKER;

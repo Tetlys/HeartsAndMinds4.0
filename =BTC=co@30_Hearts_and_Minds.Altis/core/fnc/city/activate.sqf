@@ -57,11 +57,11 @@ if (!(_city getVariable ["initialized", false])) then {
         case "Hill" : {1};
         case "VegetationFir" : {1};
         case "BorderCrossing" : {2};
-        case "NameLocal" : {2.5};
-        case "StrongpointArea" : {3};
-        case "NameVillage" : {3.5};
-        case "NameCity" : {5};
-        case "NameCityCapital" : {6};
+        case "NameLocal" : {2};
+        case "StrongpointArea" : {2};
+        case "NameVillage" : {3};
+        case "NameCity" : {2};
+        case "NameCityCapital" : {2};
         case "Airport" : {0};
         case "NameMarine" : {0};
         default {0};
@@ -99,13 +99,13 @@ if (_data_units isNotEqualTo []) then {
     private _numberOfGroup = (switch _type do {
         case "Hill" : {4};
         case "VegetationFir" : {4};
-        case "BorderCrossing" : {7};
-        case "NameLocal" : {7};
-        case "StrongpointArea" : {8};
-        case "NameVillage" : {8};
-        case "NameCity" : {16};
-        case "NameCityCapital" : {32};
-        case "Airport" : {32};
+        case "BorderCrossing" : {5};
+        case "NameLocal" : {4};
+        case "StrongpointArea" : {5};
+        case "NameVillage" : {3};
+        case "NameCity" : {8};
+        case "NameCityCapital" : {10};
+        case "Airport" : {10};
         case "NameMarine" : {4};
         default {0};
     });
@@ -129,13 +129,13 @@ if (_data_units isNotEqualTo []) then {
         if (_has_en) then {
             private _numberOfStatic = (switch _type do {
                 case "VegetationFir" : {3};
-                case "BorderCrossing" : {6};
-                case "NameLocal" : {3};
-                case "StrongpointArea" : {6};
-                case "NameVillage" : {6};
-                case "NameCity" : {12};
-                case "NameCityCapital" : {15};
-                case "Airport" : {6};
+                case "BorderCrossing" : {5};
+                case "NameLocal" : {1};
+                case "StrongpointArea" : {5};
+                case "NameVillage" : {2};
+                case "NameCity" : {2};
+                case "NameCityCapital" : {2};
+                case "Airport" : {5};
                 default {0};
             });
             [_housesEntrerable+_housesNotEntrerable, round (_p_mil_static_group_ratio * _numberOfStatic), _city] call btc_mil_fnc_create_staticOnRoof;
@@ -149,7 +149,7 @@ if (_data_units isNotEqualTo []) then {
             case "StrongpointArea" : {0};
             case "NameVillage" : {6};
             case "NameCity" : {10};
-            case "NameCityCapital" : {19};
+            case "NameCityCapital" : {10};
             case "Airport" : {6};
             default {2};
         });
@@ -164,11 +164,11 @@ if (btc_p_animals_group_ratio > 0) then {
     } else {
         // Spawn animals
         private _numberOfAnimalsGroup = (switch _type do {
-            case "Hill" : {3};
-            case "VegetationFir" : {3};
-            case "NameLocal" : {3};
-            case "NameVillage" : {2};
-            case "NameCity" : {1};
+            case "Hill" : {0};
+            case "VegetationFir" : {0};
+            case "NameLocal" : {0};
+            case "NameVillage" : {0};
+            case "NameCity" : {0};
             case "NameCityCapital" : {0};
             case "Airport" : {0};
             case "NameMarine" : {0};

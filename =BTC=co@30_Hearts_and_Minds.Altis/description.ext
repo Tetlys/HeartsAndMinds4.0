@@ -55,6 +55,7 @@ respawnOnStart = 0;
 respawnTemplates[] = {"MenuPosition", "Spectator", "Tickets"};
 respawnButton = 0;
 
+
 // Disable BI wreck system (H&M handle it internally)
 wreckManagerMode = 0;
 corpseManagerMode = 0;
@@ -67,5 +68,4 @@ disableChannels[] = {
     { 3, true, true },
     { 4, true, true },
     { 5, true, true }
-}; 
-
+};

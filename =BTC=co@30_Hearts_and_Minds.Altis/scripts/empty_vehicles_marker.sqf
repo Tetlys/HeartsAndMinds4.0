@@ -5,7 +5,7 @@ _markedveh = [];
 _cfg = configFile >> "cfgVehicles";
 _vehtomark = [];
 
-_vehtomark = ["rhsusf_m1025_d_m2","rhsusf_m1045_d","rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy","rhsusf_M1078A1R_SOV_M2_D_fmtv_socom","rhsusf_stryker_m1132_m2_d","RHS_M119_D","rhsusf_M977A4_usarmy_d","RHS_MELB_MH6M","RHS_UH60M_d","RHS_UH60M_MEV_d"];
+_vehtomark = [];
 
 // Misc variables
 markers_reset = [99999,99999,0];

@@ -447,7 +447,8 @@ btc_type_hazmat = ["HazmatBag_01_F", "Land_MetalBarrel_F"] + (_allClassSorted se
 });
 
 //Containers
-btc_containers_mat = ["Land_Cargo20_military_green_F", "Land_Cargo40_military_green_F"];
+btc_containers_mat = ["Land_Cargo20_military_green_F", "Land_Cargo40_military_green_F", "B_Slingload_01_Cargo_F"];
+Karma_Containers = ["Land_Cargo20_military_green_F", "Land_Cargo40_military_green_F", "B_Slingload_01_Cargo_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Ammo_F", "B_Slingload_01_Fuel_F"];
 
 //Player
 btc_player_side = west;
@@ -462,7 +463,7 @@ btc_construction_array =
         "Static",
         "Ammobox",
         "Containers",
-        "Supplies",
+        "Mission Objects",
         "FOB",
         "Decontamination",
         "Vehicle Logistic"
@@ -490,34 +491,40 @@ btc_construction_array =
             "Land_Mil_WallBig_4m_F",
             "Land_Mil_WallBig_Corner_F",
             "Land_PortableLight_double_F",
-            "Land_Pod_Heli_Transport_04_medevac_black_F"
+            "Land_Pod_Heli_Transport_04_medevac_black_F",
+            "Land_Net_Fence_Gate_F",
+            "Land_LampHarbour_F",
+            "Land_Camping_Light_F",
+            "Land_DragonsTeeth_01_4x2_new_redwhite_F",
+            "Land_ConcreteHedgehog_01_F",
+            "Land_Plank_01_8m_F",
+            "Land_Plank_01_4m_F",
+            "Land_Medevac_house_V1_F"
         ],
         [
             //"Static"
-        ] + (_allClassSorted select {(
-            _x isKindOf "GMG_TriPod" ||
-            {_x isKindOf "StaticMortar"} ||
-            {_x isKindOf "HMG_01_base_F"} ||
-            {_x isKindOf "AA_01_base_F"} ||
-            {_x isKindOf "AT_01_base_F"}) && {
-                getNumber (_cfgVehicles >> _x >> "side") isEqualTo ([east, west, independent, civilian] find btc_player_side)
-            }
-        }),
+            "RHS_M2StaticMG_WD",
+            "RHS_M2StaticMG_MiniTripod_WD",
+            "RHS_Stinger_AA_pod_USMC_WD",
+            "RHS_TOW_TriPod_WD",
+            "RHS_MK19_TriPod_WD",
+            "RHS_M252_WD",
+            "B_Static_Designator_01_F"
+        ],
         [
             //"Ammobox"
-            "Land_WoodenBox_F"
+            "Land_WoodenBox_F",
+            "ACE_medicalSupplyCrate",
+            "ACE_medicalSupplyCrate_advanced",
+            "ACE_Box_Chemlights",
+            "ACE_Box_82mm_Mo_Combo"
 
-        ] + (_allClassSorted select {
-            _x isKindOf "ReammoBox_F" &&
-            {!(_x isKindOf "Slingload_01_Base_F")} &&
-            {!(_x isKindOf "Pod_Heli_Transport_04_base_F")}
-        }),
+        ],
         [
             //"Containers"
-
         ] + btc_containers_mat,
         [
-            //"Supplies"
+            //"Mission Objects"
             btc_supplies_cargo
         ],
         [
@@ -532,6 +539,7 @@ btc_construction_array =
             //"Vehicle logistic"
             "ACE_Wheel",
             "ACE_Track",
+            "B_Slingload_01_Repair_F",
             "B_Slingload_01_Ammo_F",
             "B_Slingload_01_Fuel_F"
         ] + (_allClassSorted select {_x isKindOf "FlexibleTank_base_F"})
@@ -713,6 +721,6 @@ btc_flag_textures = [
 
 //Respawn
 btc_body_bagTicketPlayer = 1;
-btc_body_enemyTicket = 1;
+btc_body_enemyTicket = 5;
 
 btc_startDate = [2035, 6, 24, 12, 15];

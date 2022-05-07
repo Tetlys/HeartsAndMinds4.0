@@ -44,7 +44,6 @@ _action = ["Search_intel", localize "STR_A3_Showcase_Marksman_BIS_tskIntel_title
 //Container Loading Addon.
 
 {
-
 private _action = [
     "Logistic",
     localize "STR_BTC_HAM_ACTION_LOC_MAIN",
@@ -53,7 +52,6 @@ private _action = [
     {isNull isVehicleCargo attachedto _target && isNull isVehicleCargo _target}
 ] call ace_interact_menu_fnc_createAction;
 [_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-
 _action = [
     "log_tow",
     localize "STR_ACE_Towing_displayName",
@@ -62,7 +60,6 @@ _action = [
     {isNull (_target getVariable ["btc_towing", objNull]);}
 ] call ace_interact_menu_fnc_createAction;
 [_x, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-
 _action = [
     "log_hook",
     localize "STR_ACE_Towing_attach",
@@ -71,7 +68,6 @@ _action = [
     {!isNull btc_tow_vehicleTowing && {btc_tow_vehicleTowing != _target}}
 ] call ace_interact_menu_fnc_createAction;
 [_x, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-
 _action = [
     "log_unhook",
     localize "STR_ACE_Towing_detach",
@@ -80,13 +76,11 @@ _action = [
     {!isNull (_target getVariable ["btc_towing", objNull]);}
 ] call ace_interact_menu_fnc_createAction;
 [_x, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-
 } forEach Karma_Containers;
 
 //Log point
 {
     _x params ["_object", "_helipad"];
-
     _action = ["Logistic", localize "STR_BTC_HAM_ACTION_LOC_MAIN", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\L_ca.paa", {}, {true}] call ace_interact_menu_fnc_createAction;
     [_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
     _action = ["Require_object", localize "STR_BTC_HAM_ACTION_LOGPOINT_REQOBJ", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\D_ca.paa", {

@@ -6,17 +6,18 @@ Description:
     Select weapons if:
         - is a type of item
         - and has a ammo usage allowed
+        - and is not/is parent to a parent
 
 Parameters:
     _weapons - Array of weapons. [Array]
-    _itemType_ammo_usageAllowed - Weapons allowed filter: array of item type ("AssaultRifle", "MissileLauncher"...), allowed ammo usage ("128 + 512": ammo against vehicles and armored vehicles). [Array]
+    _itemType_ammo_usageAllowed - Weapons allowed filter: array of item type ("AssaultRifle", "MissileLauncher"...), allowed ammo usage ("128 + 512": ammo against vehicles and armored vehicles) and array to check if weapons are parent to a parent. [Array]
 
 Returns:
     Array of selected weapons
 
 Examples:
     (begin example)
-        _weapons_selected = [["launch_RPG7_F"], ["MissileLauncher", "256"]] call btc_arsenal_fnc_ammoUsage;
+        _weapons_selected = [["launch_RPG7_F"], ["MissileLauncher", "256", []]] call btc_arsenal_fnc_ammoUsage;
     (end)
 
 Author:
@@ -26,9 +27,9 @@ Author:
 
 params [
     ["_weapons", ["launch_RPG7_F"], [[]]],
-    ["_itemType_ammo_usageAllowed", ["MissileLauncher", "256"], [[]]]
+    ["_itemType_ammo_usageAllowed", ["MissileLauncher", "256", []], [[]]]
 ];
-_itemType_ammo_usageAllowed params [["_itemType", "MissileLauncher", [""]], ["_ammo_usageAllowed", "", [""]]];
+_itemType_ammo_usageAllowed params [["_itemType", "MissileLauncher", [""]], ["_ammo_usageAllowed", "256", [""]], ["_parent_array", [], [[]]]];
 
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgMagazines = configFile >> "CfgMagazines";
@@ -36,9 +37,11 @@ private _cfgAmmo = configFile >> "CfgAmmo";
 
 _weapons select {
     private _weapon = _x;
-    private _isAllowed = true;
-    if (_ammo_usageAllowed isNotEqualTo "") then {
-        private _magazines = getArray (_cfgWeapons >> _weapon >> "magazines");
+    private _magazines = getArray (_cfgWeapons >> _weapon >> "magazines");
+
+    private _isAllowed = if (_ammo_usageAllowed isEqualTo "") then {
+        true
+    } else {
         private _aiAmmoUsage_magazines = _magazines apply {
             private _ammo = getText (_cfgMagazines >> _x >> "ammo");
 
@@ -56,8 +59,19 @@ _weapons select {
             };
         };
 
-        _isAllowed = _ammo_usageAllowed in _aiAmmoUsage_magazines;
+        _ammo_usageAllowed in _aiAmmoUsage_magazines
     };
 
-    (_itemType in (_weapon call BIS_fnc_itemType)) && {_isAllowed}
+    private _isParent = if (_parent_array isEqualTo []) then {
+        true
+    } else {
+        _parent_array params ["_not", "_parent_type"];
+        if (_not) then {
+            _weapon isKindOf [_parent_type, _cfgWeapons]
+        } else {
+            !(_weapon isKindOf [_parent_type, _cfgWeapons])
+        };
+    };
+
+    (_itemType in (_weapon call BIS_fnc_itemType)) && {_isAllowed} && {_isParent}
 };

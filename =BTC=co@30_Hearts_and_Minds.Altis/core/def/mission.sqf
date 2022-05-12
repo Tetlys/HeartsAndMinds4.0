@@ -2,7 +2,7 @@
 btc_version = [
     1,
     22,
-    3
+    2
 ];
 diag_log format (["=BTC= HEARTS AND MINDS VERSION %1.%2.%3"] + btc_version);
 
@@ -18,6 +18,7 @@ btc_p_db_autoRestartHour = [
     "btc_p_db_autoRestartHour2" call BIS_fnc_getParamValue
 ];
 btc_p_db_autoRestartType = "btc_p_db_autoRestartType" call BIS_fnc_getParamValue;
+btc_p_slot_isShare = "btc_p_slot_isShare" call BIS_fnc_getParamValue isEqualTo 1;
 
 //<< Respawn options >>
 btc_p_respawn_location = "btc_p_respawn_location" call BIS_fnc_getParamValue;

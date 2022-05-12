@@ -135,7 +135,19 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
 {
     [_x, "InitPost", {
         params ["_obj"];
+        [_obj, 10] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["rhsusf_m1240a1_m2_usmc_wd","rhsusf_m1240a1_mk19_usmc_wd","RHS_MELB_MH6M","RHS_UH1Y","B_Boat_Transport_01_F"];
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 25] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["B_T_APC_Tracked_01_CRV_F","B_T_APC_Wheeled_01_cannon_F","rhsusf_M1078A1R_SOV_M2_D_fmtv_socom","rhsusf_mkvsoc"];
+{
+    [_x, "InitPost", {
+        params ["_obj"];
         [_obj, 50] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach [""];
+} forEach ["B_T_Truck_01_flatbed_F","rhsusf_CH53e_USMC_cargo"];
 

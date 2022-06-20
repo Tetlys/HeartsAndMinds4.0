@@ -47,7 +47,7 @@ addMissionEventHandler ["BuildingChanged", btc_rep_fnc_buildingchanged];
     params ["", "_player"];
     [btc_rep_malus_player_respawn, _player] call btc_rep_fnc_change;
     btc_slots_serialized set [
-        _player getVariable ["btc_slot_name", [0, 0, 0]],
+        _player getVariable ["btc_slot_key", [0, 0, 0]],
         [] // Reset serialized data if slot died
     ];
 }] call CBA_fnc_addEventHandler;
@@ -75,9 +75,7 @@ addMissionEventHandler ["HandleDisconnect", {
 ["ace_unconscious", btc_slot_fnc_serializeState] call CBA_fnc_addEventHandler;
 ["btc_playerConnected", { 
     params ["_player"];
-    private _slotName = position _player;
-    _player setVariable ["btc_slot_name", _slotName];
-    [_player, _slotName] call btc_slot_fnc_deserializeState_s;
+    [_player, _player call btc_slot_fnc_createKey] call btc_slot_fnc_deserializeState_s;
 }] call CBA_fnc_addEventHandler;
 if (btc_p_auto_db) then {
     addMissionEventHandler ["HandleDisconnect", {
@@ -128,7 +126,6 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
     };
 };
 
-
 //Cargo
 [btc_fob_mat, "InitPost", {
     params ["_obj"];
@@ -137,19 +134,18 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
 {
     [_x, "InitPost", {
         params ["_obj"];
-        [_obj, 10] call ace_cargo_fnc_setSpace;
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["rhsusf_m1240a1_m2_usmc_wd","rhsusf_m1240a1_mk19_usmc_wd","RHS_MELB_MH6M","RHS_UH1Y","B_Boat_Transport_01_F"];
-{
-    [_x, "InitPost", {
-        params ["_obj"];
-        [_obj, 25] call ace_cargo_fnc_setSpace;
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["B_T_APC_Tracked_01_CRV_F","B_T_APC_Wheeled_01_cannon_F","rhsusf_M1078A1R_SOV_M2_D_fmtv_socom","rhsusf_mkvsoc"];
-{
-    [_x, "InitPost", {
-        params ["_obj"];
         [_obj, 50] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["B_T_Truck_01_flatbed_F","rhsusf_CH53e_USMC_cargo"];
-
+} forEach ["RHS_CH_47F_10","rhsusf_M977A4_usarmy_d","B_T_VTOL_01_vehicle_F","RHS_C130J"];
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 20] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy","rhsusf_M1078A1R_SOV_M2_D_fmtv_socom","B_D_APC_Tracked_01_CRV_lxWS"];
+{
+    [_x, "InitPost", {
+        params ["_obj"];
+        [_obj, 10] call ace_cargo_fnc_setSpace;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["rhsusf_m1045_d", "C_Plane_Civil_01_racing_F","RHSGREF_A29B_HIDF",  "rhsusf_m1a2sep1tuskiwd_usarmy","RHS_MELB_AH6M","RHS_MELB_MH6M","rhsusf_m1151_m2_v2_usarmy_d","rhsusf_M1220_M2_usarmy_d", "RHS_M2A3_BUSKIII_wd", "RHS_UH60M_d","RHS_UH60M_MEV_d"];

@@ -5,7 +5,8 @@ _markedveh = [];
 _cfg = configFile >> "cfgVehicles";
 _vehtomark = [];
 
-_vehtomark = ["rhsusf_m1240a1_m2_usmc_wd","rhsusf_m1240a1_mk19_usmc_wd","C_Offroad_01_F","B_T_Truck_01_flatbed_F","rhsusf_M1078A1R_SOV_M2_D_fmtv_socom","B_T_APC_Wheeled_01_cannon_F","B_T_APC_Tracked_01_CRV_F","RHS_MELB_MH6M","RHS_UH1Y","rhsusf_CH53e_USMC_cargo","rhsusf_mkvsoc","B_Boat_Transport_01_F"];
+_vehtomark = ["RHS_MELB_AH6M", "rhsusf_m1045_w", "rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy", "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom", "rhsusf_m1151_m2_v2_usarmy_d", "rhsusf_M1220_M2_usarmy_d", "rhsusf_m1a2sep1tuskiwd_usarmy", "RHS_M2A3_BUSKIII_wd", "rhsusf_M977A4_usarmy_d", "RHS_MELB_MH6M", "B_T_APC_Tracked_01_CRV_F", "RHS_UH60M_d", "RHS_UH60M_MEV_d","RHSGREF_A29B_HIDF", "RHS_C130J", "C_Plane_Civil_01_racing_F", "RHS_CH_47F_10", "B_T_VTOL_01_vehicle_F"];
+
 
 // Misc variables
 markers_reset = [99999,99999,0];

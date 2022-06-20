@@ -39,25 +39,25 @@ Author:
         ["_field_rations", [], [[]]]
     ];
 
-    if (
-        player distance ASLToAGL _previousPos > 50 || // Don't set loadout when near main base
-        btc_p_autoloadout isEqualTo 0
-    ) then { 
-        [{player setUnitLoadout _this;}, _loadout] call CBA_fnc_execNextFrame;
-    };
-    if ((isNull _vehicle) || {!(player moveInAny _vehicle)}) then {
-        player setPosASL _previousPos;
-    };
-    player setDir _dir;
-    player forceFlagTexture _flagTexture;
-    [player, _medicalDeserializeState] call ace_medical_fnc_deserializeState;
+    //if (
+      //  player distance ASLToAGL _previousPos > 50 || // Don't set loadout when near main base
+      //  btc_p_autoloadout isEqualTo 0
+    //) then { 
+        //[{player setUnitLoadout _this;}, _loadout] call CBA_fnc_execNextFrame;
+    //};
+    //if ((isNull _vehicle) || {!(player moveInAny _vehicle)}) then {
+        //player setPosASL _previousPos;
+    //};
+    //player setDir _dir;
+   // player forceFlagTexture _flagTexture;
+    //[player, _medicalDeserializeState] call ace_medical_fnc_deserializeState;
 
-    if (_isContaminated) then {
-        player call btc_chem_fnc_damageLoop;
-    };
+    //if (_isContaminated) then {
+    //    player call btc_chem_fnc_damageLoop;
+    //};
 
-    _field_rations params [["_thirst", 0, [0]], ["_hunger", 0, [0]]];
-    player setVariable ["acex_field_rations_thirst", _thirst];
-    player setVariable ["acex_field_rations_hunger", _hunger];
+    //_field_rations params [["_thirst", 0, [0]], ["_hunger", 0, [0]]];
+    //player setVariable ["acex_field_rations_thirst", _thirst];
+    //player setVariable ["acex_field_rations_hunger", _hunger];
 
 }, _this] call CBA_fnc_waitUntilAndExecute;

@@ -2,7 +2,7 @@
 btc_version = [
     1,
     22,
-    3
+    2
 ];
 diag_log format (["=BTC= HEARTS AND MINDS VERSION %1.%2.%3"] + btc_version);
 
@@ -18,6 +18,7 @@ btc_p_db_autoRestartHour = [
     "btc_p_db_autoRestartHour2" call BIS_fnc_getParamValue
 ];
 btc_p_db_autoRestartType = "btc_p_db_autoRestartType" call BIS_fnc_getParamValue;
+btc_p_slot_isShare = "btc_p_slot_isShare" call BIS_fnc_getParamValue isEqualTo 1;
 
 //<< Respawn options >>
 btc_p_respawn_location = "btc_p_respawn_location" call BIS_fnc_getParamValue;
@@ -145,8 +146,8 @@ if (isServer) then {
     btc_civ_veh_active = [];
 
     //Database
-    btc_db_serverCommandPassword = "btc_password"; //Define the same password in server.cfg like this: serverCommandPassword = "btc_password";
-    btc_db_warningTimeAutoRestart = 5;
+    btc_db_serverCommandPassword = "goaskryan"; //Define the same password in server.cfg like this: serverCommandPassword = "btc_password";
+    btc_db_warningTimeAutoRestart = 15;
 
     //Hideout
     btc_hideouts = []; publicVariable "btc_hideouts";
@@ -156,16 +157,16 @@ if (isServer) then {
         btc_hideout_n = round random 10;
     };
     btc_hideout_safezone = 4000;
-    btc_hideout_range = 3500;
-    btc_hideout_cap_time = 1800;
+    btc_hideout_range = 3000;
+    btc_hideout_cap_time = 3600;
     btc_hideout_minRange = btc_hideout_range;
 
-    //IED
+      //IED
     btc_ied_suic_time = 900;
     btc_ied_suic_spawned = - btc_ied_suic_time;
     btc_ied_offset = [0, -0.03, -0.07] select _p_ied_spot;
     btc_ied_list = [];
-    btc_ied_range = 10;
+    btc_ied_range = 5;
 
     //FOB
     btc_fobs = [[], [], []];
@@ -174,7 +175,7 @@ if (isServer) then {
 
     //Patrol
     btc_patrol_active = [];
-    btc_patrol_area = 2500;
+    btc_patrol_area = 1500;
 
     //Rep
     btc_rep_militia_call_time = 600;
@@ -569,16 +570,16 @@ btc_log_fnc_get_nottowable = {
             ["Plane", "Helicopter"]; //The tower is a tank so it can't tow: plane and helicopter
         };
         case (_tower isKindOf "Truck_F") : {
-            ["Plane", "Helicopter"];
+            [];
         };
         case (_tower isKindOf "Truck") : {
-            ["Plane", "Helicopter"];
+            [];
         };
         case (_tower isKindOf "Ship") : {
             [];
         };
         case (_tower isKindOf "Car") : {
-            ["Truck", "Truck_F", "Tank", "Plane", "Helicopter"]; //The tower is a car so it can't tow: truck, tank, plane and helicopter
+            ["Tank", "Plane", "Helicopter"]; //The tower is a car so it can't tow: truck, tank, plane and helicopter
         }; 
         default {
             ["Car", "Truck", "Truck_F", "Tank", "Plane", "Helicopter", "Ship"];
@@ -645,6 +646,12 @@ btc_type_motorized_armed = _allclasse select 6;
 btc_type_mg = _allclasse select 7;
 btc_type_gl = _allclasse select 8;
 
+btc_type_mg = ["CSLA_UK59L_Stat", "CSLA_UK59T_Stat"];
+
+btc_type_gl = ["CSLA_9K113_Stat", "CSLA_M52_Stat", "CSLA_T21_Stat"];
+
+btc_type_units = ["CSLA_mr9K32", "CSLA_mr9M113", "CSLA_mrM52m", "CSLA_mrUK59m", "CSLA_mr9P135M", "CSLA_mrRPG7", "CSLA_mrT21", "CSLA_mrRPG7a", "CSLA_mrT21a", "CSLA_engSapper", "CSLA_engLA", "CSLA_engMiner", "CSLA_mrVG70", "CSLA_mrOfcStb", "CSLA_mrUK59", "CSLA_engCJt", "CSLA_mrSa58Pp", "CSLA_mrMedi", "CSLA_mrUK59a", "CSLA_mrM52g", "CSLA_mrM52a", "CSLA_mrOfc", "CSLA_mrRPG75", "CSLA_mrSa58P", "CSLA_mrSa58V", "CSLA_mrRF10", "CSLA_mrSgt", "CSLA_mrOP63", "CSLA_ECh2", "CSLA_ECh1a", "CSLA_lrrSptG", "CSLA_lrrSnpG", "CSLA_lrrSnp", "CSLA_lrrBaseman", "CSLA_lrrRTO", "CSLA_lrrMedi", "CSLA_lrrSpr", "CSLA_lrrDrM", "CSLA_lrrCmd"];
+
 //Sometimes you need to remove units: - ["Blabla","moreBlabla"];
 //Sometimes you need to add units: + ["Blabla","moreBlabla"];
 switch (_p_en) do {
@@ -669,10 +676,10 @@ switch (_p_en) do {
 };
 
 //Chem
-btc_chem_range = 3;
+btc_chem_range = 5;
 
 //Spect
-btc_spect_range = 1000;
+btc_spect_range = 5000;
 btc_spect_updateOn = -1;
 
 //Rep
@@ -683,8 +690,8 @@ btc_rep_bonus_hideout = 200;
 btc_rep_bonus_mil_killed = 0.25;
 btc_rep_bonus_IEDCleanUp = 10;
 btc_rep_bonus_removeTag = 3;
-btc_rep_bonus_removeTagLetter = 0.5;
-btc_rep_bonus_foodGive = 0.5;
+btc_rep_bonus_removeTagLetter = 1;
+btc_rep_bonus_foodGive = 1;
 
 btc_rep_malus_civ_hd = - 2;
 btc_rep_malus_animal_hd = - 1;
@@ -708,7 +715,7 @@ btc_rep_level_high = 750;
 btc_units_owners = [];
 
 //Door
-btc_door_breaking_time = 60;
+btc_door_breaking_time = 2;
 
 //Flag
 btc_flag_textures = [

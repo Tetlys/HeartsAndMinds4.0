@@ -45,5 +45,5 @@ if (_player isNotEqualTo objNull) then {
 
 if (_uid isEqualTo "") exitWith {};
 
-private _ticketValue = _ticket + (btc_respawn_tickets getOrDefault [_uid, btc_p_respawn_ticketsAtStart]);
+private _ticketValue = _ticket + (btc_respawn_tickets getOrDefault [_uid, 0]);
 btc_respawn_tickets set [_uid, _ticketValue];

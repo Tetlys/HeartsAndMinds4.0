@@ -1,7 +1,7 @@
 if (_this isKindof "CAManBase") exitWith {};//Jig adding fix to counter modifying loadout if not in a vehicle.
 private _object = _this;
 private _type = typeOf _object;
-x_reload_time_factor = 0.1;
+x_reload_time_factor = 2;
 
 _object setVehicleAmmo 1;
 
@@ -79,6 +79,6 @@ while {fuel _object < 0.99} do {
 	sleep 0.01;
 };
 
-if (_type in INS_add_Chaff) then {_object addweapon "CMFlareLauncher"; _object addmagazine "120Rnd_CMFlare_Chaff_Magazine";};
+if (_type isKindOf "Helicopter") then {_object addweapon "CMFlareLauncher"; _object addmagazine "120Rnd_CMFlare_Chaff_Magazine";};
 sleep x_reload_time_factor;
 _object vehicleChat format ["%1 is ready...", _type];

@@ -103,9 +103,9 @@ if (_data_units isNotEqualTo []) then {
         case "NameLocal" : {7};
         case "StrongpointArea" : {8};
         case "NameVillage" : {8};
-        case "NameCity" : {16};
-        case "NameCityCapital" : {32};
-        case "Airport" : {32};
+        case "NameCity" : {10};
+        case "NameCityCapital" : {15};
+        case "Airport" : {15};
         case "NameMarine" : {4};
         default {0};
     });
@@ -143,17 +143,17 @@ if (_data_units isNotEqualTo []) then {
 
         // Spawn civilians
         private _numberOfCivi = (switch _type do {
-            case "VegetationFir" : {1};
+            case "VegetationFir" : {0};
             case "BorderCrossing" : {0};
-            case "NameLocal" : {3};
+            case "NameLocal" : {5};
             case "StrongpointArea" : {2};
-            case "NameVillage" : {6};
+            case "NameVillage" : {8};
             case "NameCity" : {10};
-            case "NameCityCapital" : {19};
+            case "NameCityCapital" : {15};
             case "Airport" : {6};
             default {4};
         });
-        [+_housesEntrerable, round (_p_civ_group_ratio * 2 * _numberOfCivi), _city] call btc_civ_fnc_populate;
+        [+_housesEntrerable, round (_p_civ_group_ratio  * _numberOfCivi), _city] call btc_civ_fnc_populate;
     };
 };
 if (btc_p_animals_group_ratio > 0) then {

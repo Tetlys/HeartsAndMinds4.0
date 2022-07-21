@@ -85,7 +85,7 @@ if (
             btc_city_remaining pushBack _y;
         } else {
             _marker setMarkerColor "colorGreen";
-            _marker setMarkerAlpha 0;
+            _marker setMarkerAlpha 0.3;
         };
         _y setVariable ["marker", _marker];
     };

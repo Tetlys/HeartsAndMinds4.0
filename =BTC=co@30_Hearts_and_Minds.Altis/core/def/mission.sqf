@@ -419,7 +419,7 @@ btc_int_hornDelay = time;
 
 //Info
 btc_info_intel_type = [80, 95];//cache - hd - both
-btc_info_hideout_radius = 4000;
+btc_info_hideout_radius = 2000;
 btc_info_intels = ["Land_Camera_01_F", "Land_HandyCam_F", "Land_File1_F", "Land_FilePhotos_F", "Land_File2_F", "Land_File_research_F", "Land_MobilePhone_old_F", "Land_PortableLongRangeRadio_F", "Land_Laptop_02_unfolded_F"];
 private _mapsIntel = switch (worldName) do {
     case "Altis": {["Land_Map_altis_F", "Land_Map_unfolded_Altis_F"]};
@@ -478,21 +478,11 @@ btc_construction_array =
             "Land_BagFence_Long_F",
             "Land_BagFence_Round_F",
             "Land_BagFence_Short_F",
-            "Land_HBarrier_1_F",
-            "Land_HBarrier_3_F",
-            "Land_HBarrier_5_F",
-            "Land_HBarrierBig_F",
             "Land_Razorwire_F",
             "Land_CncBarrier_F",
             "Land_CncBarrierMedium_F",
             "Land_CncBarrierMedium4_F",
-            "Land_CncWall1_F",
-            "Land_CncWall4_F",
-            "Land_Mil_ConcreteWall_F",
-            "Land_Mil_WallBig_4m_F",
-            "Land_Mil_WallBig_Corner_F",
             "Land_PortableLight_double_F",
-            "Land_Pod_Heli_Transport_04_medevac_black_F",
             "Land_Net_Fence_Gate_F",
             "Land_LampHarbour_F",
             "Land_Camping_Light_F",
@@ -504,13 +494,17 @@ btc_construction_array =
         ],
         [
             //"Static"
-            "RHS_M2StaticMG_WD",
-            "RHS_M2StaticMG_MiniTripod_WD",
-            "RHS_Stinger_AA_pod_USMC_WD",
-            "RHS_TOW_TriPod_WD",
-            "RHS_MK19_TriPod_WD",
-            "RHS_M252_WD",
-            "B_Static_Designator_01_F"
+            "UK3CB_BAF_Static_L111A1_Deployed_High_DPMW",
+            "UK3CB_BAF_Static_L111A1_Deployed_Low_DPMW",
+            "UK3CB_BAF_Static_L111A1_Deployed_Mid_DPMW",
+            "UK3CB_BAF_Static_L134A1_Deployed_High_DPMW",
+            "UK3CB_BAF_Static_L134A1_Deployed_Low_DPMW",
+            "UK3CB_BAF_Static_L134A1_Deployed_Mid_DPMW",
+            "UK3CB_BAF_Static_L16_Deployed_DPMW",
+            "UK3CB_BAF_Static_L7A2_Deployed_High_DPMW",
+            "UK3CB_BAF_Static_L7A2_Deployed_Low_DPMW",
+            "UK3CB_BAF_Static_L7A2_Deployed_Mid_DPMW",
+            "UK3CB_BAF_Static_M6_Deployed_DPMW"
         ],
         [
             //"Ammobox"
@@ -580,7 +574,7 @@ btc_log_fnc_get_nottowable = {
         };
         case (_tower isKindOf "Car") : {
             ["Tank", "Plane", "Helicopter"]; //The tower is a car so it can't tow: truck, tank, plane and helicopter
-        }; 
+        };
         default {
             ["Car", "Truck", "Truck_F", "Tank", "Plane", "Helicopter", "Ship"];
         };
@@ -646,12 +640,6 @@ btc_type_motorized_armed = _allclasse select 6;
 btc_type_mg = _allclasse select 7;
 btc_type_gl = _allclasse select 8;
 
-btc_type_mg = ["CSLA_UK59L_Stat", "CSLA_UK59T_Stat"];
-
-btc_type_gl = ["CSLA_9K113_Stat", "CSLA_M52_Stat", "CSLA_T21_Stat"];
-
-btc_type_units = ["CSLA_mr9K32", "CSLA_mr9M113", "CSLA_mrM52m", "CSLA_mrUK59m", "CSLA_mr9P135M", "CSLA_mrRPG7", "CSLA_mrT21", "CSLA_mrRPG7a", "CSLA_mrT21a", "CSLA_engSapper", "CSLA_engLA", "CSLA_engMiner", "CSLA_mrVG70", "CSLA_mrOfcStb", "CSLA_mrUK59", "CSLA_engCJt", "CSLA_mrSa58Pp", "CSLA_mrMedi", "CSLA_mrUK59a", "CSLA_mrM52g", "CSLA_mrM52a", "CSLA_mrOfc", "CSLA_mrRPG75", "CSLA_mrSa58P", "CSLA_mrSa58V", "CSLA_mrRF10", "CSLA_mrSgt", "CSLA_mrOP63", "CSLA_ECh2", "CSLA_ECh1a", "CSLA_lrrSptG", "CSLA_lrrSnpG", "CSLA_lrrSnp", "CSLA_lrrBaseman", "CSLA_lrrRTO", "CSLA_lrrMedi", "CSLA_lrrSpr", "CSLA_lrrDrM", "CSLA_lrrCmd"];
-
 //Sometimes you need to remove units: - ["Blabla","moreBlabla"];
 //Sometimes you need to add units: + ["Blabla","moreBlabla"];
 switch (_p_en) do {
@@ -683,14 +671,14 @@ btc_spect_range = 5000;
 btc_spect_updateOn = -1;
 
 //Rep
-btc_rep_bonus_cache = 100;
+btc_rep_bonus_cache = 150;
 btc_rep_bonus_civ_hh = 3;
 btc_rep_bonus_disarm = 15;
 btc_rep_bonus_hideout = 200;
-btc_rep_bonus_mil_killed = 0.25;
+btc_rep_bonus_mil_killed = 0.5;
 btc_rep_bonus_IEDCleanUp = 10;
 btc_rep_bonus_removeTag = 3;
-btc_rep_bonus_removeTagLetter = 1;
+btc_rep_bonus_removeTagLetter = 2;
 btc_rep_bonus_foodGive = 1;
 
 btc_rep_malus_civ_hd = - 2;
@@ -698,12 +686,12 @@ btc_rep_malus_animal_hd = - 1;
 btc_rep_malus_civ_killed = - 10;
 btc_rep_malus_animal_killed = - 5;
 btc_rep_malus_civ_suppressed = - 4;
-btc_rep_malus_player_respawn = - 10;
+btc_rep_malus_player_respawn = - 1;
 btc_rep_malus_veh_killed = - 25;
 btc_rep_malus_building_damaged = - 2.5;
 btc_rep_malus_building_destroyed = - 5;
 btc_rep_malus_foodRemove = - btc_rep_bonus_foodGive;
-btc_rep_malus_breakDoor = - 2;
+btc_rep_malus_breakDoor = - 1;
 btc_rep_malus_wheelChange = - 7;
 
 btc_rep_level_veryLow = 0;
@@ -715,7 +703,7 @@ btc_rep_level_high = 750;
 btc_units_owners = [];
 
 //Door
-btc_door_breaking_time = 2;
+btc_door_breaking_time = 1;
 
 //Flag
 btc_flag_textures = [
@@ -723,11 +711,12 @@ btc_flag_textures = [
     "\A3\Data_F\Flags\flag_green_CO.paa",
     "\A3\Data_F\Flags\flag_blue_CO.paa",
     '#(argb,8,8,3)color(0.9,0.9,0,1)',
+    "\A3\Data_F\Flags\flag_uk_CO.paa",
     "\A3\Data_F\Flags\flag_NATO_CO.paa"
 ];
 
 //Respawn
 btc_body_bagTicketPlayer = 1;
-btc_body_enemyTicket = 5;
+btc_body_enemyTicket = 2;
 
 btc_startDate = [2035, 6, 24, 12, 15];

@@ -73,7 +73,7 @@ addMissionEventHandler ["HandleDisconnect", {
     false
 }];
 ["ace_unconscious", btc_slot_fnc_serializeState] call CBA_fnc_addEventHandler;
-["btc_playerConnected", { 
+["btc_playerConnected", {
     params ["_player"];
     [_player, _player call btc_slot_fnc_createKey] call btc_slot_fnc_deserializeState_s;
 }] call CBA_fnc_addEventHandler;
@@ -126,6 +126,10 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
     };
 };
 
+
+
+
+
 //Cargo
 [btc_fob_mat, "InitPost", {
     params ["_obj"];
@@ -136,16 +140,16 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
         params ["_obj"];
         [_obj, 50] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["RHS_CH_47F_10","rhsusf_M977A4_usarmy_d","B_T_VTOL_01_vehicle_F","RHS_C130J"];
+} forEach ["B_Truck_01_flatbed_F", "UK3CB_BAF_Chinook_HC2_cargo_DPMW", "UK3CB_BAF_Merlin_HC4_18_GPMG_DPMW", "UK3CB_BAF_MAN_HX58_Transport_Green_DPMW"];
 {
     [_x, "InitPost", {
         params ["_obj"];
         [_obj, 20] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy","rhsusf_M1078A1R_SOV_M2_D_fmtv_socom","B_D_APC_Tracked_01_CRV_lxWS"];
+} forEach ["UK3CB_BAF_LandRover_Panama_Green_A_DPMW", "UK3CB_BAF_FV432_Mk3_GPMG_Green_DPMW", "UK3CB_BAF_Warrior_A3_W_Camo_MTP", "UK3CB_BAF_Jackal2_L2A1_W_DPMW", "UK3CB_BAF_LandRover_Hard_FFR_Green_B_DPMW", "UK3CB_BAF_LandRover_WMIK_GMG_FFR_Green_B_DPMW", "UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_DPMW", "UK3CB_BAF_LandRover_WMIK_Milan_FFR_Green_B_DPMW"];
 {
     [_x, "InitPost", {
         params ["_obj"];
         [_obj, 10] call ace_cargo_fnc_setSpace;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["rhsusf_m1045_d", "C_Plane_Civil_01_racing_F","RHSGREF_A29B_HIDF",  "rhsusf_m1a2sep1tuskiwd_usarmy","RHS_MELB_AH6M","RHS_MELB_MH6M","rhsusf_m1151_m2_v2_usarmy_d","rhsusf_M1220_M2_usarmy_d", "RHS_M2A3_BUSKIII_wd", "RHS_UH60M_d","RHS_UH60M_MEV_d"];
+} forEach ["rhsusf_M1078A1R_SOV_M2_D_fmtv_socom", "UK3CB_BAF_Wildcat_HMA2_TRN_8A_DPMW", "I_Heli_light_03_dynamicLoadout_F""UK3CB_BAF_Husky_Passenger_GPMG_Green_DPMW", "UK3CB_BAF_Husky_Passenger_HMG_Green_DPMW", "UK3CB_BAF_Husky_Logistics_GMG_Green_DPMW"];

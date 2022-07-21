@@ -5,7 +5,27 @@ _markedveh = [];
 _cfg = configFile >> "cfgVehicles";
 _vehtomark = [];
 
-_vehtomark = ["RHS_MELB_AH6M", "rhsusf_m1045_w", "rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy", "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom", "rhsusf_m1151_m2_v2_usarmy_d", "rhsusf_M1220_M2_usarmy_d", "rhsusf_m1a2sep1tuskiwd_usarmy", "RHS_M2A3_BUSKIII_wd", "rhsusf_M977A4_usarmy_d", "RHS_MELB_MH6M", "B_T_APC_Tracked_01_CRV_F", "RHS_UH60M_d", "RHS_UH60M_MEV_d","RHSGREF_A29B_HIDF", "RHS_C130J", "C_Plane_Civil_01_racing_F", "RHS_CH_47F_10", "B_T_VTOL_01_vehicle_F"];
+_vehtomark = [
+"UK3CB_BAF_LandRover_Panama_Green_A_DPMW",
+"UK3CB_BAF_FV432_Mk3_GPMG_Green_DPMW",
+"UK3CB_BAF_Warrior_A3_W_Camo_MTP",
+"B_Truck_01_flatbed_F",
+"UK3CB_BAF_Husky_Logistics_GMG_Green_DPMW",
+"UK3CB_BAF_Husky_Passenger_GPMG_Green_DPMW",
+"UK3CB_BAF_Husky_Passenger_HMG_Green_DPMW",
+"UK3CB_BAF_Jackal2_L2A1_W_DPMW",
+"UK3CB_BAF_LandRover_Hard_FFR_Green_B_DPMW",
+"UK3CB_BAF_LandRover_WMIK_GMG_FFR_Green_B_DPMW",
+"UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_DPMW",
+"UK3CB_BAF_LandRover_WMIK_Milan_FFR_Green_B_DPMW",
+"rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
+"UK3CB_BAF_MAN_HX58_Transport_Green_DPMW",
+"UK3CB_BAF_Wildcat_HMA2_TRN_8A_DPMW",
+"UK3CB_BAF_Merlin_HC4_18_GPMG_DPMW",
+"UK3CB_BAF_Chinook_HC2_cargo_DPMW",
+"B_APC_Tracked_01_CRV_F",
+"I_Heli_light_03_dynamicLoadout_F"
+];
 
 
 // Misc variables

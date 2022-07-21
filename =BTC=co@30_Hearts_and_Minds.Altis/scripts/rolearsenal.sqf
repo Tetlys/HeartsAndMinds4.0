@@ -67,10 +67,6 @@ roleArsenal = {
 			if ((_UnitRole == "O.G.R.E Commander@O.G.R.E (Logistics)")
 			or (_UnitRole == "O.G.R.E Engineer")) then
 			{_Role = "OGRE"};
-    //BANSHEE
-			if ((_UnitRole == "BANSHEE Pilot@Joint Air Command 3")
-			or (_UnitRole == "BANSHEE Crew")) then
-			{_Role = "BANSHEE"};
     //STALKER
 	    if ((_UnitRole == "STALKER 1 Pilot@Joint Air Command 1")
 	    or (_UnitRole == "STALKER 1 Crew")
@@ -106,84 +102,53 @@ roleArsenal = {
 	//Define the gear for each Role
 	Private _DefaultGear = [
   //Primary
-  "rhs_weap_m4a1_carryhandle",
-  "rhs_weap_m4a1_blockII",
-  "rhs_weap_m16a4_imod",
-  "rhs_weap_mk18",
-  "rhs_weap_mk18_wd",
-  "Tier1_SR16_Carbine_Mod2_CTR_Black",
-  "Tier1_SR16_Carbine_Mod2_IMOD_Black",
-  "Tier1_SIG_MCX_115_Virtus_300BLK_Black",
-  "Tier1_SIG_MCX_115_Virtus_Black",
+	"UK3CB_BAF_L85A2",
+	"UK3CB_BAF_L119A1_RIS",
+	"UK3CB_BAF_L86A2",
+	"UK3CB_BAF_L128A1",
+	"UK3CB_BAF_L1A1_Wood",
+	"UK3CB_BAF_L1A1",
+	"UK3CB_BAF_L119A1_CQB",
+	"UK3CB_BAF_L119A1",
   //Secondary
-  "ACE_VMH3",
-  "ACE_VMM3",
-  "rhsusf_weap_glock17g4",
-  "rhsusf_weap_m1911a1",
-  "rhsusf_weap_m9",
+	"UK3CB_BAF_L9A1",
+	"UK3CB_BAF_L105A1",
+	"UK3CB_BAF_L131A1",
+	"rhsusf_weap_glock17g4",
+	"ACE_VMH3",
+	"ACE_VMM3",
   //Launcher
-  "rhs_weap_M136",
-  "rhs_weap_M136_hedp",
-  "rhs_weap_M136_hp",
+	"rhs_weap_m72a7",
   //Helm
-  "H_Watchcap_blk",
-  "H_Watchcap_cbr",
-  "H_Watchcap_camo",
-  "H_Watchcap_khk",
-  "H_Booniehat_khk_hs",
-  "H_Booniehat_khk",
-  "H_Booniehat_mcamo",
-  "H_Booniehat_oli",
-  "H_Booniehat_tan",
-  "rhs_Booniehat_m81",
-  "rhs_Booniehat_ocp",
-  "H_Cap_grn",
-  "H_Cap_oli",
-  "H_Cap_tan",
-  "H_Cap_usblack",
-  "H_Cap_tan_specops_US",
-  "rhsusf_ach_bare_wood",
-  "rhsusf_ach_bare_wood_ess",
-  "rhsusf_ach_bare_wood_headset",
-  "rhsusf_ach_bare_wood_headset_ess",
-  "rhsusf_ach_helmet_ocp",
-  "rhsusf_ach_helmet_ocp_alt",
-  "rhsusf_ach_helmet_ESS_ocp",
-  "rhsusf_ach_helmet_ESS_ocp_alt",
-  "rhsusf_ach_helmet_headset_ocp",
-  "rhsusf_ach_helmet_headset_ocp_alt",
-  "rhsusf_ach_helmet_headset_ess_ocp",
-  "rhsusf_ach_helmet_headset_ess_ocp_alt",
-  "rhsusf_opscore_mc_cover",
-  "rhsusf_opscore_mc_cover_pelt",
-  "rhsusf_opscore_mc_cover_pelt_nsw",
-  "rhsusf_opscore_mc_cover_pelt_cam",
-  "rhsusf_opscore_fg",
-  "rhsusf_opscore_fg_pelt",
-  "rhsusf_opscore_fg_pelt_cam",
-  "rhsusf_opscore_fg_pelt_nsw",
-  "rhsusf_opscore_rg_cover",
-  "rhsusf_opscore_rg_cover_pelt",
+	"UK3CB_BAF_H_Mk6_DPMT_A",
+	"UK3CB_BAF_H_Mk6_DPMT_B",
+	"UK3CB_BAF_H_Mk6_DPMT_C",
+	"UK3CB_BAF_H_Mk6_DPMT_D",
+	"UK3CB_BAF_H_Mk6_DPMT_E",
+	"UK3CB_BAF_H_Mk6_DPMT_F",
+	"UK3CB_BAF_H_Beret_PR_PRR_Over",
+	"UK3CB_BAF_H_Beret_RM_Bootneck_PRR_Over",
+  "UK3CB_BAF_H_Mk7_Scrim_A",
+  "UK3CB_BAF_H_Mk7_Scrim_F",
+  "UK3CB_BAF_H_Mk7_Scrim_ESS_A",
+  "UK3CB_BAF_H_Mk7_Scrim_C",
   //Uniform
-  "rhs_uniform_acu_oefcp",
-  "U_I_G_resistanceLeader_F",
-  "rhs_uniform_bdu_erdl",
-  "rhs_uniform_g3_m81",
-  "rhs_uniform_g3_rgr",
+	"UK3CB_BAF_U_CombatUniform_DPMT",
+	"UK3CB_BAF_U_CombatUniform_DPMT_ShortSleeve",
+	"UK3CB_BAF_U_Smock_DPMT",
   //Vest
-  "rhsusf_iotv_ocp_Rifleman",
-  "rhsusf_plateframe_rifleman",
-  "rhsusf_spc_rifleman",
-  "rhsusf_spcs_ocp_rifleman",
+	"UK3CB_BAF_V_Osprey_DPMT2",
+	"UK3CB_BAF_V_Osprey_DPMT4",
+	"UK3CB_BAF_V_Osprey_DPMT5",
+	"UK3CB_BAF_V_Osprey_DPMT6",
+	"UK3CB_BAF_V_Osprey_DPMT7",
+	"UK3CB_BAF_V_Osprey_DPMT8",
+	"UK3CB_BAF_V_Osprey_DPMT9",
   //Backpack
-  "B_Carryall_cbr",
-  "B_Carryall_khk",
-  "B_Carryall_mcamo",
-  "B_Carryall_oli",
-  "B_Kitbag_cbr",
-  "B_Kitbag_rgr",
-  "B_Kitbag_mcamo",
-  "B_Kitbag_tan",
+	"UK3CB_BAF_B_Bergen_DPMT_Rifleman_A",
+	"UK3CB_BAF_B_Bergen_DPMT_Rifleman_B",
+	"UK3CB_BAF_B_Carryall_DPMT",
+	"UK3CB_BAF_B_Kitbag_DPMT",
   //Facewear
   "M40_Gas_mask_nbc_v1_d",
   "rhs_googles_black",
@@ -212,95 +177,100 @@ roleArsenal = {
   //NVG
   "ACE_NVG_Wide_Black",
 	"ACE_NVG_Wide",
+	"UK3CB_ANPVS7",
+	"UK3CB_BAF_HMNVS",
+	"UK3CB_PVS5A",
   //Binocular
   "Laserdesignator",
 	"Laserbatteries",
+	"UK3CB_BAF_Soflam_Laserdesignator",
+	"Binocular",
+	"rhsusf_bino_leopold_mk4",
 	"ACE_Vector",
+	"ACE_VectorDay",
   //Radio
   "TFAR_anprc152",
   "tfw_rf3080Item",
   //Sights
-  "optic_mrco",
-  "optic_hamr",
-  "optic_arco_blk_f",
-  "optic_holosight_blk_f",
-  "optic_erco_blk_f",
-  "optic_arco_ak_blk_f",
-  "rhsusf_acc_g33_t1",
-  "rhsusf_acc_g33_xps3",
-  "rhsusf_acc_elcan",
-  "rhsusf_acc_acog",
-  "rhsusf_acc_eotech_552",
-  "rhsusf_acc_compm4",
-  "rhsusf_acc_su230a",
-  "rhsusf_acc_su230a_mrds",
-  "rhsusf_acc_acog_rmr",
-  "rhsusf_acc_eotech_xps3",
-  "tier1_eotech551_3xmag_black_up",
-  "tier1_eotech553_3xmag_black_up",
-  "tier1_exps3_0_3xmag_black_up",
-  "tier1_microt1_leap_3xmag_black_up",
-  "tier1_microt2_3xmag_black_up",
-  "tier1_romeo4t_bcd_g33_black_up",
-  "tier1_elcan_156_c1_black",
+	"uk3cb_baf_susat",
+	"rhsusf_acc_acog_rmr",
+	"uk3cb_baf_ta31f_hornbill",
+	"uk3cb_baf_ta31f",
+	"uk3cb_baf_maxikite",
+	"uk3cb_baf_kite",
+	"uk3cb_baf_specterlds",
+	"uk3cb_baf_suit",
   //Rail
-  "acc_flashlight_pistol",
-  "rhsusf_acc_anpeq15side_bk",
-  "rhsusf_acc_anpeq15_bk_top",
-  "rhsusf_acc_anpeq15_bk",
-  "rhsusf_acc_anpeq15_bk_light",
-  "rhs_acc_at4_handler",
-  "tier1_urx4_la5_side",
-  "tier1_urx4_la5_top",
-  "tier1_urx4_la5_m300c_black",
-  "tier1_urx4_la5_m300c_black_fl",
-  "tier1_mcx_la5_side",
-  "tier1_mcx_la5_top",
-  "tier1_mcx_la5_m300c_black",
-  "tier1_mcx_la5_m300c_black_fl",
+	"uk3cb_baf_llm_flashlight_black",
+	"uk3cb_baf_llm_flashlight_tan",
+	"uk3cb_baf_llm_ir_black",
+	"uk3cb_baf_llm_ir_tan",
+	"rhsusf_acc_wmx_bk",
+	"uk3cb_baf_flashlight_l131a1",
+	"acc_flashlight_pistol",
   //Muzzle
-  "rhsusf_acc_omega9k",
-  "tier1_aac_m42000_black",
-  "tier1_sandmans_black",
-  "tier1_srd762_black",
-  "tier1_socom556_2_mini_black",
-  "tier1_socom556_black",
-  "tier1_socom556_2_black",
+	"uk3cb_baf_bayonet_l3a1",
+	"uk3cb_baf_silencer_l85",
+	"uk3cb_baf_silencer_l105a1",
+	"rhsusf_acc_omega9k",
   //Bipod
-  "tier1_grippod_black",
-  "tier1_harris_bipod_black",
-  "tier1_kac_vfg_black",
-  "tier1_larue_fug_black",
-  "tier1_afg_mlok_black",
-  "tier1_harris_bipod_mvg_mlok_black",
+	"uk3cb_underbarrel_acc_grippod",
+	"uk3cb_underbarrel_acc_grippod_g",
+	"uk3cb_underbarrel_acc_afg",
+	"uk3cb_underbarrel_acc_afg_g",
   //Magazines
-  "Tier1_20Rnd_9x19_FMJ",
-  "Tier1_20Rnd_9x19_JHP",
-  "rhsusf_mag_7x45acp_MHP",
-  "rhsusf_mag_15Rnd_9x19_FMJ",
-  "rhsusf_mag_15Rnd_9x19_JHP",
-  "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-  "rhs_mag_30Rnd_556x45_Mk262_Stanag",
-  "Tier1_30Rnd_556x45_M856A1_EMag",
-  "Tier1_30Rnd_556x45_Mk262Mod1_EMag",
-  "Tier1_30Rnd_762x35_300BLK_Stanag",
-  "Tier1_30Rnd_762x35_300BLK_RNBT_Stanag",
+	"UK3CB_BAF_762_L42A1_20Rnd",
+	"UK3CB_BAF_762_L42A1_20Rnd_T",
+	"ACE_20Rnd_762x51_M993_AP_Mag",
+	"UK3CB_BAF_556_200Rnd_T",
+	"UK3CB_BAF_556_200Rnd",
+	"UK3CB_BAF_556_100Rnd_T",
+	"UK3CB_BAF_556_100Rnd",
+	"UK3CB_BAF_556_30Rnd",
+	"UK3CB_BAF_556_30Rnd_T",
+	"rhsusf_200rnd_556x45_mixed_box",
+	"rhsusf_200Rnd_556x45_box",
+	"rhsusf_100Rnd_556x45_mixed_soft_pouch",
+	"rhsusf_100Rnd_556x45_soft_pouch",
+	"30Rnd_9x21_Mag_SMG_02",
+	"30Rnd_9x21_Green_Mag",
+	"30Rnd_9x21_Red_Mag",
+	"UK3CB_BAF_762_20Rnd",
+	"UK3CB_BAF_762_20Rnd_T",
+	"UK3CB_BAF_12G_Pellets",
+	"UK3CB_BAF_12G_Slugs",
   //Additional Magazines
-  "rhsusf_20Rnd_762x51_SR25_m62_Mag",
-  "rhsusf_20Rnd_762x51_SR25_m118_special_Mag",
-  "Tier1_20Rnd_762x51_M62_SR25_Mag",
-  "Tier1_20Rnd_762x51_M118_Special_SR25_Mag",
-  "Tier1_250Rnd_762x51_Belt_M62_Tracer",
-  "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",
-  "rhsusf_20Rnd_762x51_m62_Mag",
-  "rhsusf_20Rnd_762x51_m118_special_Mag",
-  "ACE_HuntIR_M203",
-  "rhs_fim92_mag",
-  "MRAWS_HE_F",
-  "MRAWS_HEAT55_F",
-  "MRAWS_HEAT_F",
-  "rhs_fgm148_magazine_AT",
-  "NLAW_F",
+	"LAW_F",
+	"rhs_mag_maaws_HE",
+	"rhs_mag_maaws_HEDP",
+	"rhs_mag_maaws_HEAT",
+	"UK3CB_BAF_1Rnd_HE_Grenade_Shell",
+	"UK3CB_BAF_1Rnd_HEDP_Grenade_Shell",
+	"UK3CB_BAF_UGL_FlareWhite_F",
+	"UK3CB_BAF_UGL_FlareRed_F",
+	"UK3CB_BAF_UGL_FlareGreen_F",
+	"UK3CB_BAF_UGL_FlareYellow_F",
+	"UK3CB_BAF_UGL_FlareCIR_F",
+	"UK3CB_BAF_1Rnd_Smoke_Grenade_shell",
+	"UK3CB_BAF_1Rnd_SmokeRed_Grenade_shell",
+	"UK3CB_BAF_1Rnd_SmokeGreen_Grenade_shell",
+	"UK3CB_BAF_1Rnd_SmokeYellow_Grenade_shell",
+	"UK3CB_BAF_1Rnd_SmokePurple_Grenade_shell",
+	"UK3CB_BAF_1Rnd_SmokeBlue_Grenade_shell",
+	"UK3CB_BAF_1Rnd_SmokeOrange_Grenade_shell",
+	"ACE_HuntIR_M203",
+	"UK3CB_BAF_9_13Rnd",
+	"UK3CB_BAF_9_15Rnd",
+	"rhsusf_mag_17Rnd_9x19_FMJ",
+	"rhsusf_mag_17Rnd_9x19_JHP",
+	"UK3CB_BAF_9_17Rnd",
+	"UK3CB_BAF_127_100Rnd",
+	"UK3CB_BAF_32Rnd_40mm_G_Box",
+	"UK3CB_BAF_1Rnd_Milan",
+	"UK3CB_BAF_6Rnd_30mm_L21A1_HE",
+	"UK3CB_BAF_6Rnd_30mm_L21A1_APDS",
+	"UK3CB_BAF_762_800Rnd_T",
+	"UK3CB_BAF_762_200Rnd_T",
   //Grenades
   "rhs_mag_an_m14_th3",
   "ACE_Chemlight_HiBlue",
@@ -361,6 +331,7 @@ roleArsenal = {
   "ItemcTabHCam",
 	"ItemAndroid",
 	"ItemGPS",
+  "ItemWatch",
 	"ItemMicroDAGR",
 	"ItemcTab"
 	];
@@ -368,15 +339,10 @@ roleArsenal = {
 	Private _ADMIN = [
   //Primary
   //Secondary
-  "rhs_weap_M320",
   //Launcher
   //Helm
-  "lxWS_H_bmask_base",
-  "H_Construction_headset_black_F",
   //Uniform
-  "rhs_uniform_g3_blk",
   //Vest
-  "V_PlateCarrier1_blk",
   //Backpack
   "tfw_ilbe_whip_coy",
   "tfw_ilbe_whip_gr",
@@ -386,6 +352,12 @@ roleArsenal = {
   "tfw_ilbe_whip_wd2",
   "B_rhsusf_B_BACKPACK",
   "B_UAV_01_backpack_F",
+  "UK3CB_BAF_B_Bergen_DPMT_JTAC_H_A",
+  "UK3CB_BAF_B_Bergen_DPMT_JTAC_A",
+  "UK3CB_BAF_B_Bergen_DPMT_SL_A",
+  "UK3CB_BAF_B_Bergen_OLI_SL_A",
+  "UK3CB_BAF_B_Bergen_OLI_JTAC_A",
+  "UK3CB_BAF_B_Bergen_OLI_JTAC_H_A",
   //Facewear
   "G_Balaclava_blk",
   //Sights
@@ -403,18 +375,10 @@ roleArsenal = {
 	Private _CO = [
   //Primary
   //Secondary
-  "rhs_weap_M320",
   //Launcher
   //Helm
   //Uniform
   //Vest
-  "rhsusf_iotv_ocp_Squadleader",
-  "rhsusf_iotv_ocp_Teamleader",
-  "rhsusf_plateframe_teamleader",
-  "rhsusf_spc_squadleader",
-  "rhsusf_spc_teamleader",
-  "rhsusf_spcs_ocp_squadleader",
-  "rhsusf_spcs_ocp_teamleader_alt",
   //Backpack
   "tfw_ilbe_whip_coy",
   "tfw_ilbe_whip_gr",
@@ -424,6 +388,13 @@ roleArsenal = {
   "tfw_ilbe_whip_wd2",
   "B_rhsusf_B_BACKPACK",
   "B_UAV_01_backpack_F",
+  "B_UavTerminal",
+  "UK3CB_BAF_B_Bergen_DPMT_JTAC_H_A",
+  "UK3CB_BAF_B_Bergen_DPMT_JTAC_A",
+  "UK3CB_BAF_B_Bergen_DPMT_SL_A",
+  "UK3CB_BAF_B_Bergen_OLI_SL_A",
+  "UK3CB_BAF_B_Bergen_OLI_JTAC_A",
+  "UK3CB_BAF_B_Bergen_OLI_JTAC_H_A",
   //items
   "tfw_rf3080Item",
   "ACE_HuntIR_monitor"
@@ -431,19 +402,12 @@ roleArsenal = {
 
 	Private _SL = [
   //Primary
+	"UK3CB_BAF_L85A2_UGL",
   //Secondary
-  "rhs_weap_M320",
   //Launcher
   //Helm
   //Uniform
   //Vest
-  "rhsusf_iotv_ocp_Squadleader",
-  "rhsusf_iotv_ocp_Teamleader",
-  "rhsusf_plateframe_teamleader",
-  "rhsusf_spc_squadleader",
-  "rhsusf_spc_teamleader",
-  "rhsusf_spcs_ocp_squadleader",
-  "rhsusf_spcs_ocp_teamleader_alt",
   //Backpack
   "tfw_ilbe_whip_coy",
   "tfw_ilbe_whip_gr",
@@ -451,7 +415,12 @@ roleArsenal = {
   "tfw_ilbe_whip_mc",
   "tfw_ilbe_whip_ocp",
   "tfw_ilbe_whip_wd2",
-  "B_UAV_01_backpack_F",
+  "UK3CB_BAF_B_Bergen_DPMT_JTAC_H_A",
+  "UK3CB_BAF_B_Bergen_DPMT_JTAC_A",
+  "UK3CB_BAF_B_Bergen_DPMT_SL_A",
+  "UK3CB_BAF_B_Bergen_OLI_SL_A",
+  "UK3CB_BAF_B_Bergen_OLI_JTAC_A",
+  "UK3CB_BAF_B_Bergen_OLI_JTAC_H_A",
   //items
   "tfw_rf3080Item",
   "ACE_HuntIR_monitor"
@@ -464,10 +433,6 @@ roleArsenal = {
   //Helm
   //Uniform
   //Vest
-  "rhsusf_iotv_ocp_Medic",
-  "rhsusf_plateframe_medic",
-  "rhsusf_spc_corpsman",
-  "rhsusf_spcs_ocp_medic",
   //Backpack
   //items
   "kat_IV_16",
@@ -490,175 +455,118 @@ roleArsenal = {
 
 	Private _MARKSMAN = [
   //Primary
-  "rhs_weap_m14ebrri",
-  "Tier1_M110k1",
-  "Tier1_M110k1_CTR",
-  "Tier1_M110k5",
-  "Tier1_M110k5_ACS",
-  "Tier1_SR25_EC",
+	"UK3CB_BAF_L129A1",
   //Secondary
   //Launcher
   //Helm
   //Uniform
-  "U_B_FullGhillie_ard",
-  "U_B_FullGhillie_lsh",
-  "U_B_FullGhillie_sard",
-  "U_B_GhillieSuit",
   //Vest
-  "rhsusf_plateframe_marksman",
-  "rhsusf_spc_marksman",
-  "rhsusf_spcs_ocp_sniper",
   //Backpack
+	"B_rhsusf_B_BACKPACK",
+	"B_UAV_01_backpack_F",
+	"B_UavTerminal",
   //Facewear
   //Sights
-  "tier1_leupoldm3a_adm_black",
-  "tier1_leupoldm3a_adm_t2_black",
-  "tier1_leupoldm3a_geissele_black",
-  "tier1_leupoldm3a_geissele_docter_black",
-  "tier1_atacr18_adm_black",
-  "tier1_atacr18_adm_t1_black",
-  "tier1_atacr18_geissele_black",
-  "tier1_atacr18_geissele_docter_black",
-  "optic_nightstalker",
-  "optic_nvs",
-  "tier1_shortdot_adm_black",
-  "tier1_shortdot_geissele_black",
-  "tier1_shortdot_geissele_docter_black",
-  "optic_ams",
-  "tier1_razor_gen2_16",
-  "tier1_razor_gen2_16_geissele_docter",
-  "tier1_razor_gen3_110_adm_t2",
-  "tier1_razor_gen3_110_geissele",
-  "tier1_razor_gen3_110_geissele_docter",
+	"optic_lrps",
+	"optic_nightstalker",
+	"uk3cb_baf_ta31f",
+	"rhsusf_acc_m8541",
+	"rhsusf_acc_m8541_mrds",
+	"rhsusf_acc_m8541_wd",
+	"rksl_optic_pmii_312_sunshade",
+	"rksl_optic_pmii_525",
   //Rail
-  "tier1_m110_la5_side",
-  "tier1_m110_la5_top",
-  "tier1_sr25_la5_side",
-  "tier1_sr25_la5_top",
+	"rhsusf_acc_anpeq15side_bk",
+	"rhsusf_acc_anpeq15_bk",
+	"rhsusf_acc_anpeq15a",
   //Muzzle
-  "tier1_sandmans_black",
-  "tier1_kac_762_qdc_black",
-  "tier1_srd762_black",
-  "tier1_socom762_2_mini_black",
-  "tier1_socom762_2_black",
+	"uk3cb_underbarrel_acc_fgrip_bipod",
+	"uk3cb_underbarrel_acc_bipod",
+	"uk3cb_underbarrel_acc_grippod",
+	"uk3cb_underbarrel_acc_afg",
+	"uk3cb_baf_silencer_l115a3",
   //Bipod
-  "tier1_harris_bipod_dd_black",
-  "tier1_harris_bipod_black",
-  "tier1_harris_bipod_kac_black"
+	"uk3cb_underbarrel_acc_fgrip_bipod",
+	"uk3cb_underbarrel_acc_bipod",
+	"uk3cb_underbarrel_acc_grippod",
+	"uk3cb_underbarrel_acc_afg",
+  "ItemMicroDAGR",
+	"ItemcTab"
 	];
 
 	Private _AUTORIFLEMAN = [
   //Primary
-  "rhs_weap_m240B",
-  "rhs_weap_m249_pip_ris",
-  "rhs_weap_m249_light_S",
-  "Tier1_MK48_Mod0",
-	"Tier1_MK46_Mod0",
+	"UK3CB_BAF_L110A2",
+	"UK3CB_BAF_L7A2",
   //Secondary
   //Launcher
   //Helm
   //Uniform
   //Vest
-  "rhsusf_iotv_ocp_SAW",
-  "rhsusf_plateframe_machinegunner",
-  "rhsusf_spc_mg",
-  "rhsusf_spcs_ocp_machinegunner",
   //Backpack
   //Facewear
   //Sights
-	"rhsusf_acc_acog_mdo",
-	"rhsusf_acc_elcan",
-	"rhsusf_acc_elcan_ard",
-  "rhsusf_acc_acog_mdo",
   //Rail
   //Muzzle
-  "rhsusf_acc_ardec_m240",
-  "ace_muzzle_mzls_b",
-  "tier1_socom762mg_black",
   //Bipod
-  "rhsusf_acc_kac_grip_saw_bipod",
-  "rhsusf_acc_saw_bipod",
-  "rhsusf_acc_grip4_bipod",
-  "rhsusf_acc_saw_lw_bipod"
+  "ItemMicroDAGR",
+	"ItemcTab"
 	];
 
 	Private _AT = [
   //Primary
   //Secondary
   //Launcher
-  "launch_MRAWS_green_F",
-  "launch_NLAW_F",
-  "rhs_weap_fim92",
-  "rhs_weap_fgm148",
+	"launch_NLAW_F",
+	"rhs_weap_maaws",
+	"UK3CB_BAF_Javelin_Slung_Tube",
+	"UK3CB_BAF_Javelin_CLU",
   //Helm
   //Uniform
   //Vest
   //Backpack
 	//Magazines
-	"rhs_fim92_mag",
-  "MRAWS_HE_F",
-  "MRAWS_HEAT55_F",
-  "MRAWS_HEAT_F",
-  "rhs_fgm148_magazine_AT"
+  "ItemMicroDAGR",
+	"ItemcTab"
 	];
 
   Private _GRENADIER = [
   //Primary
-  "rhs_weap_m4a1_carryhandle_m203",
-  "rhs_weap_m4a1_blockII_M203",
-  "rhs_weap_m16a4_carryhandle_M203",
-  "rhs_weap_mk18_m320",
+	"UK3CB_BAF_L85A2_UGL",
+	"UK3CB_BAF_L85A2_UGL_HWS",
+	"UK3CB_BAF_L85A3_UGL",
   //Secondary
   //Launcher
   //Helm
   //Uniform
   //Vest
-  "rhsusf_iotv_ocp_Grenadier",
-  "rhsusf_plateframe_grenadier",
-  "rhsusf_spc_iar",
-  "rhsusf_spcs_ocp_grenadier",
   //Backpack
 	//Magazines
-	"1Rnd_HE_Grenade_shell",
-	"ACE_40mm_Flare_white",
-	"ACE_40mm_Flare_green",
-	"ACE_40mm_Flare_ir",
-	"1Rnd_Smoke_Grenade_shell",
-	"1Rnd_SmokeBlue_Grenade_shell",
-	"1Rnd_SmokeGreen_Grenade_shell",
-	"1Rnd_SmokeRed_Grenade_shell",
-	"1Rnd_SmokeYellow_Grenade_shell"
+	"tfw_rf3080Item",
+  "ACE_HuntIR_monitor"
   ];
 
 	Private _RIFLEMAN = [
   //Primary
   //Secondary
-  "tfw_rf3080Item",
-  "ACE_HuntIR_monitor"
   //Launcher
   //Helm
   //Uniform
   //Vest
   //Backpack
   //items
+	"tfw_rf3080Item",
+	"ACE_HuntIR_monitor"
 	];
 
   Private _WARPIG = [
   //Primary
+	"UK3CB_BAF_L22",
   //Secondary
   //Launcher
   //Helm
-  "rhsusf_cvc_helmet",
-  "rhsusf_cvc_alt_helmet",
-  "rhsusf_cvc_ess",
-  "H_EarProtectors_black_F",
   //Uniform
   //Vest
-  "rhsusf_iotv_ocp",
-  "rhsusf_plateframe_sapi",
-  "rhsusf_plateframe_light",
-  "rhsusf_spc_crewman",
-  "rhsusf_spcs_ocp_crewman",
   //Backpack
   "tfw_ilbe_whip_coy",
   "tfw_ilbe_whip_gr",
@@ -666,6 +574,12 @@ roleArsenal = {
   "tfw_ilbe_whip_mc",
   "tfw_ilbe_whip_ocp",
   "tfw_ilbe_whip_wd2",
+  "UK3CB_BAF_B_Bergen_DPMT_JTAC_H_A",
+  "UK3CB_BAF_B_Bergen_DPMT_JTAC_A",
+  "UK3CB_BAF_B_Bergen_DPMT_SL_A",
+  "UK3CB_BAF_B_Bergen_OLI_SL_A",
+  "UK3CB_BAF_B_Bergen_OLI_JTAC_A",
+  "UK3CB_BAF_B_Bergen_OLI_JTAC_H_A",
 	//items
   "tfw_rf3080Item"
   ];
@@ -674,18 +588,16 @@ roleArsenal = {
   //Primary
   //Secondary
   //Launcher
-  "launch_NLAW_F",
-  "launch_MRAWS_green_F",
-  "rhs_weap_fim92",
+  "UK3CB_BAF_M6",
+  "UK3CB_BAF_1Rnd_60mm_Mo_AB_Shells",
+  "UK3CB_BAF_1Rnd_60mm_Mo_Shells",
+  "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_Red",
+  "UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",
+  "UK3CB_BAF_1Rnd_60mm_Mo_WPSmoke_White",
+  "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",
   //Helm
-  "rhsusf_cvc_helmet",
-  "rhsusf_cvc_alt_helmet",
-  "rhsusf_cvc_ess",
-  "H_EarProtectors_black_F",
   //Uniform
   //Vest
-  "rhsusf_iotv_ocp_Repair",
-  "rhsusf_spc_iar",
   //Backpack
   "tfw_ilbe_whip_coy",
   "tfw_ilbe_whip_gr",
@@ -693,6 +605,12 @@ roleArsenal = {
   "tfw_ilbe_whip_mc",
   "tfw_ilbe_whip_ocp",
   "tfw_ilbe_whip_wd2",
+  "UK3CB_BAF_B_Bergen_DPMT_JTAC_H_A",
+  "UK3CB_BAF_B_Bergen_DPMT_JTAC_A",
+  "UK3CB_BAF_B_Bergen_DPMT_SL_A",
+  "UK3CB_BAF_B_Bergen_OLI_SL_A",
+  "UK3CB_BAF_B_Bergen_OLI_JTAC_A",
+  "UK3CB_BAF_B_Bergen_OLI_JTAC_H_A",
 	//Explosives
   //items
   "ACE_1Rnd_82mm_Mo_HE",
@@ -725,39 +643,14 @@ roleArsenal = {
 
 	Private _STALKER = [
   //Primary
+	"UK3CB_BAF_L22",
   //Secondary
   //Launcher
   //Helm
-  "H_CrewHelmetHeli_B",
-  "H_PilotHelmetHeli_B",
-	"rhsusf_hgu56p_visor_mask_pink",
-	"rhsusf_hgu56p_visor_mask_smiley",
-	"rhsusf_hgu56p_tan",
-	"rhsusf_hgu56p_mask_tan",
-	"rhsusf_hgu56p_visor_tan",
-	"rhsusf_hgu56p_visor_mask_tan",
-	"rhsusf_hgu56p_usa",
-	"rhsusf_hgu56p_visor_usa",
-	"rhsusf_hgu56p_visor_mask_green_mo",
-	"rhsusf_hgu56p_visor_mask_green",
-	"rhsusf_hgu56p_visor_green",
-	"rhsusf_hgu56p_visor_mask_Empire_black",
-	"rhsusf_hgu56p_visor_saf",
-	"rhsusf_hgu56p_visor_mask_saf",
-	"rhsusf_ihadss",
-	"rhsusf_hgu56p_white",
-	"rhsusf_hgu56p_visor_white",
+	"UK3CB_BAF_V_Pilot_DPMT",
   //Uniform
-  "U_B_HeliPilotCoveralls",
-  "U_B_PilotCoveralls",
+	"UK3CB_BAF_U_JumperUniform_DPMT",
   //Vest
-  "rhsusf_iotv_ocp",
-  "rhsusf_plateframe_sapi",
-  "rhsusf_plateframe_light",
-  "rhsusf_spc_crewman",
-  "rhsusf_spcs_ocp_crewman",
-	"V_PlateCarrier2_blk",
-	"V_PlateCarrier2_rgr",
   //Backpack
   "tfw_ilbe_whip_coy",
   "tfw_ilbe_whip_gr",
@@ -766,57 +659,20 @@ roleArsenal = {
   "tfw_ilbe_whip_ocp",
   "tfw_ilbe_whip_wd2",
 	"tfw_ilbe_blade_black",
+  "UK3CB_BAF_B_Bergen_DPMT_JTAC_H_A",
+  "UK3CB_BAF_B_Bergen_DPMT_JTAC_A",
+  "UK3CB_BAF_B_Bergen_DPMT_SL_A",
+  "UK3CB_BAF_B_Bergen_OLI_SL_A",
+  "UK3CB_BAF_B_Bergen_OLI_JTAC_A",
+  "UK3CB_BAF_B_Bergen_OLI_JTAC_H_A",
 	//items
+	"rhsusf_acc_mrds",
+	"rhsusf_acc_eotech_xps3",
   "ACE_rope12",
   "ACE_rope15",
   "ACE_rope18",
   "ACE_rope27",
   "tfw_rf3080Item"
-	];
-
-  Private _BANSHEE = [
-  //Primary
-  //Secondary
-  //Launcher
-  //Helm
-  "H_CrewHelmetHeli_B",
-  "H_PilotHelmetHeli_B",
-  //Uniform
-  "U_B_HeliPilotCoveralls",
-  "U_B_PilotCoveralls",
-  //Vest
-  "rhsusf_iotv_ocp_Medic",
-  "rhsusf_plateframe_medic",
-  "rhsusf_spc_corpsman",
-  "rhsusf_spcs_ocp_medic",
-  //Backpack
-  "tfw_ilbe_whip_coy",
-  "tfw_ilbe_whip_gr",
-  "tfw_ilbe_whip_mct",
-  "tfw_ilbe_whip_mc",
-  "tfw_ilbe_whip_ocp",
-  "tfw_ilbe_whip_wd2",
-	//items
-  "ACE_rope12",
-  "ACE_rope15",
-  "ACE_rope18",
-  "ACE_rope27",
-  "kat_IV_16",
-  "kat_AED",
-  "kat_X_AED",
-  "kat_EACA",
-  "kat_IO_FAST",
-  "kat_lidocaine",
-  "kat_naloxone",
-  "kat_TXA",
-  "ACE_adenosine",
-  "ACE_bloodIV",
-  "ACE_bloodIV_250",
-  "ACE_bloodIV_500",
-  "ACE_plasmaIV",
-  "ACE_plasmaIV_250",
-  "ACE_plasmaIV_500",
-  "ACE_surgicalKit"
 	];
 
 	switch (_Role) do {
@@ -855,9 +711,6 @@ roleArsenal = {
 	  };
 	  case "STALKER": {
 	    _GearToAdd = _DefaultGear + _STALKER;
-	  };
-    case "BANSHEE": {
-	    _GearToAdd = _DefaultGear + _BANSHEE;
 	  };
 	  default {
 	    _GearToAdd = _DefaultGear + ["ACE_Banana"];

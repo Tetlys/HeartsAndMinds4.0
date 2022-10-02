@@ -26,7 +26,7 @@ Author:
         params ["_display", "_key"];
 
         if (
-            _key in actionKeys "Watch" &&
+            (_key in actionKeys "Watch" || _key in actionKeys "WatchToggle") &&
             {!visibleWatch} &&
             {"ItemWatch" in (assignedItems player)}
         ) then {

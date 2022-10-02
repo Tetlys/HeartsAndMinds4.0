@@ -1,30 +1,45 @@
 private [ "_vehmarkers", "_markedveh", "_cfg", "_vehtomark", "_marker" ];
 
 _vehmarkers = [];
-_markedveh = [];
+_markedveh = []; 
 _cfg = configFile >> "cfgVehicles";
 _vehtomark = [];
 
 _vehtomark = [
-"UK3CB_BAF_LandRover_Panama_Green_A_DPMW",
-"UK3CB_BAF_FV432_Mk3_GPMG_Green_DPMW",
-"UK3CB_BAF_Warrior_A3_W_Camo_MTP",
+"UK3CB_BAF_Apache_AH1_Generic_Arctic",
+"UK3CB_BAF_Coyote_Logistics_L111A1_W_Arctic",
+"UK3CB_BAF_Coyote_Logistics_L111A1_W_Arctic",
+"UK3CB_BAF_Coyote_Passenger_L134A1_W_Arctic",
+"UK3CB_BAF_Coyote_Passenger_L134A1_W_Arctic",
+"UK3CB_BAF_Coyote_Passenger_L111A1_W_Arctic",
+"UK3CB_BAF_Coyote_Passenger_L111A1_W_Arctic",
 "B_Truck_01_flatbed_F",
-"UK3CB_BAF_Husky_Logistics_GMG_Green_DPMW",
-"UK3CB_BAF_Husky_Passenger_GPMG_Green_DPMW",
-"UK3CB_BAF_Husky_Passenger_HMG_Green_DPMW",
-"UK3CB_BAF_Jackal2_L2A1_W_DPMW",
-"UK3CB_BAF_LandRover_Hard_FFR_Green_B_DPMW",
-"UK3CB_BAF_LandRover_WMIK_GMG_FFR_Green_B_DPMW",
+"B_Truck_01_flatbed_F",
+"UK3CB_BAF_Jackal2_L2A1_W_Arctic",
+"UK3CB_BAF_Jackal2_L2A1_W_Arctic",
+"UK3CB_BAF_Jackal2_L2A1_W_Arctic",
+"UK3CB_BAF_Jackal2_L2A1_W_Arctic",
+"UK3CB_BAF_LandRover_Amb_FFR_Green_A_DPMW",
+"UK3CB_BAF_LandRover_Hard_FFR_Arctic_A_Arctic",
+"UK3CB_BAF_LandRover_Hard_FFR_Arctic_A_Arctic",
+"UK3CB_BAF_LandRover_Soft_FFR_Arctic_A_Arctic",
+"UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_DPMW",
 "UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_DPMW",
 "UK3CB_BAF_LandRover_WMIK_Milan_FFR_Green_B_DPMW",
-"rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
-"UK3CB_BAF_MAN_HX58_Transport_Green_DPMW",
-"UK3CB_BAF_Wildcat_HMA2_TRN_8A_DPMW",
-"UK3CB_BAF_Merlin_HC4_18_GPMG_DPMW",
-"UK3CB_BAF_Chinook_HC2_cargo_DPMW",
-"B_APC_Tracked_01_CRV_F",
-"I_Heli_light_03_dynamicLoadout_F"
+"UK3CB_BAF_LandRover_WMIK_Milan_FFR_Green_B_DPMW",
+"UK3CB_BAF_MAN_HX58_Cargo_Green_A_Arctic",
+"UK3CB_BAF_MAN_HX58_Cargo_Green_A_Arctic",
+"UK3CB_BAF_MAN_HX60_Fuel_Green_Arctic",
+"UK3CB_BAF_MAN_HX60_Repair_Green_Arctic",
+"UK3CB_BAF_MAN_HX60_Transport_Green_Arctic",
+"UK3CB_BAF_MAN_HX60_Transport_Green_Arctic",
+"UK3CB_BAF_MAN_HX60_Transport_Green_Arctic",
+"B_T_APC_Tracked_01_CRV_F",
+"UK3CB_BAF_Wildcat_AH1_8_Generic_DDPM",
+"UK3CB_BAF_Wildcat_AH1_TRN_8A_Arctic",
+"UK3CB_BAF_Wildcat_AH1_TRN_8A_Arctic",
+"UK3CB_BAF_Merlin_HC4_Cargo_Arctic",
+"UK3CB_BAF_Merlin_HC4_18_GPMG_Arctic"
 ];
 
 

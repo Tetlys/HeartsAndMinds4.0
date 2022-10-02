@@ -504,10 +504,23 @@ btc_construction_array =
             "UK3CB_BAF_Static_L7A2_Deployed_High_DPMW",
             "UK3CB_BAF_Static_L7A2_Deployed_Low_DPMW",
             "UK3CB_BAF_Static_L7A2_Deployed_Mid_DPMW",
-            "UK3CB_BAF_Static_M6_Deployed_DPMW"
+            "UK3CB_BAF_Static_M6_Deployed_DPMW",
+            "UK3CB_B_Searchlight_NATO", 
+            "UK3CB_B_SearchlightAA_NATO", 
+            "B_Static_Designator_01_F", 
+            "RHS_Stinger_AA_pod_USMC_WD"
         ],
         [
             //"Ammobox"
+            "UK3CB_BAF_Box_EOD_Demolitions_ACE", 
+            "UK3CB_BAF_Box_M6", 
+            "Box_cTab_items", 
+            "UK3CB_BAF_Box_WpsStatic", 
+            "UK3CB_BAF_Box_WpsLaunch_Javelin", 
+            "UK3CB_BAF_Box_Milan_Ammo", 
+            "UK3CB_BAF_Box_40_Ammo", 
+            "UK3CB_BAF_Box_L7A2", 
+            "UK3CB_BAF_Box_Section_Supplies_ACE",
             "Land_WoodenBox_F",
             "ACE_medicalSupplyCrate",
             "ACE_medicalSupplyCrate_advanced",
@@ -717,6 +730,6 @@ btc_flag_textures = [
 
 //Respawn
 btc_body_bagTicketPlayer = 1;
-btc_body_enemyTicket = 2;
+btc_body_enemyTicket = 3;
 
 btc_startDate = [2035, 6, 24, 12, 15];

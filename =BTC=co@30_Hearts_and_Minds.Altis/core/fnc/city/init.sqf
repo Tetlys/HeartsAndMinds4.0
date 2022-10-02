@@ -26,7 +26,17 @@ params [
 
 private _locations = configfile >> "cfgworlds" >> worldname >> "names";
 
-private _citiesType = ["NameVillage", "NameCity", "NameCityCapital", "NameLocal", "Hill", "Airport", "StrongpointArea", "BorderCrossing", "VegetationFir"];
+private _citiesType = [
+    "NameVillage", 
+    "NameCity", 
+    "NameCityCapital", 
+    "NameLocal", 
+    "Hill", 
+    "Airport", 
+    //"StrongpointArea", 
+    "BorderCrossing"
+    //"VegetationFir"
+    ];
 if (btc_p_sea) then {_citiesType pushBack "NameMarine";};
 
 btc_city_all = createHashMap;
@@ -58,13 +68,13 @@ for "_id" from 0 to (count _locations - 1) do {
         };
         private _name = getText(_current >> "name");
         private _cachingRadius = getNumber(_current >> "RadiusA") + getNumber(_current >> "RadiusB");
-        _cachingRadius = (_cachingRadius max 160) min 800;
+        _cachingRadius = (_cachingRadius max 400) min 1000;
 
         if (btc_city_blacklist find _name >= 0) exitWith {};
 
 
         //if you want a safe area
-        if ((getMarkerPos "SAFEAREA") inArea [_position, 1000, 1000, 0, false]) exitWith {};
+        if ((getMarkerPos "SAFEAREA") inArea [_position, 500, 500, 0, false]) exitWith {};
 
         [_position, _type, _name, _cachingRadius, false, _id] call btc_city_fnc_create;
     };

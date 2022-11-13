@@ -35,6 +35,15 @@ private _backpack = backpack _unit;
 private _uniform = toLower uniform _unit;
 private _protection = 0;
 
+// Added gasmask over-ride
+if (
+      [
+        "M40_Gas_mask_nbc_v1_d" //CONFIG - Gasmask type
+      ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1
+    ) then { _protection = _protection + 1; 
+};
+
+
 if (
     [
         "G_Respirator_base_F"

@@ -43,6 +43,11 @@ if (btc_debug) then {
 _city enableSimulation false;
 _city setVariable ["active", true];
 
+// Create Scaling Multiplier 
+private _CurrentPlayers = count allPlayers;
+//private _currentPlayers = west countSide allUnits;
+private _PlayerScale = (floor (_CurrentPlayers / 6)) max 1;
+
 private _data_units = _city getVariable ["data_units", []];
 private _data_animals = _city getVariable ["data_animals", []];
 private _type = _city getVariable ["type", ""];
@@ -103,20 +108,20 @@ if (_data_units isNotEqualTo []) then {
         case "NameLocal" : {7};
         case "StrongpointArea" : {8};
         case "NameVillage" : {8};
-        case "NameCity" : {10};
-        case "NameCityCapital" : {15};
-        case "Airport" : {15};
+        case "NameCity" : {16};
+        case "NameCityCapital" : {32};
+        case "Airport" : {32};
         case "NameMarine" : {4};
         default {0};
     });
 
     if (_has_en) then {
-        private _finalNumberOfGroup = _p_mil_group_ratio * _numberOfGroup;
+        private _finalNumberOfGroup = _p_mil_group_ratio * _numberOfGroup * _PlayerScale;
         private _numberOfHouseGroup = _finalNumberOfGroup * btc_p_mil_wp_houseDensity;
         for "_i" from 1 to round _finalNumberOfGroup do {
             [
                 _city,
-                [_spawningRadius, _spawningRadius/3] select (_i <= _numberOfHouseGroup),
+                [_spawningRadius, _spawningRadius/2] select (_i <= _numberOfHouseGroup),
                 2 + round random 2,
                 [["PATROL", "SENTRY"] selectRandomWeighted [0.7, 0.3], "HOUSE"] select (_i <= _numberOfHouseGroup)
             ] call btc_mil_fnc_create_group;
@@ -124,7 +129,7 @@ if (_data_units isNotEqualTo []) then {
     };
 
     if !(_type in ["Hill", "NameMarine"]) then {
-        ([_city, _spawningRadius/3] call btc_city_fnc_getHouses) params ["_housesEntrerable", "_housesNotEntrerable"];
+        ([_city, _spawningRadius/2] call btc_city_fnc_getHouses) params ["_housesEntrerable", "_housesNotEntrerable"];
 
         if (_has_en) then {
             private _numberOfStatic = (switch _type do {
@@ -143,17 +148,17 @@ if (_data_units isNotEqualTo []) then {
 
         // Spawn civilians
         private _numberOfCivi = (switch _type do {
-            case "VegetationFir" : {0};
+            case "VegetationFir" : {2};
             case "BorderCrossing" : {0};
-            case "NameLocal" : {5};
-            case "StrongpointArea" : {2};
-            case "NameVillage" : {8};
-            case "NameCity" : {10};
-            case "NameCityCapital" : {15};
-            case "Airport" : {6};
+            case "NameLocal" : {6};
+            case "StrongpointArea" : {0};
+            case "NameVillage" : {12};
+            case "NameCity" : {20};
+            case "NameCityCapital" : {38};
+            case "Airport" : {12};
             default {4};
         });
-        [+_housesEntrerable, round (_p_civ_group_ratio  * _numberOfCivi), _city] call btc_civ_fnc_populate;
+        [+_housesEntrerable, round (_p_civ_group_ratio * _numberOfCivi), _city] call btc_civ_fnc_populate;
     };
 };
 if (btc_p_animals_group_ratio > 0) then {
@@ -164,11 +169,11 @@ if (btc_p_animals_group_ratio > 0) then {
     } else {
         // Spawn animals
         private _numberOfAnimalsGroup = (switch _type do {
-            case "Hill" : {2};
-            case "VegetationFir" : {2};
-            case "NameLocal" : {1};
-            case "NameVillage" : {0};
-            case "NameCity" : {0};
+            case "Hill" : {3};
+            case "VegetationFir" : {3};
+            case "NameLocal" : {3};
+            case "NameVillage" : {2};
+            case "NameCity" : {1};
             case "NameCityCapital" : {0};
             case "Airport" : {0};
             case "NameMarine" : {0};
@@ -185,25 +190,25 @@ if (btc_p_animals_group_ratio > 0) then {
 
 if (_city getVariable ["spawn_more", false]) then {
     _city setVariable ["spawn_more", false];
-    private _finalNumberOfGroup = _p_mil_group_ratio * 5;
+    private _finalNumberOfGroup = _p_mil_group_ratio * 5 * _PlayerScale;
     private _numberOfHouseGroup = _finalNumberOfGroup * btc_p_mil_wp_houseDensity;
     for "_i" from 1 to round _finalNumberOfGroup do {
         [
             _city,
-            [_spawningRadius, _spawningRadius/3] select (_i <= _numberOfHouseGroup),
+            [_spawningRadius, _spawningRadius/2] select (_i <= _numberOfHouseGroup),
             4 + round random 3,
             ["PATROL", "HOUSE"] select (_i <= _numberOfHouseGroup)
         ] call btc_mil_fnc_create_group;
     };
     if (btc_p_veh_armed_spawn_more) then {
-        [[_city, _spawningRadius/3, 1, btc_type_motorized_armed, 1 + round random 2], btc_city_fnc_send] call btc_delay_fnc_exec;
+        [[_city, _spawningRadius, 1, btc_type_motorized_armed, 1 + round random 2], btc_city_fnc_send] call btc_delay_fnc_exec;
     };
 };
 
 if (
     (btc_cache_pos isNotEqualTo []) &&
     {_city inArea [btc_cache_pos, _cachingRadius, _cachingRadius, 0, false]}
-) then {
+) then {  
     if (btc_cache_obj getVariable ["btc_cache_unitsSpawned", false]) then {
         [[btc_cache_pos, 5], {
             if (count (btc_cache_pos nearEntities ["Man", 50]) > 3) exitWith {};
@@ -216,7 +221,7 @@ if (
         [btc_cache_pos, 8, 3, "HOUSE"] call btc_mil_fnc_create_group;
         [btc_cache_pos, 50, 4, "SENTRY"] call btc_mil_fnc_create_group;
         if (btc_p_veh_armed_spawn_more) then {
-            [[_city, _spawningRadius/3, 1, btc_type_motorized_armed, 1 + round random 3], btc_city_fnc_send] call btc_delay_fnc_exec;
+            [[_city, _spawningRadius, 1, btc_type_motorized_armed, 1 + round random 3], btc_city_fnc_send] call btc_delay_fnc_exec;
         };
     };
 };
@@ -241,7 +246,7 @@ if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
         };
     };
     if (btc_p_veh_armed_ho) then {
-        [[_city, _spawningRadius/3, 1, btc_type_motorized_armed, 2 + round random 3], btc_city_fnc_send] call btc_delay_fnc_exec;
+        [[_city, _spawningRadius, 1, btc_type_motorized_armed, 2 + round random 3], btc_city_fnc_send] call btc_delay_fnc_exec;
     };
 };
 
@@ -258,6 +263,9 @@ if !(_city getVariable ["has_suicider", false]) then {
         _delay = _delay + btc_delay_unit;
     };
 };
+
+
+//CONFIG - Disable tags
 
 if (_city getVariable ["data_tags", []] isEqualTo []) then {
     private _tag_number = (switch _type do {
@@ -290,14 +298,14 @@ if (
     !(_type in ["Hill", "NameMarine"]) &&
     _city getVariable ["btc_city_housesEntrerable", []] isEqualTo []
 ) then {
-    [[_city, _spawningRadius/3], btc_city_fnc_getHouses] call btc_delay_fnc_exec;
+    [[_city, _spawningRadius/2], btc_city_fnc_getHouses] call btc_delay_fnc_exec;
 };
 
 [_city, btc_door_fnc_lock] call btc_delay_fnc_exec;
 
 if (btc_p_info_houseDensity > 0) then {
     [_city, btc_info_fnc_createIntels] call btc_delay_fnc_exec;
-};
+};   
 
 private _civKilled = _city getVariable ["btc_rep_civKilled", []];
 if (_civKilled isNotEqualTo []) then {

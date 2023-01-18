@@ -1,8 +1,8 @@
 
 btc_version = [
     1,
-    22,
-    7
+    22.1,
+    8
 ];
 diag_log format (["=BTC= HEARTS AND MINDS VERSION %1.%2.%3"] + btc_version);
 
@@ -43,6 +43,7 @@ btc_p_ied = ("btc_p_ied" call BIS_fnc_getParamValue)/2;
 private _p_ied_spot = "btc_p_ied_spot" call BIS_fnc_getParamValue;
 btc_p_ied_placement = "btc_p_ied_placement" call BIS_fnc_getParamValue;
 btc_p_ied_drone = ("btc_p_ied_drone" call BIS_fnc_getParamValue) isEqualTo 1;
+btc_p_ied_power = "btc_p_ied_power" call BIS_fnc_getParamValue;
 
 //<< Hideout/Cache options >>
 btc_hideout_n = "btc_p_hideout_n" call BIS_fnc_getParamValue;
@@ -167,6 +168,7 @@ if (isServer) then {
     btc_ied_offset = [0, -0.03, -0.07] select _p_ied_spot;
     btc_ied_list = [];
     btc_ied_range = 10;
+    btc_ied_power = ["Bo_GBU12_LGB_MI10", "R_MRAAWS_HE_F"] select btc_p_ied_power;
 
     //FOB
     btc_fobs = [[], [], []];
@@ -222,7 +224,7 @@ if (isServer) then {
 
     //Side
     btc_side_ID = 0;
-    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower",  "checkpoint", "convoy", "capture_officer", "hostage", "kill", "civtreatment", "EMP", "rescue", "hack", "removeRubbish"]; // REMOVED: 
+    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower",  "checkpoint", "convoy", "capture_officer", "hostage", "kill", "civtreatment", "EMP", "rescue", "hack", "removeRubbish"]; // REMOVED:
     if (btc_p_sea) then {btc_side_list append ["civtreatment_boat", "underwater_generator"]}; // On sea
     if (btc_p_chem) then {btc_side_list append ["chemicalLeak", "pandemic"]};
     btc_side_list_use = [];
@@ -517,20 +519,20 @@ btc_construction_array =
         ],
         [
             //"Ammobox"
-            "CAV_C_Ammo_556x45M855A1MixedBELT", 
-            "CAV_C_Ammo_556x45M855A1STANAG", 
-            "CAV_C_Ammo_556x45M855A1TRACERSTANAG", 
-            "CAV_C_Ammo_762mmM61AP100rndBELT", 
-            "CAV_C_Attachments_rhsusfaccACOG", 
-            "CAV_C_Attachments_rhsusfacccompm4", 
-            "CAV_C_Attachments_rhsusfaccELCAN", 
-            "CAV_C_Attachments_ACCPointerIR", 
-            "CAV_C_Wps_m240B", 
-            "CAV_C_Wps_M249", 
-            "tf47_launcherbox", 
-            "Box_NATO_AmmoOrd_F", 
-            "ACE_Box_82mm_Mo_HE", 
-            "ACE_Box_82mm_Mo_Illum", 
+            "CAV_C_Ammo_556x45M855A1MixedBELT",
+            "CAV_C_Ammo_556x45M855A1STANAG",
+            "CAV_C_Ammo_556x45M855A1TRACERSTANAG",
+            "CAV_C_Ammo_762mmM61AP100rndBELT",
+            "CAV_C_Attachments_rhsusfaccACOG",
+            "CAV_C_Attachments_rhsusfacccompm4",
+            "CAV_C_Attachments_rhsusfaccELCAN",
+            "CAV_C_Attachments_ACCPointerIR",
+            "CAV_C_Wps_m240B",
+            "CAV_C_Wps_M249",
+            "tf47_launcherbox",
+            "Box_NATO_AmmoOrd_F",
+            "ACE_Box_82mm_Mo_HE",
+            "ACE_Box_82mm_Mo_Illum",
             "ACE_Box_82mm_Mo_Smoke"
 
         ],
@@ -543,24 +545,24 @@ btc_construction_array =
         [
             //"Supplies"
             btc_supplies_cargo,
-            "CAV_C_Gear_ANPVS15", 
-            "CAV_C_Gear_Earplugs", 
-            "CAV_C_Gear_Electronics", 
-            "CAV_C_MED_BLOOD", 
-            "CAV_C_MED_BODYBAG", 
-            "CAV_C_MED_MedicalCrate", 
-            "CAV_C_MED_ELASTICBANDAGE", 
-            "CAV_C_MED_BANDAGES", 
-            "CAV_C_MED_FIELDDRESSING", 
-            "CAV_C_MED_HostpitalCrate", 
-            "CAV_C_MED_HostpitalIV", 
-            "CAV_C_MED_PACKINGBANDAGE", 
-            "CAV_C_MED_PLASMA", 
-            "CAV_C_MED_SALINE", 
-            "CAV_C_Gear_TBS", 
-            "CAV_C_Crate_Supply", 
-            "ACE_Box_Chemlights", 
-            "ACE_medicalSupplyCrate_advanced", 
+            "CAV_C_Gear_ANPVS15",
+            "CAV_C_Gear_Earplugs",
+            "CAV_C_Gear_Electronics",
+            "CAV_C_MED_BLOOD",
+            "CAV_C_MED_BODYBAG",
+            "CAV_C_MED_MedicalCrate",
+            "CAV_C_MED_ELASTICBANDAGE",
+            "CAV_C_MED_BANDAGES",
+            "CAV_C_MED_FIELDDRESSING",
+            "CAV_C_MED_HostpitalCrate",
+            "CAV_C_MED_HostpitalIV",
+            "CAV_C_MED_PACKINGBANDAGE",
+            "CAV_C_MED_PLASMA",
+            "CAV_C_MED_SALINE",
+            "CAV_C_Gear_TBS",
+            "CAV_C_Crate_Supply",
+            "ACE_Box_Chemlights",
+            "ACE_medicalSupplyCrate_advanced",
             "ACE_medicalSupplyCrate"
         ],
         [
@@ -574,7 +576,7 @@ btc_construction_array =
         [
             //"Vehicle logistic"
             "ACE_Wheel",
-            "ACE_fastropingSupplyCrate", 
+            "ACE_fastropingSupplyCrate",
             "ACE_Track"
         ] + (_allClassSorted select {_x isKindOf "FlexibleTank_base_F"})
     ]
@@ -613,7 +615,7 @@ btc_log_fnc_get_nottowable = {
         };
         case (_tower isKindOf "Car") : {
             []; //The tower is a car so it can't tow: truck, tank, plane and helicopter
-        }; 
+        };
         default {
             ["Car", "Truck", "Truck_F", "Tank", "Plane", "Helicopter", "Ship"];
         };

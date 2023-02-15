@@ -1,6 +1,6 @@
 [] call compileScript ["core\fnc\city\init.sqf"];
 
-["Initialize"] call BIS_fnc_dynamicGroups;
+//["Initialize"] call BIS_fnc_dynamicGroups;
 setTimeMultiplier btc_p_acctime;
 
 ["btc_m", -1, objNull, "", false, false] call btc_task_fnc_create;
@@ -65,4 +65,46 @@ if (
         _tickets = -1;
     };
     [btc_player_side, _tickets] call BIS_fnc_respawnTickets;
+};
+
+/*
+//EDEN - MAP MARKERS
+{
+    if (_y getVariable ["type", ""] != "NameMarine") then {
+        if (_y getVariable ["marker", ""] != "") then {
+            deleteMarker (_y getVariable ["marker", ""]);
+        };
+        private _cachingRadius = _y getVariable ["cachingRadius", 500];
+
+        private _marker = createMarker [format ["city_%1", position _y], position _y];
+        _marker setMarkerShape "ELLIPSE";
+        _marker setMarkerBrush "SolidBorder";
+        _marker setMarkerSize [_cachingRadius, _cachingRadius];
+        _marker setMarkerAlpha 1;
+        if (_y getVariable ["occupied", false]) then {
+            _marker setMarkerColor "colorRed";
+            btc_city_remaining pushBack _y;
+        } else {
+            _marker setMarkerColor "colorGreen";
+            _marker setMarkerAlpha 1;
+        };
+        _y setVariable ["marker", _marker];
+    };
+} forEach btc_city_all;
+*/
+
+//EDEN - Object Protector
+
+if isServer then
+{
+	[] spawn
+	{
+		while {true} do
+		{
+			{
+				_x removeCuratorEditableObjects [[btc_create_object_point, btc_create_object, btc_gear_object],true]
+			} count allCurators;
+        sleep 0.25;
+		};
+	};
 };
